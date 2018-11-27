@@ -13,8 +13,6 @@
   padding: 2px 0;
   display: inline-block;
   text-transform: uppercase;
-  font-weight: 400;
-  font-family: $main-font;
   color: black;
   cursor: pointer;
   transition: all .4s;
@@ -22,6 +20,10 @@
   vertical-align: middle;
   text-align: left;
   white-space: nowrap;
+
+  &:hover {
+    color: $color-glen-blue;
+  }
 
   &:before,
   &:after {
