@@ -1,4 +1,4 @@
-/*-----------------------------------------]
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700);@import url(https://fonts.googleapis.com/css?family=Baloo+Bhaina);@import url(https://fonts.googleapis.com/css?family=Farsan);/*-----------------------------------------]
 
 	[Global Main Stylesheet] -
 
@@ -298,17 +298,20 @@ html {
 /*-------------------------------------
  * VARIABLES - PROJECT WIDE
 /-------------------------------------*/
+/* Font variables now live in typography.scss! */
 /*----
 	Global Typography
 -----*/
 /*-------------------------------------
  *	TYPOGRAPHY
 /-------------------------------------*/
+/* Imports */
 /* Main */
 body {
-  font-family: "Titillium Web", "Helvetica", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
   font-size: 16px;
-  color: #000; }
+  color: black; }
 
 /* Headings & Body Copy */
 /* Reset Fonts */
@@ -320,97 +323,164 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Titillium Web", "Helvetica", sans-serif;
-  font-weight: 700;
-  color: inherit; }
+  color: #383838; }
 
 /* stylelint-enable */
 /* Generate Responsive Sizing */
-p {
-  line-height: 24px;
-  font-size: 14px; }
-  @media only screen and (min-width: 641px) {
-    p {
-      font-size: 16px; } }
-  @media only screen and (min-width: 1441px) {
-    p {
-      font-size: 19px; } }
-
 h1,
 .h1 {
-  font-size: 25px; }
+  font-family: "Baloo Bhaina", cursive;
+  font-size: 50px; }
   @media only screen and (min-width: 641px) {
     h1,
     .h1 {
-      font-size: 28px; } }
-  @media only screen and (min-width: 1441px) {
-    h1,
-    .h1 {
-      font-size: 70px; } }
+      font-size: 100px; } }
 
 h2,
 .h2 {
+  font-family: "Baloo Bhaina", cursive;
   font-size: 30px; }
   @media only screen and (min-width: 641px) {
     h2,
     .h2 {
-      font-size: 32px; } }
-  @media only screen and (min-width: 1441px) {
-    h2,
-    .h2 {
-      font-size: 35px; } }
+      font-size: 50px; } }
 
 h3,
 .h3 {
-  font-size: 20px; }
+  font-family: "Baloo Bhaina", cursive;
+  font-size: 25px; }
   @media only screen and (min-width: 641px) {
     h3,
     .h3 {
-      font-size: 22px; } }
-  @media only screen and (min-width: 1441px) {
-    h3,
-    .h3 {
-      font-size: 25px; } }
+      font-size: 40px; } }
 
 h4,
 .h4 {
-  font-size: 60%; }
+  font-family: "Farsan", cursive;
+  font-size: 30px; }
   @media only screen and (min-width: 641px) {
     h4,
     .h4 {
-      font-size: 90%; } }
-  @media only screen and (min-width: 1441px) {
-    h4,
-    .h4 {
-      font-size: 18px; } }
+      font-size: 40px; } }
 
 h5,
 .h5 {
-  font-size: 14px; }
+  font-family: "Baloo Bhaina", cursive;
+  font-size: 20px; }
+  @media only screen and (min-width: 641px) {
+    h5,
+    .h5 {
+      font-size: 30px; } }
 
 h6,
 .h6 {
-  font-size: 10px; }
-
-.mdev-main-nav-links {
-  font-size: 16px; }
+  font-family: "Baloo Bhaina", cursive;
+  text-transform: uppercase;
+  font-size: 28px; }
   @media only screen and (min-width: 641px) {
-    .mdev-main-nav-links {
-      font-size: 17px; } }
-  @media only screen and (min-width: 1441px) {
-    .mdev-main-nav-links {
+    h6,
+    .h6 {
+      font-size: 34px; } }
+
+.glen-btn {
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  color: #383838;
+  font-size: 14px; }
+  @media only screen and (min-width: 641px) {
+    .glen-btn {
+      font-size: 16px; } }
+
+a,
+p,
+li {
+  color: #383838;
+  line-height: 100%;
+  font-size: 14px;
+  margin-bottom: 15px; }
+  @media only screen and (min-width: 641px) {
+    a,
+    p,
+    li {
       font-size: 18px; } }
+  a b,
+  p b,
+  li b {
+    font-weight: 700; }
+  a em,
+  p em,
+  li em {
+    font-style: italic; }
 
 /* Link Reset / Base Inherit */
 a {
-  font-family: "Titillium Web", "Helvetica", sans-serif;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  cursor: pointer;
   text-decoration: inherit; }
   a:hover {
     text-decoration: none;
     color: inherit; }
+
+/* List Styles */
+ul {
+  list-style-type: disc; }
+  ul li {
+    margin-left: 20px;
+    margin-bottom: 13px; }
+
+.\--body-sidebar {
+  color: #383838;
+  font-size: 16px; }
+  @media only screen and (min-width: 1025px) {
+    .\--body-sidebar {
+      font-size: 16px; } }
+
+.\--body-faq {
+  font-weight: 700;
+  color: #383838;
+  font-size: 16px; }
+  @media only screen and (min-width: 1025px) {
+    .\--body-faq {
+      font-size: 23px; } }
+
+.\--edu-name {
+  font-family: "Baloo Bhaina", cursive;
+  color: #b056da;
+  font-size: 30px; }
+  @media only screen and (min-width: 1025px) {
+    .\--edu-name {
+      font-size: 30px; } }
+
+.\--edu-title {
+  font-weight: 700;
+  color: #383838;
+  font-size: 20px; }
+  @media only screen and (min-width: 1025px) {
+    .\--edu-title {
+      font-size: 20px; } }
+
+.\--edu-bio {
+  font-weight: 700;
+  color: #383838;
+  font-size: 14px; }
+  @media only screen and (min-width: 1025px) {
+    .\--edu-bio {
+      font-size: 16px; } }
+
+.\--edu-quote {
+  font-style: italic;
+  color: #383838;
+  font-size: 14px; }
+  @media only screen and (min-width: 1025px) {
+    .\--edu-quote {
+      font-size: 18px; } }
+
+.\--rev-name {
+  font-family: "Farsan", cursive;
+  color: #ff5756;
+  font-size: 20px; }
+  @media only screen and (min-width: 1025px) {
+    .\--rev-name {
+      font-size: 30px; } }
 
 /*----
  	Utilities
@@ -460,21 +530,42 @@ a {
     display: none !important; } }
 
 /* stylelint-enable */
-.u-bold {
-  font-weight: 700; }
-
 .u-hidden {
   display: none; }
-
-.u-green {
-  color: #13b2a9; }
-
-.u-white {
-  color: #fff; }
 
 .u-freeze-scroll {
   height: 100vh;
   overflow: hidden; }
+
+.u-white {
+  color: #fff; }
+
+.u-black {
+  color: #000; }
+
+.u-orange {
+  color: #ff8421; }
+
+.u-green {
+  color: #3ab54a; }
+
+.u-blue {
+  color: #3bbcff; }
+
+.u-red {
+  color: #ff5756; }
+
+.u-yellow {
+  color: #fff730; }
+
+.u-purple {
+  color: #b056da; }
+
+.u-darkgrey {
+  color: #383838; }
+
+.u-grey {
+  color: #f7f7f7; }
 
 /*---
   Icons
@@ -533,9 +624,6 @@ a {
 .\--info-icon {
   background: blue; }
 
-.\--back-icon {
-  background: #13b2a9; }
-
 /*---
   Forms
 -----*/
@@ -546,22 +634,73 @@ form {
 /* stylelint-disable */
 /* Disabled because it is valid and I need this level of control*/
 .mdev-error {
-  border: 1px solid red !important;
+  border-top: 4px solid red !important;
+  border-bottom: 4px solid red !important;
   color: red !important; }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="url"] {
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="search"], input[type="url"] {
   width: 100%;
-  border-radius: 4px;
-  padding: 10px;
-  margin-top: 20px;
-  border: 1px solid rgba(122, 193, 66, 0);
-  background: #fafafa;
+  border-radius: 0;
+  font-family: "Open Sans", sans-serif;
+  padding: 8px 0;
+  margin-top: 15px;
+  background: transparent;
   outline: 0;
-  -webkit-transition: border, .3s;
-  -o-transition: border, .3s;
-  transition: border, .3s; }
-  input[type="text"]:hover, input[type="text"]:focus, input[type="text"]:active, input[type="email"]:hover, input[type="email"]:focus, input[type="email"]:active, input[type="password"]:hover, input[type="password"]:focus, input[type="password"]:active, input[type="search"]:hover, input[type="search"]:focus, input[type="search"]:active, input[type="url"]:hover, input[type="url"]:focus, input[type="url"]:active {
-    border: 1px solid #7ac142; }
+  -webkit-transition: border .5s, background .5s;
+  -o-transition: border .5s, background .5s;
+  transition: border .5s, background .5s;
+  border: none;
+  border-bottom: 4px solid rgba(15, 22, 24, 0);
+  border-top: 4px solid #0f1618; }
+  input[type="text"]:hover, input[type="text"]:focus, input[type="text"]:active, input[type="email"]:hover, input[type="email"]:focus, input[type="email"]:active, input[type="tel"]:hover, input[type="tel"]:focus, input[type="tel"]:active, input[type="password"]:hover, input[type="password"]:focus, input[type="password"]:active, input[type="search"]:hover, input[type="search"]:focus, input[type="search"]:active, input[type="url"]:hover, input[type="url"]:focus, input[type="url"]:active {
+    border-top: 4px solid rgba(15, 22, 24, 0);
+    border-bottom: 4px solid #0f1618;
+    background: transparent;
+    padding: 8px; }
+  input[type="text"].\--filled, input[type="email"].\--filled, input[type="tel"].\--filled, input[type="password"].\--filled, input[type="search"].\--filled, input[type="url"].\--filled {
+    border-top: 4px solid rgba(15, 22, 24, 0);
+    border-bottom: 4px solid #0f1618;
+    text-transform: none; }
+  input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder {
+    color: #000; }
+  input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder {
+    color: #000; }
+  input[type="text"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="tel"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder, input[type="search"]::-ms-input-placeholder, input[type="url"]::-ms-input-placeholder {
+    color: #000; }
+  input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="tel"]::placeholder, input[type="password"]::placeholder, input[type="search"]::placeholder, input[type="url"]::placeholder {
+    color: #000; }
+
+textarea {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0;
+  padding: 8px 0;
+  margin-top: 15px;
+  background: transparent;
+  outline: 0;
+  -webkit-transition: border .5s, background .5s;
+  -o-transition: border .5s, background .5s;
+  transition: border .5s, background .5s;
+  border: none;
+  border-bottom: 4px solid rgba(15, 22, 24, 0);
+  border-top: 4px solid #0f1618; }
+  textarea:hover, textarea:focus, textarea:active {
+    border-top: 4px solid rgba(15, 22, 24, 0);
+    border-bottom: 4px solid #0f1618;
+    background: transparent;
+    padding: 8px; }
+  textarea::-webkit-input-placeholder {
+    color: #000; }
+  textarea:-ms-input-placeholder {
+    color: #000; }
+  textarea::-ms-input-placeholder {
+    color: #000; }
+  textarea::placeholder {
+    color: #000; }
+  textarea.\--filled {
+    border-top: 4px solid rgba(15, 22, 24, 0);
+    text-transform: none !important;
+    border-bottom: 4px solid #0f1618; }
 
 /* stylelint-enable */
 /* Form Scaffolding */
@@ -676,26 +815,39 @@ a img.aligncenter {
  *
 /-------------------------------------*/
 /* Base Button */
-.mdev-base-btn, input[type="button"], input[type="submit"] {
+.glen-btn {
   width: auto;
-  padding: 20px;
-  -webkit-transition: all, .3s;
-  -o-transition: all, .3s;
-  transition: all, .3s;
+  padding: 2px 0;
+  display: inline-block;
   text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-  cursor: pointer; }
-
-/* Button Colors */
-.mdev-action-btn {
-  color: #333;
-  background: #13b2a9;
-  border: 1px solid rgba(242, 170, 0, 0); }
-  .mdev-action-btn:hover {
-    color: #13b2a9;
-    background: #333;
-    border: 1px solid #f2aa00; }
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  position: relative;
+  vertical-align: middle;
+  text-align: left;
+  white-space: nowrap; }
+  .glen-btn:before, .glen-btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .glen-btn:before {
+    top: 0;
+    left: 0; }
+  .glen-btn:after {
+    bottom: 0;
+    right: 0; }
+  @media only screen and (max-width: 640px) {
+    .glen-btn {
+      letter-spacing: 1px; } }
+  .glen-btn i {
+    margin: 0 0 0 5px; }
 
 /*----
   Theme Imports
@@ -706,6 +858,7 @@ a img.aligncenter {
  *  Place all of your imports here, not in global-main.scss
  *  ------------
  */
+/* stylelint-disable */
 .glen-typography-title {
   display: block;
   width: 100%;
@@ -717,6 +870,60 @@ a img.aligncenter {
   border-bottom: 2px solid black;
   margin: 25px 0; }
 
+.glen-typography-standard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .glen-typography-standard > * {
+    padding: 10px; }
+
+.glen-typography-colours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 20%; }
+  .glen-typography-colours > div {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    margin: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase; }
+    .glen-typography-colours > div.glen-color-orange {
+      background-color: #ff8421; }
+    .glen-typography-colours > div.glen-color-green {
+      background-color: #3ab54a; }
+    .glen-typography-colours > div.glen-color-blue {
+      background-color: #3bbcff; }
+    .glen-typography-colours > div.glen-color-red {
+      background-color: #ff5756; }
+    .glen-typography-colours > div.glen-color-yellow {
+      background-color: #fff730; }
+    .glen-typography-colours > div.glen-color-purple {
+      background-color: #b056da; }
+    .glen-typography-colours > div.glen-color-darkgrey {
+      background-color: #383838; }
+    .glen-typography-colours > div.glen-color-grey {
+      background-color: #f7f7f7; }
+
+/* stylelint-enable */
 /*----
   Print
 -----*/

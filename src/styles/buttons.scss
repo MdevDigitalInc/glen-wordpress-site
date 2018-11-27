@@ -8,26 +8,43 @@
 /-------------------------------------*/
 
 /* Base Button */
-.mdev-base-btn {
+.glen-btn {
   width: auto;
-  padding: 20px;
-  transition: all, .3s;
+  padding: 2px 0;
+  display: inline-block;
   text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: $main-font;
+  color: black;
   cursor: pointer;
-}
+  transition: all .4s;
+  position: relative;
+  vertical-align: middle;
+  text-align: left;
+  white-space: nowrap;
 
-/* Button Colors */
+  &:before,
+  &:after {
+    @include pseudo();
+    width: 100%;
+    height: 100%;
+  }
 
-.mdev-action-btn {
-  color: $color-brand-accent;
-  background: $color-brand-primary;
-  border: 1px solid rgba(242,170,0,0);
+  &:before {
+    top: 0;
+    left: 0;
+  }
 
-  &:hover {
-    color: $color-brand-primary;
-    background: $color-brand-accent;
-    border: 1px solid rgba(242,170,0,1);
+  &:after {
+    bottom: 0;
+    right: 0;
+  }
+
+  @media #{$phone-only} {
+    letter-spacing: 1px;
+  }
+
+  i {
+    margin: 0 0 0 5px;
   }
 }

@@ -2,11 +2,25 @@
  *	TYPOGRAPHY
 /-------------------------------------*/
 
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+$main-font: 'Open Sans', sans-serif;
+$main-weight: 400;
+$main-bold: 700;
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+$spec-font: 'Baloo Bhaina', cursive;
+
+@import url('https://fonts.googleapis.com/css?family=Farsan');
+$cursive-font: 'Farsan', cursive;
+
 /* Main */
 body {
   font-family: $main-font;
+  font-style: normal;
   font-size: 16px;
-  color: $black;
+  color: black;
 }
 
 /* Headings & Body Copy */
@@ -21,55 +35,51 @@ h3,.h3,
 h4,.h4,
 h5,.h5,
 h6,.h6, {
-  font-family: $main-font;
-  font-weight: 700;
-  color: inherit;
+  color: $color-glen-darkgrey;
 }
 
 // Responsive Font Size Maps
+
 $p-font-sizes: (
   null  : 14px,
-  $tablet-up : 16px,
-  $desktop-up: 19px
+  $tablet-up  : 18px
 );
 
 $h1-font-sizes: (
-  null  : 25px,
-  $tablet-up : 28px,
-  $desktop-up: 70px
+  null  : 50px,
+  $tablet-up  : 100px
 );
 
 $h2-font-sizes: (
   null  : 30px,
-  $tablet-up : 32px,
-  $desktop-up: 35px
+  $tablet-up  : 50px
 );
 
 $h3-font-sizes: (
-  null  : 20px,
-  $tablet-up : 22px,
-  $desktop-up: 25px
+  null  : 25px,
+  $tablet-up  : 40px
 );
 
 $h4-font-sizes: (
-  null  : 60%,
-  $tablet-up : 90%,
-  $desktop-up: 18px
+  null  : 30px,
+  $tablet-up  : 40px
 );
 
 $h5-font-sizes: (
-  null  : 14px
+  null  : 20px,
+  $tablet-up  : 30px
 );
 
 $h6-font-sizes: (
-  null  : 10px
+  null  : 28px,
+  $tablet-up  : 34px
 );
 
-// Links
-$link-font-sizes: (
-  null  : 16px,
-  $tablet-up : 17px,
-  $desktop-up: 18px
+// Buttons
+
+$button-font-sizes: (
+  null  : 14px,
+  $tablet-up  : 16px
 );
 
 // Responsive Font-Size Mixing (Function Only)
@@ -90,55 +100,163 @@ $link-font-sizes: (
 
 /* Generate Responsive Sizing */
 
-p {
-  line-height: 24px;
-  @include font-size($p-font-sizes);
-}
-
 h1,
 .h1 {
+  font-family: $spec-font;
   @include font-size($h1-font-sizes);
 }
 
 h2,
 .h2 {
+  font-family: $spec-font;
   @include font-size($h2-font-sizes);
 }
 
 h3,
 .h3 {
+  font-family: $spec-font;
   @include font-size($h3-font-sizes);
 }
 
 h4,
 .h4 {
+  font-family: $cursive-font;
   @include font-size($h4-font-sizes);
 }
 
 h5,
 .h5 {
+  font-family: $spec-font;
   @include font-size($h5-font-sizes);
 }
 
 h6,
 .h6 {
+  font-family: $spec-font;
+  text-transform: uppercase;
   @include font-size($h6-font-sizes);
 }
 
-.mdev-main-nav-links {
-  @include font-size($link-font-sizes);
+.glen-btn {
+  font-weight: $main-bold;
+  font-family: $main-font;
+  color: $color-glen-darkgrey;
+  @include font-size($button-font-sizes);
+}
+
+a,
+p,
+li {
+  color: $color-glen-darkgrey;
+  line-height: 100%;
+  @include font-size($p-font-sizes);
+  margin-bottom: 15px;
+
+  b {
+    font-weight: $main-bold;
+  }
+
+  em {
+    font-style: italic;
+  }
 }
 
 /* Link Reset / Base Inherit */
+
 a {
-  font-family: $main-font;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  cursor: pointer;
   text-decoration: inherit;
 
   &:hover {
     text-decoration: none;
     color: inherit;
+  }
+}
+
+/* List Styles */
+
+ul {
+  list-style-type: disc;
+
+  li {
+    margin-left: 20px;
+    margin-bottom: 13px;
+  }
+}
+
+// Kustom Text
+
+.--body {
+
+  &-sidebar {
+    color: $color-glen-darkgrey;
+    font-size: 16px;
+
+    @media #{$laptop-up} {
+      font-size: 16px;
+    }
+  }
+
+  &-faq {
+    font-weight: $main-bold;
+    color: $color-glen-darkgrey;
+    font-size: 16px;
+
+    @media #{$laptop-up} {
+      font-size: 23px;
+    }
+  }
+}
+
+.--edu {
+
+  &-name {
+    font-family: $spec-font;
+    color: $color-glen-purple;
+    font-size: 30px;
+
+    @media #{$laptop-up} {
+      font-size: 30px;
+    }
+  }
+
+  &-title {
+    font-weight: $main-bold;
+    color: $color-glen-darkgrey;
+    font-size: 20px;
+
+    @media #{$laptop-up} {
+      font-size: 20px;
+    }
+  }
+
+  &-bio {
+    font-weight: $main-bold;
+    color: $color-glen-darkgrey;
+    font-size: 14px;
+
+    @media #{$laptop-up} {
+      font-size: 16px;
+    }
+  }
+
+  &-quote {
+    font-style: italic;
+    color: $color-glen-darkgrey;
+    font-size: 14px;
+
+    @media #{$laptop-up} {
+      font-size: 18px;
+    }
+  }
+}
+
+.--rev-name {
+  font-family: $cursive-font;
+  color: $color-glen-red;
+  font-size: 20px;
+
+  @media #{$laptop-up} {
+    font-size: 30px;
   }
 }
