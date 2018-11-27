@@ -1,76 +1,9 @@
-/* stylelint-disable */
+// GLEN Global Imports
 
-.glen-typography-title {
-  display: block;
-  width: 100%;
-  padding: 5px;
-  background: rgb(86, 201, 86);
-  text-align: center;
-  text-transform: uppercase;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  margin: 25px 0;
-}
 
-.glen-typography-standard {
-  display: flex;
-  flex-direction: column;
+// GLEN Page Imports
 
-  > * {
-    padding: 10px;
-  }
-}
+@import './glen-typo.scss';
 
-// Colors
+// GLEN Module Imports
 
-.glen-typography-colours {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 20%;
-
-  > div {
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
-    margin: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-
-    &.glen-color-orange {
-      background-color: $color-glen-orange;
-    }
-
-    &.glen-color-green {
-      background-color: $color-glen-green;
-    }
-
-    &.glen-color-blue {
-      background-color: $color-glen-blue;
-    }
-
-    &.glen-color-red {
-      background-color: $color-glen-red;
-    }
-
-    &.glen-color-yellow {
-      background-color: $color-glen-yellow;
-    }
-
-    &.glen-color-purple {
-      background-color: $color-glen-purple;
-    }
-
-    &.glen-color-darkgrey {
-      background-color: $color-glen-darkgrey;
-    }
-
-    &.glen-color-grey {
-      background-color: $color-glen-grey;
-    }
-  }
-}
-
-/* stylelint-enable */
