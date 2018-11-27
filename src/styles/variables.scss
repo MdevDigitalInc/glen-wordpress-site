@@ -2,19 +2,26 @@
  * VARIABLES - PROJECT WIDE
 /-------------------------------------*/
 
-// Main colors
-$color-brand-primary: #13b2a9;
-$color-brand-accent: #333;
-$bkg-light-grey: #fafafa;
+// Generic colors
+
 $black: #000;
 $white: #fff;
 
+// Brand Colors
+
+$color-glen-orange: #ff8421;
+$color-glen-green: #3ab54a;
+$color-glen-blue: #3bbcff;
+$color-glen-red: #ff5756;
+$color-glen-yellow: #fff730;
+$color-glen-purple: #b056da;
+$color-glen-darkgrey: #383838;
+$color-glen-grey: #f7f7f7;
+
 
 // Main Font
-$main-font: 'Titillium Web', 'Helvetica', sans-serif;
-$heading-weight: 700;
-$subheading-weight: 500;
-$body-weight: 300;
+
+/* Font variables now live in typography.scss! */
 
 // Sizing Variables
 
@@ -23,4 +30,7 @@ $body-weight: 300;
 // Button Variables
 
 // Radius Variables
+
 $standard-radius: 4px;
+
+//Clipping Paths
