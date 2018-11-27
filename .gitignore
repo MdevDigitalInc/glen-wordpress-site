@@ -78,3 +78,5 @@ typings/
 node_modules/*
 
 /dist
+
+/theme/dist
