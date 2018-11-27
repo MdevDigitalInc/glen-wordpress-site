@@ -706,6 +706,17 @@ a img.aligncenter {
  *  Place all of your imports here, not in global-main.scss
  *  ------------
  */
+.glen-typography-title {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background: #56c956;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 25px 0; }
+
 /*----
   Print
 -----*/
