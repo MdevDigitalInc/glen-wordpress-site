@@ -9,20 +9,24 @@
 
 /* Base Button */
 .glen-btn {
+  position: relative;
   width: auto;
-  padding: 2px 0;
+  padding: 15px 40px;
   display: inline-block;
   text-transform: uppercase;
-  color: black;
+  color: $color-glen-green;
+  border: 3px solid $color-glen-green;
   cursor: pointer;
   transition: all .4s;
-  position: relative;
   vertical-align: middle;
   text-align: left;
   white-space: nowrap;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+  border-radius: 30px;
 
   &:hover {
-    color: $color-glen-blue;
+    background: $color-glen-green;
+    color: $white;
   }
 
   &:before,
@@ -44,6 +48,17 @@
 
   @media #{$phone-only} {
     letter-spacing: 1px;
+  }
+
+  &.--solid {
+    border-color: $color-glen-red;
+    background-color: $color-glen-red;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $color-glen-red;
+    }
   }
 
   i {

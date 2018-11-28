@@ -58,7 +58,9 @@
   <!-- UI Elements -->
   <span class="glen-typography-title">Arbor Glen UI Elements</span>
   <div class="glen-typography-elements">
-    <span>todo</span>
+    <a class="glen-btn --solid" href="/typography">i am a solid button</a>
+    <br>
+    <a class="glen-btn" href="/typography">i am a default button</a>
   </div>
   
   <img src="<?php bloginfo('template_url'); ?>/img/favicon.png" />
