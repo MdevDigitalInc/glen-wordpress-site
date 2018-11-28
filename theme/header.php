@@ -1,3 +1,9 @@
+<?php
+    //header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header("Access-Control-Allow-Origin: *");
+    header('Access-Control-Allow-Credentials: true');    
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -67,6 +73,7 @@
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
       href="<?php bloginfo('template_url'); ?>/dist/icons/apple-touch-startup-image-1536x2008.png">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    
 		<?php wp_head(); ?>
 	</head>
 	<body>
