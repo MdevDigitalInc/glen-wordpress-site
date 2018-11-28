@@ -7,7 +7,7 @@
       <div class="glen-squiggle --yellow"></div>
       <a class= "glen-btn --solid" href="#" title="todo">join our waiting list</a>
       <a class= "glen-btn" href="#" title="todo">call us: 519.439.3701</a>
-      <div class="glen-big-box --green"></div>
+      <div class="glenbox-green"></div>
     </div>
   </div>
 </div>
