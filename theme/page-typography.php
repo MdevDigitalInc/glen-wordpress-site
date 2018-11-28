@@ -19,7 +19,7 @@
     <p class="--edu-bio">Educator bio look like this!</p>
     <p class="--edu-quote">Educator quotes look like this!</p>
     <p class="--rev-name">Review names looks like this!</p>
-    <a class="glen-btn">buttons look like this</a>
+    <a class="glen-btn" href="/typography">buttons look like this</a>
   </div>
 
   <!-- Colours -->
