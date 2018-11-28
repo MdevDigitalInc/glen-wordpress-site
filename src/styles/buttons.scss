@@ -51,6 +51,43 @@
     letter-spacing: 1px;
   }
 
+  // Solid
+
+  &.--solid {
+
+    &-wg {
+      border-color: $white;
+      background-color: $white;
+      color: $color-glen-green;
+        
+      &:hover {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+    // &-?
+  }
+
+
+  // Outlined
+
+  &.--outlined {
+
+    &-wg {
+      border-color: $white;
+      background-color: transparent;
+      color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $color-glen-green;
+      }
+    }
+    // &-?
+  }
+
+  // For typography Sheet
+
   &.--solid {
     border-color: $color-glen-red;
     background-color: $color-glen-red;
@@ -61,6 +98,8 @@
       color: $color-glen-red;
     }
   }
+
+  // Embedded Icon Styles
 
   i {
     margin: 0 0 0 5px;
