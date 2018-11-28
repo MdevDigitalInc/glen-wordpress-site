@@ -17,33 +17,10 @@
 .glen-home-hero-content-box {
   z-index: 3;
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 725px;
-  top: 50%;
-  left: 20%;
+  top: 50vh;
+  left: 15%;
   padding: 62px 78px 22px 69px;
-}
-
-.glen-big-box {
-  width: 100%;
-  height: auto;
-  
-  &:after {
-    display: block;
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 30px;
-    background-color: $color-glen-green;
-    transform: rotate(-1deg);
-
-    &.--red {
-      background-color: $color-glen-red;
-    }
-  }
 }
