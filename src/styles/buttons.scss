@@ -8,26 +8,60 @@
 /-------------------------------------*/
 
 /* Base Button */
-.mdev-base-btn {
+.glen-btn {
+  position: relative;
   width: auto;
-  padding: 20px;
-  transition: all, .3s;
+  padding: 15px 40px;
+  display: inline-block;
   text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
+  color: $color-glen-green;
+  border: 3px solid $color-glen-green;
   cursor: pointer;
-}
-
-/* Button Colors */
-
-.mdev-action-btn {
-  color: $color-brand-accent;
-  background: $color-brand-primary;
-  border: 1px solid rgba(242,170,0,0);
+  transition: all .4s;
+  vertical-align: middle;
+  text-align: left;
+  white-space: nowrap;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+  border-radius: 30px;
 
   &:hover {
-    color: $color-brand-primary;
-    background: $color-brand-accent;
-    border: 1px solid rgba(242,170,0,1);
+    background: $color-glen-green;
+    color: $white;
+  }
+
+  &:before,
+  &:after {
+    @include pseudo();
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+  }
+
+  @media #{$phone-only} {
+    letter-spacing: 1px;
+  }
+
+  &.--solid {
+    border-color: $color-glen-red;
+    background-color: $color-glen-red;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $color-glen-red;
+    }
+  }
+
+  i {
+    margin: 0 0 0 5px;
   }
 }

@@ -76,3 +76,7 @@ typings/
 .data/*
 
 node_modules/*
+
+/dist
+
+/theme/dist
