@@ -51,6 +51,7 @@
     <h2>STILL HAVE QUETIONS? </h2> 
     <p>Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.</p>
     <a>CONTACT US</a>
+    
   </section>
   <section class="glen-faq-featured">
     <h3>Charitable Donations</h3>
