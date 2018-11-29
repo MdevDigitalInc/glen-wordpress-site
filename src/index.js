@@ -5,7 +5,6 @@ import Router from './util/RouteScriptLoader';
 import common from './js/common';
 import home from './js/home';
 
-import 
 // Images
 function requireAll(r) { r.keys().forEach(r); }
 requireAll(require.context('./img/', true, /\.*$/));
