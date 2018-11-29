@@ -117,4 +117,16 @@
   &.--faq {
     background-color: $color-glen-green;
   }
+
+  &.--infants {
+    background-color: $color-glen-purple;
+  }
+
+  &.--toddlers {
+    background-color: $color-glen-darkgrey;
+  }
+
+  &.--preschoolers {
+    background-color: $color-glen-red;
+  }
 }
