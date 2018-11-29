@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 
 <div>
-  <h1>Our Team todo</h1>
-  <img src="<?php bloginfo('template_url'); ?>/img/favicon.png" />
+  <div class="glen-team-hero">hero todo</div>
+  <div class="glen-team-balcony">balcony todo</div>
+  <div class="glen-team-roster --mgmt">mgmt roster todo</div>
+  <div class="glen-team-roster --team">team roster todo</div>
+  <div class="glen-team-prefooter">prefooter todo</div>
 </div>
 
 <?php get_footer(); ?>
