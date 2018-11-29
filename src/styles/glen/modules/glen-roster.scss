@@ -1,0 +1,121 @@
+/*
+
+  GLEN Roster Module
+
+  AW
+
+*/
+
+.glen-roster {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+}
+
+// Roster Head Styles
+
+.glen-roster-head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    padding-top: 25px;
+    width: 90%;
+
+    @media #{$tablet-only} {
+      width: 85%;
+    }
+
+    @media #{$laptop-up} {
+      width: 40%;
+    }
+  }
+}
+
+// Roster Cards Styles (Card Container)
+
+.glen-roster-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 5%;
+
+  @media #{$tablet-only} {
+    justify-content: flex-start;
+    padding: 0 8%;
+  }
+
+  @media #{$laptop-up} {
+    padding: 0;
+  }
+}
+
+// Roster Card Styles
+
+.glen-roster-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  padding: 0 5%;
+
+  @media #{$phone-only} {
+    &:nth-child( n+2 ) {
+      margin-top: 30px;
+    }
+  }
+
+  @media #{$tablet-only} {
+    width: 50%;
+    padding: 0 2%;
+  }
+
+  @media #{$laptop-up} {
+    width: 20%;
+    padding: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  // Card Image
+
+  .glen-roster-card-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 0 25px;
+
+    @media #{$tablet-up} {
+      width: 200px;
+      height: 200px;
+    }
+
+    &.--green {
+      background-color: $color-glen-green;
+    }
+
+    &.--purple {
+      background-color: $color-glen-purple;
+    }
+
+    &.--blue {
+      background-color: $color-glen-blue;
+    }
+  }
+}
