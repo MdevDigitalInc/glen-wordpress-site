@@ -20,6 +20,16 @@
   @media #{$laptop-up} {
     padding: 25px 16%;
   }
+
+  // Pre-footer h3 styles (only adjust positioning)
+
+  h3 {
+    padding-bottom: 20px;
+
+    @media #{$laptop-up} {
+      padding-bottom: 25px;
+    }
+  }
 }
 
 // Prefooter Boxes Styles (Boxes container)
@@ -42,24 +52,55 @@
   align-items: flex-end;
   position: relative;
   width: 100%;
-  height: 160px;
   margin: 0;
+  transition: all .4s;
+  height: 100px;
 
-  &:nth-child( n+2 ) {
-    margin-left: 25px;
+  @media #{$phone-only} {
+    &:nth-child( n+2 ) {
+      margin-top: 15px;
+    }
   }
+
+  @media #{$tablet-only} {
+    &:nth-child( n+2 ) {
+      margin-left: 13px;
+    }
+  }
+
+  @media #{$laptop-up} {
+    height: 160px;
+
+    &:nth-child( n+2 ) {
+      margin-left: 25px;
+    }
+  }
+
+  // Box Hover Styles
+
+  &:hover,
+  &:active,
+  &:focus {
+    transform: scale(1.05);
+  }
+  
 
   // Box Title Styles
 
   .glen-prefooter-box-title {
     display: block;
     font-family: $cursive-font;
-    margin: 0 0 20px 30px;
     color: $white;
-    font-size: 30px;
+    font-size: 38px;
+    margin: 0 0 13px 16px;
+
+    @media #{$tablet-only} {
+      margin: 0 0 13px 18px;
+    }
 
     @media #{$laptop-up} {
       font-size: 60px;
+      margin: 0 0 20px 30px;
     }
   }
 
