@@ -1,0 +1,79 @@
+/*
+
+  GLEN Prefooter Module
+
+  AW
+
+*/
+
+.glen-prefooter {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 5%;
+
+  @media #{$tablet-only} {
+    padding: 25px 8%;
+  }
+
+  @media #{$laptop-up} {
+    padding: 25px 16%;
+  }
+}
+
+// Prefooter Boxes Styles (Boxes container)
+
+.glen-prefooter-boxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media #{$tablet-up} {
+    flex-direction: row;
+  }
+}
+
+// Prefooter Box Styles
+
+.glen-prefooter-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+  height: 160px;
+  margin: 0;
+
+  &:nth-child( n+2 ) {
+    margin-left: 25px;
+  }
+
+  // Box Title Styles
+
+  .glen-prefooter-box-title {
+    display: block;
+    font-family: $cursive-font;
+    margin: 0 0 20px 30px;
+    color: $white;
+    font-size: 30px;
+
+    @media #{$laptop-up} {
+      font-size: 60px;
+    }
+  }
+
+  // Background Styles
+
+  &.--our-team {
+    background-color: $color-glen-orange;
+  }
+
+  &.--our-menus {
+    background-color: $color-glen-blue;
+  }
+
+  &.--faq {
+    background-color: $color-glen-green;
+  }
+}

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div>
+<div class="glen-team-page">
   <div class="glen-team-hero">hero todo</div>
   <div class="glen-team-balcony">balcony todo</div>
   <div class="glen-mgmt-roster">
