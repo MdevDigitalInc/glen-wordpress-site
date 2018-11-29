@@ -1,0 +1,26 @@
+.glen-home-page {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: $black;
+}
+
+.glen-home-hero-image {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-glen-blue;
+}
+
+.glen-home-hero-content-box {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 725px;
+  top: 50vh;
+  left: 15%;
+  padding: 62px 78px 22px 69px;
+}

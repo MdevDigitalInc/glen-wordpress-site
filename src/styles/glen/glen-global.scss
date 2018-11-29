@@ -1,0 +1,65 @@
+/*
+
+  The Mythical GLENBOX
+
+  Add this tag to any block container
+  and watch it blossom into a beautiful
+  rotated colourful block shape.
+
+  Ex.
+
+  <div class="glenbox-green"></div>
+
+*/
+
+.glenbox {
+
+  // GLENBOX GREEN
+
+  &-green {
+    
+    width: 100%;
+    height: auto;
+    
+    &:after {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 30px;
+      background-color: $color-glen-green;
+      transform: rotate(-1deg);
+    }
+  }
+
+  // GLENBOX RED
+
+  &-red {
+      
+    width: 100%;
+    height: auto;
+    
+    &:after {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 30px;
+      background-color: $color-glen-red;
+      transform: rotate(-1deg);
+    }
+  }
+
+  // GLENBOX <YOU!>
+
+}
