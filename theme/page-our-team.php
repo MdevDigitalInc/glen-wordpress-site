@@ -33,9 +33,38 @@
         </div>
       </div>
     </div>
-    <div>roster </div>
   </div>
-  <div class="glen-team-roster">team roster todo</div>
+  <div class="glen-support-roster">
+    <div class="glen-roster">
+      <div class="glen-roster-head">
+        <h2>Our Support Team</h2>
+        <p>It takes a dedicated group of people to make our team a success including our Supply Staff, our ECE Apprentices, our Dietary Planner and our Custodian.</p>
+      </div>
+      <div class="glen-roster-cards">
+        <div class="glen-roster-card">
+          <div class="glen-roster-card-image --green"></div>
+          <span class="--edu-name u-green">Elaine</span>
+          <p class="--edu-title">Dietary Planner</p>
+          <p class="--edu-bio">Elaine has been in professional food services since 1993 and with Arbour Glen since 1997.</p>
+          <p class="--edu-quote">“I love when a child is beaming with pride to share something they accomplished that day or asks me for a hug before they leave for the day. And of course, “I loved your lunch!” is always great to hear."</p>
+        </div>
+        <div class="glen-roster-card">
+          <div class="glen-roster-card-image --blue"></div>
+          <span class="--edu-name u-blue">Esperanza</span>
+          <p class="--edu-title">Custodian</p>
+          <p class="--edu-bio">Esperanza has custodial experienced since 1980’s and with Arbour Glen since 2008.</p>
+          <p class="--edu-quote">"Our family has been involved with Arbour Glen since the 1980's. My mother was the custodian at the centre before I was, and it is a pleasure to continue here after her retirement. We dust and clean to make Arbour Glen sparkle, just as she did back then.”</p>
+        </div>
+        <div class="glen-roster-card">
+          <div class="glen-roster-card-image --red"></div>
+          <span class="--edu-name u-red">Andrea</span>
+          <p class="--edu-title">ECE Apprentice</p>
+          <p class="--edu-bio">Andrea has been an ECE Apprentice with Arbour Glen since 2016.</p>
+          <p class="--edu-quote">“I love watching the children explore and make their own discoveries! It makes my work with them so meaningful.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="glen-team-prefooter">prefooter todo</div>
 </div>
 
