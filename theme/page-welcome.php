@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <div>
-  <h1>Welcome todo</h1>
-  <img src="<?php bloginfo('template_url'); ?>/img/favicon.png" />
+  <div class="glen-welcome-hero"></div>
+  <div class="glen-welcome-sticker"></div>
+  <div class="glen-welcome-balcony"></div>
+  <div class="glen-welcome-prefooter"></div>
 </div>
 
 <?php get_footer(); ?>
