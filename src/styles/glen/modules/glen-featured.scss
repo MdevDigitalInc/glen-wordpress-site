@@ -1,0 +1,75 @@
+/*
+
+  GLEN Featured Module
+
+  AW
+
+*/
+
+.glen-featured {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 5%;
+
+  @media #{$tablet-only} {
+    padding: 50px 8%;
+  }
+
+  @media #{$laptop-up} {
+    padding: 50px 16%;
+  }
+}
+
+// Featured Text Styles
+
+.glen-featured-text {
+  width: 100%;
+  padding-right: 15px;
+
+  @media #{$laptop-up} {
+    width: 50%;
+  }
+}
+
+.glen-featured-text-object {
+
+  a {
+    margin: 25px 0 55px;
+
+    @media #{$tablet-only} {
+      margin: 25px 0 45px;
+    }
+
+    @media #{$laptop-up} {
+      margin: 15px 0 0;
+    }
+  }
+  
+}
+
+// Featured Glenbox Styles
+
+.glen-featured-glenbox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  @media #{$laptop-up} {
+    justify-content: space-around;
+    width: 50%;
+  }
+}
+
+.glen-featured-glenbox-object {
+  position: relative;
+  width: 460px;
+  padding: 45px;
+
+  span,
+  ul,
+  li {
+    color: $white;
+  }
+}
