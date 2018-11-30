@@ -2,7 +2,7 @@
 
 <div class="glen-welcome-page">
   <div class="glen-welcome-hero">
-    <div class="glen-hero-image --cantelope"></div>
+    <div class="glen-hero-image --bubbles"></div>
     <div class="glen-hero-content">
       <div class="glen-hero-basic">
         <h1>Welcome</h1>

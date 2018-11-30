@@ -18,8 +18,16 @@
     height: 775px;
   }
 
+  &.--bubbles {
+    background-color: $color-glen-purple;
+  }
+
   &.--cantelope {
     background-color: $color-glen-blue;
+  }
+
+  &.--team {
+    background-color: $color-glen-green;
   }
 }
 
