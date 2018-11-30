@@ -65,6 +65,28 @@
         color: $white;
       }
     }
+
+    &-wb {
+      border-color: $white;
+      background-color: $white;
+      color: $color-glen-blue;
+        
+      &:hover {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+
+    &-wp {
+      border-color: $color-glen-purple;
+      background-color: $color-glen-purple;
+      color: $white;
+        
+      &:hover {
+        background-color: transparent;
+        color: $color-glen-purple;
+      }
+    }
     // &-?
   }
 
