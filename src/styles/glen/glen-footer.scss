@@ -3,3 +3,46 @@
   position: relative;
   background: $color-glen-darkgrey;
 }
+
+.glen-footer-content {
+  display: flex;
+  justify-content: center;
+  padding: 5px 5%;
+
+  @media #{$tablet-up} {
+    padding: 5px 8%;
+    justify-content: space-between;
+  }
+
+  @media #{$laptop-up} {
+    padding: 5px 16%;
+  }
+
+  span {
+    color: $white;
+    font-size: 12px;
+
+    @media #{$tablet-up} {
+      font-size: 13px;
+    }
+  }
+}
+
+.glen-footer-info {
+
+  .glen-footer-address {
+    text-transform: uppercase;
+  }
+
+  .glen-footer-phone {
+    margin-left: 30px;
+
+    @media #{$laptop-up} {
+      margin-left: 50px;
+    }
+  }
+
+  @media #{$phone-only} {
+    display: none;
+  }
+}
