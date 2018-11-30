@@ -18,20 +18,28 @@
     height: 775px;
   }
 
-  &.--welcome {
-    background-color: $color-glen-purple;
+  &.--infants {
+    background-color: $color-glen-orange;
   }
 
   &.--menus {
-    background-color: $color-glen-blue;
+    background-color: $color-glen-green;
   }
 
   &.--preschoolers {
-    background-color: $color-glen-red;
+    background-color: $color-glen-blue;
   }
 
   &.--team {
-    background-color: $color-glen-green;
+    background-color: $color-glen-red;
+  }
+
+  &.--toddlers {
+    background-color: $color-glen-yellow;
+  }
+
+  &.--welcome {
+    background-color: $color-glen-purple;
   }
 }
 

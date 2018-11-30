@@ -81,6 +81,19 @@
       }
     }
 
+    // Green Button | White Text
+
+    &-rw {
+      border-color: $color-glen-red;
+      background-color: $color-glen-red;
+      color: $white;
+        
+      &:hover {
+        background-color: transparent;
+        color: $color-glen-red;
+      }
+    }
+
     // Purple Button | White Text
 
     &-pw {
