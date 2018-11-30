@@ -1,7 +1,16 @@
 <?php get_header(); ?>
 
 <div class="glen-welcome-page">
-  <div class="glen-welcome-hero">glen-welcome-hero todo</div>
+  <div class="glen-welcome-hero">
+    <div class="glen-hero-image --cantelope"></div>
+    <div class="glen-hero-content">
+      <div class="glen-hero-basic">
+        <h1>Welcome</h1>
+        <p>Arbour Glen Day Nursery is a not-for-profit organization that is operated by an experienced leadership team and overseen by an engaged and passionate Board of Directors. We are a licenced program and inspected annually by the Ministry of Education. We are proud to have been caring for children in our community since 1966.</p>
+        <a class="glen-btn --solid-pw" href="/our-team" title="Meet our team">meet our team</a>
+      </div>
+    </div>
+  </div>
   <div class="glen-welcome-sticker">glen-welcome-sticker todo</div>
   <div class="glen-welcome-balcony">glen-welcome-balcony todo</div>
   <div class="glen-welcome-prefooter">
