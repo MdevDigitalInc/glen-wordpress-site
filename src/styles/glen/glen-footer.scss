@@ -29,6 +29,14 @@
 }
 
 .glen-footer-info {
+  display: flex;
+  align-items: center;
+
+  .glen-footer-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
 
   .glen-footer-address {
     text-transform: uppercase;
@@ -45,4 +53,9 @@
   @media #{$phone-only} {
     display: none;
   }
+}
+
+.glen-footer-copyright {
+  display: flex;
+  align-items: center;
 }
