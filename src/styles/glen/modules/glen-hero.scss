@@ -133,10 +133,10 @@
 
 .glen-hero-split-left {
   width: 100%;
-  padding-right: 85px;
 
   @media #{$laptop-up} {
     width: 50%;
+    padding-right: 85px;
   }
 }
 
@@ -152,13 +152,27 @@
 
 .glen-vision-hero-glenbox {
   position: relative;
-  width: 575px;
-  padding: 65px 45px;
+  width: 100%;
+  margin: 50px 0 0;
+  padding: 33px 22px;
+
+  @media #{$tablet-up} {
+    width: 575px;
+    padding: 65px 45px;
+  }
+
+  @media #{$laptop-up} {
+    margin: 0;
+  }
 
   span {
-    font-size: 50px;
     color: $white;
     font-family: $cursive-font;
-    
+    letter-spacing: $cursive-letter-spacing;
+    font-size: 24.5px;
+
+    @media #{$tablet-up} {
+      font-size: 50px;
+    }
   }
 }
