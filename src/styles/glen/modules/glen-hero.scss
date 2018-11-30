@@ -1,0 +1,53 @@
+/*
+
+  GLEN Hero Module
+
+  AW
+
+*/
+
+.glen-hero-image {
+  width: 100%;
+  height: 275px;
+
+  @media #{$tablet-only} {
+    height: 675px;
+  }
+
+  @media #{$laptop-up} {
+    height: 775px;
+  }
+
+  &.--cantelope {
+    background-color: $color-glen-blue;
+  }
+}
+
+// Post-Hero Image Content Container Styles
+
+.glen-hero-content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Basic Hero Styles
+
+.glen-hero-basic {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 35px 5%;
+
+  @media #{$tablet-only} {
+    padding: 85px 8%;
+  }
+
+  @media #{$laptop-up} {
+    padding: 100px 20%;
+  }
+}
