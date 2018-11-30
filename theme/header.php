@@ -71,8 +71,23 @@
 	</head>
 	<body>
 
-  <nav class="site-nav">
+  <nav class="glen-main-navigation">
+    <div class="glen-rainbow-bar">
+      <div class="glen-rainbow-bar-segment --yellow"></div>
+      <div class="glen-rainbow-bar-segment --green"></div>
+      <div class="glen-rainbow-bar-segment --blue"></div>
+      <div class="glen-rainbow-bar-segment --purple"></div>
+      <div class="glen-rainbow-bar-segment --red"></div>
+      <div class="glen-rainbow-bar-segment --orange"></div>
+      <div class="glen-rainbow-bar-segment --yellow"></div>
+      <div class="glen-rainbow-bar-segment --green"></div>
+      <div class="glen-rainbow-bar-segment --blue"></div>
+      <div class="glen-rainbow-bar-segment --purple"></div>
+      <div class="glen-rainbow-bar-segment --red"></div>
+      <div class="glen-rainbow-bar-segment --orange"></div>
+    </div>
 
     <?php $args = array ( 'theme_location' => 'primary_navigation') ?>
     <?php wp_nav_menu($args); ?>
+    
   </nav>
