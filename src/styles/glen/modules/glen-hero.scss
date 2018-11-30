@@ -38,8 +38,12 @@
     background-color: $color-glen-yellow;
   }
 
-  &.--welcome {
+  &.--vision {
     background-color: $color-glen-purple;
+  }
+
+  &.--welcome {
+    background-color: $color-glen-darkgrey;
   }
 }
 
@@ -62,6 +66,20 @@
 
     @media #{$laptop-up} {
       padding: 100px 20%;
+    }
+  }
+
+  &.--split {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 35px 5%;
+
+    @media #{$tablet-only} {
+      padding: 85px 8%;
+    }
+
+    @media #{$laptop-up} {
+      padding: 100px 16%;
     }
   }
 }
@@ -108,5 +126,39 @@
 
   a {
     margin-top: 30px;
+  }
+}
+
+// Split Hero Styles
+
+.glen-hero-split-left {
+  width: 100%;
+  padding-right: 85px;
+
+  @media #{$laptop-up} {
+    width: 50%;
+  }
+}
+
+.glen-hero-split-right {
+  width: 100%;
+
+  @media #{$laptop-up} {
+    width: 50%;
+  }
+}
+
+// Misc Styles
+
+.glen-vision-hero-glenbox {
+  position: relative;
+  width: 575px;
+  padding: 65px 45px;
+
+  span {
+    font-size: 50px;
+    color: $white;
+    font-family: $cursive-font;
+    
   }
 }
