@@ -2,7 +2,7 @@
 
 <div>
   <div class="glen-faq-hero">
-    <span>hero todo</span>
+    <div class="glen-hero-image --faq"></div>
   </div>
   <div class="glen-faq-dialogue">
     <span>dialogue module todo</span>
