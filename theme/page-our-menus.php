@@ -2,7 +2,7 @@
 
 <div class="glen-menus-page">
   <div class="glen-menus-hero">
-    <div class="glen-hero-image --cantelope"></div>
+    <div class="glen-hero-image --menus"></div>
     <div class="glen-hero-content">
       <div class="glen-hero-basic">
         <h1>Our Menus</h1>

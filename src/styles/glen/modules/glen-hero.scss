@@ -18,12 +18,16 @@
     height: 775px;
   }
 
-  &.--bubbles {
+  &.--welcome {
     background-color: $color-glen-purple;
   }
 
-  &.--cantelope {
+  &.--menus {
     background-color: $color-glen-blue;
+  }
+
+  &.--preschoolers {
+    background-color: $color-glen-red;
   }
 
   &.--team {
@@ -39,6 +43,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &.--sticker {
+    background-color: $color-glen-grey;
+    padding: 35px 5%;
+
+    @media #{$tablet-only} {
+      padding: 85px 8%;
+    }
+
+    @media #{$laptop-up} {
+      padding: 100px 20%;
+    }
+  }
 }
 
 // Basic Hero Styles
@@ -57,5 +74,31 @@
 
   @media #{$laptop-up} {
     padding: 100px 20%;
+  }
+}
+
+// Sticker Hero Styles
+
+.glen-hero-sticker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $white;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+  padding: 30px 25px;
+
+  @media #{$tablet-only} {
+    padding: 40px 45px;
+  }
+
+  @media #{$laptop-up} {
+    padding: 50px 60px;
+  }
+
+  a {
+    margin-top: 30px;
   }
 }
