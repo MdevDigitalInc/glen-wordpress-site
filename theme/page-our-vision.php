@@ -23,7 +23,9 @@
   <!-- Mission Section -->
 
   <section class="glen-vision-mission">
-    glen-vision-mission todo
+    <h2>Mission Statement</h2>
+    <div class="glen-squiggle --yellow"></div>
+    <p>We are a community that respects the diversity of our children and their families. We enrich each child’s development through our long tradition of progressive programming and care.</p>
   </section>
 
   <!-- Balcony Section -->
