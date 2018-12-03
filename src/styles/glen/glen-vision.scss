@@ -34,6 +34,7 @@
   width: 100%;
   background-color: $color-glen-orange;
   background-size: cover;
+  background-attachment: fixed;
   height: 300px;
 
   @media #{$tablet-only} {
