@@ -3,13 +3,14 @@ jQuery( document ).on( 'click', '#btnUpdate', function($) {
 
   var id = document.getElementById("txt_id").value;
   var name = document.getElementById("txt_name").value;
+  var title = document.getElementById("txt_title").value;
   var history = document.getElementById("txt_history").value;
   var quote = document.getElementById("txt_quote").value;
-  var teamId = document.getElementById("txt_tid").value;
-
+  var teamId = document.getElementById("dd_tid").value;
+  var avatar = document.getElementById("txt_avatar").value;
   
 
-  var query = 'UPDATE tblEmployees SET Name = "' + name + '", History = "' + history + '", Quote = "' + quote + '", TeamID = ' + teamId + ' WHERE ID = ' + id + ';'
+  var query = 'UPDATE tblEmployees SET Name = "' + name + '", Title = "' + title + '", History = "' + history + '", Quote = "' + quote + '", TeamID = ' + teamId + ', Avatar = "' + avatar + '" WHERE ID = ' + id + ';'
 
   alert(query);
 
@@ -32,12 +33,14 @@ jQuery( document ).on( 'click', '#btnUpdate', function($) {
 jQuery( document ).on( 'click', '#btnCreate', function($) {
   
   var name = document.getElementById("txt_name").value;
+  var title = document.getElementById("txt_title").value;
   var history = document.getElementById("txt_history").value;
   var quote = document.getElementById("txt_quote").value;
-  var teamId = document.getElementById("txt_tid").value;
+  var teamId = document.getElementById("dd_tid").value;
+  var avatar = document.getElementById("txt_avatar").value;
 
 
-  var query = "INSERT INTO tblEmployees (Name, History, Quote, TeamID) VALUES( '" + name + "','" + history + "','" + quote + "'," + teamId + ");"
+  var query = "INSERT INTO tblEmployees (Name, Title, History, Quote, TeamID, Avatar) VALUES( '" + name + "', '" + title + "', '" + history + "','" + quote + "'," + teamId + ", '"+avatar+"');"
 
   alert(query);
 
@@ -76,7 +79,7 @@ jQuery( document ).on( "change", "#ddEmp", function() {
       document.getElementById("txt_name").value =  response[0].Name;
       document.getElementById("txt_history").value =  response[0].History;
       document.getElementById("txt_quote").value =  response[0].Quote;
-      document.getElementById("txt_tid").value =  response[0].TeamID;
+      document.getElementById("dd_tid").value =  response[0].TeamID;
       document.getElementById("btnUpdate").hidden = false;
       (document.getElementById("btnCreate")).hide();
     }else{
@@ -84,7 +87,7 @@ jQuery( document ).on( "change", "#ddEmp", function() {
       document.getElementById("txt_name").value =  "";
       document.getElementById("txt_history").value =  "";
       document.getElementById("txt_quote").value =  "";
-      document.getElementById("txt_tid").value =  "";
+      document.getElementById("dd_tid").value =  "";
       document.getElementById("btnUpdate").css("visibility", "hidden");
       ("#btnCreate").css("visibility", "visible");
     }

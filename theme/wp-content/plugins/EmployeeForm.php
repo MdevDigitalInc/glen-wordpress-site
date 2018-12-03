@@ -45,6 +45,69 @@ function my_plugin_options() {
 	if ( !current_user_can( 'manage_options' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
   }
+class Emp {
+  public $Avatar;
+  public $Name;
+  public $Title;
+  public $History;
+  public $Quote;
+  public $TeamID;
+
+  function Emp($a,$n,$t,$h,$q,$te)
+  {
+    $this->Avatar = $a;
+    $this->Name = $n;
+    $this->Title = $t;
+    $this->History = $h;
+    $this->Quote = $q;
+    $this->TeamID = $te;
+  }
+
+}
+
+  // $sqls = array (
+
+  //   new Emp(    
+  //     "green",
+  //     "Elaine",
+  //     "Dietary Planner",
+  //     "Elaine has been in professional food services since 1993 and with Arbour Glen since 1997.",
+  //     "I love when a child is beaming with pride to share something they accomplished that day or asks me for a hug before they leave for the day. And of course, “I loved your lunch!” is always great to hear.",
+  //     2
+  //   ),
+
+  //   new Emp(
+  //     "blue",
+  //     "Esperanza",
+  //     "Custodian",
+  //     "Esperanza has custodial experienced since 1980’s and with Arbour Glen since 2008.",
+  //     "Our family has been involved with Arbour Glen since the 1980's. My mother was the custodian at the centre before I was, and it is a pleasure to continue here after her retirement. We dust and clean to make Arbour Glen sparkle, just as she did back then.",
+  //     2
+  //   ),
+  //   new Emp(
+  //     "red",
+  //     "Andrea",
+  //     "ECE Apprentice",
+  //     "Andrea has been an ECE Apprentice with Arbour Glen since 2016.",
+  //     "I love watching the children explore and make their own discoveries! It makes my work with them so meaningful.",
+  //     2
+  //   )
+  // );
+
+  // foreach($sqls as $sql)
+  // {
+  //   echo 'INSERT INTO tblEmployees (Name, Title, History, Quote, TeamID, Avatar) VALUES( "'.$sql->Name.'", "'.$sql->Title.'", "'.$sql->History.'","'.$sql->Quote.'", '.$sql->TeamID.', "'.$sql->Avatar.'");';
+  //   echo "<br/>";
+  //   echo "<br/>";
+  // }
+
+
+
+
+
+
+
+
 	echo '<div class="wrap">';
 	echo '<p>Here is where the form would go if I actually had options.</p>';
   echo '</div>';
@@ -66,9 +129,16 @@ function my_plugin_options() {
 
   echo "<input type='text' id='txt_id' style='visibility: hidden;' /><br/>";
   echo "<input type='text' id='txt_name' /><br/>";
+  echo "<input type='text' id='txt_title' /><br/>";
   echo "<textarea id='txt_history'></textarea><br/>";
   echo "<textarea id='txt_quote' ></textarea><br/>";
-  echo "<input type='text' id='txt_tid' /><br/>";
+  //echo "<input type='text' id='txt_tid' /><br/>";
+  echo "<select id='dd_tid'>";
+  echo "<option value='0'>hello</option>";
+  echo "<option value='1'>team 1</option>";
+  echo "<option value='2'>team 2</option>";
+  echo "</select><br/>";
+  echo "<input type='text' id='txt_avatar' /><br/>";
 
   
   echo "<input type='button' id='btnCreate' value='Create' />";
