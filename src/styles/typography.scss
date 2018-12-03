@@ -9,6 +9,7 @@ $main-weight: 400;
 $main-bold: 700;
 $spec-font: 'Baloo Bhaina', cursive;
 $cursive-font: 'Farsan', cursive;
+$cursive-letter-spacing: .7px;
 
 /* Main */
 body {
@@ -143,7 +144,7 @@ a,
 p,
 li {
   color: $color-glen-darkgrey;
-  line-height: 120%;
+  line-height: 135%;
   @include font-size($p-font-sizes);
   margin-bottom: 15px;
 
