@@ -9,13 +9,22 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: center;
+  width: 100%;
+  margin: 0 5%;
   flex-wrap:  wrap;
+
+  @media #{tablet-only}
+  {
+    margin: 0, 8%
+  }
+
+  @media #{laptop-up}
+  {
+    margin: 0, 16%
+  }
 }
 
-.glen-faq-left { 
+.glen-dialogue-left { 
   display: flex;
   flex-direction: column;
   width: 53%;
@@ -34,7 +43,7 @@
   padding: 10% vw-desktop(70) 5% vw-desktop(50);
 }
 
-.glen-faq-column {
+.glen-dialogue-right {
   margin-left: 5%;
   margin-top: 6%;
   display: flex;
@@ -44,38 +53,30 @@
 }
 
 .glen-faq-btn {
-  margin-top: 5%;
+  margin-top: 15px;
 }
 
 .glen-faq-contact {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 85%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0 5%;
   align-items: center;
+  flex-wrap:  wrap;
+
+  @media #{tablet-only}
+  {
+    margin: 0, 8%
+  }
+
+  @media #{laptop-up}
+  {
+    margin: 0, 16%
+  }
 
   h3 {
     color: $color-glen-purple;
-  }
-}
-
-.temp {
-  width: 100%;
-  height: auto;
-
-  &:after {
-    display: block;
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 30px;
-    background-color: $white;
   }
 }
 
@@ -87,15 +88,4 @@
   margin: 0 auto;
   justify-content: center;
   flex-wrap:  wrap;
-}
-
-.glen-faq-donate {
-  display: flex;
-  flex-direction: column;
-  width: 50%
-}
-
-.glen-faq-points {
-  display: flex;
-  width: 40%
 }
