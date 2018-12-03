@@ -131,3 +131,77 @@
     margin: 20px;
   }
 }
+
+/*
+
+  The Crombulent Rainbowbar
+
+  This bar of rainbowy goodness exists on
+  every page, TWICE. Navigation + Footer!
+
+  Ex.
+
+  <div class="glen-rainbow-bar">
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+    </div>
+
+*/
+
+.glen-rainbow-bar {
+  width: 100%;
+  display: flex;
+}
+
+.glen-rainbow-bar-segment {
+  height: 3px;
+  width: 100%;
+
+  // Color Logic
+
+  &.--yellow {
+    background-color: $color-glen-yellow;
+  }
+
+  &.--green {
+    background-color: $color-glen-green;
+  }
+
+  &.--blue {
+    background-color: $color-glen-blue;
+  }
+
+  &.--purple {
+    background-color: $color-glen-purple;
+  }
+
+  &.--red {
+    background-color: $color-glen-red;
+  }
+
+  &.--orange {
+    background-color: $color-glen-orange;
+  }
+
+  // Hide Logic For Small Screens
+
+  &:nth-child( n+7 ) {
+    display: none;
+  }
+
+  @media #{$laptop-up} {
+    &:nth-child( n+7 ) {
+      display: block;
+    }
+  }
+}

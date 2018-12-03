@@ -1,0 +1,19 @@
+.glen-main-navigation {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+// This is a bad style! It's just for my sanity - AW
+
+.menu-primary-navigation-container {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+  }
+}
+
+// End of bad style
