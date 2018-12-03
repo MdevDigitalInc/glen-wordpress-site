@@ -22,6 +22,14 @@
 
   &.--faq {
     background-color: $color-glen-grey;
+    
+    @media #{$phone-only} {
+      background-position: 100% bottom;
+    }
+
+    @media #{$tablet-only} {
+      background-position: 90% bottom;
+    }
   }
 
   &.--infants {

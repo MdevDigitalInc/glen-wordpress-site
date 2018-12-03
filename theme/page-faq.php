@@ -2,7 +2,7 @@
 
 <div>
   <div class="glen-faq-hero">
-    <div class="glen-hero-image --faq"></div>
+    <div class="glen-hero-image --faq" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girl-on-slide.png);"></div>
   </div>
   <div class="glen-faq-dialogue">
     <span>dialogue module todo</span>
