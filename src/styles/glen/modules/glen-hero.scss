@@ -30,6 +30,14 @@
 
   &.--menus {
     background-color: $color-glen-green;
+
+    @media #{$phone-only} {
+      background-position: bottom;
+    }
+
+    @media #{$tablet-only} {
+      background-position: bottom;
+    }
   }
 
   &.--preschoolers {
@@ -38,8 +46,6 @@
 
   &.--team {
     background-color: $color-glen-red;
-
-    
   }
 
   &.--toddlers {
