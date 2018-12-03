@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="glen-home-page">
-  <div class="glen-home-hero-image">
+  <div class="glen-home-hero-image" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/boy-with-truck.png);">
     <div class="glen-home-hero-content-box">
       <h1 class="u-white">Arbour Glen<br>Day Nursery</h1>
       <div class="glen-squiggle --yellow"></div>
