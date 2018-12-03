@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
 <div class="glen-toddlers-page">
-  <div class="glen-toddlers-hero">
+
+  <!-- Hero Section -->
+
+  <section class="glen-toddlers-hero">
     <div class="glen-hero-image --toddlers"></div>
     <div class="glen-hero-content --sticker">
       <div class="glen-hero-sticker">
@@ -18,9 +21,17 @@
         <a class="glen-btn --solid-pw" href="#" title="todo">join our mailing list</a>
       </div>
     </div>
-  </div>
-  <div class="glen-toddlers-balcony">glen-toddlers-balcony todo</div>
-  <div class="glen-toddlers-sticker">
+  </section>
+
+  <!-- Balcony Section -->
+
+  <section class="glen-toddlers-balcony">
+    glen-toddlers-balcony todo
+  </section>
+
+  <!-- Sticker Section -->
+
+  <section class="glen-toddlers-sticker">
     <div class="glen-sticker --programs">
       <div class="glen-sticker-box">
         <h2>What our families say</h2>
@@ -30,8 +41,11 @@
         <div class="glenbox-white"></div>
       </div>
     </div>
-  </div>
-  <div class="glen-toddlers-prefooter">
+  </section>
+
+  <!-- Pre-footer Section -->
+
+  <section class="glen-toddlers-prefooter">
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
@@ -47,7 +61,8 @@
         </a>
       </div>
     </div>
-  </div>
+  </section>
+
 </div>
 
 <?php get_footer(); ?>

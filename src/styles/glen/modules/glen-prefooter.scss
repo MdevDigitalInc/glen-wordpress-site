@@ -11,24 +11,20 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 25px 5%;
+  padding: 50px 5% 25px;
 
   @media #{$tablet-only} {
-    padding: 25px 8%;
+    padding: 60px 8% 40px;
   }
 
   @media #{$laptop-up} {
-    padding: 25px 16%;
+    padding: 100px 16%;
   }
 
   // Pre-footer h3 styles (only adjust positioning)
 
   h3 {
-    padding-bottom: 20px;
-
-    @media #{$laptop-up} {
-      padding-bottom: 25px;
-    }
+    margin-bottom: 5px;
   }
 }
 

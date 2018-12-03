@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
 <div class="glen-welcome-page">
-  <div class="glen-welcome-hero">
+
+  <!-- Hero Section -->
+
+  <section class="glen-welcome-hero">
     <div class="glen-hero-image --welcome"></div>
     <div class="glen-hero-content">
       <div class="glen-hero-basic">
@@ -10,8 +13,11 @@
         <a class="glen-btn --solid-pw" href="/our-team" title="Meet our team">meet our team</a>
       </div>
     </div>
-  </div>
-  <div class="glen-welcome-sticker">
+  </section>
+
+  <!-- Sticker Section -->
+
+  <section class="glen-welcome-sticker">
     <div class="glen-sticker --welcome">
       <div class="glen-sticker-box">
         <h2>The Arbour Glen Difference</h2>
@@ -24,9 +30,17 @@
         <p>Outside you will find children enjoying activities in our playground that is second to none! The canopy of large sugar maples offers summer shade and leafy fall fun. A busy bike path surrounds a unique climber, and there are two large sand areas where children love to dig, shovel and play in. We can’t wait for you to experience ‘The Arbour Glen difference’ for yourself!</p>
       </div>
     </div>
-  </div>
-  <div class="glen-welcome-balcony">glen-welcome-balcony todo</div>
-  <div class="glen-welcome-prefooter">
+  </section>
+
+  <!-- Balcony Section -->
+
+  <section class="glen-welcome-balcony">
+    glen-welcome-balcony todo
+  </section>
+
+  <!-- Pre-footer Section -->
+
+  <section class="glen-welcome-prefooter">
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
@@ -41,7 +55,8 @@
         </a>
       </div>
     </div>
-  </div>
+  </section>
+  
 </div>
 
 <?php get_footer(); ?>
