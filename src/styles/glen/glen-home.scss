@@ -12,6 +12,17 @@
   width: 100%;
   height: 100vh;
   background-color: $color-glen-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @media #{$phone-only} {
+    background-position: 67% bottom;
+  }
+
+  @media #{$tablet-only} {
+    background-position: 65% bottom;
+  }
 }
 
 .glen-home-hero-content-box {

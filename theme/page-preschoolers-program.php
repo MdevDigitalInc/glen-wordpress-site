@@ -5,7 +5,7 @@
   <!-- Hero Section -->
 
   <section class="glen-preschoolers-hero">
-    <div class="glen-hero-image --preschoolers"></div>
+    <div class="glen-hero-image --preschoolers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/boy-slide.png);"></div>
     <div class="glen-hero-content --sticker">
       <div class="glen-hero-sticker">
         <h1>Preschoolers</h1>
@@ -53,13 +53,13 @@
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
-        <a class="glen-prefooter-box --infants" href="/infants-program" title="Our Infants Program">
+        <a class="glen-prefooter-box --infants" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-infants.png);" href="/infants-program" title="Our Infants Program">
           <span class="glen-prefooter-box-title">Infants</span>
         </a>
-        <a class="glen-prefooter-box --toddlers" href="/toddlers-program" title="Our Toddlers Program">
+        <a class="glen-prefooter-box --toddlers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-toddlers.png);" href="/toddlers-program" title="Our Toddlers Program">
           <span class="glen-prefooter-box-title">Toddlers</span>
         </a>
-        <a class="glen-prefooter-box --faq" href="/faq" title="Read our FAQs">
+        <a class="glen-prefooter-box --faq" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-faq.png);" href="/faq" title="Read our FAQs">
           <span class="glen-prefooter-box-title">FAQ</span>
         </a>
         </a>
