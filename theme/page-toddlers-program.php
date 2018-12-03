@@ -20,7 +20,17 @@
     </div>
   </div>
   <div class="glen-toddlers-balcony">glen-toddlers-balcony todo</div>
-  <div class="glen-toddlers-sticker">glen-toddlers-sticker todo</div>
+  <div class="glen-toddlers-sticker">
+    <div class="glen-sticker --programs">
+      <div class="glen-sticker-box">
+        <h2>What our families say</h2>
+        <div class="glen-squiggle --blue"></div>
+        <p>“Arbour Glen is a parent’s dream. When we were able to get a spot, we were overjoyed. A clean and positive environment staffed with the most caring professionals I have ever met and managed by impeccably wonderful people. Our daughter is in one of the toddler rooms, yet every single person in the centre knows her name, and I know in my heart that everyone one who works at Arbour Glen truly cares about every infant, toddler and pre-schooler. All parents should feel reassured and worry-free as we do.”</p>
+        <span class="glen-review-author">- John Siambanopoulos</span>
+        <div class="glenbox-white"></div>
+      </div>
+    </div>
+  </div>
   <div class="glen-toddlers-prefooter">
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
