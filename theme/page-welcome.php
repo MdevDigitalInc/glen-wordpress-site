@@ -5,7 +5,7 @@
   <!-- Hero Section -->
 
   <section class="glen-welcome-hero">
-    <div class="glen-hero-image --welcome" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girl-bubbles.png);" ></div>
+    <div class="glen-hero-image --welcome" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girl-bubbles.png);"></div>
     <div class="glen-hero-content">
       <div class="glen-hero-basic">
         <h1>Welcome</h1>

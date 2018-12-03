@@ -5,7 +5,7 @@
   <!-- Hero Section -->
 
   <section class="glen-vision-hero">
-    <div class="glen-hero-image --vision"></div>
+    <div class="glen-hero-image --vision" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girl-tree.png);"></div>
     <div class="glen-hero-content --split">
       <div class="glen-hero-split-left">
         <h1>Our Vision</h1>

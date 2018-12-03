@@ -46,6 +46,16 @@
 
   &.--vision {
     background-color: $color-glen-purple;
+
+    @media #{$phone-only} {
+      background-size: 200%;
+      background-position: 70% 40%;
+    }
+
+    @media #{$tablet-only} {
+      background-size: 225%;
+      background-position: 50% 40%;
+    }
   }
 
   &.--welcome {
