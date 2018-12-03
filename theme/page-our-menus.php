@@ -5,7 +5,7 @@
   <!-- Hero Section -->
 
   <section class="glen-menus-hero">
-    <div class="glen-hero-image --menus"></div>
+    <div class="glen-hero-image --menus" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/boy-with-fruit.png);"></div>
     <div class="glen-hero-content">
       <div class="glen-hero-basic">
         <h1>Our Menus</h1>

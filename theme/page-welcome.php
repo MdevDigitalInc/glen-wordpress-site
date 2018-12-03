@@ -5,7 +5,7 @@
   <!-- Hero Section -->
 
   <section class="glen-welcome-hero">
-    <div class="glen-hero-image --welcome"></div>
+    <div class="glen-hero-image --welcome" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girl-bubbles.png);"></div>
     <div class="glen-hero-content">
       <div class="glen-hero-basic">
         <h1>Welcome</h1>
@@ -44,13 +44,13 @@
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
-        <a class="glen-prefooter-box --our-team" href="/our-team" title="Meet our team">
+        <a class="glen-prefooter-box --our-team" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-our-team.png);" href="/our-team" title="Meet our team">
           <span class="glen-prefooter-box-title">Our Team</span>
         </a>
-        <a class="glen-prefooter-box --our-menus" href="/our-menu" title="View our menu">
+        <a class="glen-prefooter-box --our-menus" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-our-menus.png);" href="/our-menu" title="View our menu">
           <span class="glen-prefooter-box-title">Our Menus</span>
         </a>
-        <a class="glen-prefooter-box --faq" href="/faq" title="Read our FAQs">
+        <a class="glen-prefooter-box --faq" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-faq.png);" href="/faq" title="Read our FAQs">
           <span class="glen-prefooter-box-title">FAQ</span>
         </a>
       </div>

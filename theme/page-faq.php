@@ -1,11 +1,16 @@
 <?php get_header(); ?>
 
 <div class="glen-faq-page">
+
+  <!-- Hero Section -->
+
   <section class="glen-faq-hero ">
-    <div class="glen-hero-image --faq"></div>
+    <div class="glen-hero-image --faq" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girl-on-slide.png);"></div>
   </section>
+
+  <!-- Dialogue Section -->
+
   <section class="glen-faq-dialogue">
-  
     <div class="glen-dialogue-left"><!-- questions -->
       <div class="glen-faq-desc"><!-- description -->
         <h1>FAQ</h1>
@@ -28,7 +33,6 @@
         }
         ?>
     </div><!-- /questions -->
-    
     <div class="glen-dialogue-right">
       <div class="glen-faq-box"> <!-- box -->
         <h4>
@@ -46,8 +50,10 @@
         <div class="glenbox-blue"></div>
       </div>
     </div><!-- /box -->
-
   </section>
+
+  <!-- Balcony Section -->
+
   <section class="glen-faq-contact">
     <h3>STILL HAVE QUETIONS?</h3> 
     <p>
@@ -57,6 +63,9 @@
       <a class="glen-btn --solid-pw" >CONTACT US</a>
     </div>
   </section>
+
+  <!-- Featured Section -->
+
   <section class="glen-faq-featured">
     <div class="glen-featured">
       <div class="glen-featured-text">
@@ -91,6 +100,9 @@
       </div>
     </div>
   </section>
+
+  <!-- Bumper Section -->
+  
   <section class="glen-faq-bumper">
     <hr/>
     <p>1017 Adelaide Street North, London, ON</p>
