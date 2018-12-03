@@ -75,13 +75,13 @@
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
-        <a class="glen-prefooter-box --infants" href="/infants-program" title="Our Infants Program">
+        <a class="glen-prefooter-box --infants" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-infants.png);" href="/infants-program" title="Our Infants Program">
           <span class="glen-prefooter-box-title">Infants</span>
         </a>
-        <a class="glen-prefooter-box --toddlers" href="/toddlers-program" title="Our Toddlers Program">
+        <a class="glen-prefooter-box --toddlers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-toddlers.png);" href="/toddlers-program" title="Our Toddlers Program">
           <span class="glen-prefooter-box-title">Toddlers</span>
         </a>
-        <a class="glen-prefooter-box --preschoolers" href="/preschoolers-program" title="Our Preschoolers Program">
+        <a class="glen-prefooter-box --preschoolers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-preschoolers.png);" href="/preschoolers-program" title="Our Preschoolers Program">
           <span class="glen-prefooter-box-title">Preschoolers</span>
         </a>
       </div>

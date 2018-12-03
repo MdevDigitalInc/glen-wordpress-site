@@ -48,13 +48,13 @@
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
-        <a class="glen-prefooter-box --toddlers" href="/toddlers-program" title="Our Toddlers Program">
+        <a class="glen-prefooter-box --toddlers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-toddlers.png);" href="/toddlers-program" title="Our Toddlers Program">
           <span class="glen-prefooter-box-title">Toddlers</span>
         </a>
-        <a class="glen-prefooter-box --preschoolers" href="/preschoolers-program" title="Our Preschoolers Program">
+        <a class="glen-prefooter-box --preschoolers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-preschoolers.png);" href="/preschoolers-program" title="Our Preschoolers Program">
           <span class="glen-prefooter-box-title">Preschoolers</span>
         </a>
-        <a class="glen-prefooter-box --faq" href="/faq" title="Read our FAQs">
+        <a class="glen-prefooter-box --faq" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-faq.png);" href="/faq" title="Read our FAQs">
           <span class="glen-prefooter-box-title">FAQ</span>
         </a>
         </a>

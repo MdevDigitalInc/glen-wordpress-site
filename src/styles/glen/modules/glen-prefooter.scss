@@ -51,6 +51,7 @@
   margin: 0;
   transition: all .4s;
   height: 100px;
+  background-size: cover;
 
   @media #{$phone-only} {
     &:nth-child( n+2 ) {
@@ -102,15 +103,15 @@
   // Background Styles
 
   &.--our-team {
-    background-color: $color-glen-orange;
-  }
-
-  &.--our-menus {
     background-color: $color-glen-blue;
   }
 
-  &.--faq {
+  &.--our-menus {
     background-color: $color-glen-green;
+  }
+
+  &.--faq {
+    background-color: $color-glen-orange;
   }
 
   &.--infants {
@@ -118,7 +119,7 @@
   }
 
   &.--toddlers {
-    background-color: $color-glen-darkgrey;
+    background-color: $color-glen-yellow;
   }
 
   &.--preschoolers {
