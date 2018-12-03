@@ -16,19 +16,14 @@ jQuery( document ).on( 'click', '#btnUpdate', function($) {
 
   var data = {
     'action': 'my_action',
-    'query': query//"UPDATE tblEmployees SET Name = '" + name + "', History = '" + history + "', Quote='" + quote + "', TeamID = " + teamId + " WHERE ID = " + id + ";"
+    'query': query
   };
-
-    //data.query = 'UPDATE tblEmployees SET TeamID = 3 WHERE ID = 1';
 
   // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
   jQuery.post(ajaxurl, data, function(response) {
     alert('Got this from the server: ' + response);
   });
-
 })
-
-
 
 jQuery( document ).on( 'click', '#btnCreate', function($) {
   
@@ -49,12 +44,10 @@ jQuery( document ).on( 'click', '#btnCreate', function($) {
     'query': query
   };
 
-
   // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
   jQuery.post(ajaxurl, data, function(response) {
     alert('Got this from the server: ' + response);
   });
-
 })
 
 

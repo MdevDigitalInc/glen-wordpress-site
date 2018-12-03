@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 
 <div class="glen-faq-page">
-  <section class="glen-faq-hero --faq">
-    <span>hero todo</span>
+  <section class="glen-faq-hero ">
+    <div class="glen-hero-image --faq"></div>
+    <div class="glen-hero-content --split">
   </section>
   <section class="glen-faq-dialogue">
   
@@ -11,7 +12,8 @@
         <h1>FAQ</h1>
         <p>
         We're so thrilled that you are considering Arbour Glen! Whether you've just found out you are expecting (congratulations!) or are looking for care for your 4-year old, we are here to help make your experience as effortless as possible you.
-<br/><br/>
+        </p>
+        <p>
         We like to have a personal connection with our prospective families, so please give us a call next at 519-439-3701 to confirm your request was received, and to answer any questions you may have about our centre. Speaking of questions, let's see if we can answer some for you now!
         </p>
         <div class="glen-faq-btn">
