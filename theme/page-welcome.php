@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="glen-welcome-sticker">
-    <div class="glen-sticker --basic">
+    <div class="glen-sticker --welcome">
       <div class="glen-sticker-box">
         <h2>The Arbour Glen Difference</h2>
         <p>Arbour Glen is a unique place where it only takes moments to sense that there is something wonderful and special here. Laughter can be heard from all the rooms and you will see happily engaged children learning through play. It is evident that our Educators are not just exceptional Registered ECEs, but also caring people who love working with children. You will also notice the aroma of delicious, nutritious hot lunches and yummy snacks that have been prepared by our Dietary Planner.</p>
