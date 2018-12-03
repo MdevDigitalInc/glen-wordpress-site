@@ -11,7 +11,20 @@
       </div>
     </div>
   </div>
-  <div class="glen-welcome-sticker">glen-welcome-sticker todo</div>
+  <div class="glen-welcome-sticker">
+    <div class="glen-sticker --basic">
+      <div class="glen-sticker-box">
+        <h2>The Arbour Glen Difference</h2>
+        <p>Arbour Glen is a unique place where it only takes moments to sense that there is something wonderful and special here. Laughter can be heard from all the rooms and you will see happily engaged children learning through play. It is evident that our Educators are not just exceptional Registered ECEs, but also caring people who love working with children. You will also notice the aroma of delicious, nutritious hot lunches and yummy snacks that have been prepared by our Dietary Planner.</p>
+        <div class="glen-iconstrip">
+          <div class="glen-iconstrip-bar"></div>
+          <img class="glen-iconstrip-image" src="<?php bloginfo('template_url'); ?>/img/icons/icon-school.svg" alt="Image of a school" />
+          <div class="glen-iconstrip-bar"></div>
+        </div>
+        <p>Outside you will find children enjoying activities in our playground that is second to none! The canopy of large sugar maples offers summer shade and leafy fall fun. A busy bike path surrounds a unique climber, and there are two large sand areas where children love to dig, shovel and play in. We can’t wait for you to experience ‘The Arbour Glen difference’ for yourself!</p>
+      </div>
+    </div>
+  </div>
   <div class="glen-welcome-balcony">glen-welcome-balcony todo</div>
   <div class="glen-welcome-prefooter">
     <div class="glen-prefooter">
