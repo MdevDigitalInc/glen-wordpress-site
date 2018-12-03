@@ -9,6 +9,8 @@
 .glen-hero-image {
   width: 100%;
   height: 275px;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media #{$tablet-only} {
     height: 675px;
@@ -48,6 +50,18 @@
 
   &.--welcome {
     background-color: $color-glen-darkgrey;
+    background-size: 100%;
+    background-position: 0% 60%;
+
+    @media #{$phone-only} {
+      background-size: 180%;
+      background-position: 65% 40%;
+    }
+
+    @media #{$tablet-only} {
+      background-size: 200%;
+      background-position: 65% 80%;
+    }
   }
 }
 
