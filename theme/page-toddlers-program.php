@@ -5,7 +5,7 @@
   <!-- Hero Section -->
 
   <section class="glen-toddlers-hero">
-    <div class="glen-hero-image --toddlers"></div>
+    <div class="glen-hero-image --toddlers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/asian-boy-playground.png);"></div>
     <div class="glen-hero-content --sticker">
       <div class="glen-hero-sticker">
         <h1>Toddlers</h1>
