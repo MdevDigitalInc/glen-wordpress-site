@@ -50,6 +50,14 @@
 
   &.--preschoolers {
     background-color: $color-glen-blue;
+
+    @media #{$phone-only} {
+      background-position: 100% bottom;
+    }
+
+    @media #{$tablet-only} {
+      background-position: 50% bottom;
+    }
   }
 
   &.--team {

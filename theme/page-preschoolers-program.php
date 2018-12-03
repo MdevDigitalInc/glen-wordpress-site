@@ -5,7 +5,7 @@
   <!-- Hero Section -->
 
   <section class="glen-preschoolers-hero">
-    <div class="glen-hero-image --preschoolers"></div>
+    <div class="glen-hero-image --preschoolers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/boy-slide.png);"></div>
     <div class="glen-hero-content --sticker">
       <div class="glen-hero-sticker">
         <h1>Preschoolers</h1>
