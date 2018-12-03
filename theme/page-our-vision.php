@@ -1,11 +1,46 @@
 <?php get_header(); ?>
 
 <div class="glen-vision-page">
-  <div class="glen-vision-hero">glen-vision-hero todo</div>
-  <div class="glen-vision-mission">glen-vision-mission todo</div>
-  <div class="glen-vision-balcony">glen-vision-balcony todo</div>
-  <div class="glen-vision-bigimage">glen-vision-bigimage todo</div>
-  <div class="glen-vision-featured">
+
+  <!-- Hero Section -->
+
+  <section class="glen-vision-hero">
+    <div class="glen-hero-image --vision"></div>
+    <div class="glen-hero-content --split">
+      <div class="glen-hero-split-left">
+        <h1>Our Vision</h1>
+        <p>The heart of Arbour Glen is our exceptional team of Educators and Support Staff. Our Registered Early Childhood Educators (RECEs) make Arbour Glen the special place it is. We call it ‘The Arbour Glen difference’ and we look forward to you experiencing this when you visit.</p>
+      </div>
+      <div class="glen-hero-split-right">
+        <div class="glen-vision-hero-glenbox">
+          <span>To nurture a community<br>through innovative childcare.</span>
+          <div class="glenbox-green"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+
+  <section class="glen-vision-mission">
+    glen-vision-mission todo
+  </section>
+
+  <!-- Balcony Section -->
+
+  <section class="glen-vision-balcony">
+    glen-vision-balcony todo
+  </section>
+
+  <!-- Bigimage Section -->
+
+  <section class="glen-vision-bigimage">
+    glen-vision-bigimage todo
+  </section>
+
+  <!-- Featured Section -->
+
+  <section class="glen-vision-featured">
     <div class="glen-featured">
       <div class="glen-featured-text">
         <div class="glen-featured-text-object">
@@ -32,8 +67,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="glen-vision-prefooter">
+  </section>
+
+  <!-- Pre-footer Section -->
+
+  <section class="glen-vision-prefooter">
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
@@ -48,7 +86,8 @@
         </a>
       </div>
     </div>
-  </div>
+  </section>
+
 </div>
 
 <?php get_footer(); ?>

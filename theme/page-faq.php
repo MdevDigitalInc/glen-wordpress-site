@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="glen-faq-page">
-  <section class="glen-faq-hero">
+  <section class="glen-faq-hero --faq">
     <span>hero todo</span>
   </section>
   <section class="glen-faq-dialogue">

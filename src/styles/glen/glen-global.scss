@@ -101,5 +101,149 @@
       transform: rotate(-1deg);
     }
   }
-  // GLENBOX <YOU!>
+
+  &-white {
+    width: 100%;
+    height: auto;
+    
+    &:after {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 30px;
+      background-color: $white;
+      transform: rotate(-1deg);
+    }
+  }
+
+}
+
+/*
+
+  The Stupendous Iconstrip
+
+  This is used all over GLEN and looks like
+  two bars with an icon in the middle.
+
+  Ex.
+
+  <div class="glen-iconstrip">
+    <div class="glen-iconstrip-bar"></div>
+    <img class="glen-iconstrip-image" src="<?php bloginfo('template_url'); ?>/img/icons/icon-rocket.svg" alt="Image of a purple rocket" />
+    <div class="glen-iconstrip-bar"></div>
+  </div>
+
+*/
+
+.glen-iconstrip {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Iconstrip Bar Styles
+
+.glen-iconstrip-bar {
+  width: 100%;
+  border-bottom: 3px solid $color-glen-darkgrey;
+
+  @media #{$laptop-up} {
+    width: 35%;
+  }
+}
+
+// Iconstrip Bar Icon Styles
+
+.glen-iconstrip-image {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+
+  @media #{$tablet-up} {
+    width: 75px;
+    height: 75px;
+    margin: 20px;
+  }
+}
+
+/*
+
+  The Crombulent Rainbowbar
+
+  This bar of rainbowy goodness exists on
+  every page, TWICE. Navigation + Footer!
+
+  Ex.
+
+  <div class="glen-rainbow-bar">
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+      <div class="glen-rainbow-bar-segment"></div>
+    </div>
+
+*/
+
+.glen-rainbow-bar {
+  width: 100%;
+  display: flex;
+}
+
+.glen-rainbow-bar-segment {
+  height: 3px;
+  width: 100%;
+
+  // Color Logic
+
+  &.--yellow {
+    background-color: $color-glen-yellow;
+  }
+
+  &.--green {
+    background-color: $color-glen-green;
+  }
+
+  &.--blue {
+    background-color: $color-glen-blue;
+  }
+
+  &.--purple {
+    background-color: $color-glen-purple;
+  }
+
+  &.--red {
+    background-color: $color-glen-red;
+  }
+
+  &.--orange {
+    background-color: $color-glen-orange;
+  }
+
+  // Hide Logic For Small Screens
+
+  &:nth-child( n+7 ) {
+    display: none;
+  }
+
+  @media #{$laptop-up} {
+    &:nth-child( n+7 ) {
+      display: block;
+    }
+  }
 }

@@ -55,6 +55,8 @@
   
   &.--solid {
 
+    // White Button | Green Text
+
     &-wg {
       border-color: $white;
       background-color: $white;
@@ -76,6 +78,34 @@
         color: $white;
       }
     }
+
+    // Green Button | White Text
+
+    &-gw {
+      border-color: $color-glen-green;
+      background-color: $color-glen-green;
+      color: $white;
+        
+      &:hover {
+        background-color: transparent;
+        color: $color-glen-green;
+      }
+    }
+
+    // Green Button | White Text
+
+    &-rw {
+      border-color: $color-glen-red;
+      background-color: $color-glen-red;
+      color: $white;
+        
+      &:hover {
+        background-color: transparent;
+        color: $color-glen-red;
+      }
+    }
+
+    // Purple Button | White Text
 
     &-pw {
       border-color: $color-glen-purple;
