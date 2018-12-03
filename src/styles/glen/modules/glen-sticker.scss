@@ -1,0 +1,102 @@
+/*
+
+  GLEN Sticker Module
+
+  AW
+
+*/
+
+// Sticker Section Styles
+
+.glen-sticker {
+  width: 100%;
+  position: relative;
+  background-color: $color-glen-grey;
+
+  // Welcome Page Sticker Styles
+
+  &.--welcome {
+    background-color: $color-glen-blue;
+    padding: 35px 5%;
+
+    @media #{$tablet-only} {
+      padding: 85px 8%;
+    }
+
+    @media #{$laptop-up} {
+      padding: 100px 20%;
+    }
+
+    .glen-sticker-box {
+      background-color: $white;
+      border-radius: 30px;
+      box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+    }
+  }
+
+  // Program Page Sticker Styles
+
+  &.--programs {
+    background-color: $color-glen-red;
+    padding: 60px 5%;
+
+    @media #{$tablet-only} {
+      padding: 75px 8%;
+    }
+
+    @media #{$laptop-up} {
+      padding: 35px 20%;
+    }
+
+    .glen-sticker-box {
+      position: relative;
+      z-index: 5;
+      padding: 40px 45px 20px;
+
+      @media #{$tablet-only} {
+        padding: 120px 75px 30px;
+      }
+
+      @media #{$laptop-up} {
+        padding: 75px 100px 35px;
+      }
+
+      h2 {
+        color: $color-glen-red;
+      }
+    }
+  }
+}
+
+// General Sticker Box Styles
+
+.glen-sticker-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 25px;
+
+  @media #{$tablet-only} {
+    padding: 40px 45px;
+  }
+
+  @media #{$laptop-up} {
+    padding: 50px 60px;
+  }
+}
+
+// Sticker Author Styles
+
+.glen-review-author {
+  color: $color-glen-red;
+  font-family: $cursive-font;
+  padding: 0 0 10px;
+  font-size: 20px;
+
+  @media #{$tablet-up} {
+    padding: 15px 0 10px;
+    font-size: 30px;
+  }
+}

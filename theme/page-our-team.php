@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
 <div class="glen-team-page">
-  <div class="glen-team-hero">
+
+  <!-- Hero Section -->
+
+  <section class="glen-team-hero">
     <div class="glen-hero-image --team"></div>
     <div class="glen-hero-content">
       <div class="glen-hero-basic">
@@ -15,9 +18,17 @@
         <p>Your child’s caregivers are knowledgeable, caring, and reflective Educators who provide rich experiences and exciting environments to foster learning and development. Hugs are always plentiful, and your child will feel secure knowing that their caregivers are there to celebrate their accomplishments, help them through challenges and comfort them when needed.</p>
       </div>
     </div>
-  </div>
-  <div class="glen-team-balcony">balcony todo</div>
-  <div class="glen-mgmt-roster">
+  </section>
+
+  <!-- Balcony Section -->
+
+  <section class="glen-team-balcony">
+    balcony todo
+  </section>
+
+  <!-- MGMT Roster Section -->
+
+  <section class="glen-mgmt-roster">
     <div class="glen-roster">
       <div class="glen-roster-head">
         <h2>Our Management Team</h2>
@@ -47,8 +58,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="glen-support-roster">
+  </section>
+
+  <!-- Support Roster Section -->
+
+  <section class="glen-support-roster">
     <div class="glen-roster">
       <div class="glen-roster-head">
         <h2>Our Support Team</h2>
@@ -78,8 +92,14 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="glen-team-prefooter">prefooter todo</div>
+  </section>
+
+  <!-- Pre-footer Section -->
+
+  <section class="glen-team-prefooter">
+    prefooter todo
+  </section>
+
 </div>
 
 <?php get_footer(); ?>

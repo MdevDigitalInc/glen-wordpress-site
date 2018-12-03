@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
 <div class="glen-preschoolers-page">
-  <div class="glen-preschoolers-hero">
+
+  <!-- Hero Section -->
+
+  <section class="glen-preschoolers-hero">
     <div class="glen-hero-image --preschoolers"></div>
     <div class="glen-hero-content --sticker">
       <div class="glen-hero-sticker">
@@ -20,10 +23,33 @@
         <a class="glen-btn --solid-gw" href="#" title="todo">join our mailing list</a>
       </div>
     </div>
-  </div>
-  <div class="glen-preschoolers-balcony">glen-preschoolers-balcony todo</div>
-  <div class="glen-preschoolers-sticker">glen-preschoolers-sticker todo</div>
-  <div class="glen-preschoolers-prefooter">
+  </section>
+
+  <!-- Balcony Section -->
+
+  <section class="glen-preschoolers-balcony">
+    glen-preschoolers-balcony todo
+  </section>
+
+  <!-- Sticker Section -->
+
+  <section class="glen-preschoolers-sticker">
+    <div class="glen-sticker --programs">
+      <div class="glen-sticker-box">
+        <h2>What our families say</h2>
+        <div class="glen-squiggle --blue"></div>
+        <p>“Love this place, all the ECEs have a real passion and dedication that doesn't stop. Currently we have a preschooler and an infant enrolled”</p>
+        <span class="glen-review-author">- Vince V.</span>
+        <p>“Our preschooler has been at Arbour Glen since she was an infant and she has thrived here. The staff are compassionate, empathetic and extremely knowledgeable.  The Preschool room has been especially amazing to further expand her skills. She’s become so confident and independent. They get to know each individual child as their own little person. I can’t recommend them enough.”</p>
+        <span class="glen-review-author">- Sarah M.</span>
+        <div class="glenbox-white"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-footer Section -->
+
+  <section class="glen-preschoolers-prefooter">
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
@@ -39,7 +65,8 @@
         </a>
       </div>
     </div>
-  </div>
+  </section>
+
 </div>
 
 <?php get_footer(); ?>

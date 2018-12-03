@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
 <div class="glen-infants-page">
-  <div class="glen-infants-hero">
+
+  <!-- Hero Section -->
+
+  <section class="glen-infants-hero">
     <div class="glen-hero-image --infants"></div>
     <div class="glen-hero-content --sticker">
       <div class="glen-hero-sticker">
@@ -17,10 +20,31 @@
         <a class="glen-btn --solid-rw" href="#" title="todo">join our mailing list</a>
       </div>
     </div>
-  </div>
-  <div class="glen-infants-balcony">glen-infants-balcony todo</div>
-  <div class="glen-infants-sticker">glen-infants-sticker todo</div>
-  <div class="glen-infants-prefooter">
+  </section>
+
+  <!-- Balcony Section -->
+
+  <section class="glen-infants-balcony">
+    glen-infants-balcony todo
+  </section>
+
+  <!-- Sticker Section -->
+
+  <section class="glen-infants-sticker">
+    <div class="glen-sticker --programs">
+      <div class="glen-sticker-box">
+        <h2>What our families say</h2>
+        <div class="glen-squiggle --blue"></div>
+        <p>“When I picked up my little guy on one of his first days with Arbour Glen, Chris was singing him the ABC song, while he sat contentedly in her arms.  She said (happily!) that it was her tenth time singing it – she said she discovered in that moment, it was what gave him comfort.  It almost brought me to tears: knowing they will do anything to give him what he needed in that moment of sadness.  You really feel like your baby is the centre of their world – what more can a mom ask for?”</p>
+        <span class="glen-review-author">- Alina M.</span>
+        <div class="glenbox-white"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-footer Section -->
+
+  <section class="glen-infants-prefooter">
     <div class="glen-prefooter">
       <h3>More About Us:</h3>
       <div class="glen-prefooter-boxes">
@@ -36,7 +60,8 @@
         </a>
       </div>
     </div>
-  </div>
+  </section>
+  
 </div>
 
 <?php get_footer(); ?>
