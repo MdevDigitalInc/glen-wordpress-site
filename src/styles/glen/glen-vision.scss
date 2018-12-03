@@ -29,3 +29,17 @@
     }
   }
 }
+
+.glen-bigimage {
+  width: 100%;
+  background-size: cover;
+  height: 300px;
+
+  @media #{$tablet-only} {
+    height: 550px;
+  }
+
+  @media #{$laptop-up} {
+    height: 900px;
+  }
+}

@@ -37,7 +37,7 @@
   <!-- Bigimage Section -->
 
   <section class="glen-vision-bigimage">
-    glen-vision-bigimage todo
+    <div class="glen-bigimage" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girl-tree.png);"></div>
   </section>
 
   <!-- Featured Section -->
