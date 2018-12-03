@@ -69,18 +69,22 @@ jQuery( document ).on( "change", "#ddEmp", function() {
     if( response.length > 0)
     {
       document.getElementById("txt_id").value =  response[0].ID;
+      document.getElementById("txt_title").value =  response[0].Title;
       document.getElementById("txt_name").value =  response[0].Name;
       document.getElementById("txt_history").value =  response[0].History;
       document.getElementById("txt_quote").value =  response[0].Quote;
       document.getElementById("dd_tid").value =  response[0].TeamID;
+      document.getElementById("txt_avatar").value =  response[0].Avatar;
       document.getElementById("btnUpdate").hidden = false;
       (document.getElementById("btnCreate")).hide();
     }else{
       document.getElementById("txt_id").value = "";
       document.getElementById("txt_name").value =  "";
+      document.getElementById("txt_title").value =  "";
       document.getElementById("txt_history").value =  "";
       document.getElementById("txt_quote").value =  "";
       document.getElementById("dd_tid").value =  "";
+      document.getElementById("txt_avatar").value =  "";
       document.getElementById("btnUpdate").css("visibility", "hidden");
       ("#btnCreate").css("visibility", "visible");
     }
