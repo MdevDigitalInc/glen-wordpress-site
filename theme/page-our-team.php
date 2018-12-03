@@ -22,7 +22,7 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-team-balcony">
+  <section class="glen-team-balcony mdev-todo">
     balcony todo
   </section>
 
@@ -96,7 +96,7 @@
 
   <!-- Pre-footer Section -->
 
-  <section class="glen-team-prefooter">
+  <section class="glen-team-prefooter mdev-todo">
     prefooter todo
   </section>
 
