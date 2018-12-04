@@ -37,12 +37,42 @@
   // Right Side Styles
 
   .glen-team-prefooter-right {
-    width: 50%;
+    width: 100%;
     order: 1;
+    padding-bottom: 65px;
+
+    @media #{$tablet-only} {
+      padding-bottom: 85px;
+    }
 
     @media #{$laptop-up} {
       width: 50%;
       order: 2;
+      padding-bottom: 0;
+    }
+  }
+
+  .glen-team-prefooter-right-content {
+    position: relative;
+    width: 100%;
+    padding: 30px 25px 80px;
+
+    @media #{$tablet-only} {
+      padding: 50px 200px 40px 50px;
+    }
+    
+
+    @media #{$laptop-up} {
+      width: 500px;
+      padding: 65px 50px 125px;
+    }
+    
+    h4 {
+      color: $white;
+    }
+
+    p {
+      color: $white;
     }
   }
 
