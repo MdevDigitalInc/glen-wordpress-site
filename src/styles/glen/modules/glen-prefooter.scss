@@ -159,3 +159,24 @@
     }
   }
 }
+
+// Very Specific override for Our Team page
+
+.glen-prefooter-boxes.--team {
+  flex-direction: column;
+
+  @media #{$tablet-only} {
+    flex-direction: row;
+  }
+
+  .glen-prefooter-box {
+    @media #{$laptop-up} {
+      height: 160px;
+  
+      &:nth-child( n+2 ) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+}
