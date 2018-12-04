@@ -55,13 +55,42 @@
   <!-- Balcony Section -->
 
   <section class="glen-faq-contact">
-    <h3>STILL HAVE QUETIONS?</h3> 
-    <p>
-      Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
-    </p>
-    <div class="glen-faq-btn">
-      <a class="glen-btn --solid-pw" >CONTACT US</a>
-    </div>
+    <div class="circle faq"></div>
+      <div class="circle smol">
+        <div class="glen-faq-mark"></div>
+      </div>
+      <div class="glen-contact-content">
+        
+        
+        <h3>STILL HAVE QUETIONS?</h3> 
+        <p>
+          Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
+        </p>
+        <div class="glen-faq-btn">
+          <a class="glen-btn --solid-pw" >CONTACT US</a>
+        </div>
+        <div class="glen-contact-images"> 
+          <?php 
+          $test = get_bloginfo('template_url', 'display');
+            $contactImages = array (
+              "$test/img/logos/logo-childreach.png",
+              "$test/img/logos/logo-mommy-connections.png",
+              "$test/img/logos/logo-childrens-museum.png",
+              "$test/img/logos/logo-ml-health-unit.png",
+              "$test/img/logos/logo-london-public-library.png",
+              "$test/img/logos/logo-child-youth.png",
+              "$test/img/logos/log-ontario.png"
+            );
+
+            foreach($contactImages as $img)
+            echo "<img class=\"glen-contact-image\" src=\"$img\"/>";
+          ?>
+        </div>
+        <div class="glen-contact-box">
+          <div class="glenbox-white"></div>
+        </div>
+      </div>
+    
   </section>
 
   <!-- Featured Section -->
