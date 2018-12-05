@@ -12,16 +12,14 @@
   width: 80%;
   margin: 0 5%;
   justify-content: center;
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
 
-  @media #{tablet-only}
-  {
-    margin: 0 8%
+  @media #{tablet-only} {
+    margin: 0 8%;
   }
 
-  @media #{laptop-up}
-  {
-    margin: 0 16%
+  @media #{laptop-up} {
+    margin: 0 16%;
   }
 }
 
@@ -64,16 +62,14 @@
   width: 80%;
   margin: 0 5%;
   align-items: center;
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
 
-  @media #{tablet-only}
-  {
-    margin: 0 8%
+  @media #{tablet-only} {
+    margin: 0 8%;
   }
 
-  @media #{laptop-up}
-  {
-    margin: 0 16%
+  @media #{laptop-up} {
+    margin: 0 16%;
   }
 
   h3 {
@@ -88,5 +84,5 @@
   width: 85%;
   margin: 0 auto;
   justify-content: center;
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
 }
