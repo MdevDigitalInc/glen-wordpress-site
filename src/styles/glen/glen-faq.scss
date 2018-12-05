@@ -1,0 +1,88 @@
+.glen-faq-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.glen-faq-dialogue {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 80%;
+  margin: 0 5%;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media #{tablet-only} {
+    margin: 0 8%;
+  }
+
+  @media #{laptop-up} {
+    margin: 0 16%;
+  }
+}
+
+.glen-dialogue-left { 
+  display: flex;
+  flex-direction: column;
+  width: 53%;
+}
+
+.glen-faq-desc {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.glen-faq-box {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 10% vw-desktop(70) 5% vw-desktop(50);
+}
+
+.glen-dialogue-right {
+  margin-left: 5%;
+  margin-top: 6%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30%;
+}
+
+.glen-faq-btn {
+  margin-top: 15px;
+}
+
+.glen-faq-contact {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+  margin: 0 5%;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media #{tablet-only} {
+    margin: 0 8%;
+  }
+
+  @media #{laptop-up} {
+    margin: 0 16%;
+  }
+
+  h3 {
+    color: $color-glen-purple;
+  }
+}
+
+.glen-faq-featured {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}

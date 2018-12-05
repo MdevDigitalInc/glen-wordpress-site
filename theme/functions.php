@@ -112,8 +112,7 @@ function add_slug_to_body_class($classes) {
     return $classes;
 }
 
-function get_top_ancestor_id()
-{
+function get_top_ancestor_id() {
     global $post;
 
     if($post->post_parent){
@@ -122,4 +121,18 @@ function get_top_ancestor_id()
     }
 
     return $post->ID;
+}
+
+function get_mdev_meta_tags($i) { 
+  $ret = "";
+  switch($i)
+  {
+    case "faq":
+      $ret = "<div style='background-color: red;'>IT WORKS</div>";
+      break;
+    default:
+      $ret = "<div style='background-color: red;'>IT WORKS</div>";
+    break;
+  }
+  return $ret;
 }

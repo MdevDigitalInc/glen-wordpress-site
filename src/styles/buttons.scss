@@ -68,6 +68,17 @@
       }
     }
 
+    &-wb {
+      border-color: $white;
+      background-color: $white;
+      color: $color-glen-blue;
+        
+      &:hover {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+
     // Green Button | White Text
 
     &-gw {

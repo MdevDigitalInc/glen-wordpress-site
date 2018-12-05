@@ -80,3 +80,5 @@ node_modules/*
 /dist
 
 /theme/dist
+
+/theme/wp-content/plugins/akismet

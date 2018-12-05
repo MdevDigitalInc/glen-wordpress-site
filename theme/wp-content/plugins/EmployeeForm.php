@@ -1,23 +1,23 @@
 <?php
 /*
-Plugin Name: Menu Test
-Description: Menu Test
+Plugin Name: Emp Test
+Description: Emp Test
 Author: Graham
 Author URI: http://example.com/my-team-plugin
 */
 
 /** Step 2. basics for plugin*/
 add_action( 'admin_menu', 'my_plugin_menu' );
+add_action( 'wp_ajax_my_action', 'my_action' );
 
-//basics for ajax
-add_action( 'wp_enqueue_scripts', 'ajax_test_enqueue_scripts' );
+function my_action() {
+	global $wpdb; // this is how you get access to the database
 
-//basics for ajax
-function ajax_test_enqueue_scripts() {
-	wp_enqueue_script( 'js-test', plugins_url( '/js-test.js', __FILE__ ), array('jquery'), '1.0', true );
+  header('Content-Type: application/json');
+  echo json_encode($wpdb->get_results(stripslashes($_POST['query'])));
+
+	wp_die();
 }
-
-
 
 /** Step 1. basics for plugin */
 function my_plugin_menu() {
@@ -26,9 +26,11 @@ function my_plugin_menu() {
 
 /** Step 3. */
 function my_plugin_options() {
+  wp_enqueue_script( 'js-test', get_template_directory_uri() . '/wp-content/plugins/js-test.js', array('jquery'), '1.0', true );
 	if ( !current_user_can( 'manage_options' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-	}
+  }
+
 	echo '<div class="wrap">';
 	echo '<p>Here is where the form would go if I actually had options.</p>';
   echo '</div>';
@@ -39,51 +41,32 @@ function my_plugin_options() {
     SELECT * FROM tblEmployees
   " );
 
+  echo "<select id='ddEmp'>";
+  echo "<option value=0>Not Selected.</option>";
   foreach ( $result as $page )
   {
-    echo $page->ID.'<br/>';
-    echo $page->Name.'<br/>';
-    echo $page->Quote.'<br/>';
-    echo $page->History.'<br/>';
-    echo $page->TeamID.'<br/>';
+    echo "<option value='".$page->ID."'>".$page->Name."</option>";
   }
-  //<?php $wpdb->update( $table, $data, $where, $format = null, $where_format = null );
-
-  $wpdb->update( 
-    'tblEmployees', 
-    array( 
-      'TeamID' => 2,	// string
-    ), 
-    array( 'ID' => 1 )
-  );
+  echo "</select>";
 
 
-  $result = $wpdb->get_results ( "
-    SELECT * FROM tblEmployees
-" );
+  echo "<input type='text' id='txt_id' style='visibility: hidden;' /><br/>";
+  echo "<input type='text' id='txt_name' /><br/>";
+  echo "<input type='text' id='txt_title' /><br/>";
+  echo "<textarea id='txt_history'></textarea><br/>";
+  echo "<textarea id='txt_quote' ></textarea><br/>";
+  echo "<select id='dd_tid'>";
+  echo "<option value='0'>Please Select a Team</option>";
+  echo "<option value='1'>Management Team</option>";
+  echo "<option value='2'>Support Team</option>";
+  echo "<option value='3'>Preschool Educators</option>";
+  echo "<option value='4'>Toddler Educators</option>";
+  echo "<option value='5'>Infant Educators</option>";
+  echo "</select><br/>";
+  echo "<input type='text' id='txt_avatar' /><br/>";
 
-  foreach ( $result as $page )
-  {
-    echo $page->ID.'<br/>';
-    echo $page->Name.'<br/>';
-    echo $page->Quote.'<br/>';
-    echo $page->History.'<br/>';
-    echo $page->TeamID.'<br/>';
-  }
-
-  $wpdb->update( 
-    'tblEmployees', 
-    array( 
-      'TeamID' => 1,	// string
-    ), 
-    array( 'ID' => 1 )
-  );
-
-
-  echo  "<input type='text' id='txt_name'  />";
-  echo "<textarea name='txt_history'> </textarea>";
-  echo "<textarea name='txt_quote'> </textarea>";
-
-  echo "<input type='button' value='Status Update'>";
+  
+  echo "<input type='button' id='btnCreate' value='Create' />";
+  echo "<input type='button' id='btnUpdate' value='Update' /><br/><br/>";
 }
 ?>
