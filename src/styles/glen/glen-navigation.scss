@@ -17,3 +17,46 @@
 }
 
 // End of bad style
+
+
+
+$height: 92px;
+$halfheight: ($height/2);
+$thickness: 110%; // increase to make the line thicker
+$offset: 4px;
+$backgroundcolor: rgb(255, 255, 255);
+$linecolor: rgb(255, 255, 255);
+
+.glen-zig-zag {
+
+	margin: 0 0 0 0;
+	background: $backgroundcolor;
+	position: relative;
+  height: $height;
+	z-index: 1;
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+  		right: 0;
+	}
+	&:before {
+		height: ($height - $offset);
+		top: $thickness;
+		background: linear-gradient(-135deg, $linecolor $halfheight, transparent 0) 0 $halfheight, linear-gradient( 135deg, $linecolor $halfheight, transparent 0) 0 $halfheight;
+		background-position: top left;
+		background-repeat: repeat-x;
+		background-size: $height $height;
+	}
+	&:after {
+		height: $height;
+		top: 100%;
+		background: linear-gradient(-135deg, $backgroundcolor $halfheight, transparent 0) 0 $halfheight, linear-gradient( 135deg, $backgroundcolor $halfheight, transparent 0) 0 $halfheight;
+		background-position: top left;
+		background-repeat: repeat-x;
+		background-size: $height $height;
+		
+	}
+}

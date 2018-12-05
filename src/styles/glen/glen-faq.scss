@@ -153,9 +153,10 @@
   width: 100%;
   
 }
+
 .glen-contact-image {
   //width: 10%;
   &:nth-child( n+2 ) {
-    margin-left: vw-desktop(71);
+    margin-left: vw-desktop(50);
   } 
 }
