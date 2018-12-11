@@ -16,13 +16,13 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-menus-balcony">
+  <section class="glen-menus-balcony mdev-todo">
     glen-menus-balcony todo
   </section>
 
   <!-- Menu Section -->
 
-  <section class="glen-menus-menu">
+  <section class="glen-menus-menu mdev-todo">
     glen-menus-menu todo
   </section>
 

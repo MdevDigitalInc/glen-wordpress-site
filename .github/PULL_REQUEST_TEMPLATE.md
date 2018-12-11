@@ -1,15 +1,14 @@
 ## Prerequisites
 N/A
+
 ## Changes:
-- Your
-- Changes
-- Here
+- YourChangesHere
 
 ## How To Test:
 - In terminal: `npm run dev`
-- Navigate to : `localhost:8080/`
+- Navigate to : `localhost:4000/`
 
-:imp: Delete this line only if you tested locally! :imp:
+:imp: Delete this line ONLY if you tested locally! :imp:
 
 ### Expected Result(s):
 
@@ -17,6 +16,6 @@ N/A
 
 ## Design Links
 
-[Zeplin](https://app.zeplin.io/project/5b6eee8ae47db8634b169b22/dashboard)
+[GLEN Zeplin](https://app.zeplin.io/project/5bf216589c1d023f172cd321/dashboard)
 
 :+1:
