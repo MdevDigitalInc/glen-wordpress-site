@@ -104,7 +104,7 @@
         <div class="glen-featured-glenbox-object">
           <ul>
             <li>
-              Send a cheque or money order to 	1017 Adelaide St. N. London ON. N5Y 2M8
+              Send a cheque or money order to <br>	1017 Adelaide St. N. London ON. N5Y 2M8
             </li>
             <li>
               Stop by our office to do an Interac transaction
