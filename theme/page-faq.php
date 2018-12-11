@@ -73,18 +73,16 @@
 
   <section class="glen-faq-balcony">
     <div class="glen-balcony">
-      <div class="glen-balcony-ledge"></div>
+      <div class="glen-balcony-ledge --faq"></div>
       <div class="glen-balcony-badge --faq"></div>
       <div class="glen-balcony-content --sticker">
         <div class="glen-balcony-sticker">
-          <h3>STILL HAVE QUETIONS?</h3> 
+          <h3>Still have questions?</h3> 
           <p>
             Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
           </p>
-          <div class="glen-faq-btn">
-            <a class="glen-btn --solid-pw" title="todo">CONTACT US</a>
-          </div>
-          <div class="glen-contact-images"> 
+          <a class="glen-btn --solid-pw" title="todo">CONTACT US</a>
+          <div class="glen-contact-logos"> 
             <?php 
             $test = get_bloginfo('template_url', 'display');
               $contactImages = array (
@@ -98,7 +96,7 @@
               );
 
               foreach($contactImages as $img)
-              echo "<img class=\"glen-contact-image\" src=\"$img\" alt=\"todo\"/>";
+              echo "<img class=\"glen-contact-logo\" src=\"$img\" alt=\"todo\"/>";
             ?>
           </div>
         </div>

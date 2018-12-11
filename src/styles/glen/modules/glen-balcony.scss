@@ -61,12 +61,17 @@
   z-index: -1;
   position: absolute;
   border-radius: 50%;
-  border: 2px solid #fff;
-  background-repeat: repeat;
   background-color: $color-glen-grey;
-  background-image: url('../img/patterns/pattern-numbers.svg');
-  background-size: 5%;
   margin-top: 5%;
+
+  // Style Modifiers
+
+  &.--faq {
+    background-repeat: repeat;
+    background-color: $color-glen-grey;
+    background-image: url('../img/patterns/pattern-numbers.svg');
+    background-size: 4%;
+  }
 
   &:after {
     display: block;
@@ -91,7 +96,7 @@
   }
 
   @media #{$laptop-up} {
-    margin: 100px 0;
+    margin: 125px 0 150px;
   }
 
   // Balcony Content Modifiers
@@ -119,9 +124,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  @media #{$laptop-up} {
+    padding: 50px 35px;
+  }
 
   h3 {
     color: $color-glen-purple;
+
+    @media #{$laptop-up} {
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    @media #{$laptop-up} {
+      margin-bottom: 25px;
+    }
+  }
+
+  a {
+    @media #{$laptop-up} {
+      margin-bottom: 45px;
+    }
   }
 }
 
@@ -131,11 +156,15 @@
 
 */
 
-// FAQ Page
+// FAQ Page Specific Styles (Sticker Images)
 
-.glen-contact-images {
+.glen-contact-logos {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 150px;
+  padding: 0 125px;
+
+  .glen-contact-logo {
+    height: 45px;
+  }
 }
