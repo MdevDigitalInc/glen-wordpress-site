@@ -47,8 +47,6 @@
 }
 
 .glen-faq-desc {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 
   @media #{$laptop-up} {
