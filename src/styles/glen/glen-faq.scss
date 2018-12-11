@@ -22,12 +22,12 @@
   flex-wrap: wrap;
   padding: 0 5%;
 
-  @media #{tablet-only} {
+  @media #{$tablet-only} {
     padding: 0 8%;
   }
 
-  @media #{laptop-up} {
-    padding: 0 16%;
+  @media #{$laptop-up} {
+    padding: 80px 16% 0;
   }
 }
 
@@ -36,36 +36,41 @@
 .glen-dialogue-left { 
   display: flex;
   flex-direction: column;
-  width: 53%;
+  width: 60%;
 }
 
 .glen-faq-desc {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @media #{$laptop-up} {
+    margin-bottom: 45px;
+  }
+
+  .glen-faq-btn {
+    margin-top: 15px;
+  }
+}
+
+// Dialogue Module RIGHT Side Styles
+
+.glen-dialogue-right {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 40%;
+  padding-left: 80px;
 }
 
 .glen-faq-box {
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 10% vw-desktop(70) 5% vw-desktop(50);
+  padding: 50px;
 }
 
-// Dialogue Module RIGHT Side Styles
 
-.glen-dialogue-right {
-  margin-left: 5%;
-  margin-top: 6%;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 30%;
-}
-
-.glen-faq-btn {
-  margin-top: 15px;
-}
 
 // Unsorted below this line --------
 
@@ -73,8 +78,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 80%;
-  margin: 0 5%;
+  width: 100%;
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
@@ -101,16 +105,6 @@
     margin: 5%;
     padding-top: 5%;
   }
-}
-
-.glen-faq-featured {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 85%;
-  margin: 0 auto;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .circle {
@@ -162,4 +156,49 @@
   &:nth-child( n+2 ) {
     margin-left: vw-desktop(50);
   } 
+}
+
+// Above this line unsorted -----
+
+// FAQ Bumper Module (Singleton) Styles
+
+.glen-faq-bumper {
+  width: 100%;
+  position: relative;
+  padding: 0 5% 25px;
+
+  @media #{$tablet-only} {
+    padding: 0 8% 60px;
+  }
+
+  @media #{$laptop-up} {
+    padding: 0 16% 150px;
+  }
+
+  .glen-faq-bumper-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media #{$tablet-up} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+// Address is a compound element of <img + p>
+
+.glen-faq-bumper-address {
+  display: flex;
+  align-items: flex-start;
+
+  img {
+    display: block;
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
+  }
 }

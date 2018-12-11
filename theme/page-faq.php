@@ -43,9 +43,9 @@
           So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
         </p>
         <div class="glen-faq-btn">
-        <a class="glen-btn --solid-wb" >
-          Join Our Waiting List
-        </a>
+          <a class="glen-btn --solid-wb" >
+            Join Our Waiting List
+          </a>
         </div>
         <div class="glenbox-blue"></div>
       </div>
@@ -94,7 +94,7 @@
     <div class="glen-featured">
       <div class="glen-featured-text">
         <div class="glen-featured-text-object">
-          <h3>Charitable Donations</h3>
+          <h5>Charitable Donations</h5>
           <p>
             Arbour Glen is a registered charity with the Canadian Revenue Agency. Our charitable registration number is 89611 0756 RR0001, so all of our donors receive charitable receipts. Any family or individual that donates over $150.00 will have their name engraved on a plate that will be displayed on our plaque at the back entrance-way. There are several ways you can donate:
           </p>
@@ -129,8 +129,13 @@
   
   <section class="glen-faq-bumper">
     <hr/>
-    <p>1017 Adelaide Street North, London, ON</p>
-    <p>Charitable Donations: 89611 0756 RR0001</p>
+    <div class="glen-faq-bumper-content">
+      <div class="glen-faq-bumper-address">
+        <img class="glen-footer-icon" src="<?php bloginfo('template_url'); ?>/img/icons/icon-location.svg" alt="Image of a map pin" />
+        <p class="--body-sidebar">1017 Adelaide Street North, London, ON</p>
+      </div>
+      <p class="--body-sidebar">Charitable Donations: 89611 0756 RR0001</p>
+    </div>
   </section>
 </div>
 
