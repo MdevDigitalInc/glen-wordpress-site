@@ -60,6 +60,8 @@
     width: 50%;
   }
 
+  // Special Case Override
+
   &.--wide {
     @media #{$tablet-only} {
       .glen-featured-glenbox-object {
@@ -67,6 +69,7 @@
         margin-right: 85px;
       }
     }
+
     @media #{$laptop-up} {
       justify-content: flex-start;
 

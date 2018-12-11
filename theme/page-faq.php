@@ -20,9 +20,7 @@
         <p>
           We like to have a personal connection with our prospective families, so please give us a call next at 519-439-3701 to confirm your request was received, and to answer any questions you may have about our centre. Speaking of questions, let's see if we can answer some for you now!
         </p>
-        <div class="glen-faq-btn">
-          <a class=" glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
-        </div>
+        <a class=" glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
       </div><!-- /description -->
       <div class="glen-hidden-dragon">
         <div class="glen-faq-box"> <!-- box -->
