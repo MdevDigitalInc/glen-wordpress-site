@@ -11,6 +11,7 @@
   height: 275px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
   @media #{$tablet-only} {
     height: 675px;

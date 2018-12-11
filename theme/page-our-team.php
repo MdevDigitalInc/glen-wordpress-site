@@ -22,7 +22,7 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-team-balcony">
+  <section class="glen-team-balcony mdev-todo">
     balcony todo
   </section>
 
@@ -81,7 +81,29 @@
   <!-- Pre-footer Section -->
 
   <section class="glen-team-prefooter">
-    prefooter todo
+    <div class="glen-team-prefooter-left">
+      <h3>Programs &amp; Educators:</h3>
+      <div class="glen-prefooter-boxes --team">
+        <a class="glen-prefooter-box --infants" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-infants.png);" href="/infants-program" title="Our Infants Program">
+          <span class="glen-prefooter-box-title">Infants</span>
+        </a>
+        <a class="glen-prefooter-box --toddlers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-toddlers.png);" href="/toddlers-program" title="Our Toddlers Program">
+          <span class="glen-prefooter-box-title">Toddlers</span>
+        </a>
+        <a class="glen-prefooter-box --preschoolers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-preschoolers.png);" href="/preschoolers-program" title="Our Preschoolers Program">
+          <span class="glen-prefooter-box-title">Preschoolers</span>
+        </a>
+      </div>
+    </div>
+    <div class="glen-team-prefooter-right">
+      <div class="glen-team-prefooter-right-content">
+        <h4>Our Current Board of Directors</h4>
+        <div class="glen-squiggle --yellow"></div>
+        <p>Our organization is overseen by an Executive Director and governed by a Board of Directors. To read more about our directors and for a list of our current Board Members visit:</p>
+        <a class="glen-btn --solid-wg" href="/our-vision" title="todo">our vision</a>
+        <div class="glenbox-green"></div>
+      </div>
+    </div>
   </section>
 
 </div>

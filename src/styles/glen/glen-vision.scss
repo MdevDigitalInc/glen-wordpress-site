@@ -1,0 +1,47 @@
+.glen-vision-mission {
+  width: 100%;
+  background-color: $color-glen-red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 5%;
+
+  @media #{$tablet-only} {
+    padding: 60px 10%;
+  }
+
+  @media #{$laptop-up} {
+    padding: 60px 23%;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  p {
+    color: $white;
+    line-height: 120%;
+    font-size: 24px;
+
+    @media #{$tablet-up} {
+      font-size: 20px;
+    }
+  }
+}
+
+.glen-bigimage {
+  width: 100%;
+  background-color: $color-glen-orange;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+
+  @media #{$tablet-only} {
+    height: 550px;
+  }
+
+  @media #{$laptop-up} {
+    height: 900px;
+  }
+}

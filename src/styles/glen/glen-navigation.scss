@@ -1,8 +1,11 @@
 .glen-main-navigation {
   width: 100%;
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
+  z-index: 9001;
+  height: 100px;
+  background-color: $white;
 }
 
 // This is a bad style! It's just for my sanity - AW
@@ -10,6 +13,8 @@
 .menu-primary-navigation-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 15px;
 
   ul {
     display: flex;

@@ -23,19 +23,21 @@
   <!-- Mission Section -->
 
   <section class="glen-vision-mission">
-    glen-vision-mission todo
+    <h2>Mission Statement</h2>
+    <div class="glen-squiggle --yellow"></div>
+    <p>We are a community that respects the diversity of our children and their families. We enrich each child’s development through our long tradition of progressive programming and care.</p>
   </section>
 
   <!-- Balcony Section -->
 
-  <section class="glen-vision-balcony">
+  <section class="glen-vision-balcony mdev-todo">
     glen-vision-balcony todo
   </section>
 
   <!-- Bigimage Section -->
 
   <section class="glen-vision-bigimage">
-    glen-vision-bigimage todo
+    <div class="glen-bigimage" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/boy-with-truck.png);"></div>
   </section>
 
   <!-- Featured Section -->
