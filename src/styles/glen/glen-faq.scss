@@ -104,7 +104,6 @@
   border-radius: 50%;
   width: 100%;
   border: 2px solid #FFFF;
-  //box-shadow:0 0 10px #000;
   z-index: -1;
   position: absolute;
 
@@ -114,14 +113,10 @@
     width: 700%;
     background-color: $color-glen-grey;
     margin-top: 5%;
-    // &:after {
-    //   background-color: $color-glen-blue;
-    // }
   }
 
-  &.smol {
+  &.small {
     display: flex;
-    // flex-direction: row;
     background-image:url("../img/icons/icon-questionmark.svg");
     background-repeat: no-repeat;
     background-size: 75%;
@@ -129,7 +124,7 @@
     width: 7.5%;
     z-index: 1;
     background-color: #FFFF;
-    box-shadow:0 0 13px grey;//#000;
+    box-shadow:0 0 13px grey;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -151,7 +146,6 @@
 }
 
 .glen-contact-image {
-  //width: 10%;
   &:nth-child( n+2 ) {
     margin-left: vw-desktop(50);
   } 
