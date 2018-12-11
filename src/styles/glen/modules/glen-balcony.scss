@@ -62,7 +62,11 @@
   position: absolute;
   border-radius: 50%;
   background-color: $color-glen-grey;
-  margin-top: 5%;
+  margin-top: 40px;
+
+  @media #{$tablet-up} {
+    margin-top: 75px;
+  }
 
   // Style Modifiers
 
@@ -70,7 +74,15 @@
     background-repeat: repeat;
     background-color: $color-glen-grey;
     background-image: url('../img/patterns/pattern-numbers.svg');
-    background-size: 4%;
+    background-size: 12%;
+
+    @media #{$tablet-only} {
+      background-size: 8%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: 5%;
+    }
   }
 
   &:after {
@@ -89,10 +101,10 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  margin: 5px 0; //todo
+  margin: 25px 0 75px;
 
   @media #{$tablet-only} {
-    margin: 5px 0; // todo
+    margin: 30px 0 90px;
   }
 
   @media #{$laptop-up} {
@@ -124,6 +136,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px 20px;
+
+  @media #{$tablet-only} {
+    padding: 40px 35px;
+  }
   
   @media #{$laptop-up} {
     padding: 50px 35px;
@@ -131,6 +148,11 @@
 
   h3 {
     color: $color-glen-purple;
+    margin-bottom: 15px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 20px;
+    }
 
     @media #{$laptop-up} {
       margin-bottom: 25px;
@@ -138,12 +160,24 @@
   }
 
   p {
+    margin-bottom: 25px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 20px;
+    }
+
     @media #{$laptop-up} {
       margin-bottom: 25px;
     }
   }
 
   a {
+    margin-bottom: 25px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 35px;
+    }
+
     @media #{$laptop-up} {
       margin-bottom: 45px;
     }
@@ -161,10 +195,24 @@
 .glen-contact-logos {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 0 125px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
-  .glen-contact-logo {
-    height: 45px;
+  @media #{$tablet-only} {
+    .glen-contact-logo {
+      height: auto;
+      width: 17vw;
+    }
+  }
+
+  @media #{$laptop-up} {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+
+    .glen-contact-logo {
+      max-height: 45px;
+      width: auto;
+    }
   }
 }

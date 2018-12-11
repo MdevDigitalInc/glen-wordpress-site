@@ -71,8 +71,8 @@
 
   <section class="glen-faq-balcony">
     <div class="glen-balcony">
-      <div class="glen-balcony-ledge --faq"></div>
       <div class="glen-balcony-badge --faq"></div>
+      <div class="glen-balcony-ledge --faq"></div>
       <div class="glen-balcony-content --sticker">
         <div class="glen-balcony-sticker">
           <h3>Still have questions?</h3> 
