@@ -24,6 +24,23 @@
           <a class=" glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
         </div>
       </div><!-- /description -->
+      <div class="glen-hidden-dragon">
+        <div class="glen-faq-box"> <!-- box -->
+          <h4>
+            Finding Child Care
+          </h4>
+          <div class="glen-squiggle --yellow"></div>
+          <p>
+            So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
+          </p>
+          <div class="glen-faq-btn">
+            <a class="glen-btn --solid-wb" >
+              Join Our Waiting List
+            </a>
+          </div>
+          <div class="glenbox-blue"></div>
+        </div><!-- /box -->
+      </div>
         <?php
         global $wpdb;
         $results = $wpdb->get_results ( " Select * from tblFAQ " );
@@ -48,44 +65,46 @@
           </a>
         </div>
         <div class="glenbox-blue"></div>
-      </div>
-    </div><!-- /box -->
+      </div><!-- /box -->
+    </div>
   </section>
 
   <!-- Balcony Section -->
 
-  <section class="glen-faq-contact">
-    <div class="circle faq"></div>
-    <div class="circle small"></div>
-    <div class="glen-contact-content">
-      <h3>STILL HAVE QUETIONS?</h3> 
-      <p>
-        Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
-      </p>
-      <div class="glen-faq-btn">
-        <a class="glen-btn --solid-pw" >CONTACT US</a>
-      </div>
-      <div class="glen-contact-images"> 
-        <?php 
-        $test = get_bloginfo('template_url', 'display');
-          $contactImages = array (
-            "$test/img/logos/logo-childreach.png",
-            "$test/img/logos/logo-mommy-connections.png",
-            "$test/img/logos/logo-childrens-museum.png",
-            "$test/img/logos/logo-ml-health-unit.png",
-            "$test/img/logos/logo-london-public-library.png",
-            "$test/img/logos/logo-child-youth.png",
-            "$test/img/logos/log-ontario.png"
-          );
+  <section class="glen-faq-balcony">
+    <div class="glen-balcony">
+      <div class="glen-balcony-ledge"></div>
+      <div class="glen-balcony-badge --faq"></div>
+      <div class="glen-balcony-content --sticker">
+        <div class="glen-balcony-sticker">
+          <h3>STILL HAVE QUETIONS?</h3> 
+          <p>
+            Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
+          </p>
+          <div class="glen-faq-btn">
+            <a class="glen-btn --solid-pw" title="todo">CONTACT US</a>
+          </div>
+          <div class="glen-contact-images"> 
+            <?php 
+            $test = get_bloginfo('template_url', 'display');
+              $contactImages = array (
+                "$test/img/logos/logo-childreach.png",
+                "$test/img/logos/logo-mommy-connections.png",
+                "$test/img/logos/logo-childrens-museum.png",
+                "$test/img/logos/logo-ml-health-unit.png",
+                "$test/img/logos/logo-london-public-library.png",
+                "$test/img/logos/logo-child-youth.png",
+                "$test/img/logos/log-ontario.png"
+              );
 
-          foreach($contactImages as $img)
-          echo "<img class=\"glen-contact-image\" src=\"$img\"/>";
-        ?>
-      </div>
-      <div class="glen-contact-box">
-        <div class="glenbox-white"></div>
+              foreach($contactImages as $img)
+              echo "<img class=\"glen-contact-image\" src=\"$img\" alt=\"todo\"/>";
+            ?>
+          </div>
+        </div>
       </div>
     </div>
+    
   </section>
 
   <!-- Featured Section -->

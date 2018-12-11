@@ -2,6 +2,9 @@
 
   FAQ Page Specific Styles
 
+  If you are looking for balcony-content
+  for FAQ it is in glen-balcony.scss!
+
 */
 
 // Page Wrapper Styles
@@ -20,10 +23,10 @@
   width: 100%;
   position: relative;
   flex-wrap: wrap;
-  padding: 0 5%;
+  padding: 40px 5% 0;
 
   @media #{$tablet-only} {
-    padding: 0 8%;
+    padding: 60px 8% 0;
   }
 
   @media #{$laptop-up} {
@@ -33,10 +36,14 @@
 
 // Dialogue Module LEFT Side Styles
 
-.glen-dialogue-left { 
+.glen-dialogue-left {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
+
+  @media #{$laptop-up} {
+    width: 60%;
+  }
 }
 
 .glen-faq-desc {
@@ -53,14 +60,32 @@
   }
 }
 
+.glen-hidden-dragon {
+  width: 100%;
+  margin: 5px 0;
+  
+  @media #{$tablet-only} {
+    margin: 5px 0;
+  }
+
+  @media #{$laptop-up} {
+    display: none;
+  }
+}
+
 // Dialogue Module RIGHT Side Styles
 
 .glen-dialogue-right {
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 40%;
   padding-left: 80px;
+  display: none;
+
+  @media #{$laptop-up} {
+    display: block;
+    width: 40%;
+  }
 }
 
 .glen-faq-box {
@@ -69,96 +94,6 @@
   flex-direction: column;
   padding: 50px;
 }
-
-
-
-// Unsorted below this line --------
-
-.glen-faq-contact {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: hidden;
-
-  @media #{tablet-only} {
-    margin: 0 8%;
-  }
-
-  @media #{laptop-up} {
-    margin: 0 16%;
-  }
-
-  h3 {
-    color: $color-glen-purple;
-  }
-
-  .glen-contact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    width: 80%;
-    margin: 5%;
-    padding-top: 5%;
-  }
-}
-
-.circle {
-  background-repeat: repeat;
-  border-radius: 50%;
-  width: 100%;
-  border: 2px solid #fff;
-  z-index: -1;
-  position: absolute;
-
-  &.faq {
-    background-image: url('../img/patterns/pattern-numbers.svg');
-    background-size: 5%;
-    width: 700%;
-    background-color: $color-glen-grey;
-    margin-top: 5%;
-  }
-
-  &.small {
-    display: flex;
-    background-image: url('../img/icons/icon-questionmark.svg');
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: center;
-    width: 7.5%;
-    z-index: 1;
-    background-color: #fff;
-    box-shadow: 0 0 13px grey;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin: 10px;
-  }
-}
-
-.circle:after {
-  content: '';
-  padding-bottom: 100%;
-  display: block;
-}
-
-.glen-contact-images {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.glen-contact-image {
-  &:nth-child( n+2 ) {
-    margin-left: vw-desktop(50);
-  } 
-}
-
-// Above this line unsorted -----
 
 // FAQ Bumper Module (Singleton) Styles
 

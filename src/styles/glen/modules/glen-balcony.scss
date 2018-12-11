@@ -1,0 +1,141 @@
+/*
+
+  GLEN Balcony Module Styles
+
+    GC + AW
+
+*/
+
+// Main section styles
+
+.glen-balcony {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+// Balcony Badge Styles
+
+.glen-balcony-badge {
+  z-index: 1;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid $white;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+  background-repeat: no-repeat;
+  background-color: $white;
+  background-size: 50%;
+  background-position: center;
+  display: flex;    
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  // To have room for shadow:
+  margin: 10px;
+
+  @media #{$tablet-up} {
+    width: 125px;
+  }
+
+  // Badge Image Modifiers
+
+  &.--faq {
+    background-image: url('../img/icons/icon-questionmark.svg');
+  }
+
+  &:after {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+  }
+}
+
+// Balcony Ledge Styles
+
+.glen-balcony-ledge {
+  width: 700%;
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-repeat: repeat;
+  background-color: $color-glen-grey;
+  background-image: url('../img/patterns/pattern-numbers.svg');
+  background-size: 5%;
+  margin-top: 5%;
+
+  &:after {
+    display: block;
+    content: '';
+    padding-bottom: 100%;
+  }
+}
+
+// Balcony Content Area Styles
+
+.glen-balcony-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 5px 0; //todo
+
+  @media #{$tablet-only} {
+    margin: 5px 0; // todo
+  }
+
+  @media #{$laptop-up} {
+    margin: 100px 0;
+  }
+
+  // Balcony Content Modifiers
+
+  &.--sticker {
+    padding: 0 5%; 
+
+    @media #{$tablet-only} {
+      padding: 0 8%;
+    }
+
+    @media #{$laptop-up} {
+      padding: 0 16%;
+    }
+  }
+}
+
+// Sticker Styles
+
+.glen-balcony-sticker {
+  width: 100%;
+  background: $white;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    color: $color-glen-purple;
+  }
+}
+
+/*
+
+  Page Specific Balcony Styles
+
+*/
+
+// FAQ Page
+
+.glen-contact-images {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 150px;
+}
