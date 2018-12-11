@@ -117,7 +117,7 @@
           </p>
         </div>
       </div>
-      <div class="glen-featured-glenbox">
+      <div class="glen-featured-glenbox --wide">
         <div class="glen-featured-glenbox-object">
           <ul>
             <li>
