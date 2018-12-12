@@ -79,6 +79,12 @@
     background-position: center;
   }
 
+  &.--welcome {
+    background-image: url('../img/shared/mom-son.png');
+    background-size: cover;
+    background-position: center;
+  }
+
   &.--vision {
     background-image: url('../img/shared/girl-books.png');
     background-size: 200%;
@@ -130,6 +136,11 @@
     background-image: url('../img/icons/icon-questionmark.svg');
   }
 
+  &.--welcome {
+    background-size: 55%;
+    background-image: url('../img/icons/icon-family.svg');
+  }
+
   &.--vision {
     background-size: 65%;
     background-image: url('../img/icons/icon-hearts.svg');
@@ -158,7 +169,8 @@
 
   // Style Modifiers
 
-  &.--menu {
+  &.--menu,
+  &.--welcome {
     background-repeat: repeat;
     background-color: $color-glen-red;
     background-image: url('../img/patterns/pattern-shapes.svg');
@@ -231,6 +243,7 @@
 
   // Balcony Content Modifiers
 
+  &.--glenbox,
   &.--sticker {
     padding: 0 5%; 
 
@@ -244,7 +257,39 @@
   }
 }
 
-// Sticker Styles
+// Balcony-glenbox Styles
+
+.glen-balcony-glenbox-object {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 25px 5px;
+
+  @media #{$tablet-only} {
+    padding: 55px 40px 40px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 75px 65px 40px;
+  }
+
+  span {
+    margin-bottom: 25px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$laptop-up} {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+// Balcony-Sticker Styles
 
 .glen-balcony-sticker {
   width: 100%;

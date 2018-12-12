@@ -34,8 +34,27 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-welcome-balcony mdev-todo">
-    glen-welcome-balcony todo
+  <section class="glen-welcome-balcony">
+    <div class="glen-balcony-view --welcome"></div>
+    <div class="glen-balcony">
+      <div class="glen-balcony-badge --welcome"></div>
+      <div class="glen-balcony-ledge --welcome"></div>
+      <div class="glen-balcony-content --glenbox">
+        <div class="glen-balcony-glenbox-object">
+          <h2 class="u-red">What our families say</h2>
+          <p>“BEST DAYCARE, BEST STAFF ever! Our family association (CHILDREN AND GRANDCHILDREN) goes back 40+ years!”</p>
+          <span class="--rev-name">- Carole DeBoer</span>
+          <p>“Every aspect of the Arbour Glen experience is amazing. The Educators are engaged, the learning and play experiences are exceptional and the facility is child-centred and well maintained. Expect your child to frequently tell you that food just “tastes better at Arbour Glen” – the menus are delicious! Arbour Glen prepared our children well for their entry into Kindergarten. We recommend AG to all our friends and acquaintances who are looking for the best daycare and preschool experience in London!”</p>
+          <span class="--rev-name">- Stacey Rickman</span>
+          <p>Arbour Glen is the place to have your child IF you: want them to develop social skills; want them to learn how to positively interact with others; want your child to come home and blow you away every week with everything they have learned; need help/advice with potty training, want someone to treat your child like their OWN; want a center that has employees who are dedicated in ensuring that you, as a parent, are happy and healthy; want a care center that you can trust will always do right by your family and go above and beyond to accommodate parents busy schedules.<br>
+          I literally drive across the city and back 2x a day, 5 days a week, passing several daycares closer to home so that my daughter can attend Arbour Glen, like my son did over 4 years ago. HIGHLY RECOMMENDED!</p>
+          <span class="--rev-name"> - Anna Vujicic</span>
+          <p>“Amazing place!!! The whole staff, all the ECEs, admin. cook, absolutely everyone is so warm and knowledgeable. I'm so grateful that they have been a part of my daughter's life the past 3 years; breaks my heart that she's starting JK his fall and we won't see them anymore. I'm forever grateful to all of you!”</p>
+          <span class="--rev-name"> - Chantalle & Stefan Czerwinski</span>
+          <div class="glenbox-white"></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Pre-footer Section -->
