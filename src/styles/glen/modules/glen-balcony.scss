@@ -4,6 +4,38 @@
 
     GC + AW
 
+  4 parts:
+
+  glen-balcony-view:
+
+    Hero-style image that comes before balcony itself.
+
+    Modify with page flags (ie. --vision)
+
+    Note: OPTIONAL if there is no image above the ledge.
+
+  glen-balcony-badge:
+
+    The badge with a symbol on each balcony.
+
+    Modify with page flags (ie. --vision)
+
+  glen-balcony-ledge:
+
+    The actual curved part of the module, contains
+    background styles.
+
+    Modify with page flags (ie. --faq)
+
+  glen-balcony-content:
+
+    The style of content that comes after the ledge.
+
+    Modify with...
+
+      --sticker
+      ...todo
+
 */
 
 // Main section styles
@@ -16,6 +48,45 @@
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
+}
+
+// Balcony View Styles
+
+.glen-balcony-view {
+  position: relative;
+  z-index: -5;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: $color-glen-grey;
+  background-size: cover;  
+  margin-bottom: -150px;
+  height: 400px;
+
+  @media #{$tablet-only} {
+    height: 600px;
+  }
+
+  @media #{$laptop-up} {
+    height: 800px;
+  }
+
+  // Modifiers
+
+  &.--vision {
+    background-image: url('../img/shared/girl-books.png');
+    background-position: center bottom;
+
+    @media #{$tablet-only} {
+      background-size: 125%;
+      background-position: 25%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: cover;
+      background-position: center bottom;
+    }
+  }
 }
 
 // Balcony Badge Styles
@@ -166,6 +237,7 @@
     padding: 50px 35px;
   }
 
+  h2,
   h3 {
     margin-bottom: 15px;
 
@@ -178,6 +250,7 @@
     }
   }
 
+  ul,
   p {
     margin-bottom: 25px;
 
@@ -233,5 +306,19 @@
       max-height: 45px;
       width: auto;
     }
+  }
+}
+
+// Vision Page
+
+.glen-balcony-sticker.--vision {
+  padding: 40px 20px 10px;
+
+  @media #{$tablet-only} {
+    padding: 40px 45px 10px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 100px 10px;
   }
 }

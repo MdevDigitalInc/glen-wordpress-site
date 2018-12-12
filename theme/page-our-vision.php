@@ -31,13 +31,14 @@
   <!-- Balcony Section -->
 
   <section class="glen-vision-balcony">
+    <div class="glen-balcony-view --vision"></div>
     <div class="glen-balcony">
       <div class="glen-balcony-badge --vision"></div>
       <div class="glen-balcony-ledge --vision"></div>
       <div class="glen-balcony-content --sticker">
-        <div class="glen-balcony-sticker">
+        <div class="glen-balcony-sticker --vision">
           <h4>Guiding Principles</h4>
-          <h2>We believe...</h2>
+          <h2>We Believe...</h2>
           <ul>
             <li>that optimal learning occurs when each child participates and is actively engaged.</li>
             <li>in building each child’s sense of self and well-being as a foundation for their health and wellness.</li>
