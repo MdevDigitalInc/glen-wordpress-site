@@ -35,25 +35,25 @@
             <div class="glen-quadblock">
               <h6>BELONGING</h6>
               <div class="glen-quadblock-bar --green"></div>
-              <p>Forming relationships with others to establish a sense of belonging.</p>
+              <p>Forming relationships with others to establish a sense of <span class="u-green">belonging</span>.</p>
               <div class="glenbox-green-hollow"></div>
             </div>
             <div class="glen-quadblock">
               <h6>WELL-BEING</h6>
               <div class="glen-quadblock-bar --blue"></div>
-              <p>Developing their physical and mental/emotional health to support their well-being.</p>
+              <p>Developing their physical and mental/emotional health to support their <span class="u-blue">well-being</span>.</p>
               <div class="glenbox-blue-hollow"></div>
             </div>
             <div class="glen-quadblock">
               <h6>ENGAGEMENT</h6>
               <div class="glen-quadblock-bar --purple"></div>
-              <p>Exploring the world around them through play, discovery and engagment of their body, mind and senses.</p>
+              <p>Exploring the world around them through play, discovery and <span class="u-purple">engagment</span> of their body, mind and senses.</p>
               <div class="glenbox-purple-hollow"></div>
             </div>
             <div class="glen-quadblock">
               <h6>EXPRESSION</h6>
               <div class="glen-quadblock-bar --red"></div>
-              <p>Communicating through their words, movements and various materials, to enhance expression in all forms.</p>
+              <p>Communicating through their words, movements and various materials, to enhance <span class="u-red">expression</span> in all forms.</p>
               <div class="glenbox-red-hollow"></div>
             </div>
           </div>
