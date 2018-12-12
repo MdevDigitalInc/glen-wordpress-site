@@ -322,6 +322,8 @@
     padding: 50px 35px;
   }
 
+  // Default balcony sticker text overrides
+
   h2,
   h3 {
     margin-bottom: 15px;
@@ -457,6 +459,8 @@
   }
 }
 
+// Our Team Page Balcony Quadblocks Container Styles
+
 .glen-quadblocks {
   width: 100%;
   position: relative;
@@ -467,6 +471,8 @@
     flex-wrap: nowrap;
   }
 }
+
+// Our Team Page Balcony Quadblock Styles
 
 .glen-quadblock {
   width: 100%;
@@ -510,6 +516,8 @@
     padding: 40px 15px 5px;
   }
 
+  // Quadblock bar element styles
+
   .glen-quadblock-bar {
     width: 75%;
     border-bottom: 2px solid black;
@@ -539,6 +547,8 @@
       border-color: $color-glen-blue;
     }
   }
+
+  // Quadblock Text Overrides
 
   h6 {
     @media #{$tablet-only} {
