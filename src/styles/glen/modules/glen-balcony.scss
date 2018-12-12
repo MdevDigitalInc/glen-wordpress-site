@@ -28,7 +28,6 @@
   box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
   background-repeat: no-repeat;
   background-color: $white;
-  background-size: 50%;
   background-position: center;
   display: flex;    
   flex-direction: column;
@@ -44,7 +43,13 @@
   // Badge Image Modifiers
 
   &.--faq {
+    background-size: 50%;
     background-image: url('../img/icons/icon-questionmark.svg');
+  }
+
+  &.--vision {
+    background-size: 65%;
+    background-image: url('../img/icons/icon-hearts.svg');
   }
 
   &:after {

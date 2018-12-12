@@ -30,8 +30,16 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-vision-balcony mdev-todo">
-    glen-vision-balcony todo
+  <section class="glen-vision-balcony">
+    <div class="glen-balcony">
+      <div class="glen-balcony-badge --vision"></div>
+      <div class="glen-balcony-ledge --faq"></div>
+      <div class="glen-balcony-content --sticker">
+        <div class="glen-balcony-sticker">
+          <h3>Still have questions?</h3>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Bigimage Section -->
