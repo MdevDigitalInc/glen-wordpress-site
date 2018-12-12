@@ -75,7 +75,7 @@
       <div class="glen-balcony-ledge --faq"></div>
       <div class="glen-balcony-content --sticker">
         <div class="glen-balcony-sticker">
-          <h3>Still have questions?</h3> 
+          <h3 class="u-purple">Still have questions?</h3> 
           <p>
             Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
           </p>

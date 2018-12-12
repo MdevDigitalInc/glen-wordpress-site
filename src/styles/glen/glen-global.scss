@@ -32,6 +32,27 @@
       width: 100%;
       border-radius: 30px;
       background-color: $color-glen-green;
+      box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+      transform: rotate(-1deg);
+    }
+  }
+
+  &-green-hollow {
+    width: 100%;
+    height: auto;
+    
+    &:after {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 30px;
+      border: 2px solid $color-glen-green;
       transform: rotate(-1deg);
     }
   }
@@ -54,6 +75,27 @@
       width: 100%;
       border-radius: 30px;
       background-color: $color-glen-red;
+      box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+      transform: rotate(-1deg);
+    }
+  }
+
+  &-red-hollow {
+    width: 100%;
+    height: auto;
+    
+    &:after {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 30px;
+      border: 2px solid $color-glen-red;
       transform: rotate(-1deg);
     }
   }
@@ -76,6 +118,27 @@
       width: 100%;
       border-radius: 30px;
       background-color: $color-glen-blue;
+      box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+      transform: rotate(-1deg);
+    }
+  }
+
+  &-blue-hollow {
+    width: 100%;
+    height: auto;
+    
+    &:after {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 30px;
+      border: 2px solid $color-glen-blue;
       transform: rotate(-1deg);
     }
   }
@@ -98,9 +161,32 @@
       width: 100%;
       border-radius: 30px;
       background-color: $color-glen-purple;
+      box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
       transform: rotate(-1deg);
     }
   }
+
+  &-purple-hollow {
+    width: 100%;
+    height: auto;
+    
+    &:after {
+      display: block;
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 30px;
+      border: 2px solid $color-glen-purple;
+      transform: rotate(-1deg);
+    }
+  }
+
+  // GLENBOX WHITE
 
   &-white {
     width: 100%;
@@ -118,6 +204,7 @@
       width: 100%;
       border-radius: 30px;
       background-color: $white;
+      box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
       transform: rotate(-1deg);
     }
   }

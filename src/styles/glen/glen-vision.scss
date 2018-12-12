@@ -1,18 +1,23 @@
 .glen-vision-mission {
   width: 100%;
-  background-color: $color-glen-red;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 50px 5%;
+  background-repeat: repeat;
+  background-color: $color-glen-red;
+  background-image: url('../img/patterns/pattern-shapes.svg');
 
   @media #{$tablet-only} {
     padding: 60px 10%;
+    background-size: 42%;
   }
 
   @media #{$laptop-up} {
     padding: 60px 23%;
+    background-size: 17%;
+    background-position: center;
   }
 
   h2 {

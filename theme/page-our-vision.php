@@ -30,8 +30,29 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-vision-balcony mdev-todo">
-    glen-vision-balcony todo
+  <section class="glen-vision-balcony">
+    <div class="glen-balcony-view --vision"></div>
+    <div class="glen-balcony">
+      <div class="glen-balcony-badge --vision"></div>
+      <div class="glen-balcony-ledge --vision"></div>
+      <div class="glen-balcony-content --sticker">
+        <div class="glen-balcony-sticker --vision">
+          <h4>Guiding Principles</h4>
+          <h2>We Believe...</h2>
+          <ul>
+            <li>that optimal learning occurs when each child participates and is actively engaged.</li>
+            <li>in building each child’s sense of self and well-being as a foundation for their health and wellness.</li>
+            <li>in a holistic approach to each child’s learning and development through social, emotional, physical and cognitive domains.</li>
+            <li>that diversity is to be valued, celebrated and shared with all our children and their families in a way that honours and respects them.</li>
+            <li>that for staff, ongoing education and professional development leads to best practices that ensures high quality child care.</li>
+            <li>in innovation and creativity in our program to provide meaningful experiences for our children.</li>
+            <li>in a culture that fosters a sense of belonging, builds relationships and engages our team, our families and our community.</li>
+            <li>in an ongoing commitment to consistently achieve outcomes beyond the minimums required.</li>
+          </ul>
+          <a class="glen-btn --solid-ub" href="/our-team" title="Meet our team!">meet our team</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Bigimage Section -->

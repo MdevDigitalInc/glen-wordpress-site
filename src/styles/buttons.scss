@@ -69,6 +69,8 @@
       }
     }
 
+    // White Button | Blue Text
+
     &-wb {
       border-color: $white;
       background-color: $white;
@@ -118,6 +120,20 @@
         color: $color-glen-purple;
       }
     }
+
+    // Blue Button | Black Text
+
+    &-ub {
+      border-color: $color-glen-blue;
+      background-color: $color-glen-blue;
+      color: $black;
+        
+      &:hover {
+        background-color: transparent;
+        color: $color-glen-blue;
+      }
+    }
+
     // &-?
   }
 

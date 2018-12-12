@@ -6,6 +6,7 @@ N/A
 
 ## How To Test:
 - In terminal: `npm run dev`
+- In another terminal: `docker-compose up`
 - Navigate to : `localhost:4000/`
 
 :imp: Delete this line ONLY if you tested locally! :imp:

@@ -4,6 +4,38 @@
 
     GC + AW
 
+  4 parts:
+
+  glen-balcony-view:
+
+    Hero-style image that comes before balcony itself.
+
+    Modify with page flags (ie. --vision)
+
+    Note: OPTIONAL if there is no image above the ledge.
+
+  glen-balcony-badge:
+
+    The badge with a symbol on each balcony.
+
+    Modify with page flags (ie. --vision)
+
+  glen-balcony-ledge:
+
+    The actual curved part of the module, contains
+    background styles.
+
+    Modify with page flags (ie. --faq)
+
+  glen-balcony-content:
+
+    The style of content that comes after the ledge.
+
+    Modify with...
+
+      --sticker
+      ...todo
+
 */
 
 // Main section styles
@@ -18,6 +50,64 @@
   overflow: hidden;
 }
 
+// Balcony View Styles
+
+.glen-balcony-view {
+  position: relative;
+  z-index: -5;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: $color-glen-grey;
+  background-size: cover;  
+  margin-bottom: -150px;
+  height: 400px;
+
+  @media #{$tablet-only} {
+    height: 600px;
+  }
+
+  @media #{$laptop-up} {
+    height: 800px;
+  }
+
+  // Modifiers
+
+  &.--menu {
+    background-image: url('../img/shared/cutting-food.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.--team {
+    background-image: url('../img/shared/story-telling.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.--welcome {
+    background-image: url('../img/shared/mom-son.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.--vision {
+    background-image: url('../img/shared/girl-books.png');
+    background-size: 200%;
+    background-position: 25%;
+
+    @media #{$tablet-only} {
+      background-size: 125%;
+      background-position: 25%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: cover;
+      background-position: center bottom;
+    }
+  }
+}
+
 // Balcony Badge Styles
 
 .glen-balcony-badge {
@@ -28,7 +118,6 @@
   box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
   background-repeat: no-repeat;
   background-color: $white;
-  background-size: 50%;
   background-position: center;
   display: flex;    
   flex-direction: column;
@@ -44,7 +133,28 @@
   // Badge Image Modifiers
 
   &.--faq {
+    background-size: 50%;
     background-image: url('../img/icons/icon-questionmark.svg');
+  }
+
+  &.--menu {
+    background-size: 60%;
+    background-image: url('../img/icons/icon-apple.svg');
+  }
+
+  &.--team {
+    background-size: 65%;
+    background-image: url('../img/icons/icon-footprints.svg');
+  }
+
+  &.--welcome {
+    background-size: 55%;
+    background-image: url('../img/icons/icon-family.svg');
+  }
+
+  &.--vision {
+    background-size: 65%;
+    background-image: url('../img/icons/icon-hearts.svg');
   }
 
   &:after {
@@ -70,10 +180,42 @@
 
   // Style Modifiers
 
-  &.--faq {
+  &.--menu,
+  &.--welcome {
+    background-repeat: repeat;
+    background-color: $color-glen-red;
+    background-image: url('../img/patterns/pattern-shapes.svg');
+    background-size: 12%;
+
+    @media #{$tablet-only} {
+      background-size: 8%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: 3.5%;
+    }
+  }
+
+  &.--faq,
+  &.--team {
     background-repeat: repeat;
     background-color: $color-glen-grey;
     background-image: url('../img/patterns/pattern-numbers.svg');
+    background-size: 12%;
+
+    @media #{$tablet-only} {
+      background-size: 8%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: 3.5%;
+    }
+  }
+
+  &.--vision {
+    background-repeat: repeat;
+    background-color: $color-glen-blue;
+    background-image: url('../img/patterns/pattern-shapes-blue.svg');
     background-size: 12%;
 
     @media #{$tablet-only} {
@@ -113,6 +255,7 @@
 
   // Balcony Content Modifiers
 
+  &.--glenbox,
   &.--sticker {
     padding: 0 5%; 
 
@@ -126,7 +269,39 @@
   }
 }
 
-// Sticker Styles
+// Balcony-glenbox Styles
+
+.glen-balcony-glenbox-object {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 25px 5px;
+
+  @media #{$tablet-only} {
+    padding: 55px 40px 40px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 75px 65px 40px;
+  }
+
+  span {
+    margin-bottom: 25px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$laptop-up} {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+// Balcony-Sticker Styles
 
 .glen-balcony-sticker {
   width: 100%;
@@ -136,6 +311,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 40px 20px;
 
   @media #{$tablet-only} {
@@ -146,8 +322,10 @@
     padding: 50px 35px;
   }
 
+  // Default balcony sticker text overrides
+
+  h2,
   h3 {
-    color: $color-glen-purple;
     margin-bottom: 15px;
 
     @media #{$tablet-only} {
@@ -159,6 +337,7 @@
     }
   }
 
+  ul,
   p {
     margin-bottom: 25px;
 
@@ -169,6 +348,10 @@
     @media #{$laptop-up} {
       margin-bottom: 25px;
     }
+  }
+
+  li {
+    text-align: left;
   }
 
   a {
@@ -214,5 +397,170 @@
       max-height: 45px;
       width: auto;
     }
+  }
+}
+
+// Vision Page
+
+.glen-balcony-sticker.--vision {
+  padding: 40px 20px 10px;
+
+  @media #{$tablet-only} {
+    padding: 40px 45px 10px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 100px 10px;
+  }
+}
+
+// Menu Page
+
+.glen-balcony-sticker.--menu {
+  padding: 40px 20px 10px;
+
+  @media #{$tablet-only} {
+    padding: 40px 45px 10px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 160px 5px;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+// Our Team
+
+.glen-balcony-content.--sticker {
+  @media #{$laptop-only} {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+.glen-balcony-sticker.--team {
+  padding: 40px 20px 70px;
+
+  @media #{$tablet-only} {
+    padding: 60px 45px 70px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 75px 65px;
+  }
+
+
+  p {
+    padding: 0 25px;
+    margin-bottom: 25px;
+  }
+}
+
+// Our Team Page Balcony Quadblocks Container Styles
+
+.glen-quadblocks {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$laptop-up} {
+    flex-wrap: nowrap;
+  }
+}
+
+// Our Team Page Balcony Quadblock Styles
+
+.glen-quadblock {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 1px 5px;
+
+  @media #{$phone-only} {
+    &:nth-child( n+2 ) {
+      margin-top: 25px;
+    }
+  }
+
+  @media #{$tablet-only} {
+    width: 47%;
+    height: 275px;
+    padding: 35px 1px 5px;
+
+    &:nth-child( 2n+2 ) {
+      margin-left: 6%;
+    }
+
+    &:nth-child( n+3 ) {
+      margin-top: 6%;
+    }
+  }
+
+  @media #{$laptop-up} {
+    width: 24%;
+    padding: 35px 1px 5px;
+
+    &:nth-child( n+2 ) {
+      margin-left: 2%;
+    }
+  }
+
+  @media #{$desktop-up} {
+    padding: 40px 15px 5px;
+  }
+
+  // Quadblock bar element styles
+
+  .glen-quadblock-bar {
+    width: 75%;
+    border-bottom: 2px solid black;
+    margin: 8px 0;
+
+    @media #{$tablet-only} {
+      margin: 10px 0 20px;
+    }
+
+    @media #{$laptop-up} {
+      margin: 10px 0 25px;
+    }
+
+    &.--green {
+      border-color: $color-glen-green;
+    }
+
+    &.--red {
+      border-color: $color-glen-red;
+    }
+
+    &.--purple {
+      border-color: $color-glen-purple;
+    }
+
+    &.--blue {
+      border-color: $color-glen-blue;
+    }
+  }
+
+  // Quadblock Text Overrides
+
+  h6 {
+    @media #{$tablet-only} {
+      font-size: 32px;
+    }
+
+    @media #{$laptop-only} {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    line-height: 120%;
   }
 }

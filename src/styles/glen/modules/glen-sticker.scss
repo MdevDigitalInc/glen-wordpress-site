@@ -38,14 +38,18 @@
 
   &.--programs {
     background-color: $color-glen-red;
+    background-image: url('../img/patterns/pattern-shapes.svg');
+    background-size: 96%;
     padding: 60px 5%;
 
     @media #{$tablet-only} {
       padding: 75px 8%;
+      background-size: 40%;
     }
 
     @media #{$laptop-up} {
       padding: 35px 20%;
+      background-size: 15%;
     }
 
     .glen-sticker-box {
