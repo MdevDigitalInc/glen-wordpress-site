@@ -86,6 +86,21 @@
     }
 
     @media #{$laptop-up} {
+      background-size: 3.5%;
+    }
+  }
+
+  &.--vision {
+    background-repeat: repeat;
+    background-color: $color-glen-blue;
+    background-image: url('../img/patterns/pattern-shapes-blue.svg');
+    background-size: 12%;
+
+    @media #{$tablet-only} {
+      background-size: 8%;
+    }
+
+    @media #{$laptop-up} {
       background-size: 5%;
     }
   }
@@ -152,7 +167,6 @@
   }
 
   h3 {
-    color: $color-glen-purple;
     margin-bottom: 15px;
 
     @media #{$tablet-only} {
