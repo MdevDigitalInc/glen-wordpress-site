@@ -75,18 +75,8 @@
 
   &.--menu {
     background-image: url('../img/shared/cutting-food.png');
-    background-size: 200%;
-    background-position: 25%;
-
-    @media #{$tablet-only} {
-      background-size: 125%;
-      background-position: 25%;
-    }
-
-    @media #{$laptop-up} {
-      background-size: cover;
-      background-position: center bottom;
-    }
+    background-size: cover;
+    background-position: center;
   }
 
   &.--vision {
@@ -370,7 +360,7 @@
   }
   
   @media #{$laptop-up} {
-    padding: 50px 200px 10px;
+    padding: 50px 160px 5px;
   }
 
   p {
