@@ -79,6 +79,12 @@
     background-position: center;
   }
 
+  &.--team {
+    background-image: url('../img/shared/story-telling.png');
+    background-size: cover;
+    background-position: center;
+  }
+
   &.--welcome {
     background-image: url('../img/shared/mom-son.png');
     background-size: cover;
@@ -126,14 +132,19 @@
 
   // Badge Image Modifiers
 
+  &.--faq {
+    background-size: 50%;
+    background-image: url('../img/icons/icon-questionmark.svg');
+  }
+
   &.--menu {
     background-size: 60%;
     background-image: url('../img/icons/icon-apple.svg');
   }
 
-  &.--faq {
-    background-size: 50%;
-    background-image: url('../img/icons/icon-questionmark.svg');
+  &.--team {
+    background-size: 65%;
+    background-image: url('../img/icons/icon-footprints.svg');
   }
 
   &.--welcome {
@@ -185,7 +196,8 @@
     }
   }
 
-  &.--faq {
+  &.--faq,
+  &.--team {
     background-repeat: repeat;
     background-color: $color-glen-grey;
     background-image: url('../img/patterns/pattern-numbers.svg');
@@ -299,6 +311,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 40px 20px;
 
   @media #{$tablet-only} {
@@ -333,6 +346,10 @@
     @media #{$laptop-up} {
       margin-bottom: 25px;
     }
+  }
+
+  li {
+    text-align: left;
   }
 
   a {
@@ -411,4 +428,35 @@
   p {
     text-align: center;
   }
+}
+
+// Our Team
+
+.glen-balcony-sticker.--team {
+  padding: 40px 20px 10px;
+
+  @media #{$tablet-only} {
+    padding: 40px 45px 10px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 75px 5px;
+  }
+
+
+  p {
+    padding: 0 25px;
+  }
+}
+
+.glen-quadblocks {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.glen-quadblock {
+  width: 25%;
+  position: relative;
+  z-index: 5;
 }
