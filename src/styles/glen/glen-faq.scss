@@ -1,88 +1,141 @@
+/*
+
+  FAQ Page Specific Styles
+
+  If you are looking for balcony-content
+  for FAQ it is in glen-balcony.scss!
+
+*/
+
+// Page Wrapper Styles
+
 .glen-faq-page {
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  width: 100%;
 }
+
+// Dialogue Module (Singleton) Styles
 
 .glen-faq-dialogue {
   display: flex;
-  flex-direction: row;
+  width: 100%;
   position: relative;
-  width: 80%;
-  margin: 0 5%;
-  justify-content: center;
   flex-wrap: wrap;
+  padding: 40px 5%;
 
-  @media #{tablet-only} {
-    margin: 0 8%;
+  @media #{$tablet-only} {
+    padding: 60px 8% 30px;
   }
 
-  @media #{laptop-up} {
-    margin: 0 16%;
+  @media #{$laptop-up} {
+    padding: 80px 16% 100px;
   }
 }
 
-.glen-dialogue-left { 
-  display: flex;
-  flex-direction: column;
-  width: 53%;
-}
+// Dialogue Module LEFT Side Styles
 
-.glen-faq-desc {
+.glen-dialogue-left {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @media #{$laptop-up} {
+    width: 55%;
+  }
+}
+
+.glen-faq-desc {
+  width: 100%;
+
+  @media #{$laptop-up} {
+    margin-bottom: 45px;
+  }
+
+  .glen-faq-btn {
+    margin-top: 15px;
+  }
+}
+
+.glen-hidden-dragon {
+  width: 100%;
+  margin: 40px 0;
+  
+  @media #{$tablet-only} {
+    margin: 50px 0;
+  }
+
+  @media #{$laptop-up} {
+    display: none;
+  }
+}
+
+// Dialogue Module RIGHT Side Styles
+
+.glen-dialogue-right {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-left: 80px;
+  display: none;
+
+  @media #{$laptop-up} {
+    display: block;
+    width: 45%;
+  }
 }
 
 .glen-faq-box {
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 10% vw-desktop(70) 5% vw-desktop(50);
-}
+  padding: 30px 25px 30px 20px;
 
-.glen-dialogue-right {
-  margin-left: 5%;
-  margin-top: 6%;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 30%;
-}
-
-.glen-faq-btn {
-  margin-top: 15px;
-}
-
-.glen-faq-contact {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 80%;
-  margin: 0 5%;
-  align-items: center;
-  flex-wrap: wrap;
-
-  @media #{tablet-only} {
-    margin: 0 8%;
-  }
-
-  @media #{laptop-up} {
-    margin: 0 16%;
-  }
-
-  h3 {
-    color: $color-glen-purple;
+  @media #{$tablet-up} {
+    padding: 50px;
   }
 }
 
-.glen-faq-featured {
-  display: flex;
-  flex-direction: row;
+// FAQ Bumper Module (Singleton) Styles
+
+.glen-faq-bumper {
+  width: 100%;
   position: relative;
-  width: 85%;
-  margin: 0 auto;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 0 5% 25px;
+
+  @media #{$tablet-only} {
+    padding: 0 8% 60px;
+  }
+
+  @media #{$laptop-up} {
+    padding: 0 16% 150px;
+  }
+
+  .glen-faq-bumper-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media #{$tablet-up} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+// Address is a compound element of <img + p>
+
+.glen-faq-bumper-address {
+  display: flex;
+  align-items: flex-start;
+
+  img {
+    display: block;
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
+  }
 }

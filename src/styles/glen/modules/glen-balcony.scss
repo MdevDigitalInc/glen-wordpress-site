@@ -1,0 +1,218 @@
+/*
+
+  GLEN Balcony Module Styles
+
+    GC + AW
+
+*/
+
+// Main section styles
+
+.glen-balcony {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+// Balcony Badge Styles
+
+.glen-balcony-badge {
+  z-index: 1;
+  position: relative;
+  border-radius: 50%;
+  border: 2px solid $white;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+  background-repeat: no-repeat;
+  background-color: $white;
+  background-size: 50%;
+  background-position: center;
+  display: flex;    
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  // To have room for shadow:
+  margin: 10px;
+
+  @media #{$tablet-up} {
+    width: 125px;
+  }
+
+  // Badge Image Modifiers
+
+  &.--faq {
+    background-image: url('../img/icons/icon-questionmark.svg');
+  }
+
+  &:after {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+  }
+}
+
+// Balcony Ledge Styles
+
+.glen-balcony-ledge {
+  width: 700%;
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  background-color: $color-glen-grey;
+  margin-top: 40px;
+
+  @media #{$tablet-up} {
+    margin-top: 75px;
+  }
+
+  // Style Modifiers
+
+  &.--faq {
+    background-repeat: repeat;
+    background-color: $color-glen-grey;
+    background-image: url('../img/patterns/pattern-numbers.svg');
+    background-size: 12%;
+
+    @media #{$tablet-only} {
+      background-size: 8%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: 5%;
+    }
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    padding-bottom: 100%;
+  }
+}
+
+// Balcony Content Area Styles
+
+.glen-balcony-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 25px 0 75px;
+
+  @media #{$tablet-only} {
+    margin: 30px 0 90px;
+  }
+
+  @media #{$laptop-up} {
+    margin: 125px 0 150px;
+  }
+
+  // Balcony Content Modifiers
+
+  &.--sticker {
+    padding: 0 5%; 
+
+    @media #{$tablet-only} {
+      padding: 0 8%;
+    }
+
+    @media #{$laptop-up} {
+      padding: 0 16%;
+    }
+  }
+}
+
+// Sticker Styles
+
+.glen-balcony-sticker {
+  width: 100%;
+  background: $white;
+  border-radius: 30px;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+
+  @media #{$tablet-only} {
+    padding: 40px 35px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 35px;
+  }
+
+  h3 {
+    color: $color-glen-purple;
+    margin-bottom: 15px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$laptop-up} {
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    margin-bottom: 25px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$laptop-up} {
+      margin-bottom: 25px;
+    }
+  }
+
+  a {
+    margin-bottom: 25px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 35px;
+    }
+
+    @media #{$laptop-up} {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+/*
+
+  Page Specific Balcony Styles
+
+*/
+
+// FAQ Page Specific Styles (Sticker Images)
+
+.glen-contact-logos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media #{$tablet-only} {
+    .glen-contact-logo {
+      height: auto;
+      width: 17vw;
+    }
+  }
+
+  @media #{$laptop-up} {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+
+    .glen-contact-logo {
+      max-height: 45px;
+      width: auto;
+    }
+  }
+}

@@ -20,10 +20,25 @@
         <p>
           We like to have a personal connection with our prospective families, so please give us a call next at 519-439-3701 to confirm your request was received, and to answer any questions you may have about our centre. Speaking of questions, let's see if we can answer some for you now!
         </p>
-        <div class="glen-faq-btn">
-          <a class=" glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
-        </div>
+        <a class=" glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
       </div><!-- /description -->
+      <div class="glen-hidden-dragon">
+        <div class="glen-faq-box"> <!-- box -->
+          <h4>
+            Finding Child Care
+          </h4>
+          <div class="glen-squiggle --yellow"></div>
+          <p>
+            So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
+          </p>
+          <div class="glen-faq-btn">
+            <a class="glen-btn --solid-wb" >
+              Join Our Waiting List
+            </a>
+          </div>
+          <div class="glenbox-blue"></div>
+        </div><!-- /box -->
+      </div>
         <?php
         global $wpdb;
         $results = $wpdb->get_results ( " Select * from tblFAQ " );
@@ -43,25 +58,49 @@
           So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
         </p>
         <div class="glen-faq-btn">
-        <a class="glen-btn --solid-wb" >
-          Join Our Waiting List
-        </a>
+          <a class="glen-btn --solid-wb" >
+            Join Our Waiting List
+          </a>
         </div>
         <div class="glenbox-blue"></div>
-      </div>
-    </div><!-- /box -->
+      </div><!-- /box -->
+    </div>
   </section>
 
   <!-- Balcony Section -->
 
-  <section class="glen-faq-contact">
-    <h3>STILL HAVE QUETIONS?</h3> 
-    <p>
-      Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
-    </p>
-    <div class="glen-faq-btn">
-      <a class="glen-btn --solid-pw" >CONTACT US</a>
+  <section class="glen-faq-balcony">
+    <div class="glen-balcony">
+      <div class="glen-balcony-badge --faq"></div>
+      <div class="glen-balcony-ledge --faq"></div>
+      <div class="glen-balcony-content --sticker">
+        <div class="glen-balcony-sticker">
+          <h3>Still have questions?</h3> 
+          <p>
+            Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
+          </p>
+          <a class="glen-btn --solid-pw" title="todo">CONTACT US</a>
+          <div class="glen-contact-logos"> 
+            <?php 
+            $test = get_bloginfo('template_url', 'display');
+              $contactImages = array (
+                "$test/img/logos/logo-childreach.png",
+                "$test/img/logos/logo-mommy-connections.png",
+                "$test/img/logos/logo-childrens-museum.png",
+                "$test/img/logos/logo-ml-health-unit.png",
+                "$test/img/logos/logo-london-public-library.png",
+                "$test/img/logos/logo-child-youth.png",
+                "$test/img/logos/log-ontario.png"
+              );
+
+              foreach($contactImages as $img)
+              echo "<img class=\"glen-contact-logo\" src=\"$img\" alt=\"todo\"/>";
+            ?>
+          </div>
+        </div>
+      </div>
     </div>
+    
   </section>
 
   <!-- Featured Section -->
@@ -70,17 +109,17 @@
     <div class="glen-featured">
       <div class="glen-featured-text">
         <div class="glen-featured-text-object">
-          <h3>Charitable Donations</h3>
+          <h5>Charitable Donations</h5>
           <p>
             Arbour Glen is a registered charity with the Canadian Revenue Agency. Our charitable registration number is 89611 0756 RR0001, so all of our donors receive charitable receipts. Any family or individual that donates over $150.00 will have their name engraved on a plate that will be displayed on our plaque at the back entrance-way. There are several ways you can donate:
           </p>
         </div>
       </div>
-      <div class="glen-featured-glenbox">
+      <div class="glen-featured-glenbox --wide">
         <div class="glen-featured-glenbox-object">
           <ul>
             <li>
-              Send a cheque or money order to 	1017 Adelaide St. N. London ON. N5Y 2M8
+              Send a cheque or money order to <br>	1017 Adelaide St. N. London ON. N5Y 2M8
             </li>
             <li>
               Stop by our office to do an Interac transaction
@@ -105,8 +144,13 @@
   
   <section class="glen-faq-bumper">
     <hr/>
-    <p>1017 Adelaide Street North, London, ON</p>
-    <p>Charitable Donations: 89611 0756 RR0001</p>
+    <div class="glen-faq-bumper-content">
+      <div class="glen-faq-bumper-address">
+        <img class="glen-footer-icon" src="<?php bloginfo('template_url'); ?>/img/icons/icon-location.svg" alt="Image of a map pin" />
+        <p class="--body-sidebar">1017 Adelaide Street North, London, ON</p>
+      </div>
+      <p class="--body-sidebar">Charitable Donations: 89611 0756 RR0001</p>
+    </div>
   </section>
 </div>
 
