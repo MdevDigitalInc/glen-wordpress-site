@@ -73,6 +73,22 @@
 
   // Modifiers
 
+  &.--menu {
+    background-image: url('../img/shared/cutting-food.png');
+    background-size: 200%;
+    background-position: 25%;
+
+    @media #{$tablet-only} {
+      background-size: 125%;
+      background-position: 25%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: cover;
+      background-position: center bottom;
+    }
+  }
+
   &.--vision {
     background-image: url('../img/shared/girl-books.png');
     background-size: 200%;
@@ -114,6 +130,11 @@
 
   // Badge Image Modifiers
 
+  &.--menu {
+    background-size: 60%;
+    background-image: url('../img/icons/icon-apple.svg');
+  }
+
   &.--faq {
     background-size: 50%;
     background-image: url('../img/icons/icon-questionmark.svg');
@@ -146,6 +167,21 @@
   }
 
   // Style Modifiers
+
+  &.--menu {
+    background-repeat: repeat;
+    background-color: $color-glen-red;
+    background-image: url('../img/patterns/pattern-shapes.svg');
+    background-size: 12%;
+
+    @media #{$tablet-only} {
+      background-size: 8%;
+    }
+
+    @media #{$laptop-up} {
+      background-size: 3.5%;
+    }
+  }
 
   &.--faq {
     background-repeat: repeat;
@@ -321,5 +357,23 @@
   
   @media #{$laptop-up} {
     padding: 50px 100px 10px;
+  }
+}
+
+// Menu Page
+
+.glen-balcony-sticker.--menu {
+  padding: 40px 20px 10px;
+
+  @media #{$tablet-only} {
+    padding: 40px 45px 10px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 200px 10px;
+  }
+
+  p {
+    text-align: center;
   }
 }

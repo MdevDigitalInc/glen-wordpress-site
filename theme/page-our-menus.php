@@ -16,8 +16,19 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-menus-balcony mdev-todo">
-    glen-menus-balcony todo
+  <section class="glen-menus-balcony">
+    <div class="glen-balcony-view --menu"></div>
+    <div class="glen-balcony">
+      <div class="glen-balcony-badge --menu"></div>
+      <div class="glen-balcony-ledge --menu"></div>
+      <div class="glen-balcony-content --sticker">
+        <div class="glen-balcony-sticker --menu">
+          <h2>Food & Nutrition</h2>
+          <p>We take pride in our menus, serving fish, chicken and lean beef dishes once a week and vegetarian meals twice a week (no nuts, no fruit juices and no processed meats). We include mostly fresh or frozen fruits and vegetables and try to limit canned items when practical. We serve only fresh milk daily (whole or 2%, never diluted or powdered) and most of our dips and spreads are homemade. See our menus below or look for them posted on the main hallway bulletin board inside the back entrance. You can also request a menu be emailed to you.</p>
+          <a class="glen-btn --solid-rw" href="#" title="todo">Join our mailing list</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Menu Section -->
