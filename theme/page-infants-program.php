@@ -24,7 +24,7 @@
 
   <!-- Balcony Section -->
 
-  <section class="glen-infants-balcony mdev-todo">
+  <section class="glen-infants-balcony">
     glen-infants-balcony todo
   </section>
 
