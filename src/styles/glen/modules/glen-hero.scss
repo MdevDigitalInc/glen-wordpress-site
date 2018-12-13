@@ -111,14 +111,20 @@
 
   &.--sticker {
     background-color: $color-glen-grey;
+    background-repeat: repeat;
+    background-image: url('../img/patterns/pattern-numbers.svg');
+    background-size: 120%;
+    
     padding: 35px 5%;
 
     @media #{$tablet-only} {
       padding: 85px 8%;
+      background-size: 70%;
     }
 
     @media #{$laptop-up} {
       padding: 100px 20%;
+      background-size: 30%;
     }
   }
 

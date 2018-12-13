@@ -58,6 +58,7 @@
         <span class="glen-review-author">- Vince V.</span>
         <p>“Our preschooler has been at Arbour Glen since she was an infant and she has thrived here. The staff are compassionate, empathetic and extremely knowledgeable.  The Preschool room has been especially amazing to further expand her skills. She’s become so confident and independent. They get to know each individual child as their own little person. I can’t recommend them enough.”</p>
         <span class="glen-review-author">- Sarah M.</span>
+        <div class="glenquotes --programs"></div>
         <div class="glenbox-white"></div>
       </div>
     </div>

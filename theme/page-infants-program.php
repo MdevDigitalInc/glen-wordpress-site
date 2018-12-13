@@ -53,6 +53,7 @@
         <div class="glen-squiggle --blue"></div>
         <p>“When I picked up my little guy on one of his first days with Arbour Glen, Chris was singing him the ABC song, while he sat contentedly in her arms.  She said (happily!) that it was her tenth time singing it – she said she discovered in that moment, it was what gave him comfort.  It almost brought me to tears: knowing they will do anything to give him what he needed in that moment of sadness.  You really feel like your baby is the centre of their world – what more can a mom ask for?”</p>
         <span class="glen-review-author">- Alina M.</span>
+        <div class="glenquotes --programs"></div>
         <div class="glenbox-white"></div>
       </div>
     </div>

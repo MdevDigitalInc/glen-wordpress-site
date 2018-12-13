@@ -434,6 +434,35 @@
   background-repeat: no-repeat;
   background-size: 100%;
 
+  &.--programs {
+    background-image: url('../img/graphics/quotation-marks-blue.svg');
+    
+    @media #{$phone-only} {
+      display: none;
+    }
+
+    @media #{$tablet-only} {
+      width: 260px;
+      height: 200px;
+      top: -14%;
+      left: -3%;
+    }
+
+    @media #{$laptop-only} {
+      width: 200px;
+      height: 175px;
+      top: -12%;
+      left: -3%;
+    }
+
+    @media #{$desktop-up} {
+      width: 285px;
+      height: 205px;
+      top: -10%;
+      left: -5%;
+    }
+  }
+
   &.--vision {
     width: 150px;
     height: 110px;
