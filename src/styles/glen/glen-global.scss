@@ -35,6 +35,37 @@
       box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
       transform: rotate(-1deg);
     }
+
+    &.--binoculars {
+      &:after {
+        display: block;
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 30px;
+        background-color: $color-glen-green;
+        box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+        transform: rotate(-1deg);
+        background-repeat: no-repeat;
+        background-image: url('../img/icons/icon-binoculars-alpha.svg');
+        background-size: 250px;
+        background-position: 120% 120%;
+
+        @media #{$phone-only} {
+          background-size: 150px;
+          background-position: 105% 105%;
+        }
+
+        @media #{$tablet-only} {
+          background-position: 110% 120%;
+        }
+      }
+    }
   }
 
   &-green-hollow {
