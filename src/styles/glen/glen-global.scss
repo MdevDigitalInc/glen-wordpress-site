@@ -405,31 +405,76 @@
     margin: 5px 0 10px;
   }
 
+  &.--blue {
+    background-image: url('../img/graphics/zig-zag-blue.svg');
+  }
+
   &.--yellow {
     background-image: url('../img/graphics/zig-zag-yellow.svg');
   }
 }
 
+/*
+
+  The Grateful Glenquotes
+
+  This is a div that has the quotation graphic as a bg image!
+
+  Use modifiers to change the colour :)
+
+  Ex.
+
+  <div class="glenquotes --vision"></div>
+
+*/
 
 .glenquotes {
   position: absolute;
   z-index: 100;
-  width: 150px;
-  height: 110px;
   background-repeat: no-repeat;
-  background-image: url('../img/graphics/quotation-marks.svg');
   background-size: 100%;
-  top: -15%;
-  left: 77%;
 
-  @media #{$phone-only} {
-    width: 75px;
-    height: 55px;
-    left: 81%;
+  &.--vision {
+    width: 150px;
+    height: 110px;
+    background-image: url('../img/graphics/quotation-marks-red.svg');
+    transform: rotate(180deg);
+    top: -15%;
+    left: 77%;
+  
+    @media #{$phone-only} {
+      width: 75px;
+      height: 55px;
+      left: 81%;
+    }
   }
 
-  &.--red {
-    background-image: url('../img/graphics/quotation-marks.svg');
-    transform: rotate(180deg);
+  &.--welcome {
+    background-image: url('../img/graphics/quotation-marks-blue.svg');
+    width: 115px;
+    height: 83px;
+    top: -4%;
+    left: 0;
+
+    @media #{$tablet-only} {
+      width: 260px;
+      height: 200px;
+      top: -14%;
+      left: -3%;
+    }
+
+    @media #{$laptop-only} {
+      width: 200px;
+      height: 175px;
+      top: -7%;
+      left: -3%;
+    }
+
+    @media #{$desktop-up} {
+      width: 285px;
+      height: 205px;
+      top: -10%;
+      left: 3%;
+    }
   }
 }

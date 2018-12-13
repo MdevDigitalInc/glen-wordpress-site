@@ -17,14 +17,18 @@
 
   &.--welcome {
     background-color: $color-glen-blue;
+    background-image: url('../img/patterns/pattern-shapes-blue.svg');
+    background-size: 91%;
     padding: 35px 5%;
 
     @media #{$tablet-only} {
       padding: 85px 8%;
+      background-size: 47%;
     }
 
     @media #{$laptop-up} {
       padding: 100px 20%;
+      background-size: 18%;
     }
 
     .glen-sticker-box {
