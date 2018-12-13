@@ -43,7 +43,7 @@
               <div class="glen-quadblock-bar --blue"></div>
               <p>Developing their physical and mental/emotional health to support their <span class="u-blue">well-being</span>.</p>
               <div class="glenbox-blue-hollow"></div>
-            </div>
+            </div>  
             <div class="glen-quadblock">
               <h6>ENGAGEMENT</h6>
               <div class="glen-quadblock-bar --purple"></div>
