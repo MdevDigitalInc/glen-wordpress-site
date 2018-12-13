@@ -289,8 +289,7 @@
   // Balcony Content Modifiers
 
   &.--glenbox,
-  &.--sticker,
-  &.--roster {
+  &.--sticker {
     padding: 0 5%; 
 
     @media #{$tablet-only} {
@@ -299,6 +298,13 @@
 
     @media #{$laptop-up} {
       padding: 0 16%;
+    }
+  }
+
+  &.--roster {
+    @media #{$laptop-up} {
+      padding: 0 16%;
+      margin: 50px 0 125px;
     }
   }
 }
