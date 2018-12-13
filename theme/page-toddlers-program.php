@@ -26,25 +26,32 @@
   <!-- Balcony Section -->
 
   <section class="glen-toddlers-balcony">
-    glen-toddlers-balcony todo
-    <div class="glen-roster">
-      <div class="glen-roster-head">
-        <h2>Our Management Team</h2>
-        <p>Our management team is here for you any time of day. Call them or drop by the administrative offices located on our third floor, but you may often find them in our classrooms as well.</p>
-      </div>
-      <div class="glen-roster-cards">
-          <?php 
-          $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 3;");
-          foreach ( $results as $emp )
-          {
-            echo "<div class='glen-roster-card'>";
-            echo "<div class='glen-roster-card-image --$emp->Avatar'></div>";
-            echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
-            echo "<p class='--edu-bio'>$emp->History</p>";
-            echo "<p class='--edu-quote'>\"".$emp->Quote."”</p>";
-            echo "</div>";
-          }
-          ?>
+    <div class="glen-balcony-view --toddlers"></div>
+    <div class="glen-balcony">
+      <div class="glen-balcony-badge --toddlers"></div>
+      <div class="glen-balcony-ledge"></div>
+      <div class="glen-balcony-content --roster">
+        <div class="glen-balcony-roster --toddlers">
+          <div class="glen-balcony-roster-head">
+            <h4>Meet Our</h4>
+            <h2>Toddler Room Educators</h2>
+            <p>At Arbour Glen, we have 2 Toddler groups, each with up to 15 children between 18 months and 30 months of age. There are 5 Registered Early Childhood Educators (RECEs) and 1 ECE Apprentice between the two groups. Our Toddler team are always tuned-in to the needs of each child in their group.  They are kind and nurturing caregivers who have the skills, experience and wisdom to work with toddlers.</p>
+          </div>
+          <div class="glen-balcony-roster-cards">
+            <?php 
+            $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 3;");
+            foreach ( $results as $emp )
+            {
+              echo "<div class='glen-balcony-roster-card'>";
+              echo "<div class='glen-roster-card-image --$emp->Avatar'></div>";
+              echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
+              echo "<p class='--edu-bio'>$emp->History</p>";
+              echo "<p class='--edu-quote'>\"".$emp->Quote."”</p>";
+              echo "</div>";
+            }
+            ?>
+          </div>
+        </div>
       </div>
     </div>
   </section>
