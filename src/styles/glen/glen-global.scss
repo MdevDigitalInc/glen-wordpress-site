@@ -344,3 +344,37 @@
   background-color: red;
   font-weight: 700;
 }
+
+/*
+
+  The Splendid Squiggle
+
+  This is a div that has the squiggle as a bg image!
+
+  Use modifiers to change the colour :)
+
+  Ex.
+
+  <div class="glen-squiggle --yellow"></div>
+
+*/
+
+.glen-squiggle {
+  position: relative;
+  width: 100%;
+  max-width: 275px;
+  background-repeat: no-repeat;
+  background-image: url('../img/graphics/zig-zag.svg');
+  background-size: 100%;
+  height: 20px;
+  margin: 5px 0 20px;
+
+  @media #{$phone-only} {
+    max-width: 200px;
+    margin: 5px 0 10px;
+  }
+
+  &.--yellow {
+    background-image: url('../img/graphics/zig-zag-yellow.svg');
+  }
+}
