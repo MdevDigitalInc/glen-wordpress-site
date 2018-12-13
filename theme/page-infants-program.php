@@ -30,13 +30,13 @@
       <div class="glen-balcony-badge --infants"></div>
       <div class="glen-balcony-ledge"></div>
       <div class="glen-balcony-content --roster">
-        <div class="glen-balcony-roster-head">
         <div class="glen-balcony-roster --infants">
+          <div class="glen-balcony-roster-head">
             <h4>Meet our</h4>
             <h2>Infant Room Educators</h2>
             <p>Our Infant group may have up to 10 children, who are 5 months to 18 months of age, with 3 Registered Early Childhood Educators. Our Infant team is made up of kind, nurturing caregivers who have the skills and experience in Infant care to work harmoniously and ensure our babies thrive!</p>
           </div>
-          <div class="glen-balcony-roster-cards mdev-todo">
+          <div class="glen-balcony-roster-cards">
             todo
           </div>
         </div>

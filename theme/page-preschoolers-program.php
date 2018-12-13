@@ -39,7 +39,7 @@
             <h2>Preschool Room Educators</h2>
             <p>At Arbour Glen, we have 2 Preschool groups each with up to 16 children between 30 months and 4 years of age. There are 2 Registered Early Childhood Educators in each group. Our Preschool Educators are a warm and loving team of caregivers who provide an inspiring, pleasurable atmosphere for children to enjoy learning through play.</p>
           </div>
-          <div class="glen-balcony-roster-cards mdev-todo">
+          <div class="glen-balcony-roster-cards">
             todo
           </div>
         </div>
