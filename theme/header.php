@@ -93,15 +93,36 @@
     </div>
 
     <div class="glen-main-navigation-content">
-      <div class="glen-main-navigation-logo"></div>
+      <div class="glen-main-navigation-logo">
+        <a href="/" title="Arbour Glen Home"></a>
+      </div>
       <div class="glen-main-navigation-links">
-
+        <div class="glen-main-navigation-link">
+          <span class="glen-main-navigation-link-label">about us</span>
+        </div>
+        <div class="glen-main-navigation-link">
+          <span class="glen-main-navigation-link-label">our programs</span>
+        </div>
+        <div class="glen-main-navigation-link">
+          <span class="glen-main-navigation-link-label">our menus</span>
+        </div>
+        <div class="glen-main-navigation-link">
+          <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
+        </div>
+        <div class="glen-main-navigation-link">
+          <span class="glen-main-navigation-link-label">parent handbook</span>
+        </div>
+        <div class="glen-main-navigation-link">
+          <a class="glen-main-navigation-link-label" href="/contact" title="Visit our Contact page">get in touch</a>
+        </div>
       </div>
       <div class="glen-main-navigation-socials">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
+        <a class="fab fa-facebook" href="/" title="Visit our Facebook page"></a>
+        <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
       </div>
     </div>
+
+    <!--<div class="glen-crocodilo"></div>-->
     
     <!-- The following PHP is commented out on purpose, AW -->
 
@@ -114,6 +135,4 @@
     ?>
 
     <!-- End of commented out PHP, AW -->
-
-    <div class="glen-crocodilo"></div>
   </nav>

@@ -1,33 +1,125 @@
+/*
+
+  GLEN Main Navigation
+
+  Philosophy:
+
+  The main nav has the following stack of content:
+  
+    20px of top padding
+    glen-rainbow-bar
+    glen-main-navigation-content
+    glen-crocodilo
+
+  The navigation-content div contains the functional stuff, the rest is decorative!
+
+  AW
+
+*/
+
 .glen-main-navigation {
   width: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 9001;
-  height: 100px;
   background-color: $white;
+  padding-top: 20px;
 }
 
-// This is a bad style! It's just for my sanity - AW
+// Main Navigation Content Styles
 
-.menu-primary-navigation-container {
+.glen-main-navigation-content {
+  width: 100%;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 15px;
+  padding: 10px 8% 5px;
 
-  ul {
-    display: flex;
+  @media #{$desktop-up} {
+    padding: 10px 16% 5px;
   }
 }
 
-// End of bad style
+.glen-main-navigation-logo {
+  position: relative;
+  width: 230px;
+  height: 71px;
+  background-image: url('../img/logo-arbourglen.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-right: 50px;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Main Navigation Links & Styles
+
+.glen-main-navigation-links {
+  width: 100%;
+  display: flex;
+}
+
+.glen-main-navigation-link {
+  position: relative;
+  width: 100%;
+  margin-right: 5px;
+  cursor: default;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background-color: $color-glen-green;
+  }
+
+  .glen-main-navigation-link-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $main-bold;
+    color: $color-glen-darkgrey;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Main Navigation Social Styles
+
+.glen-main-navigation-socials {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  a {
+    position: relative;
+    font-size: 26px;
+    margin: 0;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
 
 // Start of Crocodile Teeth
 
 /*
 
   SUPER IMPORTANT: The way this is implemented, I don't see a way to add shadow to the teeth. That is all.
+  Maybe with the gradients but damn dawg.
 
 */
 
