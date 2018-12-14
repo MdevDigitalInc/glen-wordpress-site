@@ -99,6 +99,7 @@
       <div class="glen-main-navigation-links">
         <div class="glen-main-navigation-link --dropdown">
           <span class="glen-main-navigation-link-label">about us&nbsp;<i class="fas fa-angle-down"></i></span>
+          <div class="glen-arrow-down"></div>
           <div class="glen-main-navigation-dropdown">
             <div class="glen-main-navigation-dropdown-links">
               <a href="/welcome" title="Welcome!">Welcome</a>
@@ -109,6 +110,7 @@
         </div>
         <div class="glen-main-navigation-link --dropdown">
           <span class="glen-main-navigation-link-label">our programs&nbsp;<i class="fas fa-angle-down"></i></span>
+          <div class="glen-arrow-down"></div>
           <div class="glen-main-navigation-dropdown">
             <div class="glen-main-navigation-dropdown-links">
               <a href="/infants-program" title="Learn more about our infants program">Infants</a>
@@ -118,7 +120,7 @@
           </div>
         </div>
         <div class="glen-main-navigation-link">
-          <span class="glen-main-navigation-link-label">our menus</span>
+          <a class="glen-main-navigation-link-label" href="/our-menus" title="Read our menus!">our menus</a>
         </div>
         <div class="glen-main-navigation-link">
           <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>

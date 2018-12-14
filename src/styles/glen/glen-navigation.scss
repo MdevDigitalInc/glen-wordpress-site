@@ -47,7 +47,7 @@
   background-image: url('../img/logo-arbourglen.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-right: 50px;
+  margin-right: 25px;
 
   a {
     position: absolute;
@@ -81,9 +81,30 @@
   }
 
   &.--dropdown {
+
+    .glen-arrow-down {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      z-index: 50;
+      transform: translateX(-50%) scaleY(0);
+      transform-origin: top;
+      width: 0; 
+      height: 0; 
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid $color-glen-green;
+      transition: all .4s;
+    }
+
     &:hover {
+
+      .glen-arrow-down {
+        transform: translateX(-50%) scaleY(1);
+      }
+
       .glen-main-navigation-dropdown {
-        display: flex;
+        transform: scaleY(1);
       }
     }
   }
@@ -103,20 +124,23 @@
     justify-content: center;
     align-items: center;
     transition: all .1s;
+    font-size: 18px;
+    padding: 0 15px;
   }
 }
 
 // Main navigation dropdown Styles
 
 .glen-main-navigation-dropdown {
-  display: none;
+  transform: scaleY(0);
+  transform-origin: top;
   transition: all .4s;
   background-color: $white;
   position: absolute;
   top: 100%;
   left: 0;
   width: 18vw;
-  padding: 15px 0 5px;
+  padding: 25px 0 5px;
   border-bottom: 3px solid $color-glen-green;
 
   .glen-main-navigation-dropdown-links {
@@ -128,7 +152,7 @@
   a {
     width: 100%;
     margin: 1px 0;
-    padding: 10px 15px;
+    padding: 10px 25px;
     
     &:hover {
       background-color: $color-glen-green;
@@ -138,6 +162,24 @@
 }
 
 // Main Navigation Social Styles
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) scale(1)translateY(0);
+  }
+  25% {
+    transform: rotate(7deg) scale(1.05) translateY(-1px);
+  }
+  50% {
+    transform: rotate(-7deg) scale(1.13);
+  }
+  75% {
+    transform: rotate(3deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translateY(0);
+  }
+}
 
 .glen-main-navigation-socials {
   position: relative;
@@ -152,6 +194,12 @@
 
     &:first-child {
       margin-right: 15px;
+    }
+
+    &:hover {
+      animation-name: shake;
+      animation-timing-function: ease-in-out;
+      animation-duration: .7s;
     }
   }
 }
