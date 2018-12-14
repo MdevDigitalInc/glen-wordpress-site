@@ -63,20 +63,29 @@
 .glen-main-navigation-links {
   width: 100%;
   display: flex;
+  position: relative;
 }
 
 .glen-main-navigation-link {
   position: relative;
   width: 100%;
-  margin-right: 5px;
   cursor: default;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  transition: all .1s;
 
   &:hover {
     background-color: $color-glen-green;
+    
+    .glen-main-navigation-link-label {
+      color: $white;
+    }
+  }
+
+  &.--dropdown {
+    &:hover {
+      .glen-main-navigation-dropdown {
+        display: flex;
+      }
+    }
   }
 
   .glen-main-navigation-link-label {
@@ -93,6 +102,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .1s;
+  }
+}
+
+// Main navigation dropdown Styles
+
+.glen-main-navigation-dropdown {
+  display: none;
+  transition: all .4s;
+  background-color: $white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 18vw;
+  padding: 15px 0 5px;
+  border-bottom: 3px solid $color-glen-green;
+
+  .glen-main-navigation-dropdown-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  a {
+    width: 100%;
+    margin: 1px 0;
+    padding: 10px 15px;
+    
+    &:hover {
+      background-color: $color-glen-green;
+      color: $white;
+    }
   }
 }
 
@@ -102,6 +143,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-left: 15px;
 
   a {
     position: relative;

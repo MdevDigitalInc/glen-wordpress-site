@@ -97,11 +97,25 @@
         <a href="/" title="Arbour Glen Home"></a>
       </div>
       <div class="glen-main-navigation-links">
-        <div class="glen-main-navigation-link">
-          <span class="glen-main-navigation-link-label">about us</span>
+        <div class="glen-main-navigation-link --dropdown">
+          <span class="glen-main-navigation-link-label">about us&nbsp;<i class="fas fa-angle-down"></i></span>
+          <div class="glen-main-navigation-dropdown">
+            <div class="glen-main-navigation-dropdown-links">
+              <a href="/welcome" title="Welcome!">Welcome</a>
+              <a href="/our-vision" title="Learn more!">Our Vision</a>
+              <a href="/our-team" title="Meet our team!">Our Team</a>
+            </div>
+          </div>
         </div>
-        <div class="glen-main-navigation-link">
-          <span class="glen-main-navigation-link-label">our programs</span>
+        <div class="glen-main-navigation-link --dropdown">
+          <span class="glen-main-navigation-link-label">our programs&nbsp;<i class="fas fa-angle-down"></i></span>
+          <div class="glen-main-navigation-dropdown">
+            <div class="glen-main-navigation-dropdown-links">
+              <a href="/infants-program" title="Learn more about our infants program">Infants</a>
+              <a href="/toddlers-program" title="Learn more about our toddlers program">Toddlers</a>
+              <a href="/preschoolers-program" title="Learn more about our preschoolers program">Preschoolers</a>
+            </div>
+          </div>
         </div>
         <div class="glen-main-navigation-link">
           <span class="glen-main-navigation-link-label">our menus</span>
@@ -110,7 +124,7 @@
           <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
         </div>
         <div class="glen-main-navigation-link">
-          <span class="glen-main-navigation-link-label">parent handbook</span>
+          <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook">parent handbook</a>
         </div>
         <div class="glen-main-navigation-link">
           <a class="glen-main-navigation-link-label" href="/contact" title="Visit our Contact page">get in touch</a>
