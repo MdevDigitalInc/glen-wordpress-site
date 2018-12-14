@@ -2,7 +2,8 @@
 <html <?php language_attributes(); ?>>
 	<head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Farsan|Open+Sans:400,400i,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Farsan|Open+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!-- [ FACEBOOK OG ] -->
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta property="fb:app_id" content="APP_ID_HERE" />
@@ -73,6 +74,9 @@
 	<body>
 
   <nav class="glen-main-navigation">
+
+    <!-- Rainbow Bar Section of Main Nav -->
+
     <div class="glen-rainbow-bar">
       <div class="glen-rainbow-bar-segment --yellow"></div>
       <div class="glen-rainbow-bar-segment --green"></div>
@@ -88,8 +92,28 @@
       <div class="glen-rainbow-bar-segment --orange"></div>
     </div>
 
-    <?php $args = array ( 'theme_location' => 'primary_navigation') ?>
-    <?php wp_nav_menu($args); ?>
+    <div class="glen-main-navigation-content">
+      <div class="glen-main-navigation-logo"></div>
+      <div class="glen-main-navigation-links">
 
-    <div class="glen-crocodilo"></div>    
+      </div>
+      <div class="glen-main-navigation-socials">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+    
+    <!-- The following PHP is commented out on purpose, AW -->
+
+    <?php
+      // $args = array ( 'theme_location' => 'primary_navigation')
+    ?>
+
+    <?php
+      // wp_nav_menu($args);
+    ?>
+
+    <!-- End of commented out PHP, AW -->
+
+    <div class="glen-crocodilo"></div>
   </nav>
