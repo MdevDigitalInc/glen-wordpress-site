@@ -14,6 +14,7 @@
       <div class="glen-hero-split-right">
         <div class="glen-vision-hero-glenbox">
           <span>To nurture a community<br>through innovative childcare.</span>
+          <div class="glenquotes --vision"></div>
           <div class="glenbox-green"></div>
         </div>
       </div>

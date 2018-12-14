@@ -137,7 +137,7 @@
         <div class="glen-squiggle --yellow"></div>
         <p>Our organization is overseen by an Executive Director and governed by a Board of Directors. To read more about our directors and for a list of our current Board Members visit:</p>
         <a class="glen-btn --solid-wg" href="/our-vision" title="todo">our vision</a>
-        <div class="glenbox-green"></div>
+        <div class="glenbox-green --binoculars"></div>
       </div>
     </div>
   </section>

@@ -33,8 +33,8 @@
       <div class="glen-balcony-badge --preschoolers"></div>
       <div class="glen-balcony-ledge"></div>
       <div class="glen-balcony-content --roster">
-        <div class="glen-balcony-roster-head">
         <div class="glen-balcony-roster --preschoolers">
+          <div class="glen-balcony-roster-head">
             <h4>Meet our</h4>
             <h2>Preschool Room Educators</h2>
             <p>At Arbour Glen, we have 2 Preschool groups each with up to 16 children between 30 months and 4 years of age. There are 2 Registered Early Childhood Educators in each group. Our Preschool Educators are a warm and loving team of caregivers who provide an inspiring, pleasurable atmosphere for children to enjoy learning through play.</p>
@@ -58,6 +58,7 @@
         <span class="glen-review-author">- Vince V.</span>
         <p>“Our preschooler has been at Arbour Glen since she was an infant and she has thrived here. The staff are compassionate, empathetic and extremely knowledgeable.  The Preschool room has been especially amazing to further expand her skills. She’s become so confident and independent. They get to know each individual child as their own little person. I can’t recommend them enough.”</p>
         <span class="glen-review-author">- Sarah M.</span>
+        <div class="glenquotes --programs"></div>
         <div class="glenbox-white"></div>
       </div>
     </div>

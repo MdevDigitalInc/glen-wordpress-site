@@ -35,6 +35,37 @@
       box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
       transform: rotate(-1deg);
     }
+
+    &.--binoculars {
+      &:after {
+        display: block;
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 30px;
+        background-color: $color-glen-green;
+        box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+        transform: rotate(-1deg);
+        background-repeat: no-repeat;
+        background-image: url('../img/icons/icon-binoculars-alpha.svg');
+        background-size: 250px;
+        background-position: 120% 120%;
+
+        @media #{$phone-only} {
+          background-size: 150px;
+          background-position: 105% 105%;
+        }
+
+        @media #{$tablet-only} {
+          background-position: 110% 120%;
+        }
+      }
+    }
   }
 
   &-green-hollow {
@@ -343,4 +374,136 @@
   justify-content: center;
   background-color: red;
   font-weight: 700;
+}
+
+/*
+
+  The Splendid Squiggle
+
+  This is a div that has the squiggle as a bg image!
+
+  Use modifiers to change the colour :)
+
+  Ex.
+
+  <div class="glen-squiggle --yellow"></div>
+
+*/
+
+.glen-squiggle {
+  position: relative;
+  width: 100%;
+  max-width: 275px;
+  background-repeat: no-repeat;
+  background-image: url('../img/graphics/zig-zag.svg');
+  background-size: 100%;
+  height: 20px;
+  margin: 5px 0 20px;
+
+  @media #{$phone-only} {
+    max-width: 200px;
+    margin: 5px 0 10px;
+  }
+
+  &.--blue {
+    background-image: url('../img/graphics/zig-zag-blue.svg');
+  }
+
+  &.--yellow {
+    background-image: url('../img/graphics/zig-zag-yellow.svg');
+  }
+}
+
+/*
+
+  The Grateful Glenquotes
+
+  This is a div that has the quotation graphic as a bg image!
+
+  Use modifiers to change the colour :)
+
+  Ex.
+
+  <div class="glenquotes --vision"></div>
+
+*/
+
+.glenquotes {
+  position: absolute;
+  z-index: 100;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &.--programs {
+    background-image: url('../img/graphics/quotation-marks-blue.svg');
+    
+    @media #{$phone-only} {
+      display: none;
+    }
+
+    @media #{$tablet-only} {
+      width: 260px;
+      height: 200px;
+      top: -14%;
+      left: -3%;
+    }
+
+    @media #{$laptop-only} {
+      width: 200px;
+      height: 175px;
+      top: -12%;
+      left: -3%;
+    }
+
+    @media #{$desktop-up} {
+      width: 285px;
+      height: 205px;
+      top: -10%;
+      left: -5%;
+    }
+  }
+
+  &.--vision {
+    width: 150px;
+    height: 110px;
+    background-image: url('../img/graphics/quotation-marks-red.svg');
+    transform: rotate(180deg);
+    top: -15%;
+    left: 77%;
+  
+    @media #{$phone-only} {
+      width: 75px;
+      height: 55px;
+      left: 81%;
+    }
+  }
+
+  &.--welcome {
+    background-image: url('../img/graphics/quotation-marks-blue.svg');
+    width: 115px;
+    height: 83px;
+    top: -4%;
+    left: 0;
+
+    @media #{$tablet-only} {
+      width: 260px;
+      height: 200px;
+      top: -14%;
+      left: -3%;
+    }
+
+    @media #{$laptop-only} {
+      width: 200px;
+      height: 175px;
+      top: -7%;
+      left: -3%;
+    }
+
+    @media #{$desktop-up} {
+      width: 285px;
+      height: 205px;
+      top: -10%;
+      left: 3%;
+    }
+  }
 }

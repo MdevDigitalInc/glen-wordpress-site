@@ -288,7 +288,21 @@
 
   // Balcony Content Modifiers
 
-  &.--glenbox,
+  &.--glenbox {
+    padding: 0 5%;
+    margin: 25px 0 75px;
+
+    @media #{$tablet-only} {
+      padding: 0 8%;
+      margin: 75px 0 90px;
+    }
+
+    @media #{$laptop-up} {
+      padding: 0 16%;
+      margin: 145px 0 150px;
+    }
+  }
+
   &.--sticker {
     padding: 0 5%; 
 
