@@ -62,8 +62,8 @@
 
 .glen-main-navigation-links {
   width: 100%;
-  display: flex;
   position: relative;
+  display: flex;
 }
 
 .glen-main-navigation-link {
@@ -98,12 +98,13 @@
   }
 
   &.--dropdown {
+    z-index: 666;
 
     .glen-arrow-down {
       position: absolute;
       top: 100%;
       left: 50%;
-      z-index: 50;
+      z-index: 9500;
       transform: translateX(-50%) scaleY(0);
       transform-origin: top;
       width: 0; 
@@ -141,8 +142,15 @@
     justify-content: center;
     align-items: center;
     transition: all .1s;
-    font-size: 18px;
     padding: 0 15px;
+
+    @media #{$laptop-only} {
+      font-size: 16px;
+    }
+
+    @media #{$desktop-up} {
+      font-size: 18px;
+    }
   }
 }
 
@@ -160,6 +168,7 @@
   width: 18vw;
   padding: 25px 0 5px;
   border-bottom: 3px solid $color-glen-green;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
 
   .glen-main-navigation-dropdown-links {
     display: flex;
