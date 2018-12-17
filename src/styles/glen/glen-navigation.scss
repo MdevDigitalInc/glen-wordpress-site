@@ -63,7 +63,11 @@
 .glen-main-navigation-links {
   width: 100%;
   position: relative;
-  display: flex;
+  display: none;
+
+  @media only screen and (min-width: 1165px) {
+    display: flex;
+  }
 }
 
 .glen-main-navigation-link {
@@ -98,7 +102,7 @@
   }
 
   &.--dropdown {
-    z-index: 666;
+    z-index: 500;
 
     .glen-arrow-down {
       position: absolute;
@@ -157,12 +161,12 @@
 // Main navigation dropdown Styles
 
 .glen-main-navigation-dropdown {
-  z-index: 600;
   transform: scaleY(0);
   transform-origin: top;
   transition: all .4s;
   background-color: $white;
   position: absolute;
+  z-index: -1000;
   top: 100%;
   left: 0;
   width: 18vw;
