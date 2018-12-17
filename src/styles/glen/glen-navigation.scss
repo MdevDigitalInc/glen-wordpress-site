@@ -47,7 +47,7 @@
   background-image: url('../img/logo-arbourglen.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-right: 25px;
+  margin-right: 50px;
 
   a {
     position: absolute;
@@ -71,6 +71,7 @@
   width: 100%;
   cursor: default;
   transition: all .1s;
+  flex: 1;
 
   &:hover {
     background-color: $color-glen-green;
@@ -78,6 +79,22 @@
     .glen-main-navigation-link-label {
       color: $white;
     }
+  }
+
+  &.--smol {
+    flex: .5;
+  }
+
+  &.--med {
+    flex: .9;
+  }
+
+  &.--largo {
+    flex: 1.2;
+  }
+
+  &.--largossa {
+    flex: 1.3;
   }
 
   &.--dropdown {

@@ -97,7 +97,7 @@
         <a href="/" title="Arbour Glen Home"></a>
       </div>
       <div class="glen-main-navigation-links">
-        <div class="glen-main-navigation-link --dropdown">
+        <div class="glen-main-navigation-link --dropdown --med">
           <span class="glen-main-navigation-link-label">about us&nbsp;<i class="fas fa-angle-down"></i></span>
           <div class="glen-arrow-down"></div>
           <div class="glen-main-navigation-dropdown">
@@ -108,7 +108,7 @@
             </div>
           </div>
         </div>
-        <div class="glen-main-navigation-link --dropdown">
+        <div class="glen-main-navigation-link --dropdown --largo">
           <span class="glen-main-navigation-link-label">our programs&nbsp;<i class="fas fa-angle-down"></i></span>
           <div class="glen-arrow-down"></div>
           <div class="glen-main-navigation-dropdown">
@@ -119,13 +119,13 @@
             </div>
           </div>
         </div>
-        <div class="glen-main-navigation-link">
+        <div class="glen-main-navigation-link --med">
           <a class="glen-main-navigation-link-label" href="/our-menus" title="Read our menus!">our menus</a>
         </div>
-        <div class="glen-main-navigation-link">
+        <div class="glen-main-navigation-link --smol">
           <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
         </div>
-        <div class="glen-main-navigation-link">
+        <div class="glen-main-navigation-link --largossa">
           <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook">parent handbook</a>
         </div>
         <div class="glen-main-navigation-link">
