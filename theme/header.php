@@ -137,8 +137,7 @@
         <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
       </div>
     </div>
-
-    <!--<div class="glen-crocodilo"></div>-->
+    <div class="glen-crocodilo"></div>
     
     <!-- The following PHP is commented out on purpose, AW -->
 
