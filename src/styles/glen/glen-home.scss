@@ -37,10 +37,27 @@
 .glen-home-hero-content-box {
   z-index: 3;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 725px;
-  top: 40vh;
-  left: 15%;
-  padding: 62px 78px 22px 69px;
+  display: block;
+  width: 325px;
+  top: 50vh;
+  left: 5%;
+  padding: 25px 15px 10px;
+
+  @media #{$tablet-only} {
+    padding: 35px 35px 25px;
+    left: 3%;
+    top: 50vh;
+    width: 650px;
+  }
+  
+  @media #{$laptop-up} {
+    padding: 50px 50px 25px;
+    top: 30vh;
+    left: 10%;
+  }
+
+  @media #{$desktop-up} {
+    padding: 60px 75px 25px;
+    left: 15%;
+  }
 }
