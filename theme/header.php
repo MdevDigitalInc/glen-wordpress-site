@@ -176,14 +176,50 @@
   </nav>
 
   <div class="glen-mobile-navigation --hidden">
+    <!-- Mobile Nav Head -->
     <div class="glen-mobile-navigation-head">
-      <div class="glen-mobile-navigation-logo"></div>
-      <div class="glen-mobile-navigation-button" onclick="closeMobileNav()">
-        <i class="fas fa-times"></i>
+      <div class="glen-rainbow-bar">
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
       </div>
+      <div class="glen-mobile-navigation-head-content">
+        <div class="glen-mobile-navigation-logo">
+          <a href="/" title="Arbour Glen Day Nursery"></a>
+        </div>
+        <div class="glen-mobile-navigation-button" onclick="closeMobileNav()">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="glen-crocodilo"></div>
     </div>
+    <!-- Mobile Nav Content -->
     <div class="glen-mobile-navigation-content">
     </div>
+    <!-- Mobile Nav Footer -->
     <div class="glen-mobile-navigation-footer">
+      <div class="glen-rainbow-bar">
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
+      </div>
     </div>
   </div>
