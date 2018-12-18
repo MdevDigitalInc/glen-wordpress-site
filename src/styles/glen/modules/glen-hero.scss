@@ -35,6 +35,15 @@
 
   &.--infants {
     background-color: $color-glen-orange;
+
+    @media #{$phone-only} {
+      background-size: 175%;
+      background-position: 5% 5%;
+    }
+
+    @media #{$tablet-only} {
+      background-position: 15% bottom;
+    }
   }
 
   &.--menus {

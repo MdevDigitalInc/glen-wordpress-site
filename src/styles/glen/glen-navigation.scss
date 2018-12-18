@@ -1,74 +1,427 @@
+/*
+
+  GLEN Main Navigation
+
+  Philosophy:
+
+  The main nav has the following stack of content:
+  
+    20px of top padding
+    glen-rainbow-bar
+    glen-main-navigation-content
+    glen-crocodilo
+
+  The navigation-content div contains the functional stuff, the rest is decorative!
+
+  AW
+
+*/
+
 .glen-main-navigation {
   width: 100%;
   position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 9001;
-  height: 100px;
   background-color: $white;
+  padding-top: 20px;
 }
 
-// This is a bad style! It's just for my sanity - AW
+// Main Navigation Content Styles
 
-.menu-primary-navigation-container {
+.glen-main-navigation-content {
+  width: 100%;
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 15px;
+  padding: 10px 8% 5px;
 
-  ul {
+  @media only screen and (max-width: 1164px) {
+    justify-content: space-between;
+  }
+
+  @media #{$desktop-up} {
+    padding: 10px 16% 5px;
+  }
+}
+
+.glen-main-navigation-logo {
+  position: relative;
+  width: 230px;
+  height: 71px;
+  background-image: url('../img/logo-arbourglen.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-right: 50px;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Main Navigation Links & Styles
+
+.glen-main-navigation-links {
+  width: 100%;
+  position: relative;
+  display: none;
+
+  @media only screen and (min-width: 1165px) {
     display: flex;
   }
 }
 
-// End of bad style
+.glen-main-navigation-link {
+  position: relative;
+  width: 100%;
+  cursor: default;
+  transition: all .1s;
+  flex: 1;
+
+  &:hover {
+    background-color: $color-glen-green;
+    
+    .glen-main-navigation-link-label {
+      color: $white;
+    }
+  }
+
+  &.--smol {
+    flex: .5;
+  }
+
+  &.--med {
+    flex: .9;
+  }
+
+  &.--largo {
+    flex: 1.2;
+  }
+
+  &.--largossa {
+    flex: 1.3;
+  }
+
+  &.--dropdown {
+    z-index: 500;
+
+    .glen-arrow-down {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      z-index: 9500;
+      transform: translateX(-50%) scaleY(0);
+      transform-origin: top;
+      width: 0; 
+      height: 0; 
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid $color-glen-green;
+      transition: all .4s;
+    }
+
+    &:hover {
+
+      .glen-arrow-down {
+        transform: translateX(-50%) scaleY(1);
+      }
+
+      .glen-main-navigation-dropdown {
+        transform: scaleY(1);
+      }
+    }
+  }
+
+  .glen-main-navigation-link-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $main-bold;
+    color: $color-glen-darkgrey;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s;
+    padding: 0 15px;
+
+    @media #{$laptop-only} {
+      font-size: 16px;
+    }
+
+    @media #{$desktop-up} {
+      font-size: 18px;
+    }
+  }
+}
+
+// Main navigation dropdown Styles
+
+.glen-main-navigation-dropdown {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all .4s;
+  background-color: $white;
+  position: absolute;
+  z-index: -1000;
+  top: 100%;
+  left: 0;
+  width: 18vw;
+  padding: 25px 0 5px;
+  border-bottom: 3px solid $color-glen-green;
+  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
+
+  .glen-main-navigation-dropdown-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  a {
+    width: 100%;
+    margin: 1px 0;
+    padding: 10px 25px;
+    
+    &:hover {
+      background-color: $color-glen-green;
+      color: $white;
+    }
+  }
+}
+
+// Main Navigation Social Styles
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg) scale(1)translateY(0);
+  }
+  25% {
+    transform: rotate(7deg) scale(1.05) translateY(-1px);
+  }
+  50% {
+    transform: rotate(-7deg) scale(1.13);
+  }
+  75% {
+    transform: rotate(3deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translateY(0);
+  }
+}
+
+.glen-main-navigation-socials {
+  position: relative;
+  display: none;
+  align-items: center;
+  margin-left: 15px;
+
+  @media only screen and (min-width: 1165px) {
+    display: flex;
+  }
+
+  a {
+    position: relative;
+    font-size: 26px;
+    margin: 0;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      animation-name: shake;
+      animation-timing-function: ease-in-out;
+      animation-duration: .7s;
+    }
+  }
+}
+
+// Hamburger Time
+
+.glen-main-navigation-hamburger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    color: lighten($color-glen-darkgrey, 10%);
+  }
+
+  i {
+    font-size: 26px;
+    color: $color-glen-darkgrey;
+  }
+
+  @media only screen and (min-width: 1165px) {
+    display: none;
+  }
+}
 
 // Start of Crocodile Teeth
 
 /*
 
   SUPER IMPORTANT: The way this is implemented, I don't see a way to add shadow to the teeth. That is all.
+  Maybe with the gradients but damn dawg.
 
 */
 
 $height: 49px;
 $halfheight: ($height/2);
 $thickness: 110%; // increase to make the line thicker
-$offset: 4px;
-$backgroundcolor: rgb(255, 255, 255);
-$linecolor: rgb(255, 255, 255);
+$offset: 0;
+$backgroundcolor: $white;
+$linecolor: $white;
 
 .glen-crocodilo {
-  margin: 0;
-  background: $backgroundcolor;
   position: relative;
-  height: $height;
+  height: 0;
   z-index: 1;
   
-  &:before,
-  &:after {
+  &:before {
     content: '';
     display: block;
     position: absolute;
     left: 0;
     right: 0;
-  }
-
-  &:before {
-    height: ($height - $offset);
+    height: 50px;
     top: $thickness;
-    background: linear-gradient(-135deg, $linecolor $halfheight, transparent 0) 0 $halfheight, linear-gradient( 135deg, $linecolor $halfheight, transparent 0) 0 $halfheight;
+    background: linear-gradient(-135deg, $white 25px, transparent 0) 0 $halfheight, linear-gradient( 135deg, $white $halfheight, transparent 0) 0 $halfheight;
     background-position: top left;
     background-repeat: repeat-x;
     background-size: $height $height;
   }
+}
 
-  &:after {
-    height: $height;
-    top: 100%;
-    background: linear-gradient(-135deg, $backgroundcolor $halfheight, transparent 0) 0 $halfheight, linear-gradient( 135deg, $backgroundcolor $halfheight, transparent 0) 0 $halfheight;
-    background-position: top left;
-    background-repeat: repeat-x;
-    background-size: $height $height;
+/*
+
+  Mobile Nav Styles
+
+*/
+
+.glen-mobile-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: $white;
+  transition: all .4s;
+
+  &.--hidden {
+    left: -125%;
+    opacity: 0;
+  }
+}
+
+// Mobile Nav Header Styles
+
+.glen-mobile-navigation-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.glen-mobile-navigation-head-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 8% 0;
+}
+
+.glen-mobile-navigation-logo {
+  position: relative;
+  width: 230px;
+  height: 71px;
+  background-image: url('../img/logo-arbourglen.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.glen-mobile-navigation-button {
+  font-size: 26px;
+  color: $color-glen-darkgrey;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: lighten($color-glen-darkgrey, 10%);
+  }
+}
+
+// Mobile Nav Main Content Styles
+
+.glen-mobile-navigation-content {
+  height: 70vh;
+  width: 100%;
+}
+
+// Mobile Nav Footer Styles
+
+.glen-mobile-navigation-footer {
+  height: 30vh;
+  width: 100%;
+  background: $color-glen-darkgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glen-mobile-navigation-footer-content {
+  padding: 25px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.glen-mobile-navigation-address {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.glen-mobile-navigation-phone {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.glen-mobile-navigation-socials {
+  display: flex;
+  padding: 5px;
+  margin-top: 15px;
+
+  a {
+    color: $white;
+    font-size: 32px;
+
+    &:last-child {
+      margin-left: 35px;
+    }
   }
 }

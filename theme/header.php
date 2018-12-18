@@ -2,7 +2,28 @@
 <html <?php language_attributes(); ?>>
 	<head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Farsan|Open+Sans:400,400i,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Farsan|Open+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- [ SCRIPTS ] -->
+    <script type="text/javascript">
+      function toggleMobileNav() {
+        var y = document.getElementsByClassName("glen-mobile-navigation");
+
+        if (y[0].classList.contains("--hidden")) {
+          y[0].classList.remove("--hidden");
+          document.body.classList.add("u-freeze-scroll");
+        } else {
+          y[0].classList.add("--hidden");
+          document.body.classList.remove("u-freeze-scroll");
+        }
+      }
+
+      function closeMobileNav() {
+        var x = document.getElementsByClassName("glen-mobile-navigation");
+        x[0].classList.add("--hidden");
+        document.body.classList.remove("u-freeze-scroll");
+      }
+    </script>
     <!-- [ FACEBOOK OG ] -->
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta property="fb:app_id" content="APP_ID_HERE" />
@@ -73,6 +94,9 @@
 	<body>
 
   <nav class="glen-main-navigation">
+
+    <!-- Rainbow Bar Section of Main Nav -->
+
     <div class="glen-rainbow-bar">
       <div class="glen-rainbow-bar-segment --yellow"></div>
       <div class="glen-rainbow-bar-segment --green"></div>
@@ -88,8 +112,122 @@
       <div class="glen-rainbow-bar-segment --orange"></div>
     </div>
 
-    <?php $args = array ( 'theme_location' => 'primary_navigation') ?>
-    <?php wp_nav_menu($args); ?>
+    <div class="glen-main-navigation-content">
+      <div class="glen-main-navigation-logo">
+        <a href="/" title="Arbour Glen Home"></a>
+      </div>
+      <div class="glen-main-navigation-links">
+        <div class="glen-main-navigation-link --dropdown --med">
+          <span class="glen-main-navigation-link-label">about us&nbsp;<i class="fas fa-angle-down"></i></span>
+          <div class="glen-arrow-down"></div>
+          <div class="glen-main-navigation-dropdown">
+            <div class="glen-main-navigation-dropdown-links">
+              <a href="/welcome" title="Welcome!">Welcome</a>
+              <a href="/our-vision" title="Learn more!">Our Vision</a>
+              <a href="/our-team" title="Meet our team!">Our Team</a>
+            </div>
+          </div>
+        </div>
+        <div class="glen-main-navigation-link --dropdown --largo">
+          <span class="glen-main-navigation-link-label">our programs&nbsp;<i class="fas fa-angle-down"></i></span>
+          <div class="glen-arrow-down"></div>
+          <div class="glen-main-navigation-dropdown">
+            <div class="glen-main-navigation-dropdown-links">
+              <a href="/infants-program" title="Learn more about our infants program">Infants</a>
+              <a href="/toddlers-program" title="Learn more about our toddlers program">Toddlers</a>
+              <a href="/preschoolers-program" title="Learn more about our preschoolers program">Preschoolers</a>
+            </div>
+          </div>
+        </div>
+        <div class="glen-main-navigation-link --med">
+          <a class="glen-main-navigation-link-label" href="/our-menus" title="Read our menus!">our menus</a>
+        </div>
+        <div class="glen-main-navigation-link --smol">
+          <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
+        </div>
+        <div class="glen-main-navigation-link --largossa">
+          <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook">parent handbook</a>
+        </div>
+        <div class="glen-main-navigation-link">
+          <a class="glen-main-navigation-link-label" href="/contact" title="Visit our Contact page">get in touch</a>
+        </div>
+      </div>
+      <div class="glen-main-navigation-socials">
+        <a class="fab fa-facebook" href="/" title="Visit our Facebook page"></a>
+        <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
+      </div>
+      <div class="glen-main-navigation-hamburger" onclick="toggleMobileNav()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="glen-crocodilo"></div>
+    
+    <!-- The following PHP is commented out on purpose, AW -->
 
-    <div class="glen-crocodilo"></div>    
+    <?php
+      // $args = array ( 'theme_location' => 'primary_navigation')
+    ?>
+
+    <?php
+      // wp_nav_menu($args);
+    ?>
+
+    <!-- End of commented out PHP, AW -->
   </nav>
+
+  <div class="glen-mobile-navigation --hidden">
+    <!-- Mobile Nav Head -->
+    <div class="glen-mobile-navigation-head">
+      <div class="glen-rainbow-bar">
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
+      </div>
+      <div class="glen-mobile-navigation-head-content">
+        <div class="glen-mobile-navigation-logo">
+          <a href="/" title="Arbour Glen Day Nursery"></a>
+        </div>
+        <div class="glen-mobile-navigation-button" onclick="closeMobileNav()">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="glen-crocodilo"></div>
+    </div>
+    <!-- Mobile Nav Content -->
+    <div class="glen-mobile-navigation-content">
+    </div>
+    <!-- Mobile Nav Footer -->
+    <div class="glen-mobile-navigation-footer">
+      <div class="glen-rainbow-bar">
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
+        <div class="glen-rainbow-bar-segment --yellow"></div>
+        <div class="glen-rainbow-bar-segment --green"></div>
+        <div class="glen-rainbow-bar-segment --blue"></div>
+        <div class="glen-rainbow-bar-segment --purple"></div>
+        <div class="glen-rainbow-bar-segment --red"></div>
+        <div class="glen-rainbow-bar-segment --orange"></div>
+      </div>
+      <div class="glen-mobile-navigation-footer-content">
+        <span class="glen-mobile-navigation-address">1017 adelaide street north,<br>london, on, n5y 2m8</span>
+        <span class="glen-mobile-navigation-phone">519.439.3701</span>
+        <div class="glen-mobile-navigation-socials">
+          <a class="fab fa-facebook" href="/" title="Visit our Facebook page"></a>
+          <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
+        </div>
+      </div>
+    </div>
+  </div>

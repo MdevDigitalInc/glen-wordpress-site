@@ -162,10 +162,11 @@ li {
 a {
   cursor: pointer;
   text-decoration: inherit;
+  transition: all .4s;
 
   &:hover {
     text-decoration: none;
-    color: inherit;
+    color: darken($color-glen-darkgrey, 10%);
   }
 }
 
