@@ -5,23 +5,32 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: $black;
+
+  footer {
+    align-self: flex-end;
+  }
 }
 
 .glen-home-hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: 100vh;
   background-color: $color-glen-blue;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
-
-  @media #{$phone-only} {
-    background-position: 67% bottom;
-  }
+  background-position: 70% 120px;
 
   @media #{$tablet-only} {
-    background-position: 65% bottom;
+    background-position: 75% 100px;
+  }
+
+  @media #{$laptop-up} {
+    background-position: 0% 100px;
   }
 }
 
@@ -31,7 +40,7 @@
   display: flex;
   flex-direction: column;
   width: 725px;
-  top: 50vh;
+  top: 40vh;
   left: 15%;
   padding: 62px 78px 22px 69px;
 }
