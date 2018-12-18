@@ -4,6 +4,26 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Farsan|Open+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- [ SCRIPTS ] -->
+    <script type="text/javascript">
+      function toggleMobileNav() {
+        var y = document.getElementsByClassName("glen-mobile-navigation");
+
+        if (y[0].classList.contains("--hidden")) {
+          y[0].classList.remove("--hidden");
+          document.body.classList.add("u-freeze-scroll");
+        } else {
+          y[0].classList.add("--hidden");
+          document.body.classList.remove("u-freeze-scroll");
+        }
+      }
+
+      function closeMobileNav() {
+        var x = document.getElementsByClassName("glen-mobile-navigation");
+        x[0].classList.add("--hidden");
+        document.body.classList.remove("u-freeze-scroll");
+      }
+    </script>
     <!-- [ FACEBOOK OG ] -->
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta property="fb:app_id" content="APP_ID_HERE" />
@@ -136,6 +156,9 @@
         <a class="fab fa-facebook" href="/" title="Visit our Facebook page"></a>
         <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
       </div>
+      <div class="glen-main-navigation-hamburger" onclick="toggleMobileNav()">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
     <div class="glen-crocodilo"></div>
     
@@ -151,3 +174,16 @@
 
     <!-- End of commented out PHP, AW -->
   </nav>
+
+  <div class="glen-mobile-navigation --hidden">
+    <div class="glen-mobile-navigation-head">
+      <div class="glen-mobile-navigation-logo"></div>
+      <div class="glen-mobile-navigation-button" onclick="closeMobileNav()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <div class="glen-mobile-navigation-content">
+    </div>
+    <div class="glen-mobile-navigation-footer">
+    </div>
+  </div>
