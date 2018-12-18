@@ -5,3 +5,22 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.glen-contact-page-content {
+  display: flex;
+  margin: 150px 5px 5px 70%;
+}
+
+.glen-contact-page-bigimage {
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.glen-contact-page-sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
