@@ -10,6 +10,6 @@
       <div class="glenbox-green"></div>
     </div>
   </div>
-</div>
+<!-- PHP MAGIC </div> -->
 
 <?php get_footer(); ?>

@@ -2,6 +2,6 @@
 
 <div class="glen-contact-page">
   <div class="mdev-todo">conact page! todo</div>
-</div>
+<!-- PHP MAGIC </div> -->
 
 <?php get_footer(); ?>

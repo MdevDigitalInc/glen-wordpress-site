@@ -24,6 +24,9 @@
 					<span class="glen-footer-copyline">Copyright Arbour Glen Day Nursery 2018</span>
 				</div>
 			</div>
-		</footer>
+    </footer>
+  <?php if ( is_page(array ('contact')) || is_home() ) { ?>
+  </div>
+  <?php }?>
 	</body>
 </html>
