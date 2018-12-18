@@ -221,5 +221,13 @@
         <div class="glen-rainbow-bar-segment --red"></div>
         <div class="glen-rainbow-bar-segment --orange"></div>
       </div>
+      <div class="glen-mobile-navigation-footer-content">
+        <span class="glen-mobile-navigation-address">1017 adelaide street north,<br>london, on, n5y 2m8</span>
+        <span class="glen-mobile-navigation-phone">519.439.3701</span>
+        <div class="glen-mobile-navigation-socials">
+          <a class="fab fa-facebook" href="/" title="Visit our Facebook page"></a>
+          <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
+        </div>
+      </div>
     </div>
   </div>

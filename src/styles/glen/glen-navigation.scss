@@ -340,6 +340,7 @@ $linecolor: $white;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 15px 8% 0;
 }
 
 .glen-mobile-navigation-logo {
@@ -365,19 +366,62 @@ $linecolor: $white;
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  &:hover {
+    color: lighten($color-glen-darkgrey, 10%);
+  }
 }
 
 // Mobile Nav Main Content Styles
 
 .glen-mobile-navigation-content {
-  height: 80vh;
+  height: 70vh;
   width: 100%;
 }
 
 // Mobile Nav Footer Styles
 
 .glen-mobile-navigation-footer {
-  height: 20vh;
+  height: 30vh;
   width: 100%;
   background: $color-glen-darkgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glen-mobile-navigation-footer-content {
+  padding: 25px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.glen-mobile-navigation-address {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.glen-mobile-navigation-phone {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.glen-mobile-navigation-socials {
+  display: flex;
+  padding: 5px;
+  margin-top: 15px;
+
+  a {
+    color: $white;
+    font-size: 32px;
+
+    &:last-child {
+      margin-left: 35px;
+    }
+  }
 }
