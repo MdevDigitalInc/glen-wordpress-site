@@ -35,6 +35,10 @@
   display: flex;
   padding: 10px 8% 5px;
 
+  @media only screen and (max-width: 1164px) {
+    justify-content: space-between;
+  }
+
   @media #{$desktop-up} {
     padding: 10px 16% 5px;
   }
@@ -244,6 +248,13 @@
 .glen-main-navigation-hamburger {
   display: flex;
   cursor: pointer;
+  font-size: 26px;
+  color: $color-glen-darkgrey;
+  align-items: center;
+
+  &:hover {
+    color: lighten($color-glen-darkgrey, 10%);
+  }
 
   @media only screen and (min-width: 1165px) {
     display: none;
@@ -303,8 +314,29 @@ $linecolor: $white;
   width: 100%;
   height: 100vh;
   background: $white;
+  transition: all .4s;
 
   &.--hidden {
-    display: none;
+    left: -125%;
+    opacity: 0;
   }
+}
+
+.glen-mobile-navigation-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+
+.glen-mobile-navigation-content {
+  height: 80vh;
+  width: 100%;
+}
+
+.glen-mobile-navigation-footer {
+  height: 20vh;
+  width: 100%;
+  background: $color-glen-darkgrey;
 }
