@@ -54,10 +54,11 @@
     padding: 50px 50px 25px;
     top: 30vh;
     left: 10%;
+    width: 700px;
   }
 
   @media #{$desktop-up} {
-    padding: 60px 75px 25px;
+    padding: 60px 50px 25px;
     left: 15%;
   }
 }
