@@ -204,6 +204,51 @@
     </div>
     <!-- Mobile Nav Content -->
     <div class="glen-mobile-navigation-content">
+      <div class="glen-mobile-accordian">
+        <!-- Accordian Item #1 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <span>PARENT LINK LABEL A</span>
+          </div>
+          <div class="glen-accordian-hidden">
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL A1</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL A2</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL A3</a>
+            </div>
+          </div>  
+        </div>
+        <!-- Accordian Item #2 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <span>PARENT LINK LABEL B</span>
+          </div>
+          <div class="glen-accordian-hidden">
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL B1</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL B2</a>
+            </div>
+          </div>  
+        </div>
+        <!-- Accordian Item #3 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label" href="/" title="todo">PARENT LINK LABEL C</a>
+          </div>
+        </div>
+        <!-- Accordian Item #4 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label" href="/" title="todo">PARENT LINK LABEL D</a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Mobile Nav Footer -->
     <div class="glen-mobile-navigation-footer">
