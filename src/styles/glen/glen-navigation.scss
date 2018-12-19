@@ -32,6 +32,7 @@
 .glen-main-navigation-content {
   width: 100%;
   position: relative;
+  z-index: 9001;
   display: flex;
   padding: 10px 8% 5px;
 
@@ -176,7 +177,6 @@
   width: 18vw;
   padding: 25px 0 5px;
   border-bottom: 3px solid $color-glen-green;
-  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
 
   .glen-main-navigation-dropdown-links {
     display: flex;
@@ -188,6 +188,7 @@
     width: 100%;
     margin: 1px 0;
     padding: 10px 25px;
+    border-top: 1px solid $color-glen-grey;
     
     &:hover {
       background-color: $color-glen-green;
@@ -283,12 +284,13 @@ $linecolor: $white;
 .glen-crocodilo {
   position: relative;
   height: 0;
-  z-index: 1;
+  z-index: 9001;
   
   &:before {
     content: '';
     display: block;
     position: absolute;
+    z-index: 9001;
     left: 0;
     right: 0;
     height: 50px;
@@ -297,6 +299,22 @@ $linecolor: $white;
     background-position: top left;
     background-repeat: repeat-x;
     background-size: $height $height;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    z-index: -500;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    top: $thickness;
+    background: linear-gradient(-135deg, $color-glen-darkgrey 25px, transparent 0) 0 $halfheight, linear-gradient( 135deg, $color-glen-darkgrey $halfheight, transparent 0) 0 $halfheight;
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-size: $height $height;
+    filter: blur(4px);
   }
 }
 
