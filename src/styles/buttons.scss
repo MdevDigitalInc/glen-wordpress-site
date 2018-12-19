@@ -52,6 +52,17 @@
     padding: 10px 20px;
   }
 
+  // More Juice
+
+  &.--juicy {
+    
+    padding: 10px 40px;
+
+    @media #{$tablet-up} {
+      padding: 15px 150px;
+    }
+  }
+
   // Solid
   
   &.--solid {
