@@ -8,19 +8,116 @@
 
 .glen-contact-page-content {
   display: flex;
-  margin: 150px 5px 5px 70%;
+  margin: 150px 5% 0;
+
+  @media #{$tablet-only} {
+    margin: 150px 8% 0;
+  }
+
+  @media #{$laptop-up} {
+    margin: 150px 0 0 70%;
+  }
 }
 
 .glen-contact-page-bigimage {
-  width: 70%;
   position: absolute;
-  top: 0;
   left: 0;
   bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-glen-orange;
+
+  @media #{$phone-only} {
+    display: none;
+  }
+
+  @media #{$tablet-only} {
+    width: 100%;
+    top: 50%;
+  }
+
+  @media #{$tablet-lnd-only} {
+    width: 100%;
+    top: 60%;
+    background-position: 0% center;
+  }
+
+  @media #{$laptop-up} {
+    width: 70%;
+    top: 0;
+  }
 }
 
 .glen-contact-page-sidebar {
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+
+  @media #{$tablet-only} {
+    flex-direction: row;
+  }
+
+  @media #{$laptop-up} {
+    padding: 0 50px;
+  }
+}
+
+// Contact Page Info Block Styles
+
+.glen-contact-page-info {
+
+  @media #{$tablet-only} {
+    width: 50%;
+  }
+
+  @media #{$tablet-lnd-only} {
+    width: 40%;
+  }
+
+  .glen-contact-page-info-phone {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .glen-contact-page-info-hours {
+    line-height: 140%;
+  }
+}
+
+// Contact Page Map Block Styles
+
+.glen-contact-page-map {
+  width: 100%;
+  margin-top: 5vh;
+  position: relative;
+
+  @media #{$tablet-only} {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  @media #{$tablet-lnd-only} {
+    margin-top: 0;
+    width: 60%;
+  }
+}
+
+.glen-contact-page-map-container {
+  width: 100%;
+
+  iframe {
+    width: 100%;
+    height: 275px;
+
+    @media #{$phone-only} {
+      height: 200px;
+    }
+
+    @media #{$laptop-up} {
+      width: vw-desktop(440);
+      height: 35vh;
+      max-width: 500px;
+      max-height: 500px;
+    }
+  }
 }
