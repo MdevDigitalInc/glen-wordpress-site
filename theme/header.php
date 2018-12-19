@@ -175,7 +175,7 @@
     <!-- End of commented out PHP, AW -->
   </nav>
 
-  <div class="glen-mobile-navigation --hidden">
+  <div class="glen-mobile-navigation --hiddenx">
     <!-- Mobile Nav Head -->
     <div class="glen-mobile-navigation-head">
       <div class="glen-rainbow-bar">
@@ -208,7 +208,7 @@
         <!-- Accordian Item #1 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <span>PARENT LINK LABEL A</span>
+            <span class="glen-accordian-link-label">PARENT LINK LABEL A</span>
           </div>
           <div class="glen-accordian-hidden">
             <div class="glen-accordian-link">
@@ -225,7 +225,7 @@
         <!-- Accordian Item #2 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <span>PARENT LINK LABEL B</span>
+            <span class="glen-accordian-link-label">PARENT LINK LABEL B</span>
           </div>
           <div class="glen-accordian-hidden">
             <div class="glen-accordian-link">
