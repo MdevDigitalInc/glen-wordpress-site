@@ -188,7 +188,10 @@
     width: 100%;
     margin: 1px 0;
     padding: 10px 25px;
-    border-top: 1px solid $color-glen-grey;
+
+    &:nth-child( n+2) {
+      border-top: 1px solid $color-glen-grey;
+    }
     
     &:hover {
       background-color: $color-glen-green;
@@ -326,7 +329,7 @@ $linecolor: $white;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9001;
+  z-index: 9002;
   display: flex;
   flex-direction: column;
   align-items: center;
