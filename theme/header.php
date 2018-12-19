@@ -208,44 +208,59 @@
         <!-- Accordian Item #1 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <span class="glen-accordian-link-label">PARENT LINK LABEL A</span>
+            <span class="glen-accordian-link-label">ABOUT US v</span>
           </div>
           <div class="glen-accordian-hidden">
             <div class="glen-accordian-link">
-              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL A1</a>
+              <a class="glen-accordian-link-label" href="/welcome" title="todo">Welcome</a>
             </div>
             <div class="glen-accordian-link">
-              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL A2</a>
+              <a class="glen-accordian-link-label" href="/our-vision" title="todo">Our Vision</a>
             </div>
             <div class="glen-accordian-link">
-              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL A3</a>
+              <a class="glen-accordian-link-label" href="/our-team" title="todo">Our Team</a>
             </div>
           </div>  
         </div>
         <!-- Accordian Item #2 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <span class="glen-accordian-link-label">PARENT LINK LABEL B</span>
+            <span class="glen-accordian-link-label">OUR PROGRAMS</span>
           </div>
           <div class="glen-accordian-hidden">
             <div class="glen-accordian-link">
-              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL B1</a>
+              <a class="glen-accordian-link-label" href="/infants-program" title="todo">Infants</a>
             </div>
             <div class="glen-accordian-link">
-              <a class="glen-accordian-link-label" href="/" title="todo">CHILD LINK LABEL B2</a>
+              <a class="glen-accordian-link-label" href="/toddlers-program" title="todo">Toddlers</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/preschoolers-program" title="todo">Preschoolers</a>
             </div>
           </div>  
         </div>
         <!-- Accordian Item #3 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label" href="/" title="todo">PARENT LINK LABEL C</a>
+            <a class="glen-accordian-link-label" href="/our-menus" title="todo">OUR MENUS</a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label" href="/" title="todo">PARENT LINK LABEL D</a>
+            <a class="glen-accordian-link-label" href="/faq" title="todo">FAQ</a>
+          </div>
+        </div>
+        <!-- Accordian Item #4 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label" href="/" title="todo">PARENT HANDBOOK</a>
+          </div>
+        </div>
+        <!-- Accordian Item #4 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label" href="/" title="todo">GET IN TOUCH</a>
           </div>
         </div>
       </div>
