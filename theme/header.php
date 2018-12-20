@@ -185,7 +185,7 @@
 
     <!-- Mobile Nav -->
     
-    <div class="glen-mobile-navigation --hiddenx">
+    <div class="glen-mobile-navigation --hidden">
     <!-- Mobile Nav Head -->
     <div class="glen-mobile-navigation-head">
       <div class="glen-rainbow-bar --mobile">

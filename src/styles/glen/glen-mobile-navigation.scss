@@ -64,14 +64,14 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: color 4s;
 
   &:hover,
   &:focus,
   &:active {
-    color: lighten($color-glen-darkgrey, 10%);
-    animation-name: shake;
-    animation-timing-function: ease-in-out;
-    animation-duration: .7s;
+    color: darken($color-glen-red, 10%);
+    animation: shake 2s infinite;
+    animation-timing-function: ease-in;
   }
 }
 
@@ -95,17 +95,15 @@
 .glen-mobile-accordian-item {
   width: 100%;
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .glen-accordian-link {
-  width: 100%;
+  width: 90%;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 25px 0;
-  height: auto;
+  padding: 25px 0;
+  margin: 0 5%;
 
   .fa-angle-down {
     display: inline;
@@ -116,7 +114,7 @@
   }
 
   &.--active {
-    border-bottom: 3px solid $color-glen-green;
+    border-bottom: 1px solid $color-glen-green;
 
     .fa-angle-down {
       display: none;
@@ -157,6 +155,17 @@
   &.--collapse {
     transform: scaleY(0);
     height: 0;
+  }
+
+  .glen-accordian-link-label {
+    font-weight: 400;
+    width: 100%;
+    border-top: 1px solid $color-glen-grey;
+
+    &:hover {
+      background: $color-glen-green;
+      color: $white;
+    }
   }
 }
 

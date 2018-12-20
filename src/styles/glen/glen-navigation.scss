@@ -266,9 +266,8 @@
     &:hover,
     &:focus,
     &:active {
-      animation-name: shake;
+      animation: shake .7s;
       animation-timing-function: ease-in-out;
-      animation-duration: .7s;
     }
   }
 }
@@ -283,9 +282,9 @@
   &:hover,
   &:focus,
   &:active {
-    animation-name: rattle;
+    animation: rattle 2s infinite;
     animation-timing-function: ease-in-out;
-    animation-duration: .9s;
+    
   }
 
   i {
