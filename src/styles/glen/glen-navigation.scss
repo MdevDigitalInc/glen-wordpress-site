@@ -220,6 +220,30 @@
   }
 }
 
+@keyframes rattle {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: scale(.96);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+  85% {
+    transform: translateX(-2px) rotate(-6deg);
+  }
+  90% {
+    transform: translateX(3px);
+  }
+  95% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0) rotate(0) scale(1);
+  }
+}
+
 .glen-main-navigation-socials {
   position: relative;
   display: none;
@@ -239,7 +263,9 @@
       margin-right: 15px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       animation-name: shake;
       animation-timing-function: ease-in-out;
       animation-duration: .7s;
@@ -254,8 +280,12 @@
   align-items: center;
   cursor: pointer;
 
-  &:hover {
-    color: lighten($color-glen-darkgrey, 10%);
+  &:hover,
+  &:focus,
+  &:active {
+    animation-name: rattle;
+    animation-timing-function: ease-in-out;
+    animation-duration: .9s;
   }
 
   i {
@@ -283,7 +313,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
   background: $white;
   transition: all .4s;
 
@@ -329,14 +358,19 @@
 }
 
 .glen-mobile-navigation-button {
-  font-size: 26px;
+  font-size: 30px;
   color: $color-glen-darkgrey;
   cursor: pointer;
   display: flex;
   align-items: center;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: lighten($color-glen-darkgrey, 10%);
+    animation-name: shake;
+    animation-timing-function: ease-in-out;
+    animation-duration: .7s;
   }
 }
 
