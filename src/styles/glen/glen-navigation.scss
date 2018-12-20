@@ -442,9 +442,11 @@ $linecolor: $white;
   transition: all .4s;
   transform-origin: top;
   transform: scaleY(1);
+  height: auto;
 
   &.--collapse {
     transform: scaleY(0);
+    height: 0;
   }
 }
 
