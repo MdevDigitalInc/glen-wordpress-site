@@ -23,6 +23,27 @@
         x[0].classList.add("--hidden");
         document.body.classList.remove("u-freeze-scroll");
       }
+
+      function toggleAccordianChildren(index, parent_node) {
+        
+        var parent = document.getElementsByClassName("glen-accordian-link");
+        var target = document.getElementsByClassName("glen-accordian-hidden");
+
+        if (target[parent_node].classList.contains("--collapse")) {
+          target[parent_node].classList.remove("--collapse");
+        } else {
+          target[parent_node].classList.add("--collapse");
+        }
+
+        if (parent[index].classList.contains("--active"))
+        {
+          parent[index].classList.remove("--active");
+        } else if (!parent[index].classList.contains("--active"))
+        {
+          parent[index].classList.add("--active");
+        }
+
+      }
     </script>
     <!-- [ FACEBOOK OG ] -->
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
@@ -146,7 +167,7 @@
           <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
         </div>
         <div class="glen-main-navigation-link --largossa">
-          <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook">parent handbook</a>
+          <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook"><div class="glen-download --fade"></div>&nbsp;parent handbook</a>
         </div>
         <div class="glen-main-navigation-link">
           <a class="glen-main-navigation-link-label" href="/contact" title="Visit our Contact page">get in touch</a>
@@ -161,24 +182,13 @@
       </div>
     </div>
     <div class="glen-crocodilo"></div>
+
+    <!-- Mobile Nav -->
     
-    <!-- The following PHP is commented out on purpose, AW -->
-
-    <?php
-      // $args = array ( 'theme_location' => 'primary_navigation')
-    ?>
-
-    <?php
-      // wp_nav_menu($args);
-    ?>
-
-    <!-- End of commented out PHP, AW -->
-  </nav>
-
-  <div class="glen-mobile-navigation --hidden">
+    <div class="glen-mobile-navigation --hidden">
     <!-- Mobile Nav Head -->
     <div class="glen-mobile-navigation-head">
-      <div class="glen-rainbow-bar">
+      <div class="glen-rainbow-bar --mobile">
         <div class="glen-rainbow-bar-segment --yellow"></div>
         <div class="glen-rainbow-bar-segment --green"></div>
         <div class="glen-rainbow-bar-segment --blue"></div>
@@ -204,6 +214,66 @@
     </div>
     <!-- Mobile Nav Content -->
     <div class="glen-mobile-navigation-content">
+      <div class="glen-mobile-accordian">
+        <!-- Accordian Item #1 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link" onclick="toggleAccordianChildren(0,0)">
+            <span class="glen-accordian-link-label "">ABOUT US&nbsp;<i class="fas fa-angle-down"></i><i class="fas fa-angle-up"></i></span>
+          </div>
+          <div class="glen-accordian-hidden --collapse">
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/welcome" title="todo">Welcome</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/our-vision" title="todo">Our Vision</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/our-team" title="todo">Our Team</a>
+            </div>
+          </div>  
+        </div>
+        <!-- Accordian Item #2 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link" onclick="toggleAccordianChildren(4,1)">
+            <span class="glen-accordian-link-label">OUR PROGRAMS&nbsp;<i class="fas fa-angle-down"></i><i class="fas fa-angle-up"></i></span>
+          </div>
+          <div class="glen-accordian-hidden --collapse">
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/infants-program" title="todo">Infants</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/toddlers-program" title="todo">Toddlers</a>
+            </div>
+            <div class="glen-accordian-link">
+              <a class="glen-accordian-link-label" href="/preschoolers-program" title="todo">Preschoolers</a>
+            </div>
+          </div>  
+        </div>
+        <!-- Accordian Item #3 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label " href="/our-menus" title="todo">OUR MENUS</a>
+          </div>
+        </div>
+        <!-- Accordian Item #4 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label " href="/faq" title="todo">FAQ</a>
+          </div>
+        </div>
+        <!-- Accordian Item #4 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label " href="/" title="todo"><div class="glen-download"></div>&nbsp;PARENT HANDBOOK</a>
+          </div>
+        </div>
+        <!-- Accordian Item #4 -->
+        <div class="glen-mobile-accordian-item">
+          <div class="glen-accordian-link">
+            <a class="glen-accordian-link-label " href="/" title="todo">GET IN TOUCH</a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Mobile Nav Footer -->
     <div class="glen-mobile-navigation-footer">
@@ -231,3 +301,15 @@
       </div>
     </div>
   </div>
+    <!-- The following PHP is commented out on purpose, AW -->
+
+    <?php
+      // $args = array ( 'theme_location' => 'primary_navigation')
+    ?>
+
+    <?php
+      // wp_nav_menu($args);
+    ?>
+
+    <!-- End of commented out PHP, AW -->
+  </nav>

@@ -1,0 +1,217 @@
+
+/*
+
+  Mobile Nav Styles
+
+*/
+
+.glen-mobile-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: $white;
+  transition: all .4s;
+
+  &.--hidden {
+    left: -125%;
+    opacity: 0;
+  }
+}
+
+// Mobile Nav Header Styles
+
+.glen-mobile-navigation-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.glen-mobile-navigation-head-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 8% 0;
+}
+
+.glen-mobile-navigation-logo {
+  position: relative;
+  width: 230px;
+  height: 71px;
+  background-image: url('../img/logo-arbourglen.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.glen-mobile-navigation-button {
+  font-size: 30px;
+  color: $color-glen-darkgrey;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 4s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($color-glen-red, 10%);
+    animation: shake 2s infinite;
+    animation-timing-function: ease-in;
+  }
+}
+
+// Mobile Nav Main Content Styles
+
+.glen-mobile-navigation-content {
+  min-height: 75vh;
+  width: 100%;
+  padding-top: 150px;
+}
+
+// Accordian Styles
+
+.glen-mobile-accordian {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glen-mobile-accordian-item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.glen-accordian-link {
+  width: 90%;
+  position: relative;
+  padding: 25px 0;
+  margin: 0 5%;
+
+  .fa-angle-down {
+    display: inline;
+  }
+
+  .fa-angle-up {
+    display: none;
+  }
+
+  &.--active {
+    border-bottom: 1px solid $color-glen-green;
+
+    .fa-angle-down {
+      display: none;
+    }
+  
+    .fa-angle-up {
+      display: inline;
+    }
+  }
+}
+
+// This badboi is a good place to start for mobile nav styles
+
+.glen-accordian-link-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding: 0 5%;
+  margin: 0;
+}
+
+.glen-accordian-hidden {
+  transition: all .1s;
+  transform-origin: top;
+  transform: scaleY(1);
+  height: auto;
+
+  &.--collapse {
+    transform: scaleY(0);
+    height: 0;
+  }
+
+  .glen-accordian-link-label {
+    font-weight: 400;
+    width: 100%;
+    border-top: 1px solid $color-glen-grey;
+
+    &:hover {
+      background: $color-glen-green;
+      color: $white;
+    }
+  }
+}
+
+// Mobile Nav Footer Styles
+
+.glen-mobile-navigation-footer {
+  height: 25vh;
+  width: 100%;
+  background: $color-glen-darkgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glen-mobile-navigation-footer-content {
+  padding: 25px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.glen-mobile-navigation-address {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.glen-mobile-navigation-phone {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.glen-mobile-navigation-socials {
+  display: flex;
+  padding: 5px;
+  margin-top: 15px;
+
+  a {
+    color: $white;
+    font-size: 32px;
+
+    &:last-child {
+      margin-left: 35px;
+    }
+  }
+}

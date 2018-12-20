@@ -32,6 +32,7 @@
 .glen-main-navigation-content {
   width: 100%;
   position: relative;
+  z-index: 9001;
   display: flex;
   padding: 10px 8% 5px;
 
@@ -102,7 +103,7 @@
   }
 
   &.--largossa {
-    flex: 1.3;
+    flex: 1.5;
   }
 
   &.--dropdown {
@@ -176,7 +177,6 @@
   width: 18vw;
   padding: 25px 0 5px;
   border-bottom: 3px solid $color-glen-green;
-  box-shadow: 0 0 15px 0 rgba(56, 56, 56, .12);
 
   .glen-main-navigation-dropdown-links {
     display: flex;
@@ -188,6 +188,10 @@
     width: 100%;
     margin: 1px 0;
     padding: 10px 25px;
+
+    &:nth-child( n+2 ) {
+      border-top: 1px solid $color-glen-grey;
+    }
     
     &:hover {
       background-color: $color-glen-green;
@@ -216,6 +220,30 @@
   }
 }
 
+@keyframes rattle {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: scale(.96);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+  85% {
+    transform: translateX(-2px) rotate(-6deg);
+  }
+  90% {
+    transform: translateX(3px);
+  }
+  95% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0) rotate(0) scale(1);
+  }
+}
+
 .glen-main-navigation-socials {
   position: relative;
   display: none;
@@ -235,10 +263,11 @@
       margin-right: 15px;
     }
 
-    &:hover {
-      animation-name: shake;
+    &:hover,
+    &:focus,
+    &:active {
+      animation: shake .7s;
       animation-timing-function: ease-in-out;
-      animation-duration: .7s;
     }
   }
 }
@@ -250,8 +279,12 @@
   align-items: center;
   cursor: pointer;
 
-  &:hover {
-    color: lighten($color-glen-darkgrey, 10%);
+  &:hover,
+  &:focus,
+  &:active {
+    animation: rattle 2s infinite;
+    animation-timing-function: ease-in-out;
+    
   }
 
   i {
@@ -261,167 +294,5 @@
 
   @media only screen and (min-width: 1165px) {
     display: none;
-  }
-}
-
-// Start of Crocodile Teeth
-
-/*
-
-  SUPER IMPORTANT: The way this is implemented, I don't see a way to add shadow to the teeth. That is all.
-  Maybe with the gradients but damn dawg.
-
-*/
-
-$height: 49px;
-$halfheight: ($height/2);
-$thickness: 110%; // increase to make the line thicker
-$offset: 0;
-$backgroundcolor: $white;
-$linecolor: $white;
-
-.glen-crocodilo {
-  position: relative;
-  height: 0;
-  z-index: 1;
-  
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 50px;
-    top: $thickness;
-    background: linear-gradient(-135deg, $white 25px, transparent 0) 0 $halfheight, linear-gradient( 135deg, $white $halfheight, transparent 0) 0 $halfheight;
-    background-position: top left;
-    background-repeat: repeat-x;
-    background-size: $height $height;
-  }
-}
-
-/*
-
-  Mobile Nav Styles
-
-*/
-
-.glen-mobile-navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9001;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background: $white;
-  transition: all .4s;
-
-  &.--hidden {
-    left: -125%;
-    opacity: 0;
-  }
-}
-
-// Mobile Nav Header Styles
-
-.glen-mobile-navigation-head {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.glen-mobile-navigation-head-content {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 8% 0;
-}
-
-.glen-mobile-navigation-logo {
-  position: relative;
-  width: 230px;
-  height: 71px;
-  background-image: url('../img/logo-arbourglen.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-
-  a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-.glen-mobile-navigation-button {
-  font-size: 26px;
-  color: $color-glen-darkgrey;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  &:hover {
-    color: lighten($color-glen-darkgrey, 10%);
-  }
-}
-
-// Mobile Nav Main Content Styles
-
-.glen-mobile-navigation-content {
-  height: 70vh;
-  width: 100%;
-}
-
-// Mobile Nav Footer Styles
-
-.glen-mobile-navigation-footer {
-  height: 30vh;
-  width: 100%;
-  background: $color-glen-darkgrey;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.glen-mobile-navigation-footer-content {
-  padding: 25px 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.glen-mobile-navigation-address {
-  color: $white;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-
-.glen-mobile-navigation-phone {
-  color: $white;
-  text-transform: uppercase;
-  font-size: 18px;
-  margin-top: 15px;
-}
-
-.glen-mobile-navigation-socials {
-  display: flex;
-  padding: 5px;
-  margin-top: 15px;
-
-  a {
-    color: $white;
-    font-size: 32px;
-
-    &:last-child {
-      margin-left: 35px;
-    }
   }
 }
