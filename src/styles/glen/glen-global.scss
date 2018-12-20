@@ -539,3 +539,55 @@
     }
   }
 }
+
+
+// Start of Crocodile Teeth
+
+/*
+
+  SUPER IMPORTANT: The way this is implemented, I don't see a way to add shadow to the teeth. That is all.
+  Maybe with the gradients but damn dawg.
+
+*/
+
+$height: 49px;
+$halfheight: ($height/2);
+$thickness: 110%; // increase to make the line thicker
+$offset: 0;
+$backgroundcolor: $white;
+$linecolor: $white;
+
+.glen-crocodilo {
+  position: relative;
+  height: 0;
+  
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    top: 8px;
+    background: linear-gradient(-140deg, #383838 25px, transparent 0) 0 $halfheight, linear-gradient( 140deg, #383838 $halfheight, transparent 0) 0 $halfheight;
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-size: $height $height;
+    filter: blur(4px);
+    opacity: .1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    top: $thickness;
+    background: linear-gradient(-140deg, $white 25px, transparent 0) 0 $halfheight, linear-gradient( 140deg, $white $halfheight, transparent 0) 0 $halfheight;
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-size: $height $height;
+  }
+}

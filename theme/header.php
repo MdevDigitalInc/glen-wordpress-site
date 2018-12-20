@@ -173,21 +173,10 @@
       </div>
     </div>
     <div class="glen-crocodilo"></div>
+
+    <!-- Mobile Nav -->
     
-    <!-- The following PHP is commented out on purpose, AW -->
-
-    <?php
-      // $args = array ( 'theme_location' => 'primary_navigation')
-    ?>
-
-    <?php
-      // wp_nav_menu($args);
-    ?>
-
-    <!-- End of commented out PHP, AW -->
-  </nav>
-
-  <div class="glen-mobile-navigation --hiddenx">
+    <div class="glen-mobile-navigation --hidden">
     <!-- Mobile Nav Head -->
     <div class="glen-mobile-navigation-head">
       <div class="glen-rainbow-bar">
@@ -303,3 +292,15 @@
       </div>
     </div>
   </div>
+    <!-- The following PHP is commented out on purpose, AW -->
+
+    <?php
+      // $args = array ( 'theme_location' => 'primary_navigation')
+    ?>
+
+    <?php
+      // wp_nav_menu($args);
+    ?>
+
+    <!-- End of commented out PHP, AW -->
+  </nav>
