@@ -353,10 +353,14 @@
 .glen-rainbow-bar {
   width: 100%;
   display: flex;
+
+  &.--mobile {
+    padding-top: 5px;
+  }
 }
 
 .glen-rainbow-bar-segment {
-  height: 4px;
+  height: 3px;
   width: 100%;
 
   // Color Logic

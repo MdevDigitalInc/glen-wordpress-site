@@ -24,14 +24,24 @@
         document.body.classList.remove("u-freeze-scroll");
       }
 
-      function toggleAccordianChildren(index) {
+      function toggleAccordianChildren(index, parent_node) {
+        
+        var parent = document.getElementsByClassName("glen-accordian-link-label");
+        console.log(parent);
+        var target = document.getElementsByClassName("glen-accordian-hidden");
 
-        var target = document.getElementsByClassName("glen-accordian-hidden")
-
-        if (target[index].classList.contains("--collapse")) {
-          target[index].classList.remove("--collapse");
+        if (target[parent_node].classList.contains("--collapse")) {
+          target[parent_node].classList.remove("--collapse");
         } else {
-          target[index].classList.add("--collapse");
+          target[parent_node].classList.add("--collapse");
+        }
+
+        if (parent[index].classList.contains("--active"))
+        {
+          parent[index].classList.remove("--active");
+        } else if (!parent[index].classList.contains("--active"))
+        {
+          parent[index].classList.add("--active");
         }
 
       }
@@ -176,10 +186,10 @@
 
     <!-- Mobile Nav -->
     
-    <div class="glen-mobile-navigation --hidden">
+    <div class="glen-mobile-navigation --hiddenx">
     <!-- Mobile Nav Head -->
     <div class="glen-mobile-navigation-head">
-      <div class="glen-rainbow-bar">
+      <div class="glen-rainbow-bar --mobile">
         <div class="glen-rainbow-bar-segment --yellow"></div>
         <div class="glen-rainbow-bar-segment --green"></div>
         <div class="glen-rainbow-bar-segment --blue"></div>
@@ -209,7 +219,7 @@
         <!-- Accordian Item #1 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <span class="glen-accordian-link-label u-bold" onclick="toggleAccordianChildren(0)">ABOUT US v</span>
+            <span class="glen-accordian-link-label u-bold" onclick="toggleAccordianChildren(0,0)">ABOUT US v</span>
           </div>
           <div class="glen-accordian-hidden --collapse">
             <div class="glen-accordian-link">
@@ -226,7 +236,7 @@
         <!-- Accordian Item #2 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <span class="glen-accordian-link-label u-bold" onclick="toggleAccordianChildren(1)">OUR PROGRAMS v</span>
+            <span class="glen-accordian-link-label u-bold" onclick="toggleAccordianChildren(4,1)">OUR PROGRAMS v</span>
           </div>
           <div class="glen-accordian-hidden --collapse">
             <div class="glen-accordian-link">
