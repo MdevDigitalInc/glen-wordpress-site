@@ -26,8 +26,7 @@
 
       function toggleAccordianChildren(index, parent_node) {
         
-        var parent = document.getElementsByClassName("glen-accordian-link-label");
-        console.log(parent);
+        var parent = document.getElementsByClassName("glen-accordian-link");
         var target = document.getElementsByClassName("glen-accordian-hidden");
 
         if (target[parent_node].classList.contains("--collapse")) {
@@ -218,8 +217,8 @@
       <div class="glen-mobile-accordian">
         <!-- Accordian Item #1 -->
         <div class="glen-mobile-accordian-item">
-          <div class="glen-accordian-link">
-            <span class="glen-accordian-link-label u-bold" onclick="toggleAccordianChildren(0,0)">ABOUT US v</span>
+          <div class="glen-accordian-link" onclick="toggleAccordianChildren(0,0)">
+            <span class="glen-accordian-link-label "">ABOUT US&nbsp;<i class="fas fa-angle-down"></i><i class="fas fa-angle-up"></i></span>
           </div>
           <div class="glen-accordian-hidden --collapse">
             <div class="glen-accordian-link">
@@ -235,8 +234,8 @@
         </div>
         <!-- Accordian Item #2 -->
         <div class="glen-mobile-accordian-item">
-          <div class="glen-accordian-link">
-            <span class="glen-accordian-link-label u-bold" onclick="toggleAccordianChildren(4,1)">OUR PROGRAMS v</span>
+          <div class="glen-accordian-link" onclick="toggleAccordianChildren(4,1)">
+            <span class="glen-accordian-link-label">OUR PROGRAMS&nbsp;<i class="fas fa-angle-down"></i><i class="fas fa-angle-up"></i></span>
           </div>
           <div class="glen-accordian-hidden --collapse">
             <div class="glen-accordian-link">
@@ -253,25 +252,25 @@
         <!-- Accordian Item #3 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label u-bold" href="/our-menus" title="todo">OUR MENUS</a>
+            <a class="glen-accordian-link-label " href="/our-menus" title="todo">OUR MENUS</a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label u-bold" href="/faq" title="todo">FAQ</a>
+            <a class="glen-accordian-link-label " href="/faq" title="todo">FAQ</a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label u-bold" href="/" title="todo">PARENT HANDBOOK</a>
+            <a class="glen-accordian-link-label " href="/" title="todo">PARENT HANDBOOK</a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label u-bold" href="/" title="todo">GET IN TOUCH</a>
+            <a class="glen-accordian-link-label " href="/" title="todo">GET IN TOUCH</a>
           </div>
         </div>
       </div>

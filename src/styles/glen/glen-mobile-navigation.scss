@@ -100,12 +100,35 @@
 
 .glen-accordian-link {
   width: 100%;
-  height: 4vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 25px 0;
+  height: auto;
+
+  .fa-angle-down {
+    display: inline;
+  }
+
+  .fa-angle-up {
+    display: none;
+  }
+
+  &.--active {
+    border-bottom: 3px solid $color-glen-green;
+
+    .fa-angle-down {
+      display: none;
+    }
+  
+    .fa-angle-up {
+      display: inline;
+    }
+  }
 }
+
+// This badboi is a good place to start for mobile nav styles
 
 .glen-accordian-link-label {
   position: absolute;
@@ -114,16 +137,15 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  margin: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 5%;
   cursor: pointer;
-
-  &.--active {
-    border-bottom: 3px solid $color-glen-green;
-  }
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  padding: 0 5%;
+  margin: 0;
 }
 
 .glen-accordian-hidden {
