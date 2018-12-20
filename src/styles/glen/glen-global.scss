@@ -595,3 +595,16 @@ $linecolor: $white;
     background-size: $height $height;
   }
 }
+
+// Kustom Ikon (Download)
+
+.glen-download {
+  display: inline;
+  transition: all .1s;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-image: url('../img/icons/icon-download.svg');
+}

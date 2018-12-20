@@ -167,7 +167,7 @@
           <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
         </div>
         <div class="glen-main-navigation-link --largossa">
-          <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook">parent handbook</a>
+          <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook"><div class="glen-download --fade"></div>&nbsp;parent handbook</a>
         </div>
         <div class="glen-main-navigation-link">
           <a class="glen-main-navigation-link-label" href="/contact" title="Visit our Contact page">get in touch</a>
@@ -264,7 +264,7 @@
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label " href="/" title="todo">PARENT HANDBOOK</a>
+            <a class="glen-accordian-link-label " href="/" title="todo"><div class="glen-download"></div>&nbsp;PARENT HANDBOOK</a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
