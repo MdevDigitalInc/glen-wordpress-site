@@ -435,6 +435,17 @@ $linecolor: $white;
   justify-content: flex-start;
   align-items: center;
   padding: 0 5%;
+  cursor: pointer;
+}
+
+.glen-accordian-hidden {
+  transition: all .4s;
+  transform-origin: top;
+  transform: scaleY(1);
+
+  &.--collapse {
+    transform: scaleY(0);
+  }
 }
 
 // Mobile Nav Footer Styles
