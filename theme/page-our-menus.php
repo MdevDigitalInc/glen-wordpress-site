@@ -38,17 +38,29 @@
       <h4>Fall/Winter Menu</h4>
       <div class="glen-menu-weeks">
         <div class="glen-menu-weeks-button">
+        <i class="fas fa-angle-left"></i>
         </div>
         <h2>Week 1</h2>
         <div class="glen-menu-weeks-button">
+          <i class="fas fa-angle-right"></i>
         </div>
       </div>
       <div class="glen-menu-days">
-        <h3>MON</h3>
-        <h3>TUES</h3>
-        <h3>WED</h3>
-        <h3>THURS</h3>
-        <h3>FRI</h3>
+        <div class="glen-menu-day --active">
+          <span>MON</span>
+        </div>
+        <div class="glen-menu-day">
+          <span>TUES</span>
+        </div>
+        <div class="glen-menu-day">
+          <span>WED</span>
+        </div>
+        <div class="glen-menu-day">
+          <span>THURS</span>
+        </div>
+        <div class="glen-menu-day">
+          <span>FRI</span>
+        </div>
       </div>
       <div class="glen-menu-content">
 
