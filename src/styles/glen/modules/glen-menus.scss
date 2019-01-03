@@ -174,7 +174,8 @@
   align-items: center;
   border-radius: 29.5px;
   color: $color-glen-darkgrey;
-  padding: 10px 0;
+  padding: 10px 5px;
+  overflow: auto;
 
   span {
     margin: 6px 0 5px;

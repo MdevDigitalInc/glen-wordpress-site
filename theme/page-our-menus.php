@@ -41,30 +41,30 @@
 
       <!-- Week Controls Container -->
       <div class="glen-menu-weeks">
-        <div class="glen-menu-weeks-button">
+        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(0)">
         <i class="fas fa-angle-left"></i>
         </div>
         <h2 class="glen-menu-week-title">Week 1</h2>
-        <div class="glen-menu-weeks-button">
+        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(1)">
           <i class="fas fa-angle-right"></i>
         </div>
       </div>
 
       <!-- Day Controls Container -->
       <div class="glen-menu-days">
-        <div class="glen-menu-day --active">
+        <div class="glen-menu-day --active" onclick="menuDaySelect(0)">
           <span>MON</span>
         </div>
-        <div class="glen-menu-day">
+        <div class="glen-menu-day" onclick="menuDaySelect(1)">
           <span>TUES</span>
         </div>
-        <div class="glen-menu-day">
+        <div class="glen-menu-day" onclick="menuDaySelect(2)">
           <span>WED</span>
         </div>
-        <div class="glen-menu-day">
+        <div class="glen-menu-day" onclick="menuDaySelect(3)">
           <span>THURS</span>
         </div>
-        <div class="glen-menu-day">
+        <div class="glen-menu-day" onclick="menuDaySelect(4)">
           <span>FRI</span>
         </div>
       </div>
@@ -85,7 +85,7 @@
           <div class="glen-menu-timeslot-foodlist">
             <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
             <span class="glen-menu-fooditem">WW Soda Crackers</span>
-            <span class="glen-menu-fooditem">Pears</span>
+            <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
             <span class="glen-menu-fooditem">Milk</span>
           </div>
         </div>

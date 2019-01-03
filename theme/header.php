@@ -35,15 +35,30 @@
           target[parent_node].classList.add("--collapse");
         }
 
-        if (parent[index].classList.contains("--active"))
-        {
+        if (parent[index].classList.contains("--active")) {
           parent[index].classList.remove("--active");
         } else if (!parent[index].classList.contains("--active"))
         {
           parent[index].classList.add("--active");
         }
-
       }
+
+      function menuDaySelect(index) {
+        var target = document.getElementsByClassName("glen-menu-day");
+
+        for ( i=0 ; i<5 ; i++ ) {
+          if (i == index ) {
+            target[index].classList.add("--active");
+          } else {
+            target[i].classList.remove("--active");
+          }
+        }
+      }
+
+      function menuWeekSelect(index) {
+        var target = document.getElementsByClassName("glen-menu-week-title");
+      }
+
     </script>
     <!-- [ FACEBOOK OG ] -->
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
