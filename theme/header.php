@@ -57,6 +57,7 @@
 
       function menuWeekSelect(index) {
         var target = document.getElementsByClassName("glen-menu-week-title");
+        target[0].innerHTML = "Week 2";
       }
 
     </script>
