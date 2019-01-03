@@ -16,6 +16,8 @@
   width: 100%;
   background: $white;
   transition: all .4s;
+  background-color: green;
+  overflow: auto;
 
   &.--hidden {
     left: -125%;
@@ -32,6 +34,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: $white;
+  z-index: 9004;
 }
 
 .glen-mobile-navigation-head-content {
@@ -78,9 +82,12 @@
 // Mobile Nav Main Content Styles
 
 .glen-mobile-navigation-content {
+  z-index: 9000;
   min-height: 75vh;
   width: 100%;
   padding-top: 150px;
+  position: relative;
+  background-color: $white;
 }
 
 // Accordian Styles
@@ -90,6 +97,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .glen-mobile-accordian-item {
@@ -172,9 +180,10 @@
 // Mobile Nav Footer Styles
 
 .glen-mobile-navigation-footer {
-  height: 25vh;
+  height: 450px;
   width: 100%;
   background: $color-glen-darkgrey;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
