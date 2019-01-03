@@ -1,0 +1,21 @@
+/*
+
+  GLEN Menus Module
+
+  AW
+
+*/
+
+.glen-menus-menu {
+  width: 100%;
+  position: relative;
+  padding: 0 5%;
+
+  @media #{$tablet-only} {
+    padding: 0 8%;
+  }
+
+  @media #{$laptop-up} {
+    padding: 0 (100/3*1%);
+  }
+}
