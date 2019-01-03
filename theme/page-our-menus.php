@@ -35,16 +35,22 @@
 
   <section class="glen-menus-menu">
     <div class="glen-menu-container">
-      <h4>Fall/Winter Menu</h4>
+
+      <!-- Menu Title -->
+      <h4 class="glen-menu-title">Fall/Winter Menu</h4>
+
+      <!-- Week Controls Container -->
       <div class="glen-menu-weeks">
         <div class="glen-menu-weeks-button">
         <i class="fas fa-angle-left"></i>
         </div>
-        <h2>Week 1</h2>
+        <h2 class="glen-menu-week-title">Week 1</h2>
         <div class="glen-menu-weeks-button">
           <i class="fas fa-angle-right"></i>
         </div>
       </div>
+
+      <!-- Day Controls Container -->
       <div class="glen-menu-days">
         <div class="glen-menu-day --active">
           <span>MON</span>
@@ -62,8 +68,27 @@
           <span>FRI</span>
         </div>
       </div>
-      <div class="glen-menu-content">
 
+      <!-- Menu Content Container -->
+      <div class="glen-menu-content">
+        <!-- Injected Content List Starts Here -->
+        <div class="glen-menu-timeslot">
+          <h3 class="glen-menu-timeslot-title">MORNING SNACK</h3>
+          <div class="glen-menu-timeslot-foodlist">
+            <span class="glen-menu-fooditem">Rice Chex &amp; Mango</span>
+            <span class="glen-menu-fooditem">Water</span>
+            <span class="glen-menu-fooditem">(Inf) Milk</span>
+          </div>
+        </div>
+        <div class="glen-menu-timeslot">
+          <h3 class="glen-menu-timeslot-title">LUNCH</h3>
+          <div class="glen-menu-timeslot-foodlist">
+            <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
+            <span class="glen-menu-fooditem">WW Soda Crackers</span>
+            <span class="glen-menu-fooditem">Pears</span>
+            <span class="glen-menu-fooditem">Milk</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>

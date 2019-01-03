@@ -126,3 +126,48 @@
     }
   }
 }
+
+// Menu Timeslot Styles
+
+.glen-menu-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0 0;
+
+  @media #{$tablet-only} {
+    padding: 20px 0 0;
+  }
+
+  @media #{$laptop-up} {
+    padding: 25px 0 0;
+  }
+}
+
+.glen-menu-timeslot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  
+  @media #{$laptop-up} {
+    margin: 15px 0 25px;
+  }
+}
+
+.glen-menu-timeslot-foodlist {
+  width: 100%;
+  background-color: $color-glen-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 29.5px;
+  color: $color-glen-darkgrey;
+  padding: 10px 0;
+
+  span {
+    margin: 6px 0 5px;
+  }
+}
