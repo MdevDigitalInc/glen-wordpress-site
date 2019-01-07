@@ -262,7 +262,7 @@ ul {
   color: $color-glen-red;
   font-size: 20px;
 
-  @media #{$laptop-up} {
+  @media #{$tablet-up} {
     font-size: 30px;
   }
 }
