@@ -9,12 +9,14 @@
   justify-content: center;
   padding: 5px 5%;
 
-  @media #{$tablet-up} {
+  @media #{$tablet-only} {
     padding: 5px 8%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
   }
 
   @media #{$laptop-up} {
+    justify-content: space-between;
     padding: 5px 16%;
   }
 
@@ -32,6 +34,10 @@
   display: flex;
   align-items: center;
 
+  @media #{$tablet-only} {
+    justify-content: center;
+  }
+
   .glen-footer-icon {
     width: 15px;
     height: 15px;
@@ -44,6 +50,14 @@
 
   .glen-footer-phone {
     margin-left: 20px;
+
+    @media #{$tablet-only} {
+      margin-left: 100px;
+    }
+
+    @media #{$tablet-only} {
+      align-self: flex-end;
+    }
 
     @media #{$laptop-up} {
       margin-left: 50px;
@@ -58,4 +72,10 @@
 .glen-footer-copyright {
   display: flex;
   align-items: center;
+
+  @media #{$tablet-only} {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
