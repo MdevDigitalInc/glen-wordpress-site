@@ -79,22 +79,38 @@
           <p>
             Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
           </p>
-          <a class="glen-btn --solid-pw" title="todo">CONTACT US</a>
+          <a class="glen-btn --solid-pw" href="/contact" title="Get in touch">CONTACT US</a>
           <div class="glen-contact-logos"> 
             <?php 
             $test = get_bloginfo('template_url', 'display');
+
+            class Cimage
+            {
+              public $img;
+              public $link;
+              public $title;
+              public $alt;
+
+              function Cimage($img, $link, $title, $alt) {
+                $this->img = $img;
+                $this->link = $link;
+                $this->title = $title;
+                $this->alt = $alt;
+              }
+            }
+            
               $contactImages = array (
-                "$test/img/logos/logo-childreach.png",
-                "$test/img/logos/logo-mommy-connections.png",
-                "$test/img/logos/logo-childrens-museum.png",
-                "$test/img/logos/logo-ml-health-unit.png",
-                "$test/img/logos/logo-london-public-library.png",
-                "$test/img/logos/logo-child-youth.png",
-                "$test/img/logos/log-ontario.png"
+                new Cimage("$test/img/logos/logo-childreach.png", "http://childreach.on.ca/", "Visit Childreach", "Childreach logo"),
+                new Cimage("$test/img/logos/logo-mommy-connections.png", "https://www.mommyconnections.ca/london/", "Visit Mommy Connections", "Mommy Connections logo"),
+                new Cimage("$test/img/logos/logo-childrens-museum.png", "https://www.londonchildrensmuseum.ca/", "Visit London Childen's Museum", "London Children's Museum logo"),
+                new Cimage("$test/img/logos/logo-ml-health-unit.png", "https://www.healthunit.com/", "Visit Middlesex Health Unit", "Middlesex Health Unit logo"),
+                new Cimage("$test/img/logos/logo-london-public-library.png", "http://www.londonpubliclibrary.ca/", "Visit London Public Library", "London Public Library logo"),
+                new Cimage("$test/img/logos/logo-child-youth.png", "http://londoncyn.ca/", "Visit London Child & Youth Network", "London CHild & Youth Network logo"),
+                new Cimage("$test/img/logos/log-ontario.png", "https://www.ontario.ca/page/government-ontario", "Visit Ontario Government", "Ontario Government logo")
               );
 
               foreach($contactImages as $img)
-              echo "<img class=\"glen-contact-logo\" src=\"$img\" alt=\"todo\"/>";
+              echo "<a href=\"$img->link\" title=\"$img->title\"><img class=\"glen-contact-logo\" src=\"$img->img\" alt=\"$img->alt\"/></a>";
             ?>
           </div>
         </div>
