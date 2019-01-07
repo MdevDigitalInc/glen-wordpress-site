@@ -1,0 +1,183 @@
+/*
+
+  GLEN Menus Module
+
+  AW
+
+*/
+
+.glen-menus-menu {
+  width: 100%;
+  position: relative;
+  padding: 25px 5% 0;
+
+  @media #{$tablet-only} {
+    padding: 50px 8% 0;
+  }
+
+  @media #{$laptop-only} {
+    padding: 75px 20% 0;
+  }
+
+  @media #{$desktop-up} {
+    padding: 100px 30% 0;
+  }
+}
+
+.glen-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    margin-bottom: 25px;
+
+    @media #{$tablet-only} {
+      margin-bottom: 35px;
+    }
+    
+    @media #{$laptop-up} {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+// Week Control Styles
+
+.glen-menu-weeks {
+  width: 100%;
+  padding: 0 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+  @media #{$tablet-only} {
+    margin-bottom: 50px;
+  }
+  
+  @media #{$laptop-up} {
+    margin-bottom: 70px;
+  }
+}
+
+.glen-menu-weeks-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid $color-glen-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  background-color: $color-glen-green;
+  transition: all .4s;
+  font-size: 26px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color: $color-glen-green;
+  }
+}
+
+// Day Control Styles
+
+.glen-menu-days {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $color-glen-darkgrey;
+  padding: 3px 5px;
+}
+
+.glen-menu-day {
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  cursor: pointer;
+  margin: 0;
+  padding: 7px;
+  border-radius: 13.5px;
+
+  @media #{$phone-only} {
+    padding: 4px;
+  }
+
+  span {
+    vertical-align: middle;
+    text-align: center;
+    font-family: $spec-font;
+    color: $color-glen-darkgrey;
+    font-size: 25px;
+
+    @media #{$tablet-up} {
+      font-size: 40px;
+    }
+  }
+
+  &:hover {
+    span {
+      transition: all .2s;
+      color: $color-glen-green;
+    }
+  }
+
+  &.--active {
+    background: $color-glen-green;
+
+    span {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: lighten($color-glen-green, 10%);
+    }
+  }
+}
+
+// Menu Timeslot Styles
+
+.glen-menu-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0 0;
+
+  @media #{$tablet-only} {
+    padding: 20px 0 0;
+  }
+
+  @media #{$laptop-up} {
+    padding: 25px 0 0;
+  }
+}
+
+.glen-menu-timeslot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  
+  @media #{$laptop-up} {
+    margin: 15px 0 25px;
+  }
+}
+
+.glen-menu-timeslot-foodlist {
+  width: 100%;
+  background-color: $color-glen-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 29.5px;
+  color: $color-glen-darkgrey;
+  padding: 10px 5px;
+  overflow: auto;
+
+  span {
+    margin: 6px 0 5px;
+  }
+}

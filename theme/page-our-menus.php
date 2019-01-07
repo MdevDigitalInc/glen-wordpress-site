@@ -33,8 +33,83 @@
 
   <!-- Menu Section -->
 
-  <section class="glen-menus-menu mdev-todo">
-    glen-menus-menu todo
+  <section class="glen-menus-menu">
+    <div class="glen-menu-container">
+
+      <!-- Menu Title -->
+      <h4 class="glen-menu-title">Fall/Winter Menu</h4>
+
+      <!-- Week Controls Container -->
+      <div class="glen-menu-weeks">
+        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(0)">
+        <i class="fas fa-angle-left"></i>
+        </div>
+        <h2 class="glen-menu-week-title">Week 1</h2>
+        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(1)">
+          <i class="fas fa-angle-right"></i>
+        </div>
+      </div>
+
+      <!-- Day Controls Container -->
+      <div class="glen-menu-days">
+        <div class="glen-menu-day --active" onclick="menuDaySelect(0)">
+          <span>MON</span>
+        </div>
+        <div class="glen-menu-day" onclick="menuDaySelect(1)">
+          <span>TUES</span>
+        </div>
+        <div class="glen-menu-day" onclick="menuDaySelect(2)">
+          <span>WED</span>
+        </div>
+        <div class="glen-menu-day" onclick="menuDaySelect(3)">
+          <span>THURS</span>
+        </div>
+        <div class="glen-menu-day" onclick="menuDaySelect(4)">
+          <span>FRI</span>
+        </div>
+      </div>
+
+      <!-- Menu Content Container -->
+      <div class="glen-menu-content">
+        <!-- Injected Content List Starts Here -->
+        <div class="glen-menu-timeslot">
+          <h3 class="glen-menu-timeslot-title">MORNING SNACK</h3>
+          <div class="glen-menu-timeslot-foodlist">
+            <span class="glen-menu-fooditem">Rice Chex &amp; Mango</span>
+            <span class="glen-menu-fooditem">Water</span>
+            <span class="glen-menu-fooditem">(Inf) Milk</span>
+          </div>
+        </div>
+        <div class="glen-menu-timeslot">
+          <h3 class="glen-menu-timeslot-title">LUNCH</h3>
+          <div class="glen-menu-timeslot-foodlist">
+            <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
+            <span class="glen-menu-fooditem">WW Soda Crackers</span>
+            <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
+            <span class="glen-menu-fooditem">Milk</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-footer Section -->
+
+  <section class="glen-vision-prefooter">
+    <div class="glen-prefooter">
+      <h3>Our Programs:</h3>
+      <div class="glen-prefooter-boxes">
+        <a class="glen-prefooter-box --infants" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-infants.png);" href="/infants-program" title="Our Infants Program">
+          <span class="glen-prefooter-box-title">Infants</span>
+        </a>
+        <a class="glen-prefooter-box --toddlers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-toddlers.png);" href="/toddlers-program" title="Our Toddlers Program">
+          <span class="glen-prefooter-box-title">Toddlers</span>
+        </a>
+        <a class="glen-prefooter-box --preschoolers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-preschoolers.png);" href="/preschoolers-program" title="Our Preschoolers Program">
+          <span class="glen-prefooter-box-title">Preschoolers</span>
+        </a>
+      </div>
+    </div>
   </section>
 
 </div>
