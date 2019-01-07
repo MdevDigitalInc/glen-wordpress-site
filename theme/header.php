@@ -190,7 +190,7 @@
         </div>
       </div>
       <div class="glen-main-navigation-socials">
-        <a class="fab fa-facebook" href="/" title="Visit our Facebook page"></a>
+        <a class="fab fa-facebook" href="https://www.facebook.com/Arbour-Glen-Day-Nursery-215530255204704/" title="Visit our Facebook page"></a>
         <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
       </div>
       <div class="glen-main-navigation-hamburger" onclick="toggleMobileNav()">
@@ -311,7 +311,7 @@
         <span class="glen-mobile-navigation-address">1017 adelaide street north,<br>london, on, n5y 2m8</span>
         <span class="glen-mobile-navigation-phone">519.439.3701</span>
         <div class="glen-mobile-navigation-socials">
-          <a class="fab fa-facebook" href="/" title="Visit our Facebook page"></a>
+          <a class="fab fa-facebook" href="https://www.facebook.com/Arbour-Glen-Day-Nursery-215530255204704/" title="Visit our Facebook page"></a>
           <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
         </div>
       </div>

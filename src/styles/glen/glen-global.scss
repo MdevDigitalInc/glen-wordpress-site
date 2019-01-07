@@ -474,7 +474,10 @@
     background-image: url('../img/graphics/quotation-marks-blue.svg');
     
     @media #{$phone-only} {
-      display: none;
+      width: 115px;
+      height: 83px;
+      top: -10%;
+      left: 0;
     }
 
     @media #{$tablet-only} {
