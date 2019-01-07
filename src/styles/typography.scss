@@ -38,7 +38,7 @@ h6,.h6, {
 
 $p-font-sizes: (
   null  : 14px,
-  $tablet-up  : 18px
+  $tablet-up  : 17px
 );
 
 $h1-font-sizes: (
@@ -167,6 +167,15 @@ a {
   &:hover {
     text-decoration: none;
     color: darken($color-glen-darkgrey, 10%);
+  }
+
+  &.glen-text-link {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($white, 10%);
+    }
   }
 }
 

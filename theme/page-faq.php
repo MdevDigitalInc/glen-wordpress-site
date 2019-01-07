@@ -131,7 +131,7 @@
               Donate through payroll via the United Way Workplace<br/> 			Donation Program (ask your employer)
             </li>
             <li>
-              Donate through Canada Helps www.canadahelps.org
+              Donate through Canada Helps <a class="glen-text-link" href="https://www.canadahelps.org" title="Visit Canada Helps">www.canadahelps.org</a>
             </li>
           </ul>
           <div class="glenbox-green"></div>
