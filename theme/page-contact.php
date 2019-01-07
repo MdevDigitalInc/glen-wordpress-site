@@ -5,7 +5,7 @@
     <div class="glen-contact-page-bigimage" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/arbour-glen-building.png);"></div>
     <div class="glen-contact-page-sidebar">
       <div class="glen-contact-page-info">
-        <h2>Get in touch</h2>
+        <h2>Get in Touch</h2>
         <div class="glen-squiggle --blue"></div>
         <h4>Reach us</h4>
         <span class="glen-contact-page-info-phone">519.439.3701</span>

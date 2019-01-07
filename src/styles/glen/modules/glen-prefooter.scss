@@ -38,6 +38,10 @@
   @media #{$tablet-up} {
     flex-direction: row;
   }
+
+  @media #{$laptop-up} {
+    margin-top: 15px;
+  }
 }
 
 // Prefooter Box Styles
