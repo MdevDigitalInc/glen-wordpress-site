@@ -9,7 +9,7 @@
 .glen-menus-menu {
   width: 100%;
   position: relative;
-  padding: 25px 5% 0;
+  padding: 75px 5% 0;
 
   @media #{$tablet-only} {
     padding: 50px 8% 0;
@@ -52,12 +52,16 @@
   align-items: center;
   margin-bottom: 25px;
 
+  @media #{$phone-only} {
+    padding: 0 5%;
+  }
+
   @media #{$tablet-only} {
     margin-bottom: 50px;
   }
   
   @media #{$laptop-up} {
-    margin-bottom: 70px;
+    margin-bottom: 35px;
   }
 }
 
@@ -109,7 +113,7 @@
     text-align: center;
     font-family: $spec-font;
     color: $color-glen-darkgrey;
-    font-size: 25px;
+    font-size: 20px;
 
     @media #{$tablet-up} {
       font-size: 40px;
@@ -180,4 +184,8 @@
   span {
     margin: 6px 0 5px;
   }
+}
+
+.glen-menu-fooditem {
+  text-align: center;
 }

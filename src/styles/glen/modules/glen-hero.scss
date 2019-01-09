@@ -50,7 +50,8 @@
     background-color: $color-glen-green;
 
     @media #{$phone-only} {
-      background-position: bottom;
+      background-size: 200%;
+      background-position: 50% 55px;
     }
 
     @media #{$tablet-only} {
