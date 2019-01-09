@@ -77,6 +77,10 @@
     background-image: url('../img/shared/infant-boy-crawling.png');
     background-size: cover;
     background-position: center;
+
+    @media #{$tablet-only} {
+      background-position: 70% center;
+    }
   }
 
   &.--menu {
@@ -204,7 +208,7 @@
   z-index: -1;
   position: absolute;
   border-radius: 50%;
-  background-color: $color-glen-grey;
+  background-color: $white;
   margin-top: 40px;
 
   @media #{$tablet-up} {

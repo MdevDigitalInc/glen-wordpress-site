@@ -152,6 +152,7 @@
   letter-spacing: .5px;
   padding: 0 5%;
   margin: 0;
+  color: $color-glen-darkgrey;
 }
 
 .glen-accordian-hidden {
@@ -166,6 +167,7 @@
   }
 
   .glen-accordian-link-label {
+    
     font-weight: 400;
     width: 100%;
     border-top: 1px solid $color-glen-grey;

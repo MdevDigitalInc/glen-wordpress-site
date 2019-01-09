@@ -38,7 +38,7 @@
 
     @media #{$phone-only} {
       background-size: 175%;
-      background-position: 5% 5%;
+      background-position: 5% 25%;
     }
 
     @media #{$tablet-only} {
@@ -193,7 +193,13 @@
   }
 
   a {
-    margin-top: 30px;
+    @media #{$tablet-only} {
+      margin-top: 10px;
+    }
+
+    @media #{$laptop-up} {
+      margin-top: 30px;
+    }
   }
 }
 
