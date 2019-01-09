@@ -25,6 +25,10 @@
   z-index: 9001;
   background-color: $white;
   padding-top: 20px;
+
+  @media #{$phone-only} {
+    padding-top: 10px;
+  }
 }
 
 // Main Navigation Content Styles
