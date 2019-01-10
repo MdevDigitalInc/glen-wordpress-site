@@ -119,8 +119,8 @@
     background-position: 25%;
 
     @media #{$tablet-only} {
-      background-size: 125%;
-      background-position: 25%;
+      background-size: cover;
+      background-position: 20% center;
     }
 
     @media #{$laptop-up} {
@@ -260,7 +260,7 @@
     }
 
     @media #{$laptop-up} {
-      background-size: 5%;
+      background-size: 3%;
     }
   }
 

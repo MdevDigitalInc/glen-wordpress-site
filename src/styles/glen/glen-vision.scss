@@ -8,6 +8,7 @@
   background-repeat: repeat;
   background-color: $color-glen-red;
   background-image: url('../img/patterns/pattern-shapes.svg');
+  
 
   @media #{$tablet-only} {
     padding: 60px 10%;
@@ -44,6 +45,7 @@
 
   @media #{$tablet-only} {
     height: 550px;
+    background-position: 75% center;
   }
 
   @media #{$laptop-up} {

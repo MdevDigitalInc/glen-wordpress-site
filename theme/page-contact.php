@@ -7,7 +7,7 @@
       <div class="glen-contact-page-info">
         <h2>Get in Touch</h2>
         <div class="glen-squiggle --blue"></div>
-        <h4>Reach us</h4>
+        <h4>Reach Us</h4>
         <span class="glen-contact-page-info-phone">519.439.3701</span>
         <h4>Hours</h4>
         <span class="glen-contact-page-info-hours">7:30am - 5:30pm<br>Monday - Friday</span>
