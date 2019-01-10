@@ -293,6 +293,9 @@
   // Balcony Content Global Overrides
 
   &.--squish {
+    @media #{$phone-only} {
+      margin: 25px 0 35px;
+    }
     @media #{$laptop-up} {
       margin: 85px 0 100px;
     }

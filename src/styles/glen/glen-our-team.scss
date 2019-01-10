@@ -3,10 +3,10 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 40px 5%;
+  padding: 1px 5%;
 
   @media #{$tablet-only} {
-    padding: 55px 8%;
+    padding: 5px 8%;
   }
 
   @media #{$laptop-up} {
