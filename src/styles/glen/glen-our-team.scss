@@ -73,6 +73,12 @@
     p {
       color: $white;
     }
+
+    a {
+      @media #{$laptop-up} {
+        margin-top: 15px;
+      }
+    }
   }
 
   h3 {

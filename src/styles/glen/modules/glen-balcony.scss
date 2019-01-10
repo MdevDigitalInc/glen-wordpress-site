@@ -115,7 +115,7 @@
 
   &.--vision {
     background-image: url('../img/shared/girl-books.png');
-    background-size: 200%;
+    background-size: cover;
     background-position: 25%;
 
     @media #{$tablet-only} {
@@ -288,6 +288,14 @@
 
   @media #{$laptop-up} {
     margin: 125px 0 150px;
+  }
+
+  // Balcony Content Global Overrides
+
+  &.--squish {
+    @media #{$laptop-up} {
+      margin: 85px 0 100px;
+    }
   }
 
   // Balcony Content Modifiers
@@ -656,7 +664,7 @@
 
   @media #{$tablet-only} {
     width: 47%;
-    height: 275px;
+    min-height: 225px;
     padding: 35px 1px 5px;
 
     &:nth-child( 2n+2 ) {

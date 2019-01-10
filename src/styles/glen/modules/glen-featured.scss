@@ -36,7 +36,7 @@
 .glen-featured-text-object {
 
   a {
-    margin: 25px 0 55px;
+    margin: 5px 0 55px;
 
     @media #{$tablet-only} {
       margin: 25px 0 45px;
@@ -84,7 +84,7 @@
 .glen-featured-glenbox-object {
   position: relative;
   width: 460px;
-  padding: 45px;
+  padding: 35px 45px 35px 25px;
 
   span,
   ul,
