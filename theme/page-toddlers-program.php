@@ -35,7 +35,7 @@
           <div class="glen-balcony-roster-head">
             <h4>Meet Our</h4>
             <h2>Toddler Room Educators</h2>
-            <p>At Arbour Glen, we have 2 Toddler groups, each with up to 15 children between 18 months and 30 months of age. There are 5 Registered Early Childhood Educators (RECEs) and 1 ECE Apprentice between the two groups. Our Toddler team are always tuned-in to the needs of each child in their group.  They are kind and nurturing caregivers who have the skills, experience and wisdom to work with toddlers.</p>
+            <p>At Arbour Glen, we have 2 Toddler groups, each with up to 15 children between 18 months and 30 months of age. There are 5 Registered Early Childhood Educators (RECEs) and 1 ECE Apprentice between the two groups. Our Toddler teams are always tuned-in to the needs of each child in their group.  They are kind and nurturing caregivers who have the skills, experience and wisdom to work with toddlers.</p>
           </div>
           <div class="glen-balcony-roster-cards">
             <?php 

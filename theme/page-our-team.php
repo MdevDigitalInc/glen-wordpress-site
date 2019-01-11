@@ -136,7 +136,7 @@
         <h4>Our Current Board of Directors</h4>
         <div class="glen-squiggle --yellow"></div>
         <p>Our organization is overseen by an Executive Director and governed by a Board of Directors. To read more about our directors and for a list of our current Board Members visit:</p>
-        <a class="glen-btn --solid-wg" href="/our-vision" title="todo">our vision</a>
+        <a class="glen-btn --solid-wg" href="/our-vision" title="Our vision">our vision</a>
         <div class="glenbox-green --binoculars"></div>
       </div>
     </div>
