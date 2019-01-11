@@ -6,12 +6,20 @@
   justify-content: space-between;
 }
 
+@media #{$phone-only} {
+  height: auto;
+}
+
 .glen-contact-page-content {
   display: flex;
-  margin: 150px 5% 0;
+  margin: 175px 5% 15px;
 
   @media #{$tablet-only} {
-    margin: 150px 8% 0;
+    margin: 175px 8% 0;
+  }
+
+  @media #{$tablet-lnd-only} {
+    margin: 200px 8% 0;
   }
 
   @media #{$laptop-up} {
@@ -25,6 +33,7 @@
   left: 0;
   bottom: 0;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-color: $color-glen-orange;
 
@@ -35,12 +44,14 @@
   @media #{$tablet-only} {
     width: 100%;
     top: 50%;
+    background-position: center bottom;
   }
 
   @media #{$tablet-lnd-only} {
     width: 100%;
     top: 60%;
-    background-position: 0% center;
+    background-position: center bottom;
+    display: none;
   }
 
   @media #{$laptop-up} {
@@ -73,6 +84,14 @@
 
   @media #{$tablet-lnd-only} {
     width: 40%;
+  }
+
+  span {
+    font-size: 16px;
+
+    @media #{$tablet-up} {
+      font-size: 18px;
+    }
   }
 
   .glen-contact-page-info-phone {

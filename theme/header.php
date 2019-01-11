@@ -234,7 +234,7 @@
         <!-- Accordian Item #1 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link" onclick="toggleAccordianChildren(0,0)">
-            <span class="glen-accordian-link-label "">ABOUT US&nbsp;<i class="fas fa-angle-down"></i><i class="fas fa-angle-up"></i></span>
+            <span class="glen-accordian-link-label">ABOUT US&nbsp;<i class="fas fa-angle-down"></i><i class="fas fa-angle-up"></i></span>
           </div>
           <div class="glen-accordian-hidden --collapse">
             <div class="glen-accordian-link">
@@ -268,25 +268,25 @@
         <!-- Accordian Item #3 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label " href="/our-menus" title="todo">OUR MENUS</a>
+            <a class="glen-accordian-link-label" href="/our-menus" title="todo">OUR MENUS</a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label " href="/faq" title="todo">FAQ</a>
+            <a class="glen-accordian-link-label" href="/faq" title="todo">FAQ</a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label " href="/" title="todo">PARENT HANDBOOK&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
+            <a class="glen-accordian-link-label" href="/" title="todo">PARENT HANDBOOK&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label " href="/" title="todo">GET IN TOUCH</a>
+            <a class="glen-accordian-link-label" href="/" title="todo">GET IN TOUCH</a>
           </div>
         </div>
       </div>

@@ -63,7 +63,7 @@
 
   <section class="glen-infants-prefooter">
     <div class="glen-prefooter">
-      <h3>More About Us:</h3>
+      <h3>Other Programs:</h3>
       <div class="glen-prefooter-boxes">
         <a class="glen-prefooter-box --toddlers" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-toddlers.png);" href="/toddlers-program" title="Our Toddlers Program">
           <span class="glen-prefooter-box-title">Toddlers</span>

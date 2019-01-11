@@ -23,7 +23,7 @@
   background-color: $color-glen-blue;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 70% 120px;
+  background-position: 70% 30px;
 
   @media #{$tablet-only} {
     background-position: 75% 100px;
@@ -38,15 +38,22 @@
   z-index: 3;
   position: relative;
   display: block;
-  width: 325px;
-  top: 50vh;
-  left: 5%;
+  width: 94%;
+  top: 40vh;
+  left: 3%;
   padding: 25px 15px 10px;
+
+  @media #{$phone-only} {
+    
+    h1 {
+      font-size: 45px;
+    }
+  }
 
   @media #{$tablet-only} {
     padding: 35px 35px 25px;
     left: 3%;
-    top: 50vh;
+    top: 45vh;
     width: 650px;
   }
   

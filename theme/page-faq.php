@@ -20,7 +20,7 @@
         <p>
           We like to have a personal connection with our prospective families, so please give us a call next at 519-439-3701 to confirm your request was received, and to answer any questions you may have about our centre. Speaking of questions, let's see if we can answer some for you now!
         </p>
-        <a class=" glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
+        <a class="glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
       </div><!-- /description -->
       <div class="glen-hidden-dragon">
         <div class="glen-faq-box"> <!-- box -->
@@ -32,7 +32,7 @@
             So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
           </p>
           <div class="glen-faq-btn">
-            <a class="glen-btn --solid-wb" >
+            <a class="glen-btn --solid-wb" title="Join our waiting list" href="mailto:centre@arbourglen.ca">
               Join Our Waiting List
             </a>
           </div>
@@ -58,7 +58,7 @@
           So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
         </p>
         <div class="glen-faq-btn">
-          <a class="glen-btn --solid-wb" >
+          <a class="glen-btn --solid-wb" title="Join our waiting list" href="mailto:centre@arbourglen.ca">
             Join Our Waiting List
           </a>
         </div>

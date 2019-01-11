@@ -25,6 +25,10 @@
   z-index: 9001;
   background-color: $white;
   padding-top: 20px;
+
+  @media #{$phone-only} {
+    padding-top: 10px;
+  }
 }
 
 // Main Navigation Content Styles
@@ -166,7 +170,7 @@
 // Main navigation dropdown Styles
 
 .glen-main-navigation-dropdown {
-  box-shadow: 0 9px 9px #525252;
+  box-shadow: 0 9px 9px #a2a2a2;
   transform: scaleY(0);
   transform-origin: top;
   transition: all .4s;
@@ -191,7 +195,7 @@
     padding: 10px 25px;
 
     &:nth-child( n+2 ) {
-      border-top: 1px solid $color-glen-grey;
+      border-top: 1px solid #e0e0e0;
     }
     
     &:hover {

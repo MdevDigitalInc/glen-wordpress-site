@@ -77,6 +77,10 @@
     background-image: url('../img/shared/infant-boy-crawling.png');
     background-size: cover;
     background-position: center;
+
+    @media #{$tablet-only} {
+      background-position: 70% center;
+    }
   }
 
   &.--menu {
@@ -111,12 +115,12 @@
 
   &.--vision {
     background-image: url('../img/shared/girl-books.png');
-    background-size: 200%;
+    background-size: cover;
     background-position: 25%;
 
     @media #{$tablet-only} {
-      background-size: 125%;
-      background-position: 25%;
+      background-size: cover;
+      background-position: 20% center;
     }
 
     @media #{$laptop-up} {
@@ -204,7 +208,7 @@
   z-index: -1;
   position: absolute;
   border-radius: 50%;
-  background-color: $color-glen-grey;
+  background-color: $white;
   margin-top: 40px;
 
   @media #{$tablet-up} {
@@ -225,7 +229,7 @@
     }
 
     @media #{$laptop-up} {
-      background-size: 3.5%;
+      background-size: 3%;
     }
   }
 
@@ -256,7 +260,7 @@
     }
 
     @media #{$laptop-up} {
-      background-size: 5%;
+      background-size: 3%;
     }
   }
 
@@ -284,6 +288,17 @@
 
   @media #{$laptop-up} {
     margin: 125px 0 150px;
+  }
+
+  // Balcony Content Global Overrides
+
+  &.--squish {
+    @media #{$phone-only} {
+      margin: 25px 0 35px;
+    }
+    @media #{$laptop-up} {
+      margin: 85px 0 100px;
+    }
   }
 
   // Balcony Content Modifiers
@@ -652,7 +667,7 @@
 
   @media #{$tablet-only} {
     width: 47%;
-    height: 275px;
+    min-height: 225px;
     padding: 35px 1px 5px;
 
     &:nth-child( 2n+2 ) {

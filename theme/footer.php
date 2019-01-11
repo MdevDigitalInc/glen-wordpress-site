@@ -16,8 +16,10 @@
 			</div>
 			<div class="glen-footer-content">
 				<div class="glen-footer-info">
-					<img class="glen-footer-icon" src="<?php bloginfo('template_url'); ?>/img/icons/icon-location.svg" alt="Image of a map pin" />
-					<span class="glen-footer-address">1017 Adelaide Street North, London, ON, N5Y 2M8</span>
+          <div class="glen-footer-info-compound">
+            <img class="glen-footer-icon" src="<?php bloginfo('template_url'); ?>/img/icons/icon-location.svg" alt="Image of a map pin" />
+            <span class="glen-footer-address">1017 Adelaide Street North, London, ON, N5Y 2M8</span>
+          </div>
 					<span class="glen-footer-phone">519.439.3701</span>
 				</div>
 				<div class="glen-footer-copyright">

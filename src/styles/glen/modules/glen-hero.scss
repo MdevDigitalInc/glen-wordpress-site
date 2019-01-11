@@ -38,7 +38,7 @@
 
     @media #{$phone-only} {
       background-size: 175%;
-      background-position: 5% 5%;
+      background-position: 5% 25%;
     }
 
     @media #{$tablet-only} {
@@ -50,7 +50,8 @@
     background-color: $color-glen-green;
 
     @media #{$phone-only} {
-      background-position: bottom;
+      background-size: 200%;
+      background-position: 50% 55px;
     }
 
     @media #{$tablet-only} {
@@ -72,6 +73,8 @@
 
   &.--team {
     background-color: $color-glen-red;
+    background-size: 125%;
+    background-position: 0 20%;
   }
 
   &.--toddlers {
@@ -169,6 +172,10 @@
   @media #{$laptop-up} {
     padding: 100px 20%;
   }
+
+  a {
+    margin-top: 10px;
+  }
 }
 
 // Sticker Hero Styles
@@ -193,7 +200,13 @@
   }
 
   a {
-    margin-top: 30px;
+    @media #{$tablet-only} {
+      margin-top: 10px;
+    }
+
+    @media #{$laptop-up} {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -221,7 +234,7 @@
 .glen-vision-hero-glenbox {
   position: relative;
   width: 100%;
-  margin: 50px 0 0;
+  margin: 25px 0 0;
   padding: 33px 22px;
 
   @media #{$tablet-up} {

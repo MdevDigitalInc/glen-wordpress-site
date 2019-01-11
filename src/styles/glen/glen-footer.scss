@@ -17,7 +17,7 @@
 
   @media #{$laptop-up} {
     justify-content: space-between;
-    padding: 5px 16%;
+    padding: 10px 16%;
   }
 
   span {
@@ -35,7 +35,12 @@
   align-items: center;
 
   @media #{$tablet-only} {
-    justify-content: center;
+    justify-content: space-between;
+  }
+  
+  .glen-footer-info-compound {
+    display: flex;
+    align-items: center;
   }
 
   .glen-footer-icon {

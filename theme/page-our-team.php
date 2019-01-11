@@ -27,7 +27,7 @@
     <div class="glen-balcony">
       <div class="glen-balcony-badge --team"></div>
       <div class="glen-balcony-ledge --team"></div>
-      <div class="glen-balcony-content --sticker">
+      <div class="glen-balcony-content --sticker --squish">
         <div class="glen-balcony-sticker --team">
           <h2>Foundations of Learning</h2>
           <p>Our Educators are trained professionals who hold First Aid/CPR and Food Handlers certificates.  All are life-long learners who participate in ongoing professional development. They understand each child’s potential based on the four foundations of learning:</p>
@@ -65,7 +65,7 @@
   <!-- MGMT Roster Section -->
 
   <section class="glen-mgmt-roster">
-    <div class="glen-roster">
+    <div class="glen-roster --team">
       <div class="glen-roster-head">
         <h2>Our Management Team</h2>
         <p>Our management team is here for you any time of day. Call them or drop by the administrative offices located on our third floor, but you may often find them in our classrooms as well.</p>
@@ -136,7 +136,7 @@
         <h4>Our Current Board of Directors</h4>
         <div class="glen-squiggle --yellow"></div>
         <p>Our organization is overseen by an Executive Director and governed by a Board of Directors. To read more about our directors and for a list of our current Board Members visit:</p>
-        <a class="glen-btn --solid-wg" href="/our-vision" title="todo">our vision</a>
+        <a class="glen-btn --solid-wg" href="/our-vision" title="Our vision">our vision</a>
         <div class="glenbox-green --binoculars"></div>
       </div>
     </div>
