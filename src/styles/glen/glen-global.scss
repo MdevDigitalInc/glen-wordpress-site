@@ -19,7 +19,7 @@
   &-green {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -103,7 +103,7 @@
   &-green-hollow {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -125,7 +125,7 @@
   &-red {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -146,7 +146,7 @@
   &-red-hollow {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -168,7 +168,7 @@
   &-blue {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -189,7 +189,7 @@
   &-blue-hollow {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -211,7 +211,7 @@
   &-purple {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -232,7 +232,7 @@
   &-purple-hollow {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -254,7 +254,7 @@
   &-white {
     width: 100%;
     height: auto;
-    
+
     &:after {
       display: block;
       content: '';
@@ -353,9 +353,15 @@
 .glen-rainbow-bar {
   width: 100%;
   display: flex;
+  background: $white;
+  padding-top: 20px;
 
   &.--mobile {
-    padding-top: 5px;
+    padding-top: 10px;
+  }
+
+  @media #{$portrait} {
+    padding-top: 10px;
   }
 }
 
@@ -472,7 +478,7 @@
 
   &.--programs {
     background-image: url('../img/graphics/quotation-marks-blue.svg');
-    
+
     @media #{$phone-only} {
       width: 115px;
       height: 83px;
@@ -509,7 +515,7 @@
     transform: rotate(180deg);
     top: -15%;
     left: 77%;
-  
+
     @media #{$phone-only} {
       width: 75px;
       height: 55px;
@@ -564,10 +570,10 @@ $offset: 0;
 $backgroundcolor: $white;
 $linecolor: $white;
 
-.glen-crocodilo {
+.glen-crocodilo-backup {
   position: relative;
   height: 0;
-  
+
   &:before {
     content: '';
     display: block;
@@ -597,6 +603,16 @@ $linecolor: $white;
     background-repeat: repeat-x;
     background-size: $height $height;
   }
+}
+
+.glen-crocodilo {
+  width:100%;
+  position: relative;
+  top: -2px;
+  height: 30px;
+  background-image: url('../img/graphics/zigzag-nav.png');
+  background-color: transparent;
+  background-repeat: repeat-x;
 }
 
 // Kustom Ikon (Download)

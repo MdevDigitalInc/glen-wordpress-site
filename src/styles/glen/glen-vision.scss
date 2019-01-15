@@ -8,7 +8,7 @@
   background-repeat: repeat;
   background-color: $color-glen-red;
   background-image: url('../img/patterns/pattern-shapes.svg');
-  
+
 
   @media #{$tablet-only} {
     padding: 60px 10%;
@@ -51,5 +51,13 @@
   @media #{$laptop-up} {
     height: 900px;
     margin-bottom: 100px;
+  }
+}
+
+.glen-vision-bigimage {
+  .glen-bigimage {
+    @media #{$phone-only} {
+      background-position: 66% center;
+    }
   }
 }

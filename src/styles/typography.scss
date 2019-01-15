@@ -196,7 +196,7 @@ ul {
 
   &-sidebar {
     color: $color-glen-darkgrey;
-    font-size: 16px;
+    font-size: 14px;
 
     @media #{$laptop-up} {
       font-size: 16px;
@@ -206,7 +206,7 @@ ul {
   &-faq {
     font-weight: $main-bold;
     color: $color-glen-darkgrey;
-    font-size: 16px;
+    font-size: 22px;
 
     @media #{$laptop-up} {
       font-size: 23px;

@@ -8,7 +8,7 @@
 
 .glen-hero-image {
   width: 100%;
-  height: 275px;
+  height: 475px;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -23,9 +23,8 @@
 
   &.--faq {
     background-color: $color-glen-grey;
-    
     @media #{$phone-only} {
-      background-position: 100% bottom;
+      background-position: center bottom;
     }
 
     @media #{$tablet-only} {
@@ -67,7 +66,7 @@
     }
 
     @media #{$tablet-only} {
-      background-position: 50% bottom;
+      background-position: 68% bottom;
     }
   }
 
@@ -75,10 +74,22 @@
     background-color: $color-glen-red;
     background-size: 125%;
     background-position: 0 20%;
+
+    @media #{$tablet-only} {
+      background-size: cover;
+    }
   }
 
   &.--toddlers {
     background-color: $color-glen-yellow;
+
+    @media #{$tablet-only} {
+      background-position: 12% center;
+    }
+
+    @media #{$phone-only} {
+      background-position: 15% center;
+    }
   }
 
   &.--vision {
@@ -126,7 +137,7 @@
     background-repeat: repeat;
     background-image: url('../img/patterns/pattern-numbers.svg');
     background-size: 120%;
-    
+
     padding: 35px 5%;
 
     @media #{$tablet-only} {

@@ -32,6 +32,14 @@
   @media #{$laptop-up} {
     padding: 80px 16% 100px;
   }
+
+  .glen-btn {
+    margin-top: 25px;
+  }
+
+  .--extrapad {
+    padding-top: 20px;
+  }
 }
 
 // Dialogue Module LEFT Side Styles
@@ -61,7 +69,7 @@
 .glen-hidden-dragon {
   width: 100%;
   margin: 40px 0;
-  
+
   @media #{$tablet-only} {
     margin: 50px 0;
   }
@@ -137,5 +145,14 @@
     width: 15px;
     height: auto;
     margin-right: 5px;
+  }
+}
+
+// Overrides
+.glen-faq-featured {
+  .glen-featured-glenbox {
+    @media #{$portrait} {
+      margin-top: 35px;
+    }
   }
 }

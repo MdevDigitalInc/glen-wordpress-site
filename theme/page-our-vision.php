@@ -97,7 +97,7 @@
 
   <section class="glen-vision-prefooter">
     <div class="glen-prefooter">
-      <h3>Our Programs</h3>
+      <h3>Our Programs:</h3>
       <div class="glen-prefooter-boxes">
         <a class="glen-prefooter-box --infants" style="background-image: url(<?php bloginfo('template_url'); ?>/img/prefooter/footer-infants.png);" href="/infants-program" title="Our Infants Program">
           <span class="glen-prefooter-box-title">Infants</span>
