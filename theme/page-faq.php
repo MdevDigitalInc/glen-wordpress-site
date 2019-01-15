@@ -23,7 +23,7 @@
         <a class="glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
       </div><!-- /description -->
       <div class="glen-hidden-dragon">
-        <div class="glen-faq-box"> <!-- box -->
+        <div class="glen-faq-box --extrapad"> <!-- box -->
           <h4>
             Finding Child Care
           </h4>
@@ -75,13 +75,13 @@
       <div class="glen-balcony-ledge --faq"></div>
       <div class="glen-balcony-content --sticker">
         <div class="glen-balcony-sticker">
-          <h3 class="u-purple">Still have questions?</h3> 
+          <h3 class="u-purple">Still have questions?</h3>
           <p>
             Don't hesitate to get in touch any time, and we'll be pleased to help. Here are more helpful links you might want to check out.
           </p>
           <a class="glen-btn --solid-pw" href="/contact" title="Get in touch">CONTACT US</a>
-          <div class="glen-contact-logos"> 
-            <?php 
+          <div class="glen-contact-logos">
+            <?php
             $test = get_bloginfo('template_url', 'display');
 
             class Cimage
@@ -98,7 +98,7 @@
                 $this->alt = $alt;
               }
             }
-            
+
               $contactImages = array (
                 new Cimage("$test/img/logos/logo-childreach.png", "http://childreach.on.ca/", "Visit Childreach", "Childreach logo"),
                 new Cimage("$test/img/logos/logo-mommy-connections.png", "https://www.mommyconnections.ca/london/", "Visit Mommy Connections", "Mommy Connections logo"),
@@ -116,7 +116,7 @@
         </div>
       </div>
     </div>
-    
+
   </section>
 
   <!-- Featured Section -->
@@ -157,7 +157,7 @@
   </section>
 
   <!-- Bumper Section -->
-  
+
   <section class="glen-faq-bumper">
     <hr/>
     <div class="glen-faq-bumper-content">

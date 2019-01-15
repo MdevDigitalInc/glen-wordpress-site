@@ -15,6 +15,10 @@
     flex-direction: column;
   }
 
+  @media #{$phone-only} {
+    padding: 10px 5%;
+  }
+
   @media #{$laptop-up} {
     justify-content: space-between;
     padding: 10px 16%;
@@ -34,10 +38,14 @@
   display: flex;
   align-items: center;
 
+  @media #{$phone-only} {
+    display: none;
+  }
+
   @media #{$tablet-only} {
     justify-content: space-between;
   }
-  
+
   .glen-footer-info-compound {
     display: flex;
     align-items: center;
@@ -67,10 +75,6 @@
     @media #{$laptop-up} {
       margin-left: 50px;
     }
-  }
-
-  @media #{$phone-only} {
-    display: none;
   }
 }
 

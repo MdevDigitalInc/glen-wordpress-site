@@ -59,7 +59,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: $color-glen-grey;
-  background-size: cover;  
+  background-size: cover;
   margin-bottom: -150px;
   height: 400px;
 
@@ -81,6 +81,10 @@
     @media #{$tablet-only} {
       background-position: 70% center;
     }
+
+    @media #{$phone-only} {
+      background-position: 70% center;
+    }
   }
 
   &.--menu {
@@ -93,18 +97,34 @@
     background-image: url('../img/shared/boy-tree.png');
     background-size: cover;
     background-position: center;
+
+    @media #{$tablet-only} {
+      background-position: 80% center;
+    }
   }
 
   &.--team {
     background-image: url('../img/shared/story-telling.png');
     background-size: cover;
     background-position: center;
+
+    @media #{$phone-only} {
+      background-position: 68% center;
+    }
   }
 
   &.--toddlers {
     background-image: url('../img/shared/boy-girl-sandbox.png');
     background-size: cover;
     background-position: center;
+
+    @media #{$tablet-only} {
+      background-position: 72% center;
+    }
+
+    @media #{$phone-only} {
+      background-position: 80% center;
+    }
   }
 
   &.--welcome {
@@ -141,7 +161,7 @@
   background-repeat: no-repeat;
   background-color: $white;
   background-position: center;
-  display: flex;    
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 60px;
@@ -287,7 +307,7 @@
   }
 
   @media #{$laptop-up} {
-    margin: 125px 0 150px;
+    margin: 100px 0 125px;
   }
 
   // Balcony Content Global Overrides
@@ -319,7 +339,7 @@
   }
 
   &.--sticker {
-    padding: 0 5%; 
+    padding: 0 5%;
 
     @media #{$tablet-only} {
       padding: 0 8%;
@@ -331,12 +351,12 @@
   }
 
   &.--roster {
-    padding: 0 5%; 
+    padding: 0 5%;
 
     @media #{$tablet-only} {
       padding: 0 8%;
     }
-    
+
     @media #{$laptop-up} {
       padding: 0 16%;
       margin: 50px 0 125px;
@@ -358,7 +378,7 @@
   @media #{$tablet-only} {
     padding: 55px 40px 40px;
   }
-  
+
   @media #{$laptop-up} {
     padding: 75px 65px 40px;
   }
@@ -392,7 +412,7 @@
   @media #{$tablet-only} {
     padding: 40px 35px;
   }
-  
+
   @media #{$laptop-up} {
     padding: 50px 35px;
   }
@@ -437,7 +457,8 @@
     }
 
     @media #{$laptop-up} {
-      margin-bottom: 45px;
+      margin-bottom: 0;
+      margin-top: 50px;
     }
   }
 }
@@ -519,24 +540,24 @@
     height: 180px;
     border-radius: 50%;
     margin: 0 0 25px;
-  
+
     @media #{$tablet-up} {
       width: 200px;
       height: 200px;
     }
-  
+
     &.--green {
       background-color: $color-glen-green;
     }
-  
+
     &.--purple {
       background-color: $color-glen-purple;
     }
-  
+
     &.--blue {
       background-color: $color-glen-blue;
     }
-  
+
     &.--red {
       background-color: $color-glen-red;
     }
@@ -584,7 +605,7 @@
   @media #{$tablet-only} {
     padding: 40px 45px 10px;
   }
-  
+
   @media #{$laptop-up} {
     padding: 50px 100px 10px;
   }
@@ -598,7 +619,7 @@
   @media #{$tablet-only} {
     padding: 40px 45px 10px;
   }
-  
+
   @media #{$laptop-up} {
     padding: 50px 160px 5px;
   }
@@ -623,7 +644,7 @@
   @media #{$tablet-only} {
     padding: 60px 45px 70px;
   }
-  
+
   @media #{$laptop-up} {
     padding: 50px 75px 65px;
   }
