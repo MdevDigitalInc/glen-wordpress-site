@@ -37,7 +37,21 @@
             <p>Our Infant group may have up to 10 children, who are 5 months to 18 months of age, with 3 Registered Early Childhood Educators. Our Infant team is made up of kind, nurturing caregivers who have the skills and experience in Infant care to work harmoniously and ensure our babies thrive!</p>
           </div>
           <div class="glen-balcony-roster-cards">
-            todo
+          <?php 
+            $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 5;");
+            $imgPath = get_bloginfo('template_url', 'display');
+            foreach ( $results as $emp )
+            {
+              echo "<div class='glen-balcony-roster-card'>";
+              echo "<div class='glen-roster-card-image --$emp->Avatar'>";
+              echo "<img src='$imgPath$emp->avatarImage' />";
+              echo "</div>";
+              echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
+              echo "<p class='--edu-bio'>$emp->History</p>";
+              echo "<p class='--edu-quote'>\"".$emp->Quote."”</p>";
+              echo "</div>";
+            }
+            ?>
           </div>
         </div>
       </div>

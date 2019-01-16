@@ -72,11 +72,14 @@
       </div>
       <div class="glen-roster-cards">
           <?php 
+          $imgPath = get_bloginfo('template_url', 'display');
           $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 1;");
           foreach ( $results as $emp )
           {
             echo "<div class='glen-roster-card'>";
-            echo "<div class='glen-roster-card-image --$emp->Avatar'></div>";
+            echo "<div class='glen-roster-card-image --$emp->Avatar'>";
+            echo "<img src='$imgPath$emp->avatarImage' />";
+            echo "</div>";
             echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
             echo "<p class='--edu-title'>$emp->Title</p>";
             echo "<p class='--edu-bio'>$emp->History</p>";
@@ -99,10 +102,13 @@
       <div class="glen-roster-cards">
         <?php 
         $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 2;");
+        
         foreach ( $results as $emp )
         {
           echo "<div class='glen-roster-card'>";
-          echo "<div class='glen-roster-card-image --$emp->Avatar'></div>";
+          echo "<div class='glen-roster-card-image --$emp->Avatar' >";
+          echo "<img src='$imgPath$emp->avatarImage' />";
+          echo "</div>";
           echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
           echo "<p class='--edu-title'>$emp->Title</p>";
           echo "<p class='--edu-bio'>$emp->History</p>";

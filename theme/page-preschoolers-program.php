@@ -40,7 +40,21 @@
             <p>At Arbour Glen, we have 2 Preschool groups each with up to 16 children between 30 months and 4 years of age. There are 2 Registered Early Childhood Educators in each group. Our Preschool Educators are a warm and loving team of caregivers who provide an inspiring, pleasurable atmosphere for children to enjoy learning through play.</p>
           </div>
           <div class="glen-balcony-roster-cards">
-            todo
+          <?php 
+            $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 3;");
+            $imgPath = get_bloginfo('template_url', 'display');
+            foreach ( $results as $emp )
+            {
+              echo "<div class='glen-balcony-roster-card'>";
+              echo "<div class='glen-roster-card-image --$emp->Avatar'>";
+              echo "<img src='$imgPath$emp->avatarImage' />";
+              echo "</div>";
+              echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
+              echo "<p class='--edu-bio'>$emp->History</p>";
+              echo "<p class='--edu-quote'>\"".$emp->Quote."”</p>";
+              echo "</div>";
+            }
+            ?>
           </div>
         </div>
       </div>

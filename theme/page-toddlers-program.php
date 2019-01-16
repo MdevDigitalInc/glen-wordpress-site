@@ -39,11 +39,14 @@
           </div>
           <div class="glen-balcony-roster-cards">
             <?php 
-            $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 3;");
+            $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 4;");
+            $imgPath = get_bloginfo('template_url', 'display');
             foreach ( $results as $emp )
             {
               echo "<div class='glen-balcony-roster-card'>";
-              echo "<div class='glen-roster-card-image --$emp->Avatar'></div>";
+              echo "<div class='glen-roster-card-image --$emp->Avatar'>";
+              echo "<img src='$imgPath$emp->avatarImage' />";
+              echo "</div>";
               echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
               echo "<p class='--edu-bio'>$emp->History</p>";
               echo "<p class='--edu-quote'>\"".$emp->Quote."”</p>";
