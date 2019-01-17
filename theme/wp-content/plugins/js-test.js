@@ -1,3 +1,7 @@
+// Team Admin
+
+  // UPDATE (TEAM MEMBER)
+
 jQuery( document ).on( 'click', '#btnUpdate', function($) {
 
   var id = document.getElementById("txt_id").value;
@@ -24,6 +28,8 @@ jQuery( document ).on( 'click', '#btnUpdate', function($) {
   });
 });
 
+  // CREATE (TEAM MEMBER)
+
 jQuery( document ).on( 'click', '#btnCreate', function($) {
   
   var name = document.getElementById("txt_name").value;
@@ -49,7 +55,7 @@ jQuery( document ).on( 'click', '#btnCreate', function($) {
   });
 });
 
-
+  // READ (TEAM MEMBER)
 
 jQuery( document ).on( "change", "#ddEmp", function() {
   
@@ -91,6 +97,48 @@ jQuery( document ).on( "change", "#ddEmp", function() {
 
 });
 
+  // DELETE (TEAM MEMBER)
+
+jQuery( document ).on( 'click', '#btnDelete', function($) {
+
+  var id = document.getElementById("txt_id").value;
+  var selectReset = document.getElementById("ddEmp");
+
+  try {
+    if (id >= 0) {
+      var query = 'DELETE FROM tblEmployees where ID = ' + id + ';';
+    } else {
+      throw "Failed on (id >= 0).";
+    }
+
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+    
+    jQuery.post(ajaxurl, data, function(response) {
+      alert('Success!');
+      console.log('Response:' + response);
+    });
+
+    document.getElementById("txt_id").value = "";
+    document.getElementById("txt_name").value =  "";
+    document.getElementById("txt_title").value =  "";
+    document.getElementById("txt_history").value =  "";
+    document.getElementById("txt_quote").value =  "";
+    document.getElementById("dd_tid").value =  "";
+    document.getElementById("txt_avatar").value =  "";
+    selectReset.selectedIndex = 0;
+
+    // NYI: Refresh #ddEmp since now it should not show the deleted option
+
+  } catch (err) {
+    alert('Something went wrong while deleting!');
+    console.log(err);
+  }
+});
+
+  // ???
 
 jQuery( document ).on( "change", "#ddTeam", function() {
   
@@ -120,6 +168,33 @@ jQuery( document ).on( "change", "#ddTeam", function() {
 
 // FAQ
 
+  // UPDATE (FAQ)
+
+  jQuery( document ).on( 'click', '#btnFAQUpdate', function($) {
+  
+    var id = document.getElementById("txt_FAQid").value;
+    var question = document.getElementById("txt_FAQquestion").value;
+    var answer = document.getElementById("txt_FAQanswer").value;
+  
+    var query = 'UPDATE tblFAQ SET Question = "' + question + '", Answer = "' + answer + '" WHERE ID = ' + id + ';';
+  
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+  
+    // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+    try {
+      jQuery.post(ajaxurl, data, function(response) {
+        alert('Success!');
+        console.log('Response:' + response);
+      });
+    } catch (err) {
+      alert('Something went wrong while updating!');
+      console.log(err);
+    }
+  });
+
   // CREATE
 
 jQuery( document ).on( 'click', '#btnFAQCreate', function($) {
@@ -142,34 +217,9 @@ jQuery( document ).on( 'click', '#btnFAQCreate', function($) {
   });
 });
 
-  // This updates the database using the inputs in the admin control (FAQ)
 
-jQuery( document ).on( 'click', '#btnFAQUpdate', function($) {
-  
-  var id = document.getElementById("txt_FAQid").value;
-  var question = document.getElementById("txt_FAQquestion").value;
-  var answer = document.getElementById("txt_FAQanswer").value;
 
-  var query = 'UPDATE tblFAQ SET Question = "' + question + '", Answer = "' + answer + '" WHERE ID = ' + id + ';';
-
-  var data = {
-    'action': 'my_action',
-    'query': query
-  };
-
-  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-  try {
-    jQuery.post(ajaxurl, data, function(response) {
-      alert('Success!');
-      console.log('Response:' + response);
-    });
-  } catch (err) {
-    alert('Something went wrong while updating!');
-    console.log(err);
-  }
-});
-
-  // This waits for the SELECT wheel to change and do stuff based on that (FAQ)
+  // READ (FAQ)
 
 jQuery( document ).on( "change", "#ddFAQ", function() {
   
@@ -198,37 +248,45 @@ jQuery( document ).on( "change", "#ddFAQ", function() {
   });
 });
 
-  // This deletes the selected entry (FAQ)
+  // DELETE (FAQ)
 
-  jQuery( document ).on( 'click', '#btnFAQDelete', function($) {
-  
-    var id = document.getElementById("txt_FAQid").value;
-    var selectReset = document.getElementById("ddFAQ");
+jQuery( document ).on( 'click', '#btnFAQDelete', function($) {
 
-    try {
-      if (id >= 0) {
-        var query = 'DELETE FROM tblFAQ WHERE ID = ' + id + ';';
-      } else {
-        throw "Failed on (id >= 0).";
-      }
+  var id = document.getElementById("txt_FAQid").value;
+  var selectReset = document.getElementById("ddFAQ");
 
-      var data = {
-        'action': 'my_action',
-        'query': query
-      };
-      
-      jQuery.post(ajaxurl, data, function(response) {
-        alert('Success!');
-        console.log('Response:' + response);
-      });
-
-      document.getElementById("txt_FAQid").value = "";
-      document.getElementById("txt_FAQquestion").value =  "";
-      document.getElementById("txt_FAQanswer").value =  "";
-      selectReset.selectedIndex = 0;
-
-    } catch (err) {
-      alert('Something went wrong while deleting!');
-      console.log(err);
+  try {
+    if (id >= 0) {
+      var query = 'DELETE FROM tblFAQ WHERE ID = ' + id + ';';
+    } else {
+      throw "Failed on (id >= 0).";
     }
-  });
+
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+    
+    jQuery.post(ajaxurl, data, function(response) {
+      alert('Success!');
+      console.log('Response:' + response);
+    });
+
+    document.getElementById("txt_FAQid").value = "";
+    document.getElementById("txt_FAQquestion").value =  "";
+    document.getElementById("txt_FAQanswer").value =  "";
+    selectReset.selectedIndex = 0;
+
+    // NYI: Refresh #ddFAQ since now it should not show the deleted option
+
+  } catch (err) {
+    alert('Something went wrong while deleting!');
+    console.log(err);
+  }
+});
+
+  // ??? (FAQ)
+
+jQuery( document ).on( "change", "#ddFAQ", function() {
+
+});
