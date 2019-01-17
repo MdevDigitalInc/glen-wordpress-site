@@ -121,6 +121,8 @@ jQuery( document ).on( "change", "#ddTeam", function() {
 
 // FAQ
 
+  // This updates the database using the inputs in the admin control (FAQ)
+
 jQuery( document ).on( 'click', '#btnFAQUpdate', function($) {
   
   var id = document.getElementById("txt_FAQid").value;
@@ -129,18 +131,24 @@ jQuery( document ).on( 'click', '#btnFAQUpdate', function($) {
 
   var query = 'UPDATE tblFAQ SET Question = "' + question + '", Answer = "' + answer + '" WHERE ID = ' + id + ';';
 
-  alert(query);
-
   var data = {
     'action': 'my_action',
     'query': query
   };
 
   // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-  jQuery.post(ajaxurl, data, function(response) {
-    alert('Got this from the server: ' + response);
-  });
+  try {
+    jQuery.post(ajaxurl, data, function(response) {
+      alert('Success!');
+      console.log('Response:' + response);
+    });
+  } catch (err) {
+    alert('Something went wrong while updating!');
+    console.log(err);
+  }
 });
+
+  // This waits for the SELECT wheel to change and do stuff based on that (FAQ)
 
 jQuery( document ).on( "change", "#ddFAQ", function() {
   
@@ -161,11 +169,39 @@ jQuery( document ).on( "change", "#ddFAQ", function() {
       document.getElementById("txt_FAQid").value =  response[0].ID;
       document.getElementById("txt_FAQquestion").value =  response[0].Question;
       document.getElementById("txt_FAQanswer").value =  response[0].Answer;
-    }else{
+    } else {
       document.getElementById("txt_FAQid").value = "";
       document.getElementById("txt_FAQquestion").value =  "";
       document.getElementById("txt_FAQanswer").value =  "";
     }
   });
-
 });
+
+  // This deletes the selected entry (FAQ)
+
+  jQuery( document ).on( 'click', '#btnFAQDelete', function($) {
+  
+    var id = document.getElementById("txt_FAQid").value;
+
+    try {
+      if (id >= 0) {
+        var query = 'DELETE FROM tblFAQ WHERE ID = ' + id + ';';
+      } else {
+        throw "Failed on (id >= 0).";
+      }
+
+      var data = {
+        'action': 'my_action',
+        'query': query
+      };
+      
+      jQuery.post(ajaxurl, data, function(response) {
+        alert('Success!');
+        console.log('Response:' + response);
+      });
+
+    } catch (err) {
+      alert('Something went wrong while deleting!');
+      console.log(err);
+    }
+  });
