@@ -1,5 +1,4 @@
 jQuery( document ).on( 'click', '#btnUpdate', function($) {
-  
 
   var id = document.getElementById("txt_id").value;
   var name = document.getElementById("txt_name").value;
@@ -121,6 +120,28 @@ jQuery( document ).on( "change", "#ddTeam", function() {
 
 // FAQ
 
+  // CREATE
+
+jQuery( document ).on( 'click', '#btnFAQCreate', function($) {
+
+  var question = document.getElementById("txt_FAQquestion").value;
+  var answer = document.getElementById("txt_FAQanswer").value;
+
+  var query = "INSERT INTO tblFAQ (question, answer) VALUES( '" + question + "', '" + answer +"');";
+
+  alert(query);
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    alert('Got this from the server: ' + response);
+  });
+});
+
   // This updates the database using the inputs in the admin control (FAQ)
 
 jQuery( document ).on( 'click', '#btnFAQUpdate', function($) {
@@ -182,6 +203,7 @@ jQuery( document ).on( "change", "#ddFAQ", function() {
   jQuery( document ).on( 'click', '#btnFAQDelete', function($) {
   
     var id = document.getElementById("txt_FAQid").value;
+    var selectReset = document.getElementById("ddFAQ");
 
     try {
       if (id >= 0) {
@@ -199,6 +221,11 @@ jQuery( document ).on( "change", "#ddFAQ", function() {
         alert('Success!');
         console.log('Response:' + response);
       });
+
+      document.getElementById("txt_FAQid").value = "";
+      document.getElementById("txt_FAQquestion").value =  "";
+      document.getElementById("txt_FAQanswer").value =  "";
+      selectReset.selectedIndex = 0;
 
     } catch (err) {
       alert('Something went wrong while deleting!');
