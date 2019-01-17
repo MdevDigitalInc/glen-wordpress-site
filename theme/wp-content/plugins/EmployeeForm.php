@@ -40,7 +40,7 @@ function my_plugin_options() {
   $result = $wpdb->get_results ( "
     SELECT * FROM tblEmployees
   " );
-
+  echo "<h3>Team Administration</h3>";
   echo "<select id='ddEmp'>";
   echo "<option value=0>Not Selected.</option>";
   foreach ( $result as $page )
@@ -48,7 +48,6 @@ function my_plugin_options() {
     echo "<option value='".$page->ID."'>".$page->Name."</option>";
   }
   echo "</select>";
-
 
   echo "<input type='text' id='txt_id' style='visibility: hidden;' /><br/>";
   echo "<input type='text' id='txt_name' /><br/>";
@@ -68,5 +67,40 @@ function my_plugin_options() {
   
   echo "<input type='button' id='btnCreate' value='Create' />";
   echo "<input type='button' id='btnUpdate' value='Update' /><br/><br/>";
+
+  // FAQ Below
+
+  $result = $wpdb->get_results ( "
+    SELECT * FROM tblFAQ
+  " );
+
+  echo "<h3>FAQ Administration</h3>";
+
+  echo "<p>Select:</p>";
+
+  echo "<select id='ddFAQ'>";
+  echo "<option value=0>Not Selected.</option>";
+  foreach ( $result as $page )
+  {
+    echo "<option value='".$page->ID."'>".$page->Question."</option>";
+  }
+  echo "</select>";
+
+  echo "<div class='input-group'>";
+  echo "<input type='text' id='txt_FAQid' name='txt_FAQid' style='visibility: hidden; display: inline;' /><br/>";
+  echo "</div>";
+
+  echo "<div class='input-group'>";
+  echo "<label for='txt_FAQquestion' style='display:block;'>Question: </label>";
+  echo "<textarea id='txt_FAQquestion' style='width: 300px; height: 100px;'></textarea>";
+  echo "</div>";
+
+  echo "<div class='input-group'>";
+  echo "<label for='txt_FAQanswer' style='display:block;'>Answer: </label>";
+  echo "<textarea id='txt_FAQanswer' style='width: 300px; height: 100px;'></textarea>";
+  echo "</div>";
+  
+  echo "<input type='button' id='btnFAQCreate' value='Create' />";
+  echo "<input type='button' id='btnFAQUpdate' value='Update' /><br/><br/>";
 }
 ?>

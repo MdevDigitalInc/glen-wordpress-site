@@ -23,7 +23,7 @@ jQuery( document ).on( 'click', '#btnUpdate', function($) {
   jQuery.post(ajaxurl, data, function(response) {
     alert('Got this from the server: ' + response);
   });
-})
+});
 
 jQuery( document ).on( 'click', '#btnCreate', function($) {
   
@@ -48,7 +48,7 @@ jQuery( document ).on( 'click', '#btnCreate', function($) {
   jQuery.post(ajaxurl, data, function(response) {
     alert('Got this from the server: ' + response);
   });
-})
+});
 
 
 
@@ -119,4 +119,53 @@ jQuery( document ).on( "change", "#ddTeam", function() {
 
 });
 
+// FAQ
 
+jQuery( document ).on( 'click', '#btnFAQUpdate', function($) {
+  
+  var id = document.getElementById("txt_FAQid").value;
+  var question = document.getElementById("txt_FAQquestion").value;
+  var answer = document.getElementById("txt_FAQanswer").value;
+
+  var query = 'UPDATE tblFAQ SET Question = "' + question + '", Answer = "' + answer + '" WHERE ID = ' + id + ';';
+
+  alert(query);
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    alert('Got this from the server: ' + response);
+  });
+});
+
+jQuery( document ).on( "change", "#ddFAQ", function() {
+  
+  var id = document.getElementById("ddFAQ").value;
+
+  var query = "Select * from tblFAQ where ID = " + id;
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+  
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    //alert('Got this from the server: ' + JSON.stringify(response));
+    if( response.length > 0)
+    {
+      document.getElementById("txt_FAQid").value =  response[0].ID;
+      document.getElementById("txt_FAQquestion").value =  response[0].Question;
+      document.getElementById("txt_FAQanswer").value =  response[0].Answer;
+    }else{
+      document.getElementById("txt_id").value = "";
+      document.getElementById("txt_name").value =  "";
+      document.getElementById("txt_title").value =  "";
+    }
+  });
+
+});
