@@ -162,9 +162,9 @@ jQuery( document ).on( "change", "#ddFAQ", function() {
       document.getElementById("txt_FAQquestion").value =  response[0].Question;
       document.getElementById("txt_FAQanswer").value =  response[0].Answer;
     }else{
-      document.getElementById("txt_id").value = "";
-      document.getElementById("txt_name").value =  "";
-      document.getElementById("txt_title").value =  "";
+      document.getElementById("txt_FAQid").value = "";
+      document.getElementById("txt_FAQquestion").value =  "";
+      document.getElementById("txt_FAQanswer").value =  "";
     }
   });
 
