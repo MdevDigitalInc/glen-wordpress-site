@@ -1,5 +1,8 @@
+// Team Admin
+
+  // UPDATE (TEAM MEMBER)
+
 jQuery( document ).on( 'click', '#btnUpdate', function($) {
-  
 
   var id = document.getElementById("txt_id").value;
   var name = document.getElementById("txt_name").value;
@@ -23,7 +26,9 @@ jQuery( document ).on( 'click', '#btnUpdate', function($) {
   jQuery.post(ajaxurl, data, function(response) {
     alert('Got this from the server: ' + response);
   });
-})
+});
+
+  // CREATE (TEAM MEMBER)
 
 jQuery( document ).on( 'click', '#btnCreate', function($) {
   
@@ -48,9 +53,9 @@ jQuery( document ).on( 'click', '#btnCreate', function($) {
   jQuery.post(ajaxurl, data, function(response) {
     alert('Got this from the server: ' + response);
   });
-})
+});
 
-
+  // READ (TEAM MEMBER)
 
 jQuery( document ).on( "change", "#ddEmp", function() {
   
@@ -92,6 +97,48 @@ jQuery( document ).on( "change", "#ddEmp", function() {
 
 });
 
+  // DELETE (TEAM MEMBER)
+
+jQuery( document ).on( 'click', '#btnDelete', function($) {
+
+  var id = document.getElementById("txt_id").value;
+  var selectReset = document.getElementById("ddEmp");
+
+  try {
+    if (id >= 0) {
+      var query = 'DELETE FROM tblEmployees where ID = ' + id + ';';
+    } else {
+      throw "Failed on (id >= 0).";
+    }
+
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+    
+    jQuery.post(ajaxurl, data, function(response) {
+      alert('Success!');
+      console.log('Response:' + response);
+    });
+
+    document.getElementById("txt_id").value = "";
+    document.getElementById("txt_name").value =  "";
+    document.getElementById("txt_title").value =  "";
+    document.getElementById("txt_history").value =  "";
+    document.getElementById("txt_quote").value =  "";
+    document.getElementById("dd_tid").value =  "";
+    document.getElementById("txt_avatar").value =  "";
+    selectReset.selectedIndex = 0;
+
+    // NYI: Refresh #ddEmp since now it should not show the deleted option
+
+  } catch (err) {
+    alert('Something went wrong while deleting!');
+    console.log(err);
+  }
+});
+
+  // ???
 
 jQuery( document ).on( "change", "#ddTeam", function() {
   
@@ -119,4 +166,127 @@ jQuery( document ).on( "change", "#ddTeam", function() {
 
 });
 
+// FAQ
 
+  // UPDATE (FAQ)
+
+  jQuery( document ).on( 'click', '#btnFAQUpdate', function($) {
+  
+    var id = document.getElementById("txt_FAQid").value;
+    var question = document.getElementById("txt_FAQquestion").value;
+    var answer = document.getElementById("txt_FAQanswer").value;
+  
+    var query = 'UPDATE tblFAQ SET Question = "' + question + '", Answer = "' + answer + '" WHERE ID = ' + id + ';';
+  
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+  
+    // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+    try {
+      jQuery.post(ajaxurl, data, function(response) {
+        alert('Success!');
+        console.log('Response:' + response);
+      });
+    } catch (err) {
+      alert('Something went wrong while updating!');
+      console.log(err);
+    }
+  });
+
+  // CREATE
+
+jQuery( document ).on( 'click', '#btnFAQCreate', function($) {
+
+  var question = document.getElementById("txt_FAQquestion").value;
+  var answer = document.getElementById("txt_FAQanswer").value;
+
+  var query = "INSERT INTO tblFAQ (question, answer) VALUES( '" + question + "', '" + answer +"');";
+
+  alert(query);
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    alert('Got this from the server: ' + response);
+  });
+});
+
+
+
+  // READ (FAQ)
+
+jQuery( document ).on( "change", "#ddFAQ", function() {
+  
+  var id = document.getElementById("ddFAQ").value;
+
+  var query = "Select * from tblFAQ where ID = " + id;
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+  
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    //alert('Got this from the server: ' + JSON.stringify(response));
+    if( response.length > 0)
+    {
+      document.getElementById("txt_FAQid").value =  response[0].ID;
+      document.getElementById("txt_FAQquestion").value =  response[0].Question;
+      document.getElementById("txt_FAQanswer").value =  response[0].Answer;
+    } else {
+      document.getElementById("txt_FAQid").value = "";
+      document.getElementById("txt_FAQquestion").value =  "";
+      document.getElementById("txt_FAQanswer").value =  "";
+    }
+  });
+});
+
+  // DELETE (FAQ)
+
+jQuery( document ).on( 'click', '#btnFAQDelete', function($) {
+
+  var id = document.getElementById("txt_FAQid").value;
+  var selectReset = document.getElementById("ddFAQ");
+
+  try {
+    if (id >= 0) {
+      var query = 'DELETE FROM tblFAQ WHERE ID = ' + id + ';';
+    } else {
+      throw "Failed on (id >= 0).";
+    }
+
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+    
+    jQuery.post(ajaxurl, data, function(response) {
+      alert('Success!');
+      console.log('Response:' + response);
+    });
+
+    document.getElementById("txt_FAQid").value = "";
+    document.getElementById("txt_FAQquestion").value =  "";
+    document.getElementById("txt_FAQanswer").value =  "";
+    selectReset.selectedIndex = 0;
+
+    // NYI: Refresh #ddFAQ since now it should not show the deleted option
+
+  } catch (err) {
+    alert('Something went wrong while deleting!');
+    console.log(err);
+  }
+});
+
+  // ??? (FAQ)
+
+jQuery( document ).on( "change", "#ddFAQ", function() {
+
+});
