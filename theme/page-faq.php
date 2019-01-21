@@ -141,7 +141,7 @@
               Stop by our office to do an Interac transaction
             </li>
             <li>
-              Send an email transfer to centre@arbourglen.ca
+              Send an email transfer to <a href="mailto:centre@arbourglen.ca" title="Email Us">centre@arbourglen.ca</a>
             </li>
             <li>
               Donate through payroll via the United Way Workplace<br/> 			Donation Program (ask your employer)
