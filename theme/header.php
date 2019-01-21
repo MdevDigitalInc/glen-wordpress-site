@@ -74,7 +74,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
       }
 
       function toggleAccordianChildren(index, parent_node) {
-        
+
         var parent = document.getElementsByClassName("glen-accordian-link");
         var target = document.getElementsByClassName("glen-accordian-hidden");
 
@@ -189,7 +189,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
       href="<?php bloginfo('template_url'); ?>/dist/icons/apple-touch-startup-image-1536x2008.png">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    
+
 		<?php wp_head(); ?>
 	</head>
 	<body>
@@ -264,7 +264,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
     <div class="glen-crocodilo"></div>
 
     <!-- Mobile Nav -->
-    
+
     <div class="glen-mobile-navigation --hidden">
     <!-- Mobile Nav Head -->
     <div class="glen-mobile-navigation-head">
@@ -310,7 +310,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
             <div class="glen-accordian-link">
               <a class="glen-accordian-link-label" href="/our-team" title="todo">Our Team</a>
             </div>
-          </div>  
+          </div>
         </div>
         <!-- Accordian Item #2 -->
         <div class="glen-mobile-accordian-item">
@@ -327,7 +327,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
             <div class="glen-accordian-link">
               <a class="glen-accordian-link-label" href="/preschoolers-program" title="todo">Preschoolers</a>
             </div>
-          </div>  
+          </div>
         </div>
         <!-- Accordian Item #3 -->
         <div class="glen-mobile-accordian-item">
@@ -350,7 +350,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label" href="/" title="todo">GET IN TOUCH</a>
+            <a class="glen-accordian-link-label" href="/contact" title="todo">GET IN TOUCH</a>
           </div>
         </div>
       </div>

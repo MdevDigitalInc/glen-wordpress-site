@@ -35,7 +35,7 @@
     @media #{$tablet-only} {
       margin-bottom: 35px;
     }
-    
+
     @media #{$laptop-up} {
       margin-bottom: 45px;
     }
@@ -50,18 +50,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   @media #{$phone-only} {
     padding: 0 5%;
   }
 
   @media #{$tablet-only} {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
-  
+
   @media #{$laptop-up} {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
 }
 
@@ -101,7 +101,8 @@
   transition: all .2s;
   cursor: pointer;
   margin: 0;
-  padding: 7px;
+  padding: 8px 7px 0;
+  margin-bottom: 10px;
   border-radius: 13.5px;
 
   @media #{$phone-only} {
@@ -164,7 +165,7 @@
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
-  
+
   @media #{$laptop-up} {
     margin: 15px 0 25px;
   }

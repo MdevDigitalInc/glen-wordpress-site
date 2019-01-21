@@ -2,6 +2,11 @@
   width: 100%;
   position: relative;
   background: $color-glen-darkgrey;
+
+  .glen-rainbow-bar {
+    padding: 0;
+    background: transparent;
+  }
 }
 
 .glen-footer-content {
