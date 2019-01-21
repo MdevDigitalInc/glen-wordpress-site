@@ -1,11 +1,60 @@
+<?php
+
+
+
+
+if($_POST["action"] == "menu_load_action") {
+
+	global $wpdb; // this is how you get access to the database
+
+  $query = "select * from tblMenu where Week = ".$_POST['week']." and DOW = ".$_POST['dow'];
+  echo json_encode($wpdb->get_results($query));
+
+	die();
+}
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+<?php
+
+
+
+function my_enqueue() {
+
+wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/my-ajax-script.js', array('jquery') );
+
+wp_localize_script( 'ajax-script', 'my_ajax_object',
+        array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action( 'wp_enqueue_scripts', 'my_enqueue' );
+
+// add_action( 'wp_ajax_menu_load_action', 'menu_load_action' );
+// function menu_load_action() {
+// 	global $wpdb; // this is how you get access to the database
+
+//   header('Content-Type: application/json');
+
+//   $query = "select * from tblMenu where Week = ".$_POST['week']." and DOW = ".$_POST['dow'];
+//   echo json_encode("Hellos");//$wpdb->get_results($query));
+
+//   wp_die();
+// }
+?>
 	<head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Farsan|Open+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!-- [ SCRIPTS ] -->
     <script type="text/javascript">
+    var menuDay = 1;
+    var menuWeek = 1;
+    <?php
+    global $wpdb;
+    $results = $wpdb->get_results("Select max(Week) as maxWeek from tblMenu");
+    //print_r(array_values($results));
+    echo "var maxWeeks = ".$results[0]->maxWeek.";";
+    ?>
       function toggleMobileNav() {
         var y = document.getElementsByClassName("glen-mobile-navigation");
 
@@ -46,6 +95,9 @@
       function menuDaySelect(index) {
         var target = document.getElementsByClassName("glen-menu-day");
 
+        menuDay = index+1;
+        var nextMenu = menuLoad(menuWeek, menuDay);
+
         for ( i=0 ; i<5 ; i++ ) {
           if (i == index ) {
             target[index].classList.add("--active");
@@ -56,8 +108,20 @@
       }
 
       function menuWeekSelect(index) {
+        menuWeek += index;
+
+        if(menuWeek > maxWeeks) {
+          menuWeek = 1;
+        }
+
+        if(menuWeek < 1) {
+          menuWeek = maxWeeks;
+        }
+
+        var nextMenu = menuLoad(menuWeek, menuDay);
+
         var target = document.getElementsByClassName("glen-menu-week-title");
-        target[0].innerHTML = "Week 2";
+        target[0].innerHTML = "Week" + menuWeek;
       }
 
     </script>

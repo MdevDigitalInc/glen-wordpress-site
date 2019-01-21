@@ -68,10 +68,18 @@
       <div class="glen-sticker-box">
         <h2>What our families say</h2>
         <div class="glen-squiggle --blue"></div>
-        <p>“Love this place, all the ECEs have a real passion and dedication that doesn't stop. Currently we have a preschooler and an infant enrolled”</p>
+        <?php 
+            $results = $wpdb->get_results("Select * from tblTestimony where pageId = 4;");
+            foreach ( $results as $row )
+            {
+              echo "<p>“".$row->Text."”</p>";//When I picked up my little guy on one of his first days with Arbour Glen, Chris was singing him the ABC song, while he sat contentedly in her arms.  She said (happily!) that it was her tenth time singing it – she said she discovered in that moment, it was what gave him comfort.  It almost brought me to tears: knowing they will do anything to give him what he needed in that moment of sadness.  You really feel like your baby is the centre of their wor\ld – what more can \a mom ask for?”</p>";
+              echo "<span class=\"glen-review-author\">- $row->Author</span>";
+            }
+        ?>
+        <!-- <p>“Love this place, all the ECEs have a real passion and dedication that doesn't stop. Currently we have a preschooler and an infant enrolled”</p>
         <span class="glen-review-author">- Vince V.</span>
         <p>“Our preschooler has been at Arbour Glen since she was an infant and she has thrived here. The staff are compassionate, empathetic and extremely knowledgeable.  The Preschool room has been especially amazing to further expand her skills. She’s become so confident and independent. They get to know each individual child as their own little person. I can’t recommend them enough.”</p>
-        <span class="glen-review-author">- Sarah M.</span>
+        <span class="glen-review-author">- Sarah M.</span> -->
         <div class="glenquotes --programs"></div>
         <div class="glenbox-white"></div>
       </div>

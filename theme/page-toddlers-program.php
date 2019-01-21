@@ -66,8 +66,16 @@
       <div class="glen-sticker-box">
         <h2>What our families say</h2>
         <div class="glen-squiggle --blue"></div>
-        <p>“Arbour Glen is a parent’s dream. When we were able to get a spot, we were overjoyed. A clean and positive environment staffed with the most caring professionals I have ever met and managed by impeccably wonderful people. Our daughter is in one of the toddler rooms, yet every single person in the centre knows her name, and I know in my heart that everyone one who works at Arbour Glen truly cares about every infant, toddler and pre-schooler. All parents should feel reassured and worry-free as we do.”</p>
-        <span class="glen-review-author">- John Siambanopoulos</span>
+          <?php 
+            $results = $wpdb->get_results("Select * from tblTestimony where pageId = 3;");
+            foreach ( $results as $row )
+            {
+              echo "<p>“".$row->Text."”</p>";//When I picked up my little guy on one of his first days with Arbour Glen, Chris was singing him the ABC song, while he sat contentedly in her arms.  She said (happily!) that it was her tenth time singing it – she said she discovered in that moment, it was what gave him comfort.  It almost brought me to tears: knowing they will do anything to give him what he needed in that moment of sadness.  You really feel like your baby is the centre of their wor\ld – what more can \a mom ask for?”</p>";
+              echo "<span class=\"glen-review-author\">- $row->Author</span>";
+            }
+          ?>
+        <!-- <p>“Arbour Glen is a parent’s dream. When we were able to get a spot, we were overjoyed. A clean and positive environment staffed with the most caring professionals I have ever met and managed by impeccably wonderful people. Our daughter is in one of the toddler rooms, yet every single person in the centre knows her name, and I know in my heart that everyone one who works at Arbour Glen truly cares about every infant, toddler and pre-schooler. All parents should feel reassured and worry-free as we do.”</p>
+        <span class="glen-review-author">- John Siambanopoulos</span> -->
         <div class="glenquotes --programs"></div>
         <div class="glenbox-white"></div>
       </div>

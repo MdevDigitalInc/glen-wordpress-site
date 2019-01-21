@@ -41,7 +41,7 @@
 
       <!-- Week Controls Container -->
       <div class="glen-menu-weeks">
-        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(0)">
+        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(-1)">
         <i class="fas fa-angle-left"></i>
         </div>
         <h2 class="glen-menu-week-title">Week 1</h2>
@@ -71,24 +71,50 @@
 
       <!-- Menu Content Container -->
       <div class="glen-menu-content">
-        <!-- Injected Content List Starts Here -->
-        <div class="glen-menu-timeslot">
-          <h3 class="glen-menu-timeslot-title">MORNING SNACK</h3>
-          <div class="glen-menu-timeslot-foodlist">
-            <span class="glen-menu-fooditem">Rice Chex &amp; Mango</span>
-            <span class="glen-menu-fooditem">Water</span>
-            <span class="glen-menu-fooditem">(Inf) Milk</span>
-          </div>
-        </div>
-        <div class="glen-menu-timeslot">
-          <h3 class="glen-menu-timeslot-title">LUNCH</h3>
-          <div class="glen-menu-timeslot-foodlist">
-            <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
-            <span class="glen-menu-fooditem">WW Soda Crackers</span>
-            <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
-            <span class="glen-menu-fooditem">Milk</span>
-          </div>
-        </div>
+      <?php
+
+      $TOD = array("", "MORNING SNACK", "LUNCH", "AFTERNOON SNACK");
+      $TODID = array("", "rowMS", "rowL", "rowAS");
+      
+      $results = $wpdb->get_results("Select * from tblMenu where Week = 1 and DOW = 1;");
+
+      //echo nl2br($results[0]->Name);
+      // echo "<br/>";
+      // foreach($results as $row)
+      // {
+      //   echo nl2br("$row->Name");
+      // }
+      foreach($results as $row)
+      {
+       echo '<div class="glen-menu-timeslot">';
+       echo '  <h3 class="glen-menu-timeslot-title">'.$TOD[$row->TOD].'</h3>';
+       echo '  <div class="glen-menu-timeslot-foodlist" id="'.$TODID[$row->TOD].'">';
+       $columns = explode (PHP_EOL, $row->Name); 
+        foreach($columns as $column) {
+          echo '    <span class="glen-menu-fooditem">'.$column.'</span>';
+        }
+       echo '  </div>';
+       echo '</div>';
+      }
+        // <div class="glen-menu-timeslot">
+        //   <h3 class="glen-menu-timeslot-title">LUNCH</h3>
+        //   <div class="glen-menu-timeslot-foodlist">
+        //     <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
+        //     <span class="glen-menu-fooditem">WW Soda Crackers</span>
+        //     <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
+        //     <span class="glen-menu-fooditem">Milk</span>
+        //   </div>
+        // </div>
+        // <div class="glen-menu-timeslot">
+        //   <h3 class="glen-menu-timeslot-title">Afternoon Snack</h3>
+        //   <div class="glen-menu-timeslot-foodlist">
+        //     <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
+        //     <span class="glen-menu-fooditem">WW Soda Crackers</span>
+        //     <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
+        //     <span class="glen-menu-fooditem">Milk</span>
+        //   </div>
+        // </div>
+        ?>
       </div>
     </div>
   </section>
