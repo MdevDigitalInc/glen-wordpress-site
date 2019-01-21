@@ -121,7 +121,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
         var nextMenu = menuLoad(menuWeek, menuDay);
 
         var target = document.getElementsByClassName("glen-menu-week-title");
-        target[0].innerHTML = "Week" + menuWeek;
+        target[0].innerHTML = "Week " + menuWeek;
       }
 
     </script>

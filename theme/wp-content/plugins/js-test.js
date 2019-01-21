@@ -290,3 +290,296 @@ jQuery( document ).on( 'click', '#btnFAQDelete', function($) {
 jQuery( document ).on( "change", "#ddFAQ", function() {
 
 });
+
+
+
+
+
+// Testimony
+
+  // UPDATE (Testimony)
+
+  jQuery( document ).on( 'click', '#btnTestUpdate', function($) {
+  
+    var id = document.getElementById("txt_Testid").value;
+    var author = document.getElementById("txt_Testauthor").value;
+    var text = document.getElementById("txt_Testtext").value;
+    var pageId = document.getElementById("dd_Testid").value;
+  
+    var query = 'UPDATE tblTestimony SET Author = "' + author + '", Text = "' + text + '", pageId = '+pageId+' WHERE ID = ' + id + ';';
+  
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+  
+    // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+    try {
+      jQuery.post(ajaxurl, data, function(response) {
+        alert('Success!');
+        console.log('Response:' + response);
+      });
+    } catch (err) {
+      alert('Something went wrong while updating!');
+      console.log(err);
+    }
+  });
+
+  // CREATE (Testimony)
+
+jQuery( document ).on( 'click', '#btnTestCreate', function($) {
+
+  var author = document.getElementById("txt_Testauthor").value;
+    var text = document.getElementById("txt_Testtext").value;
+    var pageId = document.getElementById("dd_Testid").value;
+
+  var query = "INSERT INTO tblTestimony (Author, Text, pageId) VALUES( '" + author + "', '" + text +"', "+pageId+");";
+
+  alert(query);
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    alert('Got this from the server: ' + response);
+  });
+});
+
+
+
+  // READ (Testimony)
+
+jQuery( document ).on( "change", "#ddTest", function() {
+  
+  var id = document.getElementById("ddTest").value;
+
+  var query = "Select * from tblTestimony where ID = " + id;
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+  
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    //alert('Got this from the server: ' + JSON.stringify(response));
+    if( response.length > 0)
+    {
+      document.getElementById("txt_Testid").value =  response[0].ID;
+      document.getElementById("txt_Testauthor").value =  response[0].Author;
+      document.getElementById("txt_Testtext").value =  response[0].Text;
+      document.getElementById("dd_Testid").value =  response[0].pageId;
+    } else {
+      document.getElementById("txt_Testid").value = "";
+      document.getElementById("txt_Testauthor").value = "";
+      document.getElementById("txt_Testtext").value = "";
+      document.getElementById("dd_Testid").value = "";
+    }
+  });
+});
+
+  // DELETE (Testimony)
+
+jQuery( document ).on( 'click', '#btnTestDelete', function($) {
+
+  var id = document.getElementById("txt_Testid").value;
+  var selectReset = document.getElementById("ddTest");
+
+  try {
+    if (id >= 0) {
+      var query = 'DELETE FROM tblTestimony WHERE ID = ' + id + ';';
+    } else {
+      throw "Failed on (id >= 0).";
+    }
+
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+    
+    jQuery.post(ajaxurl, data, function(response) {
+      alert('Success!');
+      console.log('Response:' + response);
+    });
+
+    document.getElementById("txt_Testid").value = "";
+    document.getElementById("txt_Testauthor").value =  "";
+    document.getElementById("txt_Testtext").value =  "";
+    document.getElementById("dd_Testid").value = "";
+    selectReset.selectedIndex = 0;
+
+    // NYI: Refresh #ddFAQ since now it should not show the deleted option
+
+  } catch (err) {
+    alert('Something went wrong while deleting!');
+    console.log(err);
+  }
+});
+
+//End Testimony
+
+
+
+// Menu
+
+  // UPDATE (Menu)
+
+  jQuery( document ).on( 'click', '#btnMenuUpdate', function($) {
+  
+    var id = document.getElementById("txt_Menuid").value;
+    var text = document.getElementById("txt_Menutext").value;
+    var week = document.getElementById("dd_Menuweek").value;
+    var dow = document.getElementById("dd_MenuDOW").value;
+    var tod = document.getElementById("dd_MenuTOD").value;
+  
+    var query = 'UPDATE tblMenu SET Name = "' + text + '", Week = ' + week + ', DOW = '+dow+', TOD = '+tod+' WHERE ID = ' + id + ';';
+  
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+  
+    // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+    try {
+      jQuery.post(ajaxurl, data, function(response) {
+        alert('Success!');
+        console.log('Response:' + response);
+      });
+    } catch (err) {
+      alert('Something went wrong while updating!');
+      console.log(err);
+    }
+  });
+
+  // CREATE (Menu)
+
+jQuery( document ).on( 'click', '#btnMenuCreate', function($) {
+
+  var text = document.getElementById("txt_Menutext").value;
+  var week = document.getElementById("dd_Menuweek").value;
+  var dow = document.getElementById("dd_MenuDOW").value;
+  var tod = document.getElementById("dd_MenuTOD").value;
+
+  var query = "INSERT INTO tblTestimony (Name, Week, DOW, TOD) VALUES( '" + text + "', " + week +", "+dow+", "+tod+");";
+
+  alert(query);
+
+  var data = {
+    'action': 'my_action',
+    'query': query
+  };
+
+  // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+  jQuery.post(ajaxurl, data, function(response) {
+    alert('Got this from the server: ' + response);
+  });
+});
+
+
+
+
+// READ (MENU)
+
+function readMenu()
+{
+  var week = document.getElementById("ddMenuWeek").value;
+  var dow = document.getElementById("ddMenuDay").value;
+  var tod = document.getElementById("ddMenuTime").value;
+
+  if(week > 0 && dow > 0 && tod > 0 )
+  {
+    var query = "Select * from tblMenu where Week = " + week + " AND DOW = "+dow+" AND TOD = "+tod+";";
+
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+    
+    // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+    jQuery.post(ajaxurl, data, function(response) {
+      //alert('Got this from the server: ' + JSON.stringify(response));
+      if( response.length > 0)
+      {
+        document.getElementById("txt_Menuid").value = response[0].ID;
+        document.getElementById("txt_Menutext").value = response[0].Name;
+        document.getElementById("dd_Menuweek").value = response[0].Week;
+        document.getElementById("dd_MenuDOW").value = response[0].DOW;
+        document.getElementById("dd_MenuTOD").value = response[0].TOD;
+      } else {
+        document.getElementById("txt_Menuid").value = "";
+        document.getElementById("txt_Menutext").value = "";
+        document.getElementById("dd_Menuweek").value = "";
+        document.getElementById("dd_MenuDOW").value = "";
+        document.getElementById("dd_MenuTOD").value = "";
+      }
+    });
+  }
+}
+
+
+  // READ (Menu)
+
+  jQuery( document ).on( "change", "#ddMenuWeek", function() {
+    readMenu();
+  });
+
+  jQuery( document ).on( "change", "#ddMenuDay", function() {
+    readMenu();
+  });
+
+  jQuery( document ).on( "change", "#ddMenuTime", function() {
+    readMenu();
+  });
+
+
+
+
+
+
+
+
+
+
+  // DELETE (Menu)
+
+jQuery( document ).on( 'click', '#btnTestDelete', function($) {
+
+  var id = document.getElementById("txt_Menuid").value;
+  var selectReset = document.getElementById("ddMenu");
+
+  try {
+    if (id >= 0) {
+      var query = 'DELETE FROM tblMenu WHERE ID = ' + id + ';';
+    } else {
+      throw "Failed on (id >= 0).";
+    }
+
+    var data = {
+      'action': 'my_action',
+      'query': query
+    };
+    
+    jQuery.post(ajaxurl, data, function(response) {
+      alert('Success!');
+      console.log('Response:' + response);
+    });
+
+    document.getElementById("txt_Menuid").value = "";
+      document.getElementById("txt_Menutext").value = "";
+      document.getElementById("dd_Menuweek").value = "";
+      document.getElementById("dd_MenuDOW").value = "";
+      document.getElementById("dd_MenuTOD").value = "";
+    selectReset.selectedIndex = 0;
+
+    // NYI: Refresh #ddFAQ since now it should not show the deleted option
+
+  } catch (err) {
+    alert('Something went wrong while deleting!');
+    console.log(err);
+  }
+});
+
+//end Menu
