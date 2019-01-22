@@ -302,7 +302,7 @@
 // Iconstrip Bar Styles
 
 .glen-iconstrip-bar {
-  width: 100%;
+  width: 30%;
   border-bottom: 3px solid $color-glen-darkgrey;
 
   @media #{$laptop-up} {
@@ -367,7 +367,8 @@
 
 .glen-rainbow-bar-segment {
   height: 3px;
-  width: 100%;
+  width: 8.33333%;
+  flex-grow: 1;
 
   // Color Logic
 
