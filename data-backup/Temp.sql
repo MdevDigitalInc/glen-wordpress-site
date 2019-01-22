@@ -35,4 +35,4 @@ update tblFAQ set Answer = 'Does Arbour Glen accept children on Child Care Fee S
 
 
 
-update tblFAQ set Answer = 'Yes Arbour Glen, accepts all children on child care fee, as does all centres in London and Middlesex. To apply for subsidy please go to <a href="https://occmsbilling.london.ca/olaf/">Online Child Care Fee Subsidy Application for the City of London.</a>' Where ID = 4
+update tblFAQ set Answer = 'Yes, Arbour Glen, accepts all children on child care fee, as does all centres in London and Middlesex. To apply for subsidy please go to <a href="https://occmsbilling.london.ca/olaf/">Online Child Care Fee Subsidy Application for the City of London.</a>' Where ID = 4;

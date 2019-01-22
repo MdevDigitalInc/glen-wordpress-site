@@ -344,7 +344,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
         <!-- Accordian Item #4 -->
         <div class="glen-mobile-accordian-item">
           <div class="glen-accordian-link">
-            <a class="glen-accordian-link-label" href="/" title="todo">PARENT HANDBOOK&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
+            <a class="glen-accordian-link-label" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/PARENT-HANDBOOK-PDF-Current-Oct.-16-2018-.pdf" target="_blank" title="todo">PARENT HANDBOOK&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
           </div>
         </div>
         <!-- Accordian Item #4 -->
