@@ -202,14 +202,22 @@
 .glen-mobile-navigation-address {
   color: $white;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 12px;
+
+  @media #{$tablet-up} {
+    font-size: 20px;
+  }
 }
 
 .glen-mobile-navigation-phone {
   color: $white;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 12px;
   margin-top: 15px;
+
+  @media #{$tablet-up} {
+    font-size: 18px;
+  }
 }
 
 .glen-mobile-navigation-socials {
