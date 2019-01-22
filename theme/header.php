@@ -164,10 +164,10 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" type="image/png" sizes="32x32"
-      href="<?php bloginfo('template_url'); ?>/dist/icons/favicon-32x32.png">
+      href="<?php bloginfo('template_url'); ?>/img/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16"
-      href="<?php bloginfo('template_url'); ?>/dist/icons/favicon-16x16.png">
-    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/dist/icons/favicon.ico">
+      href="<?php bloginfo('template_url'); ?>/img/favicon.png">
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/img/favicon.ico">
     <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
       href="<?php bloginfo('template_url'); ?>/dist/icons/apple-touch-startup-image-320x460.png">
     <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
@@ -247,7 +247,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
           <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
         </div>
         <div class="glen-main-navigation-link --largossa">
-          <a class="glen-main-navigation-link-label" href="/" title="Download our Handbook">parent handbook&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
+        <a class="glen-main-navigation-link-label" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/PARENT-HANDBOOK-PDF-Current-Oct.-16-2018-.pdf" target="_blank" title="Download our Handbook">parent handbook&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
         </div>
         <div class="glen-main-navigation-link">
           <a class="glen-main-navigation-link-label" href="/contact" title="Visit our Contact page">get in touch</a>

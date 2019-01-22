@@ -20,7 +20,7 @@
         <p>
           We like to have a personal connection with our prospective families, so please give us a call next at 519-439-3701 to confirm your request was received, and to answer any questions you may have about our centre. Speaking of questions, let's see if we can answer some for you now!
         </p>
-        <a class="glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
+        <a class="glen-btn --solid-pw" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/PARENT-HANDBOOK-PDF-Current-Oct.-16-2018-.pdf" target="_blank">DOWNLOAD OUR PARENT HANDBOOK</a>
       </div><!-- /description -->
       <div class="glen-hidden-dragon">
         <div class="glen-faq-box --extrapad"> <!-- box -->
@@ -135,7 +135,7 @@
         <div class="glen-featured-glenbox-object">
           <ul>
             <li>
-              Send a cheque or money order to <br>	1017 Adelaide St. N. London ON. N5Y 2M8
+              Send a cheque or money order to <br>	1017 Adelaide St N, London, ON N5Y 2M8
             </li>
             <li>
               Stop by our office to do an Interac transaction

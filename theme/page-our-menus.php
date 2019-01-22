@@ -25,7 +25,7 @@
         <div class="glen-balcony-sticker --menu">
           <h2>Food & Nutrition</h2>
           <p>We take pride in our menus, serving fish, chicken or lean beef dishes three times a week and vegetarian meals twice a week (no nuts, no fruit juices and no processed meats). We include mostly fresh or frozen fruits and vegetables and try to limit canned items when practical. We serve only fresh milk daily (whole or 2%, never diluted or powdered) and most of our dips and spreads are homemade. See our menus below or look for them posted on the main hallway bulletin board inside the back entrance.</p>
-          <a class="glen-btn --solid-rw" title="Download our menu" href="todo"">Download Our Menu</a>
+          <a class="glen-btn --solid-rw" title="Download our menu" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/Menu_Fall-Winter_2018-19.pdf" target="_blank">Download Our Menu</a>
         </div>
       </div>
     </div>
