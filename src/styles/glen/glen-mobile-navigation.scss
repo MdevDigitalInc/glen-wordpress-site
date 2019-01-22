@@ -197,6 +197,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  @media #{$phone-only} {
+    padding: 15px 5%;
+  }
 }
 
 .glen-mobile-navigation-address {
@@ -218,6 +222,10 @@
   @media #{$tablet-up} {
     font-size: 18px;
   }
+
+  @media #{$phone-only} {
+    margin-top: 8px;
+  }
 }
 
 .glen-mobile-navigation-socials {
@@ -225,12 +233,24 @@
   padding: 5px;
   margin-top: 15px;
 
+  @media #{$phone-only} {
+    margin-top: 5px;
+  }
+
   a {
     color: $white;
     font-size: 32px;
 
+    @media #{$phone-only} {
+      font-size: 18px;
+    }
+
     &:last-child {
       margin-left: 35px;
+
+      @media #{$phone-only} {
+        margin-left: 15px;
+      }
     }
   }
 }
