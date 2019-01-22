@@ -20,7 +20,7 @@
         <p>Arbour Glen has strong ties in the community and one of the things we participate in is an intergenerational program with Kensington Village Retirement Home. It’s been our tradition since the early 1990’s to visit with the senior residents on a regular basis. Sometimes its hard to tell who’s having more fun, them or us!</p>
         <p>As in all rooms, our Preschool Educators spend time observing and recording your child’s learning through play. We use ‘Seesaw’, a digital online portfolio app, to share with you a glimpse into their time spent with us! You will receive occasional snapshots of something special they are doing and an online portfolio of your child’s time at Arbour Glen will be compiled. Participation in ‘Seesaw’ is optional, so we will create paper portfolios for those who choose not to partake. Learning stories and photos are posted throughout the hallways and classrooms. Don’t forget to check them out along with our ‘End-of-day’ posters to keep you ‘in the loop’!</p>
         <p>When it’s time for your child to leave for ‘big school’, they will take lasting friendships and wonderful memories of their time at Arbour Glen. But remember to come back and visit! Warm hugs will always be waiting for them.</p>
-        <a class="glen-btn --solid-gw" title="Join our waiting list" href="mailto:centre@arbourglen.ca">join our mailing list</a>
+        <a class="glen-btn --solid-gw" title="Join our waiting list" href="https://london.onehsn.com/">join our waiting list</a>
       </div>
     </div>
   </section>
@@ -40,7 +40,7 @@
             <p>At Arbour Glen, we have 2 Preschool groups each with up to 16 children between 30 months and 4 years of age. There are 2 Registered Early Childhood Educators in each group. Our Preschool Educators are a warm and loving team of caregivers who provide an inspiring, pleasurable atmosphere for children to enjoy learning through play.</p>
           </div>
           <div class="glen-balcony-roster-cards">
-          <?php 
+          <?php
             $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 3;");
             $imgPath = get_bloginfo('template_url', 'display');
             foreach ( $results as $emp )
@@ -68,7 +68,7 @@
       <div class="glen-sticker-box">
         <h2>What our families say</h2>
         <div class="glen-squiggle --blue"></div>
-        <?php 
+        <?php
             $results = $wpdb->get_results("Select * from tblTestimony where pageId = 4;");
             foreach ( $results as $row )
             {

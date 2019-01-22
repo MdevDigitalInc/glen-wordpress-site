@@ -2,6 +2,11 @@
   width: 100%;
   position: relative;
   background: $color-glen-darkgrey;
+
+  .glen-rainbow-bar {
+    padding: 0;
+    background: transparent;
+  }
 }
 
 .glen-footer-content {
@@ -44,6 +49,7 @@
 
   @media #{$tablet-only} {
     justify-content: space-between;
+    display: none;
   }
 
   .glen-footer-info-compound {
@@ -63,9 +69,13 @@
 
   .glen-footer-phone {
     margin-left: 20px;
+    color: $white;
+    margin-bottom: 0;
+    font-size: 12px;
 
     @media #{$tablet-only} {
       margin-left: 100px;
+      display: none;
     }
 
     @media #{$tablet-only} {
@@ -74,6 +84,7 @@
 
     @media #{$laptop-up} {
       margin-left: 50px;
+      font-size: 13px;
     }
   }
 }
@@ -85,6 +96,6 @@
   @media #{$tablet-only} {
     width: 100%;
     justify-content: center;
-    margin-top: 10px;
+    margin: 10px 0;
   }
 }

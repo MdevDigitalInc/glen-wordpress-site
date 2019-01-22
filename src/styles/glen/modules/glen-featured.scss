@@ -83,8 +83,20 @@
 
 .glen-featured-glenbox-object {
   position: relative;
-  width: 460px;
+  width: 60%;
+  min-width: 300px;
   padding: 35px 45px 35px 25px;
+
+  @media #{$phone-only} {
+    width: 100%;
+    margin: 0 auto;
+    min-width: 200px;
+    padding: 30px 20px;
+  }
+
+  @media #{$laptop-only} {
+    padding: 30px 20px;
+  }
 
   span,
   ul,

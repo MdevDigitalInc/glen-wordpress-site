@@ -101,6 +101,10 @@
     @media #{$tablet-only} {
       background-position: 80% center;
     }
+
+    @media #{$phone-only} {
+      background-position: 90% top;
+    }
   }
 
   &.--team {
@@ -461,6 +465,11 @@
       margin-top: 50px;
     }
   }
+
+  .glen-btn {
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
 }
 
 // Balcony Roster Styles
@@ -538,8 +547,10 @@
   .glen-roster-card-image {
     width: 180px;
     height: 180px;
+    position: relative;
     border-radius: 50%;
     margin: 0 0 25px;
+    overflow: hidden;
 
     @media #{$tablet-up} {
       width: 200px;
@@ -560,6 +571,11 @@
 
     &.--red {
       background-color: $color-glen-red;
+    }
+
+    img {
+      @include center(both);
+      width: 100%;
     }
   }
 }

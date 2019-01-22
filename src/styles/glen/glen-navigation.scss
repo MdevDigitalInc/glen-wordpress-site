@@ -151,6 +151,7 @@
     justify-content: center;
     align-items: center;
     transition: all .1s;
+    line-height: 1.1;
     padding: 0 15px;
 
     @media #{$laptop-only} {
@@ -166,7 +167,6 @@
 // Main navigation dropdown Styles
 
 .glen-main-navigation-dropdown {
-  box-shadow: 0 9px 9px #a2a2a2;
   transform: scaleY(0);
   transform-origin: top;
   transition: all .4s;

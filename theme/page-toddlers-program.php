@@ -18,7 +18,7 @@
         </div>
         <p>Our Educators observe the Toddlers to provide an environment that reflects their interests and supports their ongoing development in all areas. This is also a time when they further increase their social and emotional well-being through discovery and enquiry, playing alongside one another and starting to share and take turns. Toddlers are also about movement. Our indoor environment has room for large-motor play, but nothing compares to our wonderful outdoor space that provides further challenges. Your child will run, play, take new risks and experience new adventures. Our outdoor summer program invites them to dig in the sand beneath our shady sugar maple, splash in water play activities and have fun on the riding toys.  And of course, hugs and cuddles never go out of style!</p>
         <p>Our Educators will be there each morning to welcome you and your child and to hear about how their night was. We believe the connection with families is very important to a child’s development. We take lots of photos that document babies busy at play and use ‘Seesaw’, a digital online portfolio app, to share with you a glimpse into their time spent with us! You will receive occasional snapshots of something special they are doing, and an online portfolio of your Toddler’s ‘amazing moments’ will be compiled for you. Participation in ‘Seesaw’ is optional, so we will create paper portfolios for those who choose not to be involved. We also post ‘Learning Stories’ that share a little of what we’ve been up to, so don’t forget to check our bulletin boards and other documentation. A small note will be waiting for you at pick up time, that shares about how well your child ate and slept that day.</p>
-        <a class="glen-btn --solid-pw" href="#" title="todo">join our mailing list</a>
+        <a class="glen-btn --solid-pw" href="https://london.onehsn.com/" title="Join our waiting list">join our waiting list</a>
       </div>
     </div>
   </section>
@@ -38,7 +38,7 @@
             <p>At Arbour Glen, we have 2 Toddler groups, each with up to 15 children between 18 months and 30 months of age. There are 5 Registered Early Childhood Educators (RECEs) and 1 ECE Apprentice between the two groups. Our Toddler teams are always tuned-in to the needs of each child in their group.  They are kind and nurturing caregivers who have the skills, experience and wisdom to work with toddlers.</p>
           </div>
           <div class="glen-balcony-roster-cards">
-            <?php 
+            <?php
             $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 4;");
             $imgPath = get_bloginfo('template_url', 'display');
             foreach ( $results as $emp )
@@ -66,7 +66,7 @@
       <div class="glen-sticker-box">
         <h2>What our families say</h2>
         <div class="glen-squiggle --blue"></div>
-          <?php 
+          <?php
             $results = $wpdb->get_results("Select * from tblTestimony where pageId = 3;");
             foreach ( $results as $row )
             {

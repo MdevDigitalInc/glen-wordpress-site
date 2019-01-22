@@ -20,10 +20,10 @@
             <img class="glen-footer-icon" src="<?php bloginfo('template_url'); ?>/img/icons/icon-location.svg" alt="Image of a map pin" />
             <span class="glen-footer-address">1017 Adelaide Street North, London, ON, N5Y 2M8</span>
           </div>
-					<span class="glen-footer-phone">519.439.3701</span>
+					<a class="glen-footer-phone" href="tel:+15194393701" title="Call us!">519.439.3701</a>
 				</div>
 				<div class="glen-footer-copyright">
-					<span class="glen-footer-copyline">Copyright Arbour Glen Day Nursery 2018</span>
+        <span class=glen-footer-copyline">Copyright&copy; Arbour Glen Day Nursery <?php echo date("Y"); ?></span>
 				</div>
 			</div>
     </footer>
