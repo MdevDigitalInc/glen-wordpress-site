@@ -106,7 +106,7 @@
   border-radius: 13.5px;
 
   @media #{$phone-only} {
-    padding: 4px;
+    padding: 6px 6px 0;
   }
 
   span {

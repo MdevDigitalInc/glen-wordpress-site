@@ -141,6 +141,7 @@
 
     img {
       @include center(both);
+      width: 100%;
     }
   }
 }

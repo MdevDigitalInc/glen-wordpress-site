@@ -32,7 +32,7 @@
             So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
           </p>
           <div class="glen-faq-btn">
-            <a class="glen-btn --solid-wb" title="Join our waiting list" href="mailto:centre@arbourglen.ca">
+            <a class="glen-btn --solid-wb" title="Join our waiting list" href="https://london.onehsn.com/">
               Join Our Waiting List
             </a>
           </div>
@@ -58,7 +58,7 @@
           So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
         </p>
         <div class="glen-faq-btn">
-          <a class="glen-btn --solid-wb" title="Join our waiting list" href="mailto:centre@arbourglen.ca">
+          <a class="glen-btn --solid-wb" title="Join our waiting list" href="https://london.onehsn.com/">
             Join Our Waiting List
           </a>
         </div>

@@ -468,6 +468,7 @@
 
   .glen-btn {
     margin-bottom: 25px;
+    margin-top: 25px;
   }
 }
 
@@ -574,6 +575,7 @@
 
     img {
       @include center(both);
+      width: 100%;
     }
   }
 }

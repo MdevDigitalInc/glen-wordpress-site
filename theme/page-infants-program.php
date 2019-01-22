@@ -17,7 +17,7 @@
         </div>
         <p>Before your baby starts at Arbour Glen, you will both come for a visit to our room. Tell us everything you would like us to know! Ask us any other questions you may have. We want you and your child to feel at home. Your child’s next visit will be a short morning or afternoon to let them experience Arbour Glen on their own. We also welcome any and every question and encourage you to call and check in as often as you'd like. We want you to feel connected to their day. Once enrolled, our Educators take time to welcome you each day and hear about your little one’s night.</p>
         <p>But once you leave for work, don’t think you’re going to miss out on the fun! We believe the connection with families is very important to a child’s development. We take lots of photos that document babies busy at play. We use ‘Seesaw’, a digital online portfolio app, to share with you a glimpse into their time spent with us! You will receive occasional snapshots of something special they are doing and an online portfolio of your baby’s adventures when they move on to Toddlers. Participation in ‘Seesaw’ is optional, so we will create paper portfolios for those who choose not to.  We also post ‘Learning Stories’ that share a little of what we’ve been up to, so don’t forget to check our bulletin boards and other documentation. At pick up time, Baby parents also receive a daily note that shares information about their child’s day.</p>
-        <a class="glen-btn --solid-rw" href="#" title="todo">join our mailing list</a>
+        <a class="glen-btn --solid-rw" href="https://london.onehsn.com/" title="Join our waiting list">join our waiting list</a>
       </div>
     </div>
   </section>
@@ -37,7 +37,7 @@
             <p>Our Infant group may have up to 10 children, who are 5 months to 18 months of age, with 3 Registered Early Childhood Educators. Our Infant team is made up of kind, nurturing caregivers who have the skills and experience in Infant care to work harmoniously and ensure our babies thrive!</p>
           </div>
           <div class="glen-balcony-roster-cards">
-          <?php 
+          <?php
             $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 5;");
             $imgPath = get_bloginfo('template_url', 'display');
             foreach ( $results as $emp )
@@ -65,7 +65,7 @@
       <div class="glen-sticker-box">
         <h2>What our families say</h2>
         <div class="glen-squiggle --blue"></div>
-        <?php 
+        <?php
             $results = $wpdb->get_results("Select * from tblTestimony where pageId = 2;");
             foreach ( $results as $row )
             {
