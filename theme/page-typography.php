@@ -3,7 +3,7 @@
 <div class="glen-typography-page">
   
   <!-- Font Styles -->
-  <span class="glen-typography-title">Arbor Glen Typography</span>
+  <span class="glen-typography-title">Arbour Glen Typography</span>
   <div class="glen-typography-standard">
     <h1>h1 looks like this!</h1>
     <h2>h2 looks like this!</h2>
@@ -23,7 +23,7 @@
   </div>
 
   <!-- Colours -->
-  <span class="glen-typography-title">Arbor Glen Colours</span>
+  <span class="glen-typography-title">Arbour Glen Colours</span>
   <div class="glen-typography-colours">
     <div class="glen-color-orange">orange</div>
     <div class="glen-color-green">green</div>
@@ -36,7 +36,7 @@
   </div>
 
   <!-- Line Break Test -->
-  <span class="glen-typography-title">Arbor Glen Line Break Test</span>
+  <span class="glen-typography-title">Arbour Glen Line Break Test</span>
   <div class="glen-typography-standard">
     <h1>h1. Jived fox nymph<br/>grabs quick waltz.</h1>
     <h2>h2. Jived fox nymph<br/>grabs quick waltz.</h2>
@@ -56,7 +56,7 @@
   </div>
 
   <!-- UI Elements -->
-  <span class="glen-typography-title">Arbor Glen UI Elements</span>
+  <span class="glen-typography-title">Arbour Glen UI Elements</span>
   <div class="glen-typography-elements">
     <a class="glen-btn --solid" href="/typography">i am a solid button</a>
     <br>
