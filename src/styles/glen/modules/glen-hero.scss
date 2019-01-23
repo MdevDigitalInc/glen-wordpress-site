@@ -13,6 +13,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  @media #{$phone-only} {
+    background-attachment: scroll;
+  }
+
   @media #{$tablet-only} {
     height: 675px;
   }

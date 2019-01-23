@@ -43,6 +43,10 @@
   background-attachment: fixed;
   height: 300px;
 
+  @media #{$phone-only} {
+    background-attachment: scroll;
+  }
+
   @media #{$tablet-only} {
     height: 550px;
     background-position: 75% center;
