@@ -127,16 +127,17 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue' );
     </script>
     <!-- [ FACEBOOK OG ] -->
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-    <meta property="fb:app_id" content="APP_ID_HERE" />
+    <meta property="fb:app_id" content="415535068989678" />
     <meta property="og:type" content="website" />
-    <meta property="og:url"  content="http://SITE_URL_HERE" />
-    <meta property="og:title" content="SITE_TITLE_HERE" />
-    <meta property="og:image" content="http://moreiradevelopment.io/social/moreira-development-twitcard.png" />
+    <meta property="og:url"  content="http://arbourglen.ca/" />
+    <meta property="og:title" content="Daycare and Nursery in London Ontario | Arbour Glen" />
+    <meta property="og:description" content="Welcome to Arbour Glen! Love, caring, learning and fun – it doesn't take long to feel the difference you and your child will enjoy at Arbour Glen." />
+    <meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/facebook.jpg" />
     <!-- Twitter Card  -->
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="@SAMPLE"><meta name="twitter:creator" content="@SAMPLE"><meta name="twitter:title" content="[ MOREIRA DEVELOPMENT PROJECT ] CLIENT | PROJECT "/>
-    <meta name="twitter:description" content="Base Project Install"/>
-    <meta name="twitter:image" content="http://moreiradevelopment.io/social/moreira-development-twitcard.png"/>
+    <meta name="twitter:title" content="Daycare and Nursery in London Ontario | Arbour Glen"/>
+    <meta name="twitter:description" content="Welcome to Arbour Glen! Love, caring, learning and fun – it doesn't take long to feel the difference you and your child will enjoy at Arbour Glen."/>
+    <meta name="twitter:image" content="<?php bloginfo('template_url'); ?>/img/twitter.png"/>
     <!-- Viewport Settings -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
