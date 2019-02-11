@@ -42,7 +42,8 @@ add_action('after_setup_theme', function () {
      * Enable plugins to manage the document title
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
      */
-    add_theme_support('title-tag');
+    //Disabled to allow manual SEO to take over
+    //add_theme_support('title-tag');
     /**
      * Register navigation menus
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
@@ -123,7 +124,7 @@ function get_top_ancestor_id() {
     return $post->ID;
 }
 
-function get_mdev_meta_tags($i) { 
+function get_mdev_meta_tags($i) {
   $ret = "";
   switch($i)
   {

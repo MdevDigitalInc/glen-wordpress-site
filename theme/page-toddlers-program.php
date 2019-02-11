@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Toddler Daycare Program | Arbour Glen</title>
+    <meta name="description" content="Your child will explore their growing independence and enjoy new adventures with a consistent yet flexible routine that provides the security they love.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-toddlers-page">
 

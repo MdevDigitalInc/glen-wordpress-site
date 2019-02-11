@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>How Do I Register My Child For Daycare? FAQs | Arbour Glen</title>
+    <meta name="description" content="Start with the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area and register for the Arbour Glen waitlist.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-faq-page">
 

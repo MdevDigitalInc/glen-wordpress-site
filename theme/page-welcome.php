@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Welcome to Arbour Glen Day Nursery | London, Ontario</title>
+    <meta name="description" content="Caring for children in our community since 1966, we are a licensed not-for-profit organization operated by an experienced leadership team and Board of Directors.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-welcome-page">
 
@@ -43,7 +49,7 @@
         <div class="glen-balcony-glenbox-object">
           <h2 class="u-red">What our families say</h2>
           <div class="glen-squiggle --blue"></div>
-          <?php 
+          <?php
             $results = $wpdb->get_results("Select * from tblTestimony where pageId = 1;");
             foreach ( $results as $row )
             {
@@ -85,7 +91,7 @@
       </div>
     </div>
   </section>
-  
+
 </div>
 
 <?php get_footer(); ?>
