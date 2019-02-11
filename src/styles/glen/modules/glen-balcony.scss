@@ -618,6 +618,16 @@
       width: auto;
     }
   }
+
+  .glen-contact-logo {
+    transition: transform .5s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.3);
+    }
+  }
 }
 
 // Vision Page
