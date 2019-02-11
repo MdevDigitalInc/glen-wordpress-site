@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <title>Daycare and Nursery in London Ontario | Arbour Glen</title>
+    <title>Arbour Glen | Daycare and Nursery in London Ontario</title>
     <meta name="description" content="Welcome to Arbour Glen! Love, caring, learning and fun – it doesn't take long to feel the difference you and your child will enjoy at Arbour Glen.">
 	</head>
 	<body>
