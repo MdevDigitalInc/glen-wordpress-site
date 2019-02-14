@@ -78,14 +78,23 @@
           <span class="--rev-name">Our Current Board of Directors</span>
           <div class="glen-squiggle --yellow"></div>
           <ul>
-            <li>President: Louise Milligan</li>
-            <li>Secretary: John Young</li>
-            <li>Treasurer: Stephanie Fizell</li>
-            <li>Community Member: Judy Bonthron</li>
-            <li>Community Member: Joel Melton</li>
-            <li>Parent Member: Emily Fard</li>
-            <li>Parent Member: Janice Tijssen</li>
-            <li>Parent Member: Alexis Clark</li>
+          <?php
+          $result = $wpdb->get_results ("SELECT * FROM tblDirectors");
+
+          $titles = array(
+            "",
+            "President",
+            "Secretary",
+            "Treasurer",
+            "Community Member",
+            "Parent Member"
+          );
+
+          foreach ( $result as $page )
+          {
+            echo "<li>".$titles[$page->Title].": $page->Name</li>";
+          }
+            ?>
           </ul>
           <div class="glenbox-purple"></div>
         </div>

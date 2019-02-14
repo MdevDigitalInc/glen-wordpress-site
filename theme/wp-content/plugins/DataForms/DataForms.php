@@ -24,10 +24,11 @@ function my_plugin_menus() {
   //add_options_page( 'My Plugin Options', 'Updates For', 'manage_options', 'glen-data-form', 'my_bulk_options' );
 
   add_options_page( 'Glen Menu Options', 'Updates Menu', 'manage_options', 'glen-menu-data', 'menu_plugin_options' );
-
   add_options_page( 'Glen Reviews Options', 'Updates Reviews', 'manage_options', 'glen-reviews-data', 'testimony_plugin_options' );
   add_options_page( 'Glen FAQ Options', 'Updates FAQ', 'manage_options', 'glen-faq-data', 'faq_plugin_options' );
   add_options_page( 'Glen Employee Options', 'Updates Employees', 'manage_options', 'glen-employee-data', 'employee_plugin_options' );
+
+  add_options_page( 'Glen Director Options', 'Updates Directors', 'manage_options', 'glen-director-data', 'director_plugin_options' );
   
 }
 
@@ -238,13 +239,13 @@ echo "<p><em>Choose from the dropdown to edit an existing option.</em></p>";
 
 echo "<p>Existing Entries:</p>";
 
-echo "<select id='ddMenu'>";
-echo "<option value=0>- None Selected -</option>";
-foreach ( $result as $page )
-{
-  echo "<option value='".$page->ID."'>".$page->Week.$page->DOW.$page->TOD."</option>";
-}
-echo "</select>";
+// echo "<select id='ddMenu'>";
+// echo "<option value=0>- None Selected -</option>";
+// foreach ( $result as $page )
+// {
+//   echo "<option value='".$page->ID."'>".$page->Week.$page->DOW.$page->TOD."</option>";
+// }
+// echo "</select>";
 
 
 echo "<select id='ddMenuWeek'>";
@@ -286,43 +287,8 @@ echo "<input type='text' id='txt_Menuid' name='txt_Menuid' style='visibility: hi
 echo "</div>";
 
 echo "<div class='input-group'>";
-echo "<label for='txt_Menutext' style='display:block;'>Family Name: </label>";
+echo "<label for='txt_Menutext' style='display:block;'>Menu Item(s): </label>";
 echo "<textarea id='txt_Menutext' style='width: 400px; height: 125px; margin-bottom: 6px;'></textarea>";
-echo "</div>";
-
-echo "<div class='input-group'>";
-echo "<label for='dd_Menuweek' style='display:block;'>Choose which week: </label>";
-echo "<select id='dd_Menuweek' style='margin-bottom: 6px;'>";
-echo "<option value='0'>Please Select a week</option>";
-echo "<option value='1'>Week 1</option>";
-echo "<option value='2'>Week 2</option>";
-echo "<option value='3'>Week 3</option>";
-echo "<option value='4'>Week 4</option>";
-echo "<option value='5'>Week 5</option>";
-echo "<option value='6'>Week 6</option>";
-echo "</select>";
-echo "</div>";
-
-echo "<div class='input-group'>";
-echo "<label for='dd_MenuDOW' style='display:block;'>Choose the day of the week: </label>";
-echo "<select id='dd_MenuDOW' style='margin-bottom: 6px;'>";
-echo "<option value='0'>Please Select a day</option>";
-echo "<option value='1'>Monday</option>";
-echo "<option value='2'>Tuesday</option>";
-echo "<option value='3'>Wednesday</option>";
-echo "<option value='4'>Thrusday</option>";
-echo "<option value='5'>Friday</option>";
-echo "</select>";
-echo "</div>";
-
-echo "<div class='input-group'>";
-echo "<label for='dd_MenuTOD' style='display:block;'>Choose Time Of Day: </label>";
-echo "<select id='dd_MenuTOD' style='margin-bottom: 6px;'>";
-echo "<option value='0'>Please Select a day</option>";
-echo "<option value='1'>Morning Snack</option>";
-echo "<option value='2'>Lunch</option>";
-echo "<option value='3'>Afternoon Snack</option>";
-echo "</select>";
 echo "</div>";
 
 // echo "<input type='button' id='btnMenuCreate' value='Create' style='margin-right: 5px;'/>";
@@ -356,12 +322,13 @@ function testimony_plugin_options() {
 
   echo "<h3>Testimony Administration</h3>";
 
-  echo "<p><em>Choose from the dropdown to edit an existing question.</em></p>";
+  echo "<p><em>Choose from the dropdown to edit an existing review or create a new one.</em></p>";
 
   echo "<p>Existing Entries:</p>";
 
   echo "<select id='ddTest'>";
   echo "<option value=0>- None Selected -</option>";
+  echo "<option value=0>- Create New -</option>";
   foreach ( $result as $page )
   {
     echo "<option value='".$page->ID."'>".$page->Author."</option>";
@@ -373,12 +340,12 @@ function testimony_plugin_options() {
   echo "</div>";
 
   echo "<div class='input-group'>";
-  echo "<label for='txt_Testauthor' style='display:block;'>Family Name: </label>";
-  echo "<textarea id='txt_Testauthor' style='width: 400px; height: 125px; margin-bottom: 6px;'></textarea>";
+  echo "<label for='txt_Testauthor' style='display:block;'>Name: </label>";
+  echo "<input type='text' id='txt_Testauthor' />";
   echo "</div>";
 
   echo "<div class='input-group'>";
-  echo "<label for='txt_Testtext' style='display:block;'>Answer: </label>";
+  echo "<label for='txt_Testtext' style='display:block;'>Testimonial: </label>";
   echo "<textarea id='txt_Testtext' style='width: 400px; height: 125px; margin-bottom: 6px;'></textarea>";
   echo "</div>";
 
@@ -424,12 +391,13 @@ function faq_plugin_options() {
 
   echo "<h3>FAQ Administration</h3>";
 
-  echo "<p><em>Choose from the dropdown to edit an existing question.</em></p>";
+  echo "<p><em>Choose from the dropdown to edit an existing question or create a new one.</em></p>";
 
   echo "<p>Existing Entries:</p>";
 
   echo "<select id='ddFAQ'>";
   echo "<option value=0>- None Selected -</option>";
+  echo "<option value=0>- Create New -</option>";
   foreach ( $result as $page )
   {
     echo "<option value='".$page->ID."'>".$page->Question."</option>";
@@ -482,12 +450,13 @@ function employee_plugin_options() {
 
   echo "<h3>Team Administration</h3>";
 
-  echo "<p><em>Choose from the dropdown to edit an existing team member.</em></p>";
+  echo "<p><em>Choose from the dropdown below to edit an existing team member or create a new one.</em></p>";
 
-  echo "<p>Existing Entries:</p>";
+  echo "<p>Team Members:</p>";
 
   echo "<select id='ddEmp'>";
   echo "<option value=0>Not Selected.</option>";
+  echo "<option value=0>Create New.</option>";
   foreach ( $result as $page )
   {
     echo "<option value='".$page->ID."'>".$page->Name."</option>";
@@ -519,9 +488,9 @@ function employee_plugin_options() {
   echo "</div>";
 
   echo "<div class='input-group'>";
-  echo "<label for='txt_quote' style='display:block;'>Team Membership: </label>";
+  echo "<label for='txt_quote' style='display:block;'>Page Placement: </label>";
   echo "<select id='dd_tid' style='margin-bottom: 6px;'>";
-  echo "<option value='0'>Please Select a Team</option>";
+  echo "<option value='0'>Please Select a Page</option>";
   echo "<option value='1'>Management Team</option>";
   echo "<option value='2'>Support Team</option>";
   echo "<option value='3'>Preschool Educators</option>";
@@ -531,14 +500,86 @@ function employee_plugin_options() {
   echo "</div>";
 
   echo "<div class='input-group'>";
-  echo "<label for='txt_avatar' style='display:block;'>Avatar Colour: </label>";
-  echo "<input type='text' id='txt_avatar' style='margin-bottom: 6px;'/>";
+  echo "<label for='dd_avatar' style='display:block;'>Avatar Colour: </label>";
+  echo "<select id='dd_avatar' style='margin-bottom: 6px;'>";
+  echo "<option value=''>Please Select a Colour</option>";
+  echo "<option value='blue'>Blue</option>";
+  echo "<option value='green'>Green</option>";
+  echo "<option value='purple'>Purple</option>";
+  echo "<option value='red'>Red</option>";
+  echo "</select>";
   echo "</div>";
 
   
   echo "<input type='button' id='btnCreate' value='Create' style='margin-right: 5px;'/>";
   echo "<input type='button' id='btnUpdate' value='Update' style='margin-right: 5px;'/>";
   echo "<input type='button' id='btnDelete' value='Delete' />";
+
+  echo "</div>";
+
+  echo "</div>";
+}
+
+
+
+
+function director_plugin_options() {
+  wp_enqueue_script( 'DataConnection', get_template_directory_uri() . '../../../plugins/DataForms/DataConnections.js', array('jquery'), '1.0', true );
+	if ( !current_user_can( 'manage_options' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+  }
+  // Menu Admin Forms
+
+  global $wpdb;
+  echo "<div class='admin-container' style='width: 100%; position: relative; display: flex; flex-wrap: wrap; box-sizing: border-box;'>";
+  // Team Member Admin Forms
+
+  $result = $wpdb->get_results ( "
+    SELECT * FROM tblDirectors
+  " );
+
+  echo "<div class='admin-group' style='width:40%; border: 1px #d0d0d0 solid; padding: 10px; margin: 5px;'>";
+
+  echo "<h3>Board of Directors Administration</h3>";
+
+  echo "<p><em>Choose from the dropdown to edit an existing board member.</em></p>";
+
+  echo "<p>Existing Entries:</p>";
+
+  echo "<select id='ddDir'>";
+  echo "<option value=0>Not Selected.</option>";
+  foreach ( $result as $page )
+  {
+    echo "<option value='".$page->ID."'>".$page->Name."</option>";
+  }
+  echo "</select>";
+
+  echo "<div class='input-group'>";
+  echo "<input type='text' id='txt_id' style='visibility: hidden;' /><br/>";
+  echo "</div>";
+
+  echo "<div class='input-group'>";
+  echo "<label for='txt_name' style='display:block;'>Name: </label>";
+  echo "<input type='text' id='txt_name' style='margin-bottom: 6px;'/>";
+  echo "</div>";
+
+  echo "<div class='input-group'>";
+  echo "<label for='dd_title' style='display:block;'>Title </label>";
+  echo "<select id='dd_title' style='margin-bottom: 6px;'>";
+  echo "<option value='0'>Please Select a Team</option>";
+  echo "<option value='1'>President</option>";
+  echo "<option value='2'>Secretary</option>";
+  echo "<option value='3'>Treasurer</option>";
+  echo "<option value='4'>Community Member</option>";
+  echo "<option value='5'>Parent Member</option>";
+  echo "</select>";
+  echo "</div>";
+
+  
+  
+  echo "<input type='button' id='btnDirCreate' value='Create' style='margin-right: 5px;'/>";
+  echo "<input type='button' id='btnDirUpdate' value='Update' style='margin-right: 5px;'/>";
+  echo "<input type='button' id='btnDirDelete' value='Delete' />";
 
   echo "</div>";
 
