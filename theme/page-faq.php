@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>How Do I Register My Child For Daycare? FAQs | Arbour Glen</title>
+    <meta name="description" content="Start with the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area and register for the Arbour Glen waitlist.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-faq-page">
 
@@ -20,7 +26,7 @@
         <p>
           We like to have a personal connection with our prospective families, so please give us a call next at 519-439-3701 to confirm your request was received, and to answer any questions you may have about our centre. Speaking of questions, let's see if we can answer some for you now!
         </p>
-        <a class="glen-btn --solid-pw">DOWNLOAD OUR PARENT HANDBOOK</a>
+        <a class="glen-btn --solid-pw" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/PARENT-HANDBOOK-PDF-Current-Oct.-16-2018-.pdf" target="_blank">DOWNLOAD OUR PARENT HANDBOOK</a>
       </div><!-- /description -->
       <div class="glen-hidden-dragon">
         <div class="glen-faq-box --extrapad"> <!-- box -->
@@ -32,7 +38,7 @@
             So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
           </p>
           <div class="glen-faq-btn">
-            <a class="glen-btn --solid-wb" title="Join our waiting list" href="mailto:centre@arbourglen.ca">
+            <a class="glen-btn --solid-wb" title="Join our waiting list" href="https://london.onehsn.com/">
               Join Our Waiting List
             </a>
           </div>
@@ -58,7 +64,7 @@
           So...where do you start when looking for childcare? A great place to begin is the London and Middlesex Child Care Waitlist. Here, you can learn about childcare centres in your area, create an account and also get on multiple wait lists quickly and easily, including with us. You can also access more information at Family Info, a web portal for parents, caregivers that links information on programs, services and resources in the London and Middlesex area for children.
         </p>
         <div class="glen-faq-btn">
-          <a class="glen-btn --solid-wb" title="Join our waiting list" href="mailto:centre@arbourglen.ca">
+          <a class="glen-btn --solid-wb" title="Join our waiting list" href="https://london.onehsn.com/">
             Join Our Waiting List
           </a>
         </div>
@@ -135,13 +141,13 @@
         <div class="glen-featured-glenbox-object">
           <ul>
             <li>
-              Send a cheque or money order to <br>	1017 Adelaide St. N. London ON. N5Y 2M8
+              Send a cheque or money order to <br>	1017 Adelaide St N, London, ON N5Y 2M8
             </li>
             <li>
               Stop by our office to do an Interac transaction
             </li>
             <li>
-              Send an email transfer to centre@arbourglen.ca
+              Send an email transfer to <a href="mailto:centre@arbourglen.ca" title="Email Us">centre@arbourglen.ca</a>
             </li>
             <li>
               Donate through payroll via the United Way Workplace<br/> 			Donation Program (ask your employer)

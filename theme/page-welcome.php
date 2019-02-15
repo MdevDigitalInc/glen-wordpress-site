@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Welcome to Arbour Glen Day Nursery | London, Ontario</title>
+    <meta name="description" content="Caring for children in our community since 1966, we are a licensed not-for-profit organization operated by an experienced leadership team and Board of Directors.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-welcome-page">
 
@@ -43,7 +49,15 @@
         <div class="glen-balcony-glenbox-object">
           <h2 class="u-red">What our families say</h2>
           <div class="glen-squiggle --blue"></div>
-          <p>“BEST DAYCARE, BEST STAFF ever! Our family association (CHILDREN AND GRANDCHILDREN) goes back 40+ years!”</p>
+          <?php
+            $results = $wpdb->get_results("Select * from tblTestimony where pageId = 1;");
+            foreach ( $results as $row )
+            {
+              echo "<p>“".$row->Text."”</p>";//When I picked up my little guy on one of his first days with Arbour Glen, Chris was singing him the ABC song, while he sat contentedly in her arms.  She said (happily!) that it was her tenth time singing it – she said she discovered in that moment, it was what gave him comfort.  It almost brought me to tears: knowing they will do anything to give him what he needed in that moment of sadness.  You really feel like your baby is the centre of their wor\ld – what more can \a mom ask for?”</p>";
+              echo "<span class=\"glen-review-author\">- $row->Author</span>";
+            }
+            ?>
+          <!-- <p>“BEST DAYCARE, BEST STAFF ever! Our family association (CHILDREN AND GRANDCHILDREN) goes back 40+ years!”</p>
           <span class="--rev-name">- Carole DeBoer</span>
           <p>“Every aspect of the Arbour Glen experience is amazing. The Educators are engaged, the learning and play experiences are exceptional and the facility is child-centred and well maintained. Expect your child to frequently tell you that food just “tastes better at Arbour Glen” – the menus are delicious! Arbour Glen prepared our children well for their entry into Kindergarten. We recommend AG to all our friends and acquaintances who are looking for the best daycare and preschool experience in London!”</p>
           <span class="--rev-name">- Stacey Rickman</span>
@@ -51,7 +65,7 @@
           I literally drive across the city and back 2x a day, 5 days a week, passing several daycares closer to home so that my daughter can attend Arbour Glen, like my son did over 4 years ago. HIGHLY RECOMMENDED!</p>
           <span class="--rev-name"> - Anna Vujicic</span>
           <p>“Amazing place!!! The whole staff, all the ECEs, admin. cook, absolutely everyone is so warm and knowledgeable. I'm so grateful that they have been a part of my daughter's life the past 3 years; breaks my heart that she's starting JK his fall and we won't see them anymore. I'm forever grateful to all of you!”</p>
-          <span class="--rev-name"> - Chantalle & Stefan Czerwinski</span>
+          <span class="--rev-name"> - Chantalle & Stefan Czerwinski</span> -->
           <div class="glenquotes --welcome"></div>
           <div class="glenbox-white"></div>
         </div>
@@ -77,7 +91,7 @@
       </div>
     </div>
   </section>
-  
+
 </div>
 
 <?php get_footer(); ?>

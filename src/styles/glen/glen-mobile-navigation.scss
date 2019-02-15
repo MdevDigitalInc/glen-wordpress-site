@@ -128,7 +128,7 @@
     .fa-angle-down {
       display: none;
     }
-  
+
     .fa-angle-up {
       display: inline;
     }
@@ -170,7 +170,7 @@
   .glen-accordian-link-label {
     font-weight: 400;
     width: 100%;
-    border-top: 1px solid $color-glen-grey;
+    border-top: 1px solid #e0e0e0;
 
     &:hover {
       background: $color-glen-green;
@@ -197,19 +197,35 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  @media #{$phone-only} {
+    padding: 15px 5%;
+  }
 }
 
 .glen-mobile-navigation-address {
   color: $white;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 12px;
+
+  @media #{$tablet-up} {
+    font-size: 20px;
+  }
 }
 
 .glen-mobile-navigation-phone {
   color: $white;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 12px;
   margin-top: 15px;
+
+  @media #{$tablet-up} {
+    font-size: 18px;
+  }
+
+  @media #{$phone-only} {
+    margin-top: 8px;
+  }
 }
 
 .glen-mobile-navigation-socials {
@@ -217,12 +233,24 @@
   padding: 5px;
   margin-top: 15px;
 
+  @media #{$phone-only} {
+    margin-top: 5px;
+  }
+
   a {
     color: $white;
     font-size: 32px;
 
+    @media #{$phone-only} {
+      font-size: 18px;
+    }
+
     &:last-child {
       margin-left: 35px;
+
+      @media #{$phone-only} {
+        margin-left: 15px;
+      }
     }
   }
 }

@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Healthy Daycare Food and Drink Choices for Children | Arbour Glen</title>
+    <meta name="description" content="Our delicious healthy meals and snacks are prepared on-site and meet the requirements as set out in the “Eating Well with Canada’s Food Guide”.Our delicious healthy meals and snacks are prepared on-site and meet the requirements as set out in the “Eating Well with Canada’s Food Guide”.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-menus-page">
 
@@ -25,7 +31,7 @@
         <div class="glen-balcony-sticker --menu">
           <h2>Food & Nutrition</h2>
           <p>We take pride in our menus, serving fish, chicken or lean beef dishes three times a week and vegetarian meals twice a week (no nuts, no fruit juices and no processed meats). We include mostly fresh or frozen fruits and vegetables and try to limit canned items when practical. We serve only fresh milk daily (whole or 2%, never diluted or powdered) and most of our dips and spreads are homemade. See our menus below or look for them posted on the main hallway bulletin board inside the back entrance.</p>
-          <a class="glen-btn --solid-rw" title="Download our menu" href="todo"">Download Our Menu</a>
+          <a class="glen-btn --solid-rw" title="Download our menu" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/Menu_Fall-Winter_2018-19.pdf" target="_blank">Download Our Menu</a>
         </div>
       </div>
     </div>
@@ -41,7 +47,7 @@
 
       <!-- Week Controls Container -->
       <div class="glen-menu-weeks">
-        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(0)">
+        <div class="glen-menu-weeks-button" onclick="menuWeekSelect(-1)">
         <i class="fas fa-angle-left"></i>
         </div>
         <h2 class="glen-menu-week-title">Week 1</h2>
@@ -71,24 +77,50 @@
 
       <!-- Menu Content Container -->
       <div class="glen-menu-content">
-        <!-- Injected Content List Starts Here -->
-        <div class="glen-menu-timeslot">
-          <h3 class="glen-menu-timeslot-title">MORNING SNACK</h3>
-          <div class="glen-menu-timeslot-foodlist">
-            <span class="glen-menu-fooditem">Rice Chex &amp; Mango</span>
-            <span class="glen-menu-fooditem">Water</span>
-            <span class="glen-menu-fooditem">(Inf) Milk</span>
-          </div>
-        </div>
-        <div class="glen-menu-timeslot">
-          <h3 class="glen-menu-timeslot-title">LUNCH</h3>
-          <div class="glen-menu-timeslot-foodlist">
-            <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
-            <span class="glen-menu-fooditem">WW Soda Crackers</span>
-            <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
-            <span class="glen-menu-fooditem">Milk</span>
-          </div>
-        </div>
+      <?php
+
+      $TOD = array("", "MORNING SNACK", "LUNCH", "AFTERNOON SNACK");
+      $TODID = array("", "rowMS", "rowL", "rowAS");
+
+      $results = $wpdb->get_results("Select * from tblMenu where Week = 1 and DOW = 1;");
+
+      //echo nl2br($results[0]->Name);
+      // echo "<br/>";
+      // foreach($results as $row)
+      // {
+      //   echo nl2br("$row->Name");
+      // }
+      foreach($results as $row)
+      {
+       echo '<div class="glen-menu-timeslot">';
+       echo '  <h3 class="glen-menu-timeslot-title">'.$TOD[$row->TOD].'</h3>';
+       echo '  <div class="glen-menu-timeslot-foodlist" id="'.$TODID[$row->TOD].'">';
+       $columns = explode (PHP_EOL, $row->Name);
+        foreach($columns as $column) {
+          echo '    <span class="glen-menu-fooditem">'.$column.'</span>';
+        }
+       echo '  </div>';
+       echo '</div>';
+      }
+        // <div class="glen-menu-timeslot">
+        //   <h3 class="glen-menu-timeslot-title">LUNCH</h3>
+        //   <div class="glen-menu-timeslot-foodlist">
+        //     <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
+        //     <span class="glen-menu-fooditem">WW Soda Crackers</span>
+        //     <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
+        //     <span class="glen-menu-fooditem">Milk</span>
+        //   </div>
+        // </div>
+        // <div class="glen-menu-timeslot">
+        //   <h3 class="glen-menu-timeslot-title">Afternoon Snack</h3>
+        //   <div class="glen-menu-timeslot-foodlist">
+        //     <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
+        //     <span class="glen-menu-fooditem">WW Soda Crackers</span>
+        //     <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
+        //     <span class="glen-menu-fooditem">Milk</span>
+        //   </div>
+        // </div>
+        ?>
       </div>
     </div>
   </section>

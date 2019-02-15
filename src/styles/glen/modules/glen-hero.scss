@@ -13,6 +13,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  @media #{$phone-only} {
+    background-attachment: scroll;
+  }
+
   @media #{$tablet-only} {
     height: 675px;
   }
@@ -28,7 +32,7 @@
     }
 
     @media #{$tablet-only} {
-      background-position: 90% bottom;
+      background-position: 60% bottom;
     }
   }
 
@@ -36,8 +40,8 @@
     background-color: $color-glen-orange;
 
     @media #{$phone-only} {
-      background-size: 175%;
-      background-position: 5% 25%;
+      background-size: cover;
+      background-position: 19% 25%;
     }
 
     @media #{$tablet-only} {
@@ -49,7 +53,7 @@
     background-color: $color-glen-green;
 
     @media #{$phone-only} {
-      background-size: 200%;
+      background-size: cover;
       background-position: 50% 55px;
     }
 
@@ -62,7 +66,7 @@
     background-color: $color-glen-blue;
 
     @media #{$phone-only} {
-      background-position: 100% bottom;
+      background-position: 50% bottom;
     }
 
     @media #{$tablet-only} {
@@ -72,7 +76,7 @@
 
   &.--team {
     background-color: $color-glen-red;
-    background-size: 125%;
+    background-size: cover;
     background-position: 0 20%;
 
     @media #{$tablet-only} {
@@ -96,7 +100,7 @@
     background-color: $color-glen-purple;
 
     @media #{$phone-only} {
-      background-size: 200%;
+      background-size: cover;
       background-position: 70% 40%;
     }
 
@@ -108,11 +112,11 @@
 
   &.--welcome {
     background-color: $color-glen-darkgrey;
-    background-size: 100%;
+    background-size: cover;
     background-position: 0% 60%;
 
     @media #{$phone-only} {
-      background-size: 180%;
+      background-size: cover;
       background-position: 65% 40%;
     }
 

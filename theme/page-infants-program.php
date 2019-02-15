@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Infants Daycare Program | Arbour Glen</title>
+    <meta name="description" content="Our priority is to get to know you and your baby to develop a meaningful relationship. Our team consists of kind, nurturing caregivers who will ensure that your baby thrives.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-infants-page">
 
@@ -17,7 +23,7 @@
         </div>
         <p>Before your baby starts at Arbour Glen, you will both come for a visit to our room. Tell us everything you would like us to know! Ask us any other questions you may have. We want you and your child to feel at home. Your child’s next visit will be a short morning or afternoon to let them experience Arbour Glen on their own. We also welcome any and every question and encourage you to call and check in as often as you'd like. We want you to feel connected to their day. Once enrolled, our Educators take time to welcome you each day and hear about your little one’s night.</p>
         <p>But once you leave for work, don’t think you’re going to miss out on the fun! We believe the connection with families is very important to a child’s development. We take lots of photos that document babies busy at play. We use ‘Seesaw’, a digital online portfolio app, to share with you a glimpse into their time spent with us! You will receive occasional snapshots of something special they are doing and an online portfolio of your baby’s adventures when they move on to Toddlers. Participation in ‘Seesaw’ is optional, so we will create paper portfolios for those who choose not to.  We also post ‘Learning Stories’ that share a little of what we’ve been up to, so don’t forget to check our bulletin boards and other documentation. At pick up time, Baby parents also receive a daily note that shares information about their child’s day.</p>
-        <a class="glen-btn --solid-rw" href="#" title="todo">join our mailing list</a>
+        <a class="glen-btn --solid-rw" href="https://london.onehsn.com/" title="Join our waiting list">join our waiting list</a>
       </div>
     </div>
   </section>
@@ -37,7 +43,21 @@
             <p>Our Infant group may have up to 10 children, who are 5 months to 18 months of age, with 3 Registered Early Childhood Educators. Our Infant team is made up of kind, nurturing caregivers who have the skills and experience in Infant care to work harmoniously and ensure our babies thrive!</p>
           </div>
           <div class="glen-balcony-roster-cards">
-            todo
+          <?php
+            $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 5;");
+            $imgPath = get_bloginfo('template_url', 'display');
+            foreach ( $results as $emp )
+            {
+              echo "<div class='glen-balcony-roster-card'>";
+              echo "<div class='glen-roster-card-image --$emp->Avatar'>";
+              echo "<img src='$imgPath$emp->avatarImage' />";
+              echo "</div>";
+              echo "<span class='--edu-name u-$emp->Avatar'>$emp->Name</span>";
+              echo "<p class='--edu-bio'>$emp->History</p>";
+              echo "<p class='--edu-quote'>\"".$emp->Quote."”</p>";
+              echo "</div>";
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -51,8 +71,14 @@
       <div class="glen-sticker-box">
         <h2>What our families say</h2>
         <div class="glen-squiggle --blue"></div>
-        <p>“When I picked up my little guy on one of his first days with Arbour Glen, Chris was singing him the ABC song, while he sat contentedly in her arms.  She said (happily!) that it was her tenth time singing it – she said she discovered in that moment, it was what gave him comfort.  It almost brought me to tears: knowing they will do anything to give him what he needed in that moment of sadness.  You really feel like your baby is the centre of their world – what more can a mom ask for?”</p>
-        <span class="glen-review-author">- Alina M.</span>
+        <?php
+            $results = $wpdb->get_results("Select * from tblTestimony where pageId = 2;");
+            foreach ( $results as $row )
+            {
+              echo "<p>“".$row->Text."”</p>";//When I picked up my little guy on one of his first days with Arbour Glen, Chris was singing him the ABC song, while he sat contentedly in her arms.  She said (happily!) that it was her tenth time singing it – she said she discovered in that moment, it was what gave him comfort.  It almost brought me to tears: knowing they will do anything to give him what he needed in that moment of sadness.  You really feel like your baby is the centre of their wor\ld – what more can \a mom ask for?”</p>";
+              echo "<span class=\"glen-review-author\">- $row->Author</span>";
+            }
+            ?>
         <div class="glenquotes --programs"></div>
         <div class="glenbox-white"></div>
       </div>

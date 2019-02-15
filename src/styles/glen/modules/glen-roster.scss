@@ -113,7 +113,9 @@
   .glen-roster-card-image {
     width: 180px;
     height: 180px;
-    border-radius: 50%;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
     margin: 0 0 25px;
 
     @media #{$tablet-up} {
@@ -135,6 +137,14 @@
 
     &.--red {
       background-color: $color-glen-red;
+    }
+
+    img {
+      @include center(both);
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
     }
   }
 }
