@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Infants Daycare Program | Arbour Glen</title>
+    <meta name="description" content="Our priority is to get to know you and your baby to develop a meaningful relationship. Our team consists of kind, nurturing caregivers who will ensure that your baby thrives.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-infants-page">
 

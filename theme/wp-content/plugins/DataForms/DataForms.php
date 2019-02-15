@@ -548,6 +548,7 @@ function director_plugin_options() {
 
   echo "<select id='ddDir'>";
   echo "<option value=0>Not Selected.</option>";
+  echo "<option value='0'>Please Create New</option>";
   foreach ( $result as $page )
   {
     echo "<option value='".$page->ID."'>".$page->Name."</option>";
@@ -566,7 +567,7 @@ function director_plugin_options() {
   echo "<div class='input-group'>";
   echo "<label for='dd_title' style='display:block;'>Title </label>";
   echo "<select id='dd_title' style='margin-bottom: 6px;'>";
-  echo "<option value='0'>Please Select a Team</option>";
+  echo "<option value='0'>Please Select a Title</option>";
   echo "<option value='1'>President</option>";
   echo "<option value='2'>Secretary</option>";
   echo "<option value='3'>Treasurer</option>";

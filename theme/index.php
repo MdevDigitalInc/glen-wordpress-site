@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Arbour Glen | Daycare and Nursery in London Ontario</title>
+    <meta name="description" content="Welcome to Arbour Glen! Love, caring, learning and fun – it doesn't take long to feel the difference you and your child will enjoy at Arbour Glen.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-home-page">
   <div class="glen-home-hero-image" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/boy-with-truck.png);"></div>

@@ -1,7 +1,11 @@
 <?php get_header(); ?>
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-typography-page">
-  
+
   <!-- Font Styles -->
   <span class="glen-typography-title">Arbour Glen Typography</span>
   <div class="glen-typography-standard">
@@ -62,7 +66,7 @@
     <br>
     <a class="glen-btn" href="/typography">i am a default button</a>
   </div>
-  
+
   <img src="<?php bloginfo('template_url'); ?>/img/favicon.png" />
 </div>
 

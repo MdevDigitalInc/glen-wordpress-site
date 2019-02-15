@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+<title>Our Vision | Arbour Glen</title>
+  <meta name="description" content="Learn about our vision, mission, and guiding principles.">
+</head>
+<body>
+
+<?php include 'navigation.php' ?>
 
 <div class="glen-vision-page">
 

@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Healthy Daycare Food and Drink Choices for Children | Arbour Glen</title>
+    <meta name="description" content="Our delicious healthy meals and snacks are prepared on-site and meet the requirements as set out in the “Eating Well with Canada’s Food Guide”.Our delicious healthy meals and snacks are prepared on-site and meet the requirements as set out in the “Eating Well with Canada’s Food Guide”.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-menus-page">
 
@@ -75,7 +81,7 @@
 
       $TOD = array("", "MORNING SNACK", "LUNCH", "AFTERNOON SNACK");
       $TODID = array("", "rowMS", "rowL", "rowAS");
-      
+
       $results = $wpdb->get_results("Select * from tblMenu where Week = 1 and DOW = 1;");
 
       //echo nl2br($results[0]->Name);
@@ -89,7 +95,7 @@
        echo '<div class="glen-menu-timeslot">';
        echo '  <h3 class="glen-menu-timeslot-title">'.$TOD[$row->TOD].'</h3>';
        echo '  <div class="glen-menu-timeslot-foodlist" id="'.$TODID[$row->TOD].'">';
-       $columns = explode (PHP_EOL, $row->Name); 
+       $columns = explode (PHP_EOL, $row->Name);
         foreach($columns as $column) {
           echo '    <span class="glen-menu-fooditem">'.$column.'</span>';
         }

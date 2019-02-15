@@ -1,9 +1,13 @@
-<?php 
+<?php
 /*
 Template Name: Template1
 */
 ?>
 <?php get_header(); ?>
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 	<main role="main" aria-label="Content">
 
@@ -23,9 +27,9 @@ Template Name: Template1
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
+
 				<?php the_content(); ?>
-				
+
 
 				<?php edit_post_link(); ?>
 

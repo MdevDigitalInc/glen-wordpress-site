@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <title>Meet Our Exceptional Team of Educators and Support Staff | Arbour Glen</title>
+    <meta name="description" content="Our team are trained professionals with First Aid/CPR and Food Handlers certificates. All are life-long learners who participate in ongoing professional development.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
 
 <div class="glen-team-page">
 
@@ -43,7 +49,7 @@
               <div class="glen-quadblock-bar --blue"></div>
               <p>Developing their physical and mental/emotional health to support their <span class="u-blue">well-being</span>.</p>
               <div class="glenbox-blue-hollow"></div>
-            </div>  
+            </div>
             <div class="glen-quadblock">
               <h6>ENGAGEMENT</h6>
               <div class="glen-quadblock-bar --purple"></div>
@@ -71,7 +77,7 @@
         <p>Our management team is here for you any time of day. Call them or drop by the administrative offices located on our third floor, but you may often find them in our classrooms as well.</p>
       </div>
       <div class="glen-roster-cards">
-          <?php 
+          <?php
           $imgPath = get_bloginfo('template_url', 'display');
           $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 1;");
           foreach ( $results as $emp )
@@ -100,9 +106,9 @@
         <p>It takes a dedicated group of people to make our team a success including our Supply Staff, our ECE Apprentices, our Dietary Planner and our Custodian.</p>
       </div>
       <div class="glen-roster-cards">
-        <?php 
+        <?php
         $results = $wpdb->get_results("Select * from tblEmployees where TeamID = 2;");
-        
+
         foreach ( $results as $emp )
         {
           echo "<div class='glen-roster-card'>";
