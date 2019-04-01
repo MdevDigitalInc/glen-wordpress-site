@@ -526,11 +526,6 @@ function readMenu()
     };
 
     jQuery.post(ajaxurl, data, function(response) {
-      //alert('Got this from the server: ' + JSON.stringify(response));
-      if( response.length > 0)
-      {
-      } else {
-      }
     });
     
     
@@ -669,8 +664,7 @@ jQuery( document ).on( "change", "#ddDir", function() {
   // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
   jQuery.post(ajaxurl, data, function(response) {
     
-    if( response.length > 0)
-    {
+    if( response.length > 0) {
       //alert('Got this from the sefasdfasdfrver: ' + JSON.stringify(response));
       document.getElementById("txt_id").value =  response[0].ID;
       document.getElementById("dd_title").value =  response[0].Title;
@@ -746,9 +740,7 @@ jQuery( document ).on( "change", "#fileHandbook", function() {
     contentType: false,
     cache:false,
     processData:false,
-    success:function(data)
-    {
-      
+    success:function(data) {
       var link = document.getElementById("lnkHandbook");
       link.href = "/wp-content/themes/mdev-theme" + data;
     }
@@ -780,8 +772,7 @@ jQuery( document ).on( "change", "#fileMenu", function() {
     contentType: false,
     cache:false,
     processData:false,
-    success:function(data)
-    {      
+    success:function(data) {
       var link = document.getElementById("lnkMenu");
       link.href = "/wp-content/themes/mdev-theme" + data;
     }
@@ -809,8 +800,7 @@ jQuery( document ).on( "change", "#fileOpportunity", function() {
     contentType: false,
     cache:false,
     processData:false,
-    success:function(data)
-    {      
+    success:function(data) {     
       var link = document.getElementById("lnkOpportunity");
       link.href = "/wp-content/themes/mdev-theme" + data;
     }
