@@ -23,7 +23,7 @@
 					<a class="glen-footer-phone" href="tel:+15194393701" title="Call us!">519.439.3701</a>
 				</div>
 				<div class="glen-footer-copyright">
-        <span class=glen-footer-copyline">Copyright&copy; Arbour Glen Day Nursery <?php echo date("Y"); ?></span>
+        <span class="glen-footer-copyline">Copyright &copy; Arbour Glen Day Nursery <?php echo date("Y"); ?></span>
 				</div>
 			</div>
     </footer>

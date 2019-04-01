@@ -1,5 +1,12 @@
 <?php get_header(); ?>
 
+<title>Preschool Daycare Program | Arbour Glen</title>
+    <meta name="description" content="Children in the Preschool program will sing, dance, create, run, jump, explore, discover, and engage in imaginative and cooperative play.">
+	</head>
+	<body>
+
+  <?php include 'navigation.php' ?>
+
 <div class="glen-preschoolers-page">
 
   <!-- Hero Section -->

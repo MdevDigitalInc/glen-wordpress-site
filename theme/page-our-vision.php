@@ -65,7 +65,7 @@
   <!-- Bigimage Section -->
 
   <section class="glen-vision-bigimage">
-    <div class="glen-bigimage" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/boy-with-truck.png);"></div>
+    <div class="glen-bigimage" style="background-image: url(<?php bloginfo('template_url'); ?>/img/shared/girls-sandbox.png);"></div>
   </section>
 
   <!-- Featured Section -->
@@ -93,7 +93,8 @@
             "Secretary",
             "Treasurer",
             "Community Member",
-            "Parent Member"
+            "Parent Member",
+            "Executive Director"
           );
 
           foreach ( $result as $page )

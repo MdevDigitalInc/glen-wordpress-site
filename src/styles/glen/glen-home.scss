@@ -69,3 +69,13 @@
     left: 15%;
   }
 }
+
+.glen-btn-opportunities {
+  @media #{$tablet-only} {
+    left : 3%;
+  }
+  
+  @media #{$laptop-up} {
+    left : 4%;
+  }
+}

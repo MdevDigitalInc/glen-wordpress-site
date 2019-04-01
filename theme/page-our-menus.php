@@ -21,6 +21,11 @@
   </section>
 
   <!-- Balcony Section -->
+  <?php 
+    $query = "select FlagStringValue from tblSiteConfig where ID = 3";
+    $results = $wpdb->get_results($query);
+    $filePath = get_bloginfo('template_url', 'display') . $results[0]->FlagStringValue;
+  ?>
 
   <section class="glen-menus-balcony">
     <div class="glen-balcony-view --menu"></div>
@@ -31,7 +36,7 @@
         <div class="glen-balcony-sticker --menu">
           <h2>Food & Nutrition</h2>
           <p>We take pride in our menus, serving fish, chicken or lean beef dishes three times a week and vegetarian meals twice a week (no nuts, no fruit juices and no processed meats). We include mostly fresh or frozen fruits and vegetables and try to limit canned items when practical. We serve only fresh milk daily (whole or 2%, never diluted or powdered) and most of our dips and spreads are homemade. See our menus below or look for them posted on the main hallway bulletin board inside the back entrance.</p>
-          <a class="glen-btn --solid-rw" title="Download our menu" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/Menu_Fall-Winter_2018-19.pdf" target="_blank">Download Our Menu</a>
+          <a class="glen-btn --solid-rw" title="Download our menu" href="<?php echo $filePath ?>" target="_blank">Download Our Menu</a><!-- http://arbourglen.ca/wp-content/uploads/2019/01/Menu_Fall-Winter_2018-19.pdf -->
         </div>
       </div>
     </div>
@@ -42,8 +47,16 @@
   <section class="glen-menus-menu">
     <div class="glen-menu-container">
 
-      <!-- Menu Title -->
-      <h4 class="glen-menu-title">Fall/Winter Menu</h4>
+    <!-- Menu Title -->
+    <?php 
+    $season = $wpdb->get_results ( "SELECT * FROM tblSiteConfig where ID = 1;" )[0];
+      
+      if($season->FlagValue == 1){
+      echo "<h4 class=\"glen-menu-title\">Fall/Winter Menu</h4>";
+      } else {
+      echo "<h4 class=\"glen-menu-title\">Spring/Summer Menu</h4>";
+      }
+    ?>
 
       <!-- Week Controls Container -->
       <div class="glen-menu-weeks">
@@ -102,24 +115,6 @@
        echo '  </div>';
        echo '</div>';
       }
-        // <div class="glen-menu-timeslot">
-        //   <h3 class="glen-menu-timeslot-title">LUNCH</h3>
-        //   <div class="glen-menu-timeslot-foodlist">
-        //     <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
-        //     <span class="glen-menu-fooditem">WW Soda Crackers</span>
-        //     <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
-        //     <span class="glen-menu-fooditem">Milk</span>
-        //   </div>
-        // </div>
-        // <div class="glen-menu-timeslot">
-        //   <h3 class="glen-menu-timeslot-title">Afternoon Snack</h3>
-        //   <div class="glen-menu-timeslot-foodlist">
-        //     <span class="glen-menu-fooditem">Homemade Minestrone Soup (Beans)</span>
-        //     <span class="glen-menu-fooditem">WW Soda Crackers</span>
-        //     <span class="glen-menu-fooditem">Pears Pears Pears Pears Pears Pears Pears Pears Pears </span>
-        //     <span class="glen-menu-fooditem">Milk</span>
-        //   </div>
-        // </div>
         ?>
       </div>
     </div>
