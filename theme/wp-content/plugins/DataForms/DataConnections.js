@@ -18,7 +18,7 @@ jQuery( document ).on( 'click', '#btnUpdate', function($) {
   alert(query);
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
 
@@ -40,12 +40,12 @@ jQuery( document ).on( 'click', '#btnCreate', function($) {
   var avatar = document.getElementById("dd_avatar").value;
 
 
-  var query = "INSERT INTO tblEmployees (Name, Title, History, Quote, TeamID, Avatar) VALUES( '" + name + "', '" + title + "', '" + history + "','" + quote + "'," + teamId + ", '"+avatar+"');"
+  var query = "INSERT INTO tblEmployees (Name, Title, History, Quote, TeamID, Avatar) VALUES( '" + name + "', '" + title + "', '" + history + "','" + quote + "'," + teamId + ", '"+avatar+"');";
 
   alert(query);
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
 
@@ -64,7 +64,7 @@ jQuery( document ).on( "change", "#ddEmp", function() {
   var query = "Select * from tblEmployees where ID = " + id;
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
   
@@ -80,7 +80,9 @@ jQuery( document ).on( "change", "#ddEmp", function() {
       document.getElementById("txt_quote").value =  response[0].Quote;
       document.getElementById("dd_tid").value =  response[0].TeamID;
       document.getElementById("dd_avatar").value =  response[0].Avatar;
+      document.getElementById("imgCurrent").src = "/wp-content/themes/arbor-glen-theme"+response[0].avatarImage;
       document.getElementById("btnUpdate").hidden = false;
+      
       (document.getElementById("btnCreate")).hide();
     }else{
       document.getElementById("txt_id").value = "";
@@ -90,8 +92,7 @@ jQuery( document ).on( "change", "#ddEmp", function() {
       document.getElementById("txt_quote").value =  "";
       document.getElementById("dd_tid").value =  "";
       document.getElementById("dd_avatar").value =  "";
-      document.getElementById("btnUpdate").css("visibility", "hidden");
-      ("#btnCreate").css("visibility", "visible");
+      document.getElementById("imgCurrent").hidden = "";
     }
   });
 
@@ -112,7 +113,7 @@ jQuery( document ).on( 'click', '#btnDelete', function($) {
     }
 
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
     
@@ -146,7 +147,7 @@ jQuery( document ).on( "change", "#ddTeam", function() {
   var query = "Select ID, Name from tblEmployees where TeamID = " + id;
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
   var msTM = document.getElementById('msTeamMemebers');
@@ -178,7 +179,7 @@ jQuery( document ).on( "change", "#ddTeam", function() {
     var query = 'UPDATE tblFAQ SET Question = "' + question + '", Answer = "' + answer + '" WHERE ID = ' + id + ';';
   
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
   
@@ -206,7 +207,7 @@ jQuery( document ).on( 'click', '#btnFAQCreate', function($) {
   alert(query);
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
 
@@ -227,7 +228,7 @@ jQuery( document ).on( "change", "#ddFAQ", function() {
   var query = "Select * from tblFAQ where ID = " + id;
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
   
@@ -262,7 +263,7 @@ jQuery( document ).on( 'click', '#btnFAQDelete', function($) {
     }
 
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
     
@@ -308,7 +309,7 @@ jQuery( document ).on( "change", "#ddFAQ", function() {
     var query = 'UPDATE tblTestimony SET Author = "' + author + '", Text = "' + text + '", pageId = '+pageId+' WHERE ID = ' + id + ';';
   
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
   
@@ -337,7 +338,7 @@ jQuery( document ).on( 'click', '#btnTestCreate', function($) {
   alert(query);
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
 
@@ -358,7 +359,7 @@ jQuery( document ).on( "change", "#ddTest", function() {
   var query = "Select * from tblTestimony where ID = " + id;
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
   
@@ -395,7 +396,7 @@ jQuery( document ).on( 'click', '#btnTestDelete', function($) {
     }
 
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
     
@@ -430,14 +431,11 @@ jQuery( document ).on( 'click', '#btnTestDelete', function($) {
   
     var id = document.getElementById("txt_Menuid").value;
     var text = document.getElementById("txt_Menutext").value;
-    var week = document.getElementById("dd_Menuweek").value;
-    var dow = document.getElementById("dd_MenuDOW").value;
-    var tod = document.getElementById("dd_MenuTOD").value;
   
-    var query = 'UPDATE tblMenu SET Name = "' + text + '", Week = ' + week + ', DOW = '+dow+', TOD = '+tod+' WHERE ID = ' + id + ';';
+    var query = 'UPDATE tblMenu SET Name = "' + text + '" WHERE ID = ' + id + ';';
   
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
   
@@ -467,7 +465,7 @@ jQuery( document ).on( 'click', '#btnMenuCreate', function($) {
   alert(query);
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
 
@@ -484,16 +482,17 @@ jQuery( document ).on( 'click', '#btnMenuCreate', function($) {
 
 function readMenu()
 {
+  
   var week = document.getElementById("ddMenuWeek").value;
   var dow = document.getElementById("ddMenuDay").value;
   var tod = document.getElementById("ddMenuTime").value;
 
-  if(week > 0 && dow > 0 && tod > 0 )
+  if(week > 0 && dow > 0 && tod > 0)
   {
     var query = "Select * from tblMenu where Week = " + week + " AND DOW = "+dow+" AND TOD = "+tod+";";
 
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
     
@@ -516,6 +515,27 @@ function readMenu()
 
   // READ (Menu)
 
+  jQuery( document ).on( "click", "#btnSeasonUpdate", function() {
+    
+    var season = document.getElementById("ddSeasons").value;
+    var query = "update tblSiteConfig set FlagValue = "+season+" where ID = 1;";
+
+    var data = {
+      'action': 'glen_action',
+      'query': query
+    };
+
+    jQuery.post(ajaxurl, data, function(response) {
+      //alert('Got this from the server: ' + JSON.stringify(response));
+      if( response.length > 0)
+      {
+      } else {
+      }
+    });
+    
+    
+  });
+
   jQuery( document ).on( "change", "#ddMenuWeek", function() {
     readMenu();
   });
@@ -527,6 +547,8 @@ function readMenu()
   jQuery( document ).on( "change", "#ddMenuTime", function() {
     readMenu();
   });
+
+  
 
 
 
@@ -552,7 +574,7 @@ jQuery( document ).on( 'click', '#btnTestDelete', function($) {
     }
 
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
     
@@ -599,7 +621,7 @@ jQuery( document ).on( 'click', '#btnDirUpdate', function($) {
   alert(query);
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
 
@@ -621,7 +643,7 @@ jQuery( document ).on( 'click', '#btnDirCreate', function($) {
   alert(query);
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
 
@@ -640,7 +662,7 @@ jQuery( document ).on( "change", "#ddDir", function() {
   var query = "Select * from tblDirectors where ID = " + id;
 
   var data = {
-    'action': 'my_action',
+    'action': 'glen_action',
     'query': query
   };
   
@@ -677,7 +699,7 @@ jQuery( document ).on( 'click', '#btnDirDelete', function($) {
     }
 
     var data = {
-      'action': 'my_action',
+      'action': 'glen_action',
       'query': query
     };
     
@@ -697,4 +719,100 @@ jQuery( document ).on( 'click', '#btnDirDelete', function($) {
     alert('Something went wrong while deleting!');
     console.log(err);
   }
+});
+
+
+jQuery( document ).on( "change", "#fileHandbook", function() {
+  
+  var property = document.getElementById("fileHandbook").files[0];
+  var file_name = property.name;
+  //var image_ext = image_name.split('.').pop.toLowerCase();
+  var file_size = property.size;
+  
+  
+
+  //var query = "Select * from tblDirectors where ID = " + id;
+
+  //var query = "update tblSiteConfig set FlagValue = "+file_name+" where ID = 1;";
+  var form_data = new FormData();
+  form_data.append("file", property);
+  form_data.append("fileNum", 2);
+  form_data.append("action", 'glen_downloads_action');
+
+  jQuery.ajax({
+    url: ajaxurl,
+    method: "POST",
+    data: form_data,
+    contentType: false,
+    cache:false,
+    processData:false,
+    success:function(data)
+    {
+      
+      var link = document.getElementById("lnkHandbook");
+      link.href = "/wp-content/themes/mdev-theme" + data;
+    }
+  });
+
+});
+
+
+jQuery( document ).on( "change", "#fileMenu", function() {
+  
+  var property = document.getElementById("fileMenu").files[0];
+  var file_name = property.name;
+  var file_size = property.size;
+  
+  
+
+  //var query = "Select * from tblDirectors where ID = " + id;
+
+  //var query = "update tblSiteConfig set FlagValue = "+file_name+" where ID = 1;";
+  var form_data = new FormData();
+  form_data.append("file", property);
+  form_data.append("fileNum", 3);
+  form_data.append("action", 'glen_downloads_action');
+
+  jQuery.ajax({
+    url: ajaxurl,
+    method: "POST",
+    data: form_data,
+    contentType: false,
+    cache:false,
+    processData:false,
+    success:function(data)
+    {      
+      var link = document.getElementById("lnkMenu");
+      link.href = "/wp-content/themes/mdev-theme" + data;
+    }
+  });
+});
+
+
+
+jQuery( document ).on( "change", "#fileOpportunity", function() {
+  alert("me");
+  var property = document.getElementById("fileOpportunity").files[0];
+  var file_name = property.name;
+  var file_size = property.size;
+  
+
+  var form_data = new FormData();
+  form_data.append("file", property);
+  form_data.append("fileNum", 4);
+  form_data.append("action", 'glen_downloads_action');
+
+  jQuery.ajax({
+    url: ajaxurl,
+    method: "POST",
+    data: form_data,
+    contentType: false,
+    cache:false,
+    processData:false,
+    success:function(data)
+    {      
+      var link = document.getElementById("lnkOpportunity");
+      link.href = "/wp-content/themes/mdev-theme" + data;
+    }
+  });
 });

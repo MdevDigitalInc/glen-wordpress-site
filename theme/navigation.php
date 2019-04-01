@@ -51,7 +51,12 @@
         <a class="glen-main-navigation-link-label" href="/faq" title="Frequently Asked Questions">faq</a>
       </div>
       <div class="glen-main-navigation-link --largossa">
-      <a class="glen-main-navigation-link-label" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/PARENT-HANDBOOK-PDF-Current-Oct.-16-2018-.pdf" target="_blank" title="Download our Handbook">parent handbook&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
+      <?php 
+        $query = "select FlagStringValue from tblSiteConfig where ID = 2";
+        $results = $wpdb->get_results($query);
+        $filePath = get_bloginfo('template_url', 'display') . $results[0]->FlagStringValue;
+      ?>
+      <a class="glen-main-navigation-link-label" href="<?php echo $filePath; ?>" target="_blank" title="Download our Handbook">parent handbook&nbsp;&nbsp;<i class="fas fa-file-download"></i></a><!-- http://arbourglen.ca/wp-content/uploads/2019/01/PARENT-HANDBOOK-PDF-Current-Oct.-16-2018-.pdf -->
       </div>
       <div class="glen-main-navigation-link">
         <a class="glen-main-navigation-link-label" href="/contact" title="Visit our Contact page">get in touch</a>
@@ -59,7 +64,7 @@
     </div>
     <div class="glen-main-navigation-socials">
       <a class="fab fa-facebook" href="https://www.facebook.com/Arbour-Glen-Day-Nursery-215530255204704/" title="Visit our Facebook page"></a>
-      <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
+      <a class="fab fa-instagram" href="https://www.instagram.com/arbourglendaynursery/" title="Visit our Instagram"></a>
     </div>
     <div class="glen-main-navigation-hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
@@ -148,7 +153,12 @@
       <!-- Accordian Item #4 -->
       <div class="glen-mobile-accordian-item">
         <div class="glen-accordian-link">
-          <a class="glen-accordian-link-label" href="http://glenstaging.flywheelsites.com/wp-content/uploads/2019/01/PARENT-HANDBOOK-PDF-Current-Oct.-16-2018-.pdf" target="_blank" title="todo">PARENT HANDBOOK&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
+          <?php 
+            $query = "select FlagStringValue from tblSiteConfig where ID = 2";
+            $results = $wpdb->get_results($query);
+            $filePath = get_bloginfo('template_url', 'display') . $results[0]->FlagStringValue;
+          ?>
+          <a class="glen-accordian-link-label" href="<?php echo $filePath; ?>" target="_blank" title="todo">PARENT HANDBOOK&nbsp;&nbsp;<i class="fas fa-file-download"></i></a>
         </div>
       </div>
       <!-- Accordian Item #4 -->
@@ -180,7 +190,7 @@
       <span class="glen-mobile-navigation-phone">519.439.3701</span>
       <div class="glen-mobile-navigation-socials">
         <a class="fab fa-facebook" href="https://www.facebook.com/Arbour-Glen-Day-Nursery-215530255204704/" title="Visit our Facebook page"></a>
-        <a class="fab fa-instagram" href="/" title="Visit our Instagram"></a>
+        <a class="fab fa-instagram" href="https://www.instagram.com/arbourglendaynursery/" title="Visit our Instagram"></a>
       </div>
     </div>
   </div>
