@@ -29,7 +29,7 @@ function glen_downloads_action()
     $target_file = "";
     if($_FILES["file"]["name"] != '') {
       ///var/www/html/wp-content/themes/mdev-theme/wp-content/uploads
-      $target_dir = SITE_ROOT."/themes/mdev-theme/uploads/";//mdev-theme// /themes/arbor-glen-theme
+      $target_dir = SITE_ROOT."/themes/arbor-glen-theme/uploads/";//mdev-theme// /themes/arbor-glen-theme
       $target_file = $target_dir . basename($_FILES["file"]["name"]);//$submitted .
       $uploadOk = 1;
       $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
